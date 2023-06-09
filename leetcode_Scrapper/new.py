@@ -1,4 +1,8 @@
+
+#all the links of the problems of all tags 
+
 # Import required packages
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -7,18 +11,19 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 from bs4 import BeautifulSoup
+
 # Define the chromedriver service
 s = Service('chromedriver.exe')
 
 # Instantiate the webdriver
-driver = webdriver.Chrome(service=s)
+driver = webdriver.Chrome(service=s) 
 
 # URL of the inspected page
 page_URL = "https://leetcode.com/problemset/all/"  # Replace with the actual URL
 
 def get_links(url):
     driver.get(url)
-    time.sleep(10)
+    time.sleep(6)
 
     # Create a BeautifulSoup object
     soup = BeautifulSoup(driver.page_source, 'html.parser')
@@ -60,7 +65,6 @@ def get_a_tags(url):
             pass
     print(len(ans))
     return ans
-
 my_ans = []
 ass = []
 for link in tag:
@@ -73,8 +77,14 @@ for link in tag:
 print(len(my_ans))
 my_ans = list(set(my_ans))
 print("new")
-print(len(my_ans))
- #write code for 
+
+ 
+with open('lc_links_clean.txt', 'w') as f: 
+    # Iterate over each link in your final list of links
+    for link in my_ans:
+        # Write each link to the file, followed by a newline
+        f.write(link + "\n")
+        
 
 
 # Close the browser
