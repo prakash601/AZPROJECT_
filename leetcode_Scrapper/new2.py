@@ -27,7 +27,7 @@ QDATA_FOLDER = "leetcode_Scrapper/Qdata"
 def get_array_of_links():
     arr = []  # Array to store the lines of the file
 # Open the file
-    with open("lc_links_clean.txt", "r") as file:
+    with open("lc_links_clean_unlocked.txt", "r") as file:
         # Read each line one by one
         for line in file:
             arr.append(line) 
