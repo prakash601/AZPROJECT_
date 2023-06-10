@@ -1,3 +1,5 @@
+#gfg links scrapper and add to file gfg_links_clean.txt 
+
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
