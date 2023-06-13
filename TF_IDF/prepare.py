@@ -15,8 +15,18 @@ def preprocess(docment_text):
 vocab = {}
 documents = []
 
-for index,line in enumerate(lines):
-    # print(index, line)
+for index,line in enumerate(lines, start = 1):
+    print(index)
+    #read statement from txt file name index.txt and add it to the line 
+    file_path = f'leetcode_Scrapper/Qdata/{index}/{index}.txt'
+    with open(file_path,'r') as f:
+        lines = f.readlines()
+    for i in lines:
+        current_line = i.strip()
+        if "Example" in current_line:
+            break
+        line += current_line
+        
     tokens = preprocess(line)
     documents.append(tokens)
     token = set(tokens)
