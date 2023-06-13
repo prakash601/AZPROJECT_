@@ -48,3 +48,17 @@ with open('TF_IDF/idf-values.txt','w') as f:
 with open('TF_IDF/documents.txt','w') as f:
     for doc in documents:
         f.write("%s\n" % ' '.join(doc))
+        
+inverted_index = {}
+for index, doc in enumerate(documents):
+    for token in doc:
+        if token not in inverted_index:
+            inverted_index[token] = [index]
+        else:
+            inverted_index[token].append(index)
+
+#save the inverted index in a text file
+with open('TF_IDF/inverted_index.txt','w') as f:
+    for key in inverted_index.keys():
+        f.write("%s\n" % key)
+        f.write("%s\n" % ' '.join([str(x) for x in inverted_index[key]]))
