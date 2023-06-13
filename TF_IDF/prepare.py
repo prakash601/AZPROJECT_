@@ -19,6 +19,7 @@ for index,line in enumerate(lines):
     # print(index, line)
     tokens = preprocess(line)
     documents.append(tokens)
+    token = set(tokens)
     for token in tokens:
         if token not in vocab:
             vocab[token] = 1
