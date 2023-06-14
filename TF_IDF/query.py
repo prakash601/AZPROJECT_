@@ -1,6 +1,22 @@
 import math
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 
-def load_vocab():
+# nltk.download('stopwords')
+# nltk.download('punkt')
+
+astop_words = set(stopwords.words('english'))
+custom_stop_words = ['<','<=', '=', '<', '>=','r', ',',']','.','[']
+stop_words = astop_words.union(custom_stop_words)
+
+def remove_stop_words(text):
+    # words = word_tokenize(text)
+    words = text.split()
+    filtered_words = [word for word in words if word.lower() not in stop_words]
+    return ' '.join(filtered_words)
+
+def load_vocab(): 
     vocab = {}
     with open('TF_IDF/vocab.txt','r') as f:
         vocab_terms = f.readlines()
@@ -11,6 +27,7 @@ def load_vocab():
         vocab[term.strip()] = int(idf_value.strip()) 
     # print('size of vocab', len(vocab))
     return vocab 
+
 
 def load_documents():
     documents = []
@@ -61,7 +78,7 @@ def get_idf_value(term):
 def calculate_sorted_order_of_documents(query_terms):
     potential_documents  = {}
     for term in query_terms:
-        if vocab_idf_vales[term] ==0:
+        if vocab_idf_vales[term] == 0:
             continue
         tf_idf_by_doc = get_tf_dictionary(term)
         idf_values = get_idf_value(term)
@@ -71,21 +88,31 @@ def calculate_sorted_order_of_documents(query_terms):
                 potential_documents[document] = tf_idf_by_doc[document] * idf_values
             potential_documents[document] += tf_idf_by_doc[document] * idf_values
         
-        print(potential_documents)
+    # print(potential_documents)
+
+    for document in potential_documents:
+        potential_documents[document] = potential_documents[document] / len(query_terms)
         
-        for document in potential_documents:
-            potential_documents[document] = potential_documents[document] / len(query_terms)
-            
-        potential_documents = dict(sorted(potential_documents.items(), key=lambda item: item[1], reverse=True))
+    potential_documents = dict(sorted(potential_documents.items(), key=lambda item: item[1], reverse=True))
+    i=0
+    for i, document_index in enumerate(potential_documents):
+        if i == 10:
+            break
+        print('Score:', potential_documents[document_index], 'Document:', documents[int(document_index)])
         
-        for document_index in potential_documents:
-            print('Document: ',documents[int(document_index)], 'score: ', potential_documents[document_index] )
+        # for document_index in potential_documents:
+        #     print('score: ', potential_documents[document_index], 'Document: ',documents[int(document_index)])
+
         
 
 query_string = input("Enter your query: ")
-query_terms = [term.lower() for term in query_string.strip().split()]
+# query_string = "Given an array of positive integers nums, return the maximum possible sum of an ascending subarray in nums.A subarray is defined as a contiguous sequence of numbers in an array."
+# query_string = remove_stop_words(query_string)
 
+
+print(query_string)
+query_terms = [term.lower() for term in query_string.strip().split()]
 print(query_terms)
 calculate_sorted_order_of_documents(query_terms)
-
-
+# for term in query_terms:
+#     print(term, get_idf_value(term))

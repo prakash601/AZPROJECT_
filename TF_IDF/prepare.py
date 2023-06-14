@@ -1,13 +1,24 @@
 #read the index.txt and prepare document, vocab ,idf
+import math
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
 
 with open('leetcode_Scrapper/index.txt','r') as f:
     lines = f.readlines()
 
 
-def preprocess(docment_text):
+# def perprocess_qdata(document_text):
+#     tokens = word_tokenize(document_text.strip())
+#     return tokens
+    
+
+def preprocess(document_text):
     #remove the leading number from the string, remove not alpha numeric character, make everything lower case
     # print(docment_text)
-    terms = [term.lower() for term in docment_text.strip().split()[1:] ]
+    terms = [term.lower() for term in document_text.strip().split()[1:] ]
+    # terms = word_tokenize(document_text.strip())[1:]
     # print(terms)
     return terms
     
