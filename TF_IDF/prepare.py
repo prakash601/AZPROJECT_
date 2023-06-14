@@ -5,6 +5,8 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
 
+
+
 with open('leetcode_Scrapper/index.txt','r') as f:
     lines = f.readlines()
 
