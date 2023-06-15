@@ -59,24 +59,18 @@ def load_inverted_index():
     # print('size of inverted index', len(inverted_index))
     return inverted_index
  
- 
- 
- 
- 
+def load_links_of_qs():
+    with open("leetcode_Scrapper/Qindex.txt", "r") as f:
+        links = f.readlines()
+    return links
 
-# def load_links_of_qs():
-#     with open("leetcode_Scrapper/qData/links.txt", "r") as f:
-#         links = f.readlines()
-#     return links
+Qlink = load_links_of_qs() 
 
-# Qlink = load_links_of_qs() 
-
-
+Qlink = load_links_of_qs() 
 vocab_idf_vales = load_vocab()
 documents = load_documents()
 inverted_index = load_inverted_index()
-# print(inverted_index['the'])  
- 
+# print(inverted_index['the'])    
 
 
 def get_tf_dictionary(term):
@@ -97,30 +91,47 @@ def get_idf_value(term):
     
 
 
-def calculate_sorted_order_of_documents(query_terms):
-    potential_documents  = {}
-    for term in query_terms:
-        if vocab_idf_vales[term] == 0:
-            continue
-        tf_idf_by_doc = get_tf_dictionary(term)
-        idf_values = get_idf_value(term)
-        
-        for document in tf_idf_by_doc:
-            if document not in potential_documents:
-                potential_documents[document] = tf_idf_by_doc[document] * idf_values
-            potential_documents[document] += tf_idf_by_doc[document] * idf_values
-        
-    # print(potential_documents)
 
-    for document in potential_documents:
-        potential_documents[document] = potential_documents[document] / len(query_terms)
-        
-    potential_documents = dict(sorted(potential_documents.items(), key=lambda item: item[1], reverse=True))
+def calc_docs_sorted_order(q_terms):
+    # will store the doc which can be our ans: sum of tf-idf value of that doc for all the query terms
+    potential_docs = {}
     ans = []
-    for doc_index in potential_documents:
-        ans.append({'score': potential_documents[doc_index], 'document': documents[int(doc_index)]})
-    
-    return ans[:10:]
+    for term in q_terms:
+        if (term not in vocab_idf_vales):
+            continue
+
+        tf_vals_by_docs = get_tf_dictionary(term)
+        idf_value = get_idf_value(term)
+
+        # print(term, tf_vals_by_docs, idf_value)
+
+        for doc in tf_vals_by_docs:
+            if doc not in potential_docs:
+                potential_docs[doc] = tf_vals_by_docs[doc]*idf_value
+            else:
+                potential_docs[doc] += tf_vals_by_docs[doc]*idf_value
+
+        # print(potential_docs)
+        # divide the scores of each doc with no of query terms
+        for doc in potential_docs:
+            potential_docs[doc] /= len(q_terms)
+
+        # sort in dec order acc to values calculated
+        potential_docs = dict(
+            sorted(potential_docs.items(), key=lambda item: item[1], reverse=True))
+
+        # if no doc found
+        if (len(potential_docs) == 0):
+            print("No matching question found. Please search with more relevant terms.")
+
+        # Printing ans
+        # print("The Question links in Decreasing Order of Relevance are: \n")
+        for doc_index in potential_docs:
+            # print("Question Link:", Qlink[int(
+            #     doc_index) - 1], "\tScore:", potential_docs[doc_index])
+            ans.append({"Question Link": Qlink[int(
+                doc_index) - 1][:-2], "Score": potential_docs[doc_index]})
+    return ans
     
     # i=0
     # for i, document_index in enumerate(potential_documents):
@@ -155,8 +166,8 @@ class SearchForm(FlaskForm):
 
 @app.route("/<query>")
 def return_links(query):
-    query_terms = [term.lower() for term in query.strip().split()]
-    return jsonify(calculate_sorted_order_of_documents(query_terms)[:20:])
+    q_terms = [term.lower() for term in query.strip().split()]
+    return jsonify(calc_docs_sorted_order(q_terms)[:20:])
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -165,6 +176,6 @@ def home():
     results = []
     if form.validate_on_submit():
         query = form.search.data
-        query_terms = [term.lower() for term in query.strip().split()]
-        results = calculate_sorted_order_of_documents(query_terms)[:20:]
+        q_terms = [term.lower() for term in query.strip().split()]
+        results = calc_docs_sorted_order(q_terms)[:20:]
     return render_template('index.html', form=form, results=results)
