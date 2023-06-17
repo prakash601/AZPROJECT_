@@ -2,27 +2,63 @@
 import math
 import nltk
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import regexp_tokenize
+from nltk.stem import WordNetLemmatizer
 
+lemmatizer = WordNetLemmatizer()
+nltk.download('stopwords')
+nltk.download('wordnet') 
 
 with open('leetcode_Scrapper/index.txt','r') as f:
     lines = f.readlines()
-
+    
+index_terms = [term.strip() for term in lines]
 
 # def perprocess_qdata(document_text):
 #     tokens = word_tokenize(document_text.strip())
 #     return tokens
     
+astop_words = set(stopwords.words('english'))
+custom_stop_words = ['<','<=', '=', '<', '>=','r', ',',']','.','[','(',')','+','-','return','given','--','//','/','*','**','**=','*=','+=','-=','==','!=','!=','+=','-=','*=','/=','%=', '||', '!', '&&', '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '>>=', '<<=','!', '@', '#', '$', '%', '&', '*', '(', ')', '-', '+', '=', '[', ']', '{', '}', '|',
+    '\\', '/', '~', '^', '>', '<', '.', ',', ':', ';', '"', "'", '_', '?', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F', 'G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U', 'V','W','X','Y','Z','`','``','````','``````','````````','``````````','```````````','````````````','`````````````','``````````````','```````````````','````````````````','`````````````````','``````````````````','```````````````````', '``',
+    'the', 'a', 'an', 'is', 'are', 'was', 'were', 'of', 'in', 'on', 'at', 'by', 'to', 'for',
+    'with', 'and', 'or', 'not', 'but', 'from', 'into', 'about', 'after', 'before', 'over',
+    'under', 'between', 'among', 'through', 'during', 'since', 'until', 'unless', 'while',
+    'throughout', 'above', 'below', 'behind', 'beside', 'beneath', 'within', 'without',
+    'Hello', ',', 'how', 'are', 'you', '?', '(', "I'm", 'doing', 'well', ')', '[', 'And', 'you', ']', '{', 'Nice', 'to', 'meet', 'you', '}', '&', '(', '...', ')', ',', '[', '..', ':', ']', '....', '+-----------------+----------+|', '|+-----------------+----------+|', '|+-----------------+----------+', '"||**||**|*"', '", "', '=#', ',', '#,', '#,#"', ',', ',', ':"../"', ').', '"./"', '/"'
 
-def preprocess(document_text):
-    #remove the leading number from the string, remove not alpha numeric character, make everything lower case
-    # print(docment_text)
-    terms = [term.lower() for term in document_text.strip().split()[1:] ]
-    # terms = word_tokenize(document_text.strip())[1:]
-    # print(terms)
-    return terms
+ ]
+stop_words = astop_words.union(custom_stop_words)
+
+def remove_stop_words(text):
     
+    words = regexp_tokenize(text, pattern=r"\w+|[^\w\s]|\(|\)|\[|\]|{|}|,|\.|\+|-|:|\"|&|\*|/|=|#")
+    # words = text.split()
+    filtered_words = [word for word in words if word.lower() not in stop_words]
+    return ' '.join(filtered_words)
 
+# def preprocess(document_text):
+#     #remove the leading number from the string, remove not alpha numeric character, make everything lower case
+#     # print(docment_text)
+#     # terms = [term.lower() for term in remove_stop_words(document_text).strip().split()[1:] ]
+#     terms = [stemmer.stem(term.lower()) for term in remove_stop_words(document_text).strip().split()[1:]]
+
+#     # terms = word_tokenize(document_text.strip())[1:]
+#     # print(terms)
+#     return terms
+    
+def preprocess(document_text):
+    filtered_terms = remove_stop_words(document_text).strip().split()[1:]
+    lemmatized_terms = [lemmatizer.lemmatize(term.lower()) for term in filtered_terms]
+    weighted_terms = []
+    for term in lemmatized_terms:
+        if term in index_terms:
+            # Assign a higher weight to terms in index_terms
+            weighted_terms.append(term + '^5')  # You can customize the weight here
+        else:
+            weighted_terms.append(term)
+
+    return weighted_terms
 
 
 vocab = {}
@@ -68,6 +104,7 @@ for index,line in enumerate(lines, start = 1):
         line += current_line
         
     tokens = preprocess(line)
+    # break
     documents.append(tokens)
     token = set(tokens)
     for token in tokens:

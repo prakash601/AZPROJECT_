@@ -1,10 +1,10 @@
 import math
-# import nltk
-# from nltk.corpus import stopwords
-# from nltk.tokenize import word_tokenize
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 
-# nltk.download('stopwords')
-# nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('punkt')
 
 from flask import Flask, jsonify, url_for, redirect, render_template, request, session
 import math
@@ -13,15 +13,15 @@ import re
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
-# astop_words = set(stopwords.words('english'))
-# custom_stop_words = ['<','<=', '=', '<', '>=','r', ',',']','.','[']
-# stop_words = astop_words.union(custom_stop_words)
+astop_words = set(stopwords.words('english'))
+custom_stop_words = ['<','<=', '=', '<', '>=','r', ',',']','.','[']
+stop_words = astop_words.union(custom_stop_words)
 
-# def remove_stop_words(text):
-#     # words = word_tokenize(text)
-#     words = text.split()
-#     filtered_words = [word for word in words if word.lower() not in stop_words]
-#     return ' '.join(filtered_words)
+def remove_stop_words(text):
+    # words = word_tokenize(text)
+    words = text.split()
+    filtered_words = [word for word in words if word.lower() not in stop_words]
+    return ' '.join(filtered_words)
 
 def load_vocab(): 
     vocab = {}
