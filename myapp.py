@@ -1,27 +1,43 @@
 import math
 import nltk
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-
+from nltk.tokenize import regexp_tokenize
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import wordnet
+lemmatizer = WordNetLemmatizer()
 nltk.download('stopwords')
-nltk.download('punkt')
+nltk.download('wordnet') 
+nltk.download('wordnet')
 
 from flask import Flask, jsonify, url_for, redirect, render_template, request, session
 import math
 import re
 
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
 
 astop_words = set(stopwords.words('english'))
-custom_stop_words = ['<','<=', '=', '<', '>=','r', ',',']','.','[']
+custom_stop_words = ['<','<=', '=', '<', '>=','r', ',',']','.','[','(',')','+','-','return','given','--','//','/','*','**','**=','*=','+=','-=','==','!=','!=','+=','-=','*=','/=','%=', '||', '!', '&&', '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '>>=', '<<=','!', '@', '#', '$', '%', '&', '*', '(', ')', '-', '+', '=', '[', ']', '{', '}', '|',
+    '\\', '/', '~', '^', '>', '<', '.', ',', ':', ';', '"', "'", '_', '?', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F', 'G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U', 'V','W','X','Y','Z','`','``','````','``````','````````','``````````','```````````','````````````','`````````````','``````````````','```````````````','````````````````','`````````````````','``````````````````','```````````````````', '``',
+    'the', 'a', 'an', 'is', 'are', 'was', 'were', 'of', 'in', 'on', 'at', 'by', 'to', 'for',
+    'with', 'and', 'or', 'not', 'but', 'from', 'into', 'about', 'after', 'before', 'over',
+    'under', 'between', 'among', 'through', 'during', 'since', 'until', 'unless', 'while',
+    'throughout', 'above', 'below', 'behind', 'beside', 'beneath', 'within', 'without',
+    'Hello', ',', 'how', 'are', 'you', '?', '(', "I'm", 'doing', 'well', ')', '[', 'And', 'you', ']', '{', 'Nice', 'to', 'meet', 'you', '}', '&', '(', '...', ')', ',', '[', '..', ':', ']', '....', '+-----------------+----------+|', '|+-----------------+----------+|', '|+-----------------+----------+', '"||**||**|*"', '", "', '=#', ',', '#,', '#,#"', ',', ',', ':"../"', ').', '"./"', '/"'
+
+ ]
 stop_words = astop_words.union(custom_stop_words)
 
 def remove_stop_words(text):
-    # words = word_tokenize(text)
-    words = text.split()
+    
+    words = regexp_tokenize(text, pattern=r"\w+|[^\w\s]|\(|\)|\[|\]|{|}|,|\.|\+|-|:|\"|&|\*|/|=|#")
+    # words = text.split()
     filtered_words = [word for word in words if word.lower() not in stop_words]
     return ' '.join(filtered_words)
+
+
+def preprocess(document_text):
+    filtered_terms = remove_stop_words(document_text).strip().split()
+    lemmatized_terms = [lemmatizer.lemmatize(term.lower()) for term in filtered_terms]
+    return lemmatized_terms
 
 def load_vocab(): 
     vocab = {}
@@ -57,24 +73,30 @@ def load_inverted_index():
     # print('size of inverted index', len(inverted_index))
     return inverted_index
  
+ 
+ 
+ 
 def load_links_of_qs():
     with open("leetcode_Scrapper/Qindex.txt", "r") as f:
         links = f.readlines()
     return links
 
+
+Qlink = load_links_of_qs() 
+
 # get the document text from document.txt 
 def load_doc_text():
-    with open("TF_IDF/documents_txt.txt", "r") as f:
+    with open("TF_IDF/documents.txt", "r") as f:
         docs = f.readlines()
     return docs
 
 Doctext = load_doc_text()
 
-Qlink = load_links_of_qs() 
 vocab_idf_vales = load_vocab()
 documents = load_documents()
 inverted_index = load_inverted_index()
-# print(inverted_index['the'])    
+# print(inverted_index['the'])  
+ 
 
 
 def get_tf_dictionary(term):
@@ -87,17 +109,36 @@ def get_tf_dictionary(term):
                 tf_vlaues[doc_id] += 1
     for document in tf_vlaues:
         # tf_vlaues[document] = math.log(tf_vlaues[document] + 1)
-        tf_vlaues[document] = tf_vlaues[document] / len(documents[int (document)])
+        # tf_vlaues[document] = tf_vlaues[document] / len(documents[int (document)])
+        max_tf = max(tf_vlaues.values())
+        avg_tf = sum(tf_vlaues.values()) / len(tf_vlaues)
+        for document in tf_vlaues:
+            tf_vlaues[document] = tf_vlaues[document] / max_tf / avg_tf
+
     return tf_vlaues
 
-def get_idf_value(term):  
-    return math.log(len(documents) / vocab_idf_vales[term])
+# def get_idf_value(term):  
+#     return math.log(len(documents) / vocab_idf_vales[term])
     
+def get_idf_value(term):
+    df = len(inverted_index.get(term, []))
+    smoothing_term = 1  # Adjust the value of the smoothing term as per your preference
+    idf = math.log((len(documents) + smoothing_term) / (df + smoothing_term))
+    return idf
 
+def expand_query(query_terms):
+    expanded_terms = []
+    for term in query_terms:
+        expanded_terms.append(term)
+        synsets = wordnet.synsets(term)
+        for synset in synsets:
+            for lemma in synset.lemmas():
+                expanded_terms.append(lemma.name())
+    return expanded_terms
 
-
-def calc_docs_sorted_order(q_terms):
+def calc_docs_sorted_order(query_terms):
     # will store the doc which can be our ans: sum of tf-idf value of that doc for all the query terms
+    q_terms = expand_query(query_terms)
     potential_docs = {}
     ans = []
     for term in q_terms:
@@ -130,11 +171,29 @@ def calc_docs_sorted_order(q_terms):
 
         # Printing ans
         # print("The Question links in Decreasing Order of Relevance are: \n")
+        # print(Doctext[1])
         for doc_index in potential_docs:
             # print("Question Link:", Qlink[int(
             #     doc_index) - 1], "\tScore:", potential_docs[doc_index])
             ans.append({"Question Link": Qlink[int(doc_index)][:-1], "text": Doctext[int(doc_index)]})
+            # # print( Doctext[int(doc_index)])
+            
+    
+
     return ans
+     
+     
+
+    # i=0
+    # for i, document_index in enumerate(potential_documents):
+    #     if i == 10:
+    #         break
+    #     print('Score:', potential_documents[document_index], 'Document:', documents[int(document_index)])
+        
+        # for document_index in potential_documents:
+        #     print('score: ', potential_documents[document_index], 'Document: ',documents[int(document_index)])
+
+        
     
     # i=0
     # for i, document_index in enumerate(potential_documents):
@@ -171,8 +230,8 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route("/<query>")
 def return_links(query):
-    q_terms = [term.lower() for term in query.strip().split()]
-    return jsonify(calc_docs_sorted_order(q_terms)[:10:])
+    # q_terms = [term.lower() for term in query.strip().split()]
+    return jsonify(calc_docs_sorted_order(preprocess(remove_stop_words(query)))[:10:])
 
 
 
@@ -184,8 +243,9 @@ def home():
 
     if request.method == 'POST':
         query = request.form.get('search', '')
-        q_terms = [term.lower() for term in query.strip().split()]
-        results =  calc_docs_sorted_order(q_terms)[:10:]
+        # q_terms = [term.lower() for term in query.strip().split()]
+        # results =  calc_docs_sorted_order(q_terms)[:10:]
+        results = calc_docs_sorted_order(preprocess(remove_stop_words(query)))[:10:]
         session['search_term'] = query
         session['results'] = results
         return redirect(url_for('home'))

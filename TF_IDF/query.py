@@ -8,7 +8,7 @@ lemmatizer = WordNetLemmatizer()
 nltk.download('stopwords')
 nltk.download('wordnet') 
 nltk.download('wordnet')
-from symspellpy import SymSpell, Verbosity
+# from symspellpy import SymSpell, Verbosity
 
 # def correct_spellings(text):
 #     # Create an instance of SymSpell
@@ -238,6 +238,7 @@ query_terms = preprocess(text)
 
 # print(query_terms)
 p=calc_docs_sorted_order(query_terms)
+# p=calc_docs_sorted_order(preprocess(remove_stop_words(query_string)))
 # print(p[:20:])
 # # for term in query_terms:
 #     print(term, get_idf_value(term))
