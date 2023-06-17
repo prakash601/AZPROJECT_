@@ -5,8 +5,6 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
 
-
-
 with open('leetcode_Scrapper/index.txt','r') as f:
     lines = f.readlines()
 
@@ -24,16 +22,45 @@ def preprocess(document_text):
     # print(terms)
     return terms
     
-    
+
+
+
 vocab = {}
 documents = []
 
+document_first_line = []
+
 for index,line in enumerate(lines, start = 1):
-    print(index)
+    # print(index)
+    #read statement from txt file name index.txt and add it to the line 
+    file_path = f'leetcode_Scrapper/Qdata/{index}/{index}.txt'
+    with open(file_path,'r') as f:
+        file_lines = f.readlines()
+    line = ''
+    for i in file_lines:
+        current_line = i.strip()
+        if "Example" in current_line:
+            break
+        line += current_line
+    document_first_line.append(line.rstrip())
+        
+# document_first_line = '\n'.join(document_first_line)
+# print(document_first_line)
+# for line in document_first_line:
+#     print(line)
+#save the documents in a text file
+with open('TF_IDF/documents_txt.txt','w') as f:
+    for doc in document_first_line:
+        f.write("%s\n" % (doc))
+
+
+for index,line in enumerate(lines, start = 1):
+    # print(index)
     #read statement from txt file name index.txt and add it to the line 
     file_path = f'leetcode_Scrapper/Qdata/{index}/{index}.txt'
     with open(file_path,'r') as f:
         lines = f.readlines()
+        
     for i in lines:
         current_line = i.strip()
         if "Example" in current_line:
@@ -52,14 +79,14 @@ for index,line in enumerate(lines, start = 1):
 #reverse sort the vocab based on the value
 vocab  = {k: v for k, v in sorted(vocab.items(), key=lambda item: item[1], reverse=True)}
 
-print('numner of documents', len(documents))
-print('size of vocab', len(vocab))
-print('sample document', documents[0])
-print(vocab)    
+# print('numner of documents', len(documents))
+# print('size of vocab', len(vocab))
+# print('sample document', documents[0])
+# print(vocab)    
 
 # print(documents[:10])
     
-#save the vocab in a text file
+# save the vocab in a text file
 with open('TF_IDF/vocab.txt','w') as f:
     for key in vocab.keys():
         f.write("%s\n" % key)
@@ -81,7 +108,7 @@ for index, doc in enumerate(documents):
         else:
             inverted_index[token].append(index)
 
-#save the inverted index in a text file
+# save the inverted index in a text file
 with open('TF_IDF/inverted_index.txt','w') as f:
     for key in inverted_index.keys():
         f.write("%s\n" % key)

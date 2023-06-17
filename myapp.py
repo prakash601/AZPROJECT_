@@ -64,7 +64,7 @@ def load_links_of_qs():
 
 # get the document text from document.txt 
 def load_doc_text():
-    with open("TF_IDF/documents.txt", "r") as f:
+    with open("TF_IDF/documents_txt.txt", "r") as f:
         docs = f.readlines()
     return docs
 

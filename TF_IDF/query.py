@@ -138,12 +138,19 @@ def calc_docs_sorted_order(q_terms):
 
         # Printing ans
         # print("The Question links in Decreasing Order of Relevance are: \n")
+        print(Doctext[1])
         for doc_index in potential_docs:
             # print("Question Link:", Qlink[int(
             #     doc_index) - 1], "\tScore:", potential_docs[doc_index])
             ans.append({"Question Link": Qlink[int(doc_index)][:-1], "text": Doctext[int(doc_index)]})
-    return ans
+            # print( Doctext[int(doc_index)])
+            break
     
+
+    return ans
+     
+     
+
     # i=0
     # for i, document_index in enumerate(potential_documents):
     #     if i == 10:
@@ -168,15 +175,15 @@ def calc_docs_sorted_order(q_terms):
 
 query_string = input("Enter your query: ")
 # query_string = "Given an array of positive integers nums, return the maximum possible sum of an ascending subarray in nums.A subarray is defined as a contiguous sequence of numbers in an array."
-query_string = remove_stop_words(query_string)
+# query_string = remove_stop_words(query_string)
 
 
-print(query_string)
+# print(query_string)
 query_terms = [term.lower() for term in query_string.strip().split()]
 # print(query_terms)
 p=calc_docs_sorted_order(query_terms)
-print(p)
-# for term in query_terms:
+# print(p)
+# # for term in query_terms:
 #     print(term, get_idf_value(term))
 
 # app = Flask(__name__)

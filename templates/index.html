@@ -24,9 +24,13 @@
     <div class="result-item" style="margin: auto;">
       <a href="{{ result['Question Link'] }}" target="_blank" title="Solve it">{{ result['Question Link'].rsplit('/',
         1)[-1].replace('-', ' ')| title }}</a>
-      <p>{{ result['text'] }}</p>
-      <button class="link-button" onclick="window.open('{{ result['Question Link'] }}', '_blank')">Go to
-        Question</button>
+      {% set words = result['text'].split() %}
+        {% if words|length > 25 %}
+          <p>{{ words[:15]|join(' ') }}...</p>
+        {% else %}
+          <p>{{ result['text'] }}</p>
+        {% endif %}
+      <button class="link-button" onclick="window.open('{{ result['Question Link'] }}', '_blank')">Go to Question</button>
     </div>
     {% endfor %}
   </div>
