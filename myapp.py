@@ -6,12 +6,10 @@ import math
 # nltk.download('stopwords')
 # nltk.download('punkt')
 
-
-from flask import Flask, jsonify
+from flask import Flask, jsonify, url_for, redirect, render_template, request, session
 import math
 import re
 
-from flask import Flask, render_template, request, jsonify
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
@@ -129,8 +127,7 @@ def calc_docs_sorted_order(q_terms):
         for doc_index in potential_docs:
             # print("Question Link:", Qlink[int(
             #     doc_index) - 1], "\tScore:", potential_docs[doc_index])
-            ans.append({"Question Link": Qlink[int(
-                doc_index) - 1][:-2], "Score": potential_docs[doc_index]})
+            ans.append({"Question Link": Qlink[int(doc_index) - 1][:-1], "Score": potential_docs[doc_index]})
     return ans
     
     # i=0
@@ -151,31 +148,44 @@ def calc_docs_sorted_order(q_terms):
 
 # print(query_string)
 # query_terms = [term.lower() for term in query_string.strip().split()]
-# print(query_terms)
-# calculate_sorted_order_of_documents(query_terms)
+# # print(query_terms)
+# p = calc_docs_sorted_order(query_terms)[:10:]
+
+# print(p)
+
 # for term in query_terms:
 #     print(term, get_idf_value(term))
+############################################################################################################
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key'
-
-class SearchForm(FlaskForm):
-    search = StringField('Enter your search term')
-    submit = SubmitField('Search')
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 
 @app.route("/<query>")
 def return_links(query):
     q_terms = [term.lower() for term in query.strip().split()]
-    return jsonify(calc_docs_sorted_order(q_terms)[:20:])
+    return jsonify(calc_docs_sorted_order(q_terms)[:10:])
+
+
 
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    form = SearchForm()
-    results = []
-    if form.validate_on_submit():
-        query = form.search.data
+    search_term = session.pop('search_term', '') if 'search_term' in session else ''
+    results = session.pop('results', []) if 'results' in session else []
+
+    if request.method == 'POST':
+        query = request.form.get('search', '')
         q_terms = [term.lower() for term in query.strip().split()]
-        results = calc_docs_sorted_order(q_terms)[:20:]
-    return render_template('index.html', form=form, results=results)
+        results =  calc_docs_sorted_order(q_terms)[:10:]
+        session['search_term'] = query
+        session['results'] = results
+        return redirect(url_for('home'))
+
+    return render_template('index.html', search_term=search_term, results=results)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

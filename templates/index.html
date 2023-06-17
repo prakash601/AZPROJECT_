@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Search Page</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="form">
-      <form method="POST">
-        {{ form.hidden_tag() }} {{ form.search.label }} {{ form.search() }} {{
-        form.submit() }}
-      </form>
+
+<head>
+  <title>Search Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+
+<body>
+  <div class="form">
+    <form method="POST">
+      <div class="search-box">
+        <input class="input-search" type="search" name="search" placeholder="Type to Search..." required
+          value="{{ search_term }}">
+        <button class="btn-search" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="results-container">
+    {% for result in results %}
+    <div class="result-item" style="margin: auto;">
+      <a href="{{ result['Question Link'] }}" target="_blank" title="Solve it">{{ result['Question Link'].rsplit('/',
+        1)[-1].replace('-', ' ')| title }}</a>
+      <button class="link-button" onclick="window.open('{{ result['Question Link'] }}', '_blank')">Go to
+        Question</button>
     </div>
-    <div>
-      {% for result in results %}
-      <a href="{{ result['Question Link'] }}">{{ result['Question Link'] }}</a>
-      <p>Score: {{ result['Score'] }}</p>
-      {% endfor %}
-    </div>
-  </body>
+    {% endfor %}
+  </div>
+</body>
+
+
 </html>

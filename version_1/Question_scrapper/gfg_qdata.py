@@ -18,15 +18,15 @@ s = Service('chromedriver.exe')
 driver = webdriver.Chrome(service=s)
 # check heading_class is present or not first by document.querySelector("");, leetcode page's heading and body class changes day by day
 
-heading_class = ".mr-2.text-label-1"
-body_class = ".px-5.pt-4"
+heading_class = ".g-m-0"
+body_class = ".problems_problem_content__Xm_eO"
 index = 1
 QDATA_FOLDER = "version_1/Question_scrapper/Qdata"
 
 def get_array_of_links():
     arr = []  # Array to store the lines of the file
 # Open the file
-    with open("lc_links_clean_unlocked.txt", "r") as file:
+    with open("gfg_links_clean.txt", "r") as file:
         # Read each line one by one
         for line in file:
             arr.append(line) 
@@ -56,16 +56,17 @@ def create_and_add_text_to_file(file_name, text):
 def getPagaData(url, index):
     try:
         driver.get(url)
-        WebDriverWait(driver, 10).until(
+        WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, body_class)))
         time.sleep(1)
         heading = driver.find_element(By.CSS_SELECTOR, heading_class)
         body = driver.find_element(By.CSS_SELECTOR, body_class)
         print(heading.text)
-        if (heading.text):
-            add_text_to_index_file(heading.text)
-            add_link_to_Qindex_file(url)
-            create_and_add_text_to_file(str(index), body.text)
+        print(body.text)
+        # if (heading.text):
+        #     add_text_to_index_file(heading.text)
+        #     add_link_to_Qindex_file(url)
+        #     create_and_add_text_to_file(str(index), body.text)
         time.sleep(1)
         return True
     except Exception as e:
@@ -78,6 +79,7 @@ for link in arr:
     success = getPagaData(link, index)
     if (success):
         index = index+1
+    break
 
 
 driver.quit()
