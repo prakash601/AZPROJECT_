@@ -62,15 +62,21 @@ def load_inverted_index():
  
  
  
- 
+def load_links_of_qs():
+    with open("leetcode_Scrapper/Qindex.txt", "r") as f:
+        links = f.readlines()
+    return links
 
-# def load_links_of_qs():
-#     with open("leetcode_Scrapper/qData/links.txt", "r") as f:
-#         links = f.readlines()
-#     return links
 
-# Qlink = load_links_of_qs() 
+Qlink = load_links_of_qs() 
 
+# get the document text from document.txt 
+def load_doc_text():
+    with open("TF_IDF/documents.txt", "r") as f:
+        docs = f.readlines()
+    return docs
+
+Doctext = load_doc_text()
 
 vocab_idf_vales = load_vocab()
 documents = load_documents()
@@ -97,30 +103,57 @@ def get_idf_value(term):
     
 
 
-def calculate_sorted_order_of_documents(query_terms):
-    potential_documents  = {}
-    for term in query_terms:
-        if vocab_idf_vales[term] == 0:
-            continue
-        tf_idf_by_doc = get_tf_dictionary(term)
-        idf_values = get_idf_value(term)
-        
-        for document in tf_idf_by_doc:
-            if document not in potential_documents:
-                potential_documents[document] = tf_idf_by_doc[document] * idf_values
-            potential_documents[document] += tf_idf_by_doc[document] * idf_values
-        
-    # print(potential_documents)
 
-    for document in potential_documents:
-        potential_documents[document] = potential_documents[document] / len(query_terms)
-        
-    potential_documents = dict(sorted(potential_documents.items(), key=lambda item: item[1], reverse=True))
+def calc_docs_sorted_order(q_terms):
+    # will store the doc which can be our ans: sum of tf-idf value of that doc for all the query terms
+    potential_docs = {}
     ans = []
-    for doc_index in potential_documents:
-        ans.append({'score': potential_documents[doc_index], 'document': documents[int(doc_index)]})
+    for term in q_terms:
+        if (term not in vocab_idf_vales):
+            continue
+
+        tf_vals_by_docs = get_tf_dictionary(term)
+        idf_value = get_idf_value(term)
+
+        # print(term, tf_vals_by_docs, idf_value)
+
+        for doc in tf_vals_by_docs:
+            if doc not in potential_docs:
+                potential_docs[doc] = tf_vals_by_docs[doc]*idf_value
+            else:
+                potential_docs[doc] += tf_vals_by_docs[doc]*idf_value
+
+        # print(potential_docs)
+        # divide the scores of each doc with no of query terms
+        for doc in potential_docs:
+            potential_docs[doc] /= len(q_terms)
+
+        # sort in dec order acc to values calculated
+        potential_docs = dict(
+            sorted(potential_docs.items(), key=lambda item: item[1], reverse=True))
+
+        # if no doc found
+        if (len(potential_docs) == 0):
+            print("No matching question found. Please search with more relevant terms.")
+
+        # Printing ans
+        # print("The Question links in Decreasing Order of Relevance are: \n")
+        for doc_index in potential_docs:
+            # print("Question Link:", Qlink[int(
+            #     doc_index) - 1], "\tScore:", potential_docs[doc_index])
+            ans.append({"Question Link": Qlink[int(doc_index)][:-1], "text": Doctext[int(doc_index)]})
+    return ans
     
-    return ans[:10:]
+    # i=0
+    # for i, document_index in enumerate(potential_documents):
+    #     if i == 10:
+    #         break
+    #     print('Score:', potential_documents[document_index], 'Document:', documents[int(document_index)])
+        
+        # for document_index in potential_documents:
+        #     print('score: ', potential_documents[document_index], 'Document: ',documents[int(document_index)])
+
+        
     
     # i=0
     # for i, document_index in enumerate(potential_documents):
@@ -133,38 +166,39 @@ def calculate_sorted_order_of_documents(query_terms):
 
         
 
-# query_string = input("Enter your query: ")
+query_string = input("Enter your query: ")
 # query_string = "Given an array of positive integers nums, return the maximum possible sum of an ascending subarray in nums.A subarray is defined as a contiguous sequence of numbers in an array."
-# query_string = remove_stop_words(query_string)
+query_string = remove_stop_words(query_string)
 
 
-# print(query_string)
-# query_terms = [term.lower() for term in query_string.strip().split()]
+print(query_string)
+query_terms = [term.lower() for term in query_string.strip().split()]
 # print(query_terms)
-# calculate_sorted_order_of_documents(query_terms)
+p=calc_docs_sorted_order(query_terms)
+print(p)
 # for term in query_terms:
 #     print(term, get_idf_value(term))
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your-secret-key'
+# app = Flask(__name__)
+# app.config['SECRET_KEY'] = 'your-secret-key'
 
-class SearchForm(FlaskForm):
-    search = StringField('Enter your search term')
-    submit = SubmitField('Search')
-
-
-@app.route("/<query>")
-def return_links(query):
-    query_terms = [term.lower() for term in query.strip().split()]
-    return jsonify(calculate_sorted_order_of_documents(query_terms)[:20:])
+# class SearchForm(FlaskForm):
+#     search = StringField('Enter your search term')
+#     submit = SubmitField('Search')
 
 
-@app.route("/", methods=['GET', 'POST'])
-def home():
-    form = SearchForm()
-    results = []
-    if form.validate_on_submit():
-        query = form.search.data
-        query_terms = [term.lower() for term in query.strip().split()]
-        results = calculate_sorted_order_of_documents(query_terms)[:20:]
-    return render_template('index.html', form=form, results=results)
+# @app.route("/<query>")
+# def return_links(query):
+#     query_terms = [term.lower() for term in query.strip().split()]
+#     return jsonify(calculate_sorted_order_of_documents(query_terms)[:20:])
+
+
+# @app.route("/", methods=['GET', 'POST'])
+# def home():
+#     form = SearchForm()
+#     results = []
+#     if form.validate_on_submit():
+#         query = form.search.data
+#         query_terms = [term.lower() for term in query.strip().split()]
+#         results = calculate_sorted_order_of_documents(query_terms)[:20:]
+#     return render_template('index.html', form=form, results=results)

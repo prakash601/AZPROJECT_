@@ -62,7 +62,13 @@ def load_links_of_qs():
         links = f.readlines()
     return links
 
-Qlink = load_links_of_qs() 
+# get the document text from document.txt 
+def load_doc_text():
+    with open("TF_IDF/documents.txt", "r") as f:
+        docs = f.readlines()
+    return docs
+
+Doctext = load_doc_text()
 
 Qlink = load_links_of_qs() 
 vocab_idf_vales = load_vocab()
@@ -127,7 +133,7 @@ def calc_docs_sorted_order(q_terms):
         for doc_index in potential_docs:
             # print("Question Link:", Qlink[int(
             #     doc_index) - 1], "\tScore:", potential_docs[doc_index])
-            ans.append({"Question Link": Qlink[int(doc_index) - 1][:-1], "Score": potential_docs[doc_index]})
+            ans.append({"Question Link": Qlink[int(doc_index)][:-1], "text": Doctext[int(doc_index)]})
     return ans
     
     # i=0
