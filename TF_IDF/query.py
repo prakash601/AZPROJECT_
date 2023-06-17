@@ -232,9 +232,9 @@ def calc_docs_sorted_order(query_terms):
 query_string = input("Enter your query: ")
 # query_string = "Given an array of positive integers nums, return the maximum possible sum of an ascending subarray in nums.A subarray is defined as a contiguous sequence of numbers in an array."
 text = remove_stop_words(query_string)
-corrected_text = correct_spellings(text)
-print(corrected_text)
-query_terms = preprocess(corrected_text)
+# corrected_text = correct_spellings(text)
+print(text)
+query_terms = preprocess(text)
 
 # print(query_terms)
 p=calc_docs_sorted_order(query_terms)
