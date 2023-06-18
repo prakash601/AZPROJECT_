@@ -1,0 +1,20 @@
+We've learnt about operators and other basics of Java Now, it's time to take another leap and learn to use control structures that helps us choose flow of any code.
+Given two integers A and B. Your task is to print the even number first and odd number next in individual lines.
+Input Fomat:
+First line of input contains number of testcases denoted by T. For each testcase, there will be single line containing a and b separated by space.
+Output Fomat:
+For each testcase, print the even number first and odd number next in individual lines.
+User Task:
+Sinc this is a function problem, you don't have to take any input. You just have to complete the function evenOdd().
+Constraints:
+1 <= T <= 100
+0 <= A,B <= 108
+Example:
+Input:
+1
+4 5
+Output:
+4
+5
+Example:
+Testcase 1: 4 is even and printed first. 5 is odd and printed next.

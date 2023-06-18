@@ -1,0 +1,36 @@
+Given a Binary Search Tree that contains positive integer values greater than 0. The task is to complete the function isDeadEnd which returns true if the BST contains a dead end else returns false. Here Dead End means, we are not able to insert any element after that node.
+Example 1:
+Input : 
+  8
+ / \ 
+ 5 9
+ / \ 
+ 2 7 
+ /
+ 1 
+ 
+Output :
+Yes
+Node "1" is the dead End because after that 
+  we cant insert any element.
+Example 2:
+Input : 
+  8
+ / \ 
+ 7 10
+ / / \
+ 2 9 13
+
+Output :
+Yes
+Explanation :
+We can't insert any element at 
+ node 9.  
+Your Task:
+You don't have to input or print anything. Complete the function isDeadEnd() which takes the input parameter head and returns a boolean value.
+Expected Time Complexity: O(N) where N is the Number of nodes in a given binary tree.
+Expected Space Complexity: O(N)
+Constraints:
+1<=T<=100
+1<=N<=200
+ 

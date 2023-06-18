@@ -1,0 +1,19 @@
+Given a directed graph, find out if a vertex j is reachable from another vertex i for all vertex pairs (i, j) in the given graph. Here reachable mean that there is a path from vertex i to j. The reach-ability matrix is called transitive closure of a graph. The directed graph is represented by adjacency list graph where there are N vertices.
+Example 1:
+Input: N = 4
+graph = {{1, 1, 0, 1}, 
+  {0, 1, 1, 0}, 
+  {0, 0, 1, 1}, 
+  {0, 0, 0, 1}}
+Output: {{1, 1, 1, 1}, 
+  {0, 1, 1, 1}, 
+  {0, 0, 1, 1}, 
+  {0, 0, 0, 1}}
+Explaination: The output list shows the 
+reachable indexes.
+Your Task:
+You do not need to read input or print anything. Your task is to complete the function transitiveClosure() which takes N and graph as input parameters and returns the transitive closure of the graph in form of 2d array.
+Expected Time Complexity: O(N3)
+Expected Auxiliary Space: O(N2)
+Constraints:
+1 ≤ N ≤ 100  

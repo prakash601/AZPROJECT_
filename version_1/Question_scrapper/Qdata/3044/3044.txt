@@ -1,0 +1,31 @@
+Given two integer arrays Arr1 and Arr2 of size N. Use the greatest elements from the given arrays to create a new array of size N such that it consists of only unique elements and the sum of all its elements is maximum.
+The created elements should contain the elements of Arr2 followed by elements of Arr1 in order of their appearance.
+Note: The input array will be given in such way, that every time it is possible to make a new arr by maintaing the following conditions.
+
+Example 1:
+Input:
+N = 5
+Arr1 = {7, 4, 8, 0, 1}
+Arr2 = {9, 7, 2, 3, 6}
+Output: 9 7 6 4 8
+ 9, 7, 6 are from 2nd array
+and 4, 8 from 1st array.
+
+Example 2:
+Input: N = 4
+Arr1 = {6, 7, 5, 3}
+Arr2 = {5, 6, 2, 9} 
+Output: 5 6 9 7 
+Explanation: 5, 6, 9 are from 2nd array
+and 7 from 1st array.
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function maximizeArray() which takes the array arr1[], arr2[] and n as input parameters and returns the desired array of integers.
+
+Expected Time Complexity: O(NlogN)
+Expected Auxiliary Space: O(N)
+
+Constraints:
+1 <= N <= 105
+0 <=| Arr1[i] |<= 109
+0 <= |Arr2[i] |<= 109

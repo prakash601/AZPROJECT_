@@ -1,0 +1,27 @@
+Given a set of n non-negative integers, and a value m, determine if there is a subset of the given set with sum divisible by m.
+Example 1:
+Input: 
+n = 4 m = 6 
+nums[] = {3 1 7 5}
+Output:
+1
+Explanation:
+If we take the subset {7, 5} then sum
+will be 12 which is divisible by 6.
+Example 2:
+Input:
+n = 3, m = 5
+nums[] = {1 2 6}
+0
+Explanation: 
+All possible subsets of the given set are 
+{1}, {2}, {6}, {1, 2}, {2, 6}, {1, 6}
+and {1, 2, 6}. There is no subset whose
+sum is divisible by 5.
+Your Task:
+You don't need to read or print anything. Your task is to complete the function DivisibleByM() which takes the given set and m as input parameter and returns 1 if any of the subset(non-empty) sum is divisible by m otherwise returns 0.
+Expected Time Complexity: O(n*m)
+Expected Space Complexity: O(n)
+Constraints:
+1 <= elements in set <= 1000
+1 <= n, m <= 1000

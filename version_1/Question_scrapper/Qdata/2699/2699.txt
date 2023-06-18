@@ -1,0 +1,24 @@
+Given an array arr of size n. Print all the numbers less than k and should be such that the difference between every adjacent digit should be 1 in the array.
+Note: Return empty list if no such number present, driver code will automatically print -1.
+Example 1:
+Input:
+n = 8, k = 54
+arr[] = {7, 98, 56, 43, 45, 23, 12, 8}
+Output: 43 45 23 12
+Explanation: 43 45 23 12 all these numbers have adjacent 
+digits diff as 1 and they areless than 54.
+Example 2:
+Input:
+n = 10, k = 1000
+arr[] = {87, 89, 45, 235, 465, 765, 123, 987, 499, 655}
+Output: 87 89 45 765 123 987
+Explanation: 87 89 45 765 123 987 all these numbers have adjacent
+digits diff as 1 and they areless than 1000.
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function getDigitDiff1AndLessK() which takes the array of integers arr, n and k as parameters and returns a list of integer denoting the answer.
+Expected Time Complexity:O(n)
+Expected Auxiliary Space:O(1)
+Constraints:
+1 <= n <= 107
+1 <= k, arr[i] <= 1018
+ 

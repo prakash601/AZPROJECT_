@@ -1,0 +1,24 @@
+Given N number of square blocks. The height of each square block is 1. The task is to create a  staircase of max height using these blocks.
+Note: The first stair would require only one block, the second stair would require two blocks and so on.
+Example 1:
+Input:
+N = 10
+Output:
+4
+Explanation:
+The max height of the stairs with
+10 blocks is 4.
+Example 2:
+Input:
+
+Output:
+5
+Explanation:
+The max height of the stairs with
+16 blocks is 5.
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function maxStairHeight() which takes an Integer N as input and returns the answer.
+Expected Time Complexity: O(1)
+Expected Auxiliary Space: O(1)
+Constraints:
+1 <= N <= 108

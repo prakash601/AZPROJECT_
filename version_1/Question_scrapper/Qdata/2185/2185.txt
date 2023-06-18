@@ -1,0 +1,23 @@
+Given an array of integers arr[0..n-1], count all pairs (arr[i], arr[j]) in it such that i*arr[i] > j*arr[j],
+and 0 ≤ i < j < n.
+  Example 1:
+Input :
+arr[] = {5, 0, 10, 2, 4, 1, 6}
+Output :
+5
+Explanation :
+Pairs which hold condition i*arr[i] > j*arr[j] are
+(10, 2) (10, 4) (10, 1) (2, 1) (4, 1)
+  Example 2:
+arr[] = {8, 4, 2, 1}
+Output :
+2
+ 
+Your Task:  
+You don't need to read input or print anything. Your task is to complete the function countPairs() which takes the array A[] and its size N as inputs and returns the required result.
+  Expected Time Complexity: O(N. log(N))
+Expected Auxiliary Space: O(N. log(N))
+  Constraints:
+1 ≤ N ≤ 105
+1 ≤ A[ ] ≤ 103
+   

@@ -1,0 +1,19 @@
+Macro is one of the most important part of CPP preprocessors. It allows us to define variables and functions and it basically works by substituting the value or function during the preprocessing stage of code conversion(High level to Low level). So, let's dive into preprocessors!
+You are given two inputs: a(integer),and b(integer). You need to print a * b .
+Input Format:
+First line of input conatins number of testcases T. For each testcase, there will be one line of input containing a and b.
+Output Format:
+For each testcase, print a*b.
+User Task:
+Your task is to complete the provided function .
+Constraints:
+1 <= T <= 10
+1 <= a,b <= 100
+Input:
+2
+5 6
+7 11
+Output:
+30
+77
+ 

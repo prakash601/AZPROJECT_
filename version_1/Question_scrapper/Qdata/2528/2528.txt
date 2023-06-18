@@ -1,0 +1,19 @@
+Given an odd length word your task is to complete the function printPattern that takes a string s as its argument and prints it from the middle of the word such that it follows the following pattern.
+  Input: PROGRAM 
+Output:
+G$ GR$ GRA$ GRAM$ 
+GRAMP$ GRAMPR$ GRAMPRO$
+
+Input: RAT
+Output:
+A$ AT$ ATR$
+
+NOTE: 
+Corresponding to each test case in a new 
+line print the pattern in a  single 
+line where each row of the pattern 
+is separated by a instead 
+of a new line.
+Constraints:
+1 ≤ T ≤ 20
+1<=size of string(s)<=20

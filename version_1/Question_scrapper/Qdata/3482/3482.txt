@@ -1,0 +1,29 @@
+A Tic-Tac-Toe board is given after some moves are played. Find out if the given board is valid, i.e., is it possible to reach this board position after some moves or not.
+Note that every arbitrary filled grid of 9 spaces isn’t valid e.g. a grid filled with 3 X and 6 O isn’t valid situation because each player needs to take alternate turns.
+Note :  The game starts with X
+
+Example 1:
+Input:
+board[] = {'X', 'X', 'O', 
+ 'O', 'O', 'X',
+ 'X', 'O', 'X'};
+Output: Valid
+Explanation: This is a valid board.
+
+Example 2:
+Input:
+board[] = {'O', 'X', 'X', 
+ 'O', 'X', 'X',
+ 'O', 'O', 'X'};
+Output: Invalid
+Explanation: Both X and O cannot win.
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function isValid() which takes a character array of size 9 representing the board as input parameter and returns a boolean value denoting if it is valid or not.
+
+Expected Time Complexity: O(1)
+Expected Auxiliary Space: O(1)
+
+Constraints:
+Every character on the board can either be 'X' or 'O'.
+ 

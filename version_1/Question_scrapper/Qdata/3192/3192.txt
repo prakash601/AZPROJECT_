@@ -1,0 +1,13 @@
+You are given two strings s and t. Now your task is to print all longest common sub-sequences in lexicographical order.
+Example 1:
+Input: s = abaaa, t = baabaca
+Output: aaaa abaa baaa
+Example 2:
+Input: s = aaa, t = a
+Output: a
+Your Task:
+You do not need to read or print anything. Your task is to complete the function all_longest_common_subsequences() which takes string a and b as first and second parameter respectively and returns a list of strings which contains all possible longest common subsequences in lexicographical order.
+  Expected Time Complexity: O(n4)
+Expected Space Complexity: O(K * n) where K is a constant less than n.
+  Constraints:
+1 ≤ Length of both strings ≤ 50

@@ -35,24 +35,24 @@ def get_array_of_links():
     return arr
 
 
-def add_text_to_index_file(text):
-    index_file_path = os.path.join(QDATA_FOLDER, "index.txt")
-    with open(index_file_path, "a") as index_file:
-        index_file.write(text + "\n")
+# def add_text_to_index_file(text):
+#     index_file_path = os.path.join(QDATA_FOLDER, "index.txt")
+#     with open(index_file_path, "a") as index_file:
+#         index_file.write(text + "\n")
 
 
-def add_link_to_Qindex_file(text):
-    index_file_path = os.path.join(QDATA_FOLDER, "Qindex.txt")
-    with open(index_file_path, "a", encoding="utf-8", errors="ignore") as Qindex_file:
-        Qindex_file.write(text)
+# def add_link_to_Qindex_file(text):
+#     index_file_path = os.path.join(QDATA_FOLDER, "Qindex.txt")
+#     with open(index_file_path, "a", encoding="utf-8", errors="ignore") as Qindex_file:
+#         Qindex_file.write(text)
 
 
-def create_and_add_text_to_file(file_name, text):
-    folder_path = os.path.join(QDATA_FOLDER, file_name)
-    os.makedirs(folder_path, exist_ok=True)
-    file_path = os.path.join(folder_path, file_name + ".txt")
-    with open(file_path, "w", encoding="utf-8", errors="ignore") as new_file:
-        new_file.write(text)
+# def create_and_add_text_to_file(file_name, text):
+#     folder_path = os.path.join(QDATA_FOLDER, file_name)
+#     os.makedirs(folder_path, exist_ok=True)
+#     file_path = os.path.join(folder_path, file_name + ".txt")
+#     with open(file_path, "w", encoding="utf-8", errors="ignore") as new_file:
+#         new_file.write(text)
 
 
 def getPagaData(url, index):
@@ -61,14 +61,27 @@ def getPagaData(url, index):
         WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, body_class)))
         time.sleep(1)
+        # heading = driver.find_element(By.CSS_SELECTOR, heading_class)
+        # body = driver.find_element(By.CSS_SELECTOR, body_class)
+        # print(heading.text)
         heading = driver.find_element(By.CSS_SELECTOR, heading_class)
         body = driver.find_element(By.CSS_SELECTOR, body_class)
+        body_text = body.text
+
+        # Split the heading text into lines
+        lines = body_text.split('\n')
+
+        # Exclude the first line
+        lines_except_first = lines[1:]
+
+        # Join the lines back into a single string
+        modified_body_text = '\n'.join(lines_except_first)
         print(heading.text)
-        print(body.text)
+        print(modified_body_text)
         # if (heading.text):
         #     add_text_to_index_file(heading.text)
         #     add_link_to_Qindex_file(url)
-        #     create_and_add_text_to_file(str(index), body.text)
+        #     create_and_add_text_to_file(str(index), modified_body_text)
         time.sleep(1)
         return True
     except Exception as e:

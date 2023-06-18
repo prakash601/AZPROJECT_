@@ -1,0 +1,19 @@
+Before implementing any algorithm, we should be thorough with taking inputs. Here, we will learn how to read inputs.
+You are given two inputs: a(integer), and b(string). You need to take the input and print a and b separated by a space.
+Note : You don't have to print any new lines.
+Example 1:
+Input:
+a = 5
+b = Hello
+Output:
+5 Hello
+Example 2:
+Input:
+a = 7
+b = Geeks
+Output:
+7 Geeks
+  Constraints:
+1 <= a <= 106
+Video:
+ 

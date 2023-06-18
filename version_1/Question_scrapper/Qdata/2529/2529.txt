@@ -1,0 +1,24 @@
+You are given array A of size n. You need to find the maximum-sum sub-array with the condition that you are allowed to skip at most one element.
+Example 1:
+Input:
+n = 5
+A[] = {1,2,3,-4,5}
+Output: 11
+Explanation: We can get maximum sum
+subarray by skipping -4.
+Example 2:
+Input:
+n = 8
+A[] = {-2,-3,4,-1,-2,1,5,-3}
+Output: 9
+Explanation: We can get maximum sum
+subarray by skipping -2 as [4,-1,1,5]
+sums to 9, which is the maximum
+achievable sum.
+Your Task:
+Your task is to complete the function maxSumSubarray that take array and size as parameters and returns the maximum sum.
+Expected Time Complexity: O(N).
+Expected Auxiliary Space: O(N).
+Constraints:
+1 <= n <= 100
+-103 <= Ai<= 103

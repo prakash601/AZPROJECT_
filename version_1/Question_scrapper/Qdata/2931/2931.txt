@@ -1,0 +1,18 @@
+Given a binary tree of size N, your task is to that find all duplicate subtrees from the given binary tree.
+
+Note: Here's the Output of every Node printed in the Pre-Order tree traversal format. Arrange nodes in the answer array based on the lexicographically incresing order of their preorder traversal of subtree.
+For Example: if we have 3 preorder traversal as {1,2,3},{1},{11,2,3} than your lexicographically increasing order is {1},{1,2,3},{11,2,3}, you are supposed to output the head of all these subtrees in the same order.
+
+Example:
+Output : 2 4
+  4
+Explanation: Above Trees are two 
+duplicate subtrees.i.e and 
+Therefore,you need to return above trees 
+root in the form of a list.
+Your Task:
+You don't need to take input. Just complete the function printAllDups() that takes the root node as a parameter and returns an array of Node*, which contains all the duplicate subtree.
+
+Constraints:
+1<=T<=100
+1<=N<=100

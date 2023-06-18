@@ -1,0 +1,20 @@
+You are given a string s containing only lowecase letters. You need to count the number of vowels and the number of consonants.
+If vowel count > consonant count then print - “Yes”(without quotes).
+If vowel count < consonant count then print - “No”(without quotes).
+If vowel count = consonant count then print - “Same”(without quotes).
+Example 1:
+Input:
+the quick brown fox jumps over the lazy dog
+
+Output:
+No
+Example 2:
+Input:
+aaaaaa
+
+Output:
+Yes
+Your Task:
+Since this is a function problem, you don't need to take any input. Just complete the function checkString(string  s) that take s as input and produces output.
+Constraints:
+1 <= |s| <= 100

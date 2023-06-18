@@ -1,0 +1,18 @@
+Here, we'll learn the delete keyword that's used to clear the dynamically allocated memory in CPP.
+Given a dynamic array A of size N. The task is to find the sum of array elements.
+Example 1:
+Input:
+N = 5
+A[] = 1 2 3 4 5
+Output: 
+15
+1
+Explanation:
+Sum of array elements is 15 
+(1 + 2 + 3 + 4 + 5). The first
+element is 1.
+ 
+Just comment the line that is deallocating the array. Driver code will output the sum of array elements and in next line prints the first array element(A[0]).
+Constraints:
+1 <= N <= 100
+1 <= A[i] <= 105

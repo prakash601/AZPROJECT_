@@ -2160,3 +2160,1343 @@
 1043. Partition Array for Maximum Sum
 1739. Building Boxes
 208. Implement Trie (Prefix Tree)
+Look and Say Pattern
+Possible Words From Phone Digits
+Asteroid Collision
+Max distance between same elements
+Delete nodes greater than k
+Product Pair
+Find Missing And Repeating
+Maximum subset sum
+Lucky Numbers
+Minimum indexed character
+Valid Pair Sum
+Maximum number of 2X2 squares
+Geek and Number String
+Unequal Arrays
+Count number of words
+Diameter of a Binary Tree
+Missing number
+Remaining String
+Count pairs with given sum
+Maximize The Cut Segments
+Sum of Left Leaf Nodes
+C++ Hello World
+Count Pairs in an Array
+Leaf at same level
+Next Right Node
+Is it Fibonacci
+Maximum Possible Value
+Transfiguration
+Single valued subtree
+Positive Negative Pair
+Dice throw
+Pattern 1
+Construct Tree from Inorder & Preorder
+Check for Balanced Tree
+Non Repeating Numbers
+Fascinating Number
+Sorted insert for circular linked list
+Distance from the Source (Bellman-Ford Algorithm)
+Find position of set bit
+Palindromic Partitioning
+Lexicographically smallest string
+Count number of substrings
+Find the Frequency
+Subset Sums
+Two Repeated Elements
+The Bit Game
+Check if the door is open or closed
+Max and min element in Binary Tree
+String Mirror
+Minimize the Heights II
+Even Odd
+Smallest range in K lists
+Wildcard string matching
+Reverse a String
+Convert an array to reduced form
+Find Kth permutation
+Binary matrix having maximum number of 1s
+Min Number of Flips
+Find the first node of loop in linked list
+Facing the sun
+Count type of Characters
+Get Minimum Squares
+Chicks in a Zoo
+Linked List in Zig-Zag fashion
+Max Coins
+Exceptionally odd
+Maximize the sum of selected numbers from a sorted array to make it empty
+Modular Node
+Sort an array of 0s, 1s and 2s
+Stack designer
+Counts Zeros Xor Pairs
+Matrix Interchange - Java
+K Sum Paths
+String formation from substring
+Sieve of Eratosthenes
+Maximize Number of 1's
+Maximum Sub Array
+Water Overflow
+Binary String
+Clone a linked list with next and random pointer
+Minimum times A has to be repeated such that B is a substring of it
+Alternate Vowel and Consonant String
+Largest subarray with 0 sum
+Find length of Loop
+Cake Distribution Problem
+Smallest number
+Squares in N*N Chessboard
+Foldable Binary Tree
+Root to leaf path sum
+Maximum money
+LCM Triplet
+Rotate Array
+Logical Operators
+Edit Distance
+Inorder Successor in BST
+Implement stack using array
+Learning Structs
+Toggle bits given range
+Save Gotham!
+Move all negative elements to end
+Minimum BST Sum Subtree
+Linked List that is Sorted Alternatingly
+Print Bracket Number
+Operating an array
+Find all factorial numbers less than or equal to N
+Maximum product of two numbers
+Geek and Strings
+Print first letter of every word in the string
+Count ways to N'th Stair(Order does not matter)
+Sum of all prime numbers between 1 and N.
+Smallest divisible number
+Find k-th smallest element in given n ranges
+Top View of Binary Tree
+Partition the Array
+Product of Primes
+Longest Common Subsequence
+Check for BST
+Two numbers with odd occurrences
+Check for Binary
+Merge Sort for Linked List
+Maximum Intervals Overlap
+Prerequisite Tasks
+Row with minimum number of 1's
+Count pairs in array divisible by K
+Reversing the vowels
+Wildcard Pattern Matching
+Taking input
+Bit Magic
+Searching a number
+Longest Palindrome in a String
+Pairs with Positive Negative values
+Display longest name
+Java Strings | Set 1
+Choose and Swap
+IPL 2021 - Match Day 2
+Find Nth root of M
+Find Common Nodes in two BSTs
+Validate an IP Address
+Steps by Knight
+Pattern 2
+Min sum formed by digits
+Check if a number is divisible by 8
+Circle of strings
+Vowel or Not
+Reversing the equation
+Delete alternate characters
+Check if array is sorted
+Add Binary Strings
+Find the closest number
+Subsets
+Hands of Straights
+Course Schedule
+Subset Sum Problem
+Sum of elements in a matrix
+Maximum Sub-String after at most K changes
+Delete a Node in Single Linked List
+Remove consonants from a string
+Move all zeroes to end of array
+Maximum Meetings in One Room
+Index of first 1 in a sorted array of 0s and 1s
+Minimum Swaps for Bracket Balancing
+Determine if Two Trees are Identical
+Coin Piles
+Construct Tree from Preorder Traversal
+Find the string in grid
+Make Palindrome
+Yet another query problem
+Split a Circular Linked List into two halves
+Doubly linked list Insertion at given position
+Save Ironman
+Multiply Matrices
+Count all possible paths from top left to bottom right
+C++ Operators | Set 1 (Arithmetic)
+Array Pair Sum Divisibility Problem
+Row with max 1s
+Step by Step Condition
+Print BST elements in given range
+Inorder Traversal (Iterative)
+Find number of closed islands
+A difference of values and indexes
+Kth Ancestor in a Tree
+Play with an array
+Node at a given index in linked list
+Missing number in matrix
+GCD Array
+Merge two BST 's
+Number Of Enclaves
+Consonants and Vowels check - Java
+Wave Array
+Sum of numbers in string
+Find Number of Numbers
+Diagonal Sum In Binary Tree
+Remove character
+Sum of Right Leaf Nodes
+Ease the Array
+Non Repeating Character
+Easy Task
+Count number of hops
+LRU Cache
+Find the number of islands
+Subarrays with given sum
+Vertical Traversal of Binary Tree
+Aggressive Cows
+Match specific pattern
+Maximum Number of coins
+Phone directory
+3 Divisors
+Children Sum Parent
+Shuffle integers
+Rat in a Maze Problem - I
+Check String
+Is Binary Number Multiple of 3
+Three way partitioning
+Shortest XY distance in Grid
+Ways To Tile A Floor
+Implement Stack using Linked List
+K closest elements
+Rearrange Array Alternately
+Sequence Fun
+Almost Equal
+Insertion Sort
+Insert in Middle of Linked List
+Water Collection
+Two Mirror Trees
+Start Coding
+Replace every element with the least greater element on its right
+Tree Transformation
+Sum of two numbers represented as arrays
+Minimum Cost of ropes
+Total Cuts
+Extract the Number from the String
+Sum Of Prime
+BST to max heap
+Job Sequencing Problem
+Java Substring
+Intersection of two sorted Linked lists
+Multiply two strings
+Almost Equal -Java
+Remove every k'th node
+Count the Substring
+Special Palindrome Substrings
+Word Break
+Bus Conductor
+Count the number of possible triangles
+Finding Profession
+Largest number possible
+Print Diagonally
+Get min at pop
+Leftmost and rightmost nodes of binary tree
+Count the subarrays having product less than k
+Maximum of minimum for every window size
+Reverse a linked list
+Geek's Village and Wells
+Check if a string is Isogram or not
+Find duplicates under given constraints
+Delete nodes having greater value on right
+Convert to Roman No
+Maximum Intersecting Lines
+Nearly sorted
+Number of Good Components
+Smallest Subset with Greater Sum
+Number Of Open Doors
+Longest Palindromic Substring
+Complete Binary Tree
+Palindrome String
+Distinct occurrences
+Print the Kth Digit
+Longest Consecutive 1's
+Boundary Traversal of binary tree
+Generate Binary Numbers
+For Loop- primeCheck - Java
+Smaller and Larger
+Array Removals
+Key Pair
+Sum of first n terms
+Sort a String
+Length of the longest subarray with positive product
+longest substring containing '1'
+Linked List Insertion
+Restrictive Candy Crush
+Boolean Matrix
+Multiplication Table
+Minimum element in BST
+Count the elements
+Count Palindromic Subsequences
+Bitwise Operators - Java
+The Pattern Matcher - Java
+Power of 2
+Absolute List Sorting
+Armstrong Numbers
+Balanced string
+Longest consecutive subsequence
+Swap and Maximize
+Add two numbers represented by linked lists
+Count triplets with sum smaller than X
+Longest alternating subsequence
+Set kth bit
+Water Connection Problem
+C++ Input / Output
+Queue using two Stacks
+Bleak Numbers
+Minimum distance between two numbers
+Reverse a Stack
+Complement
+Segregate 0s and 1s
+Count ways to reach the n'th stair
+Search in a matrix
+Check Mirror in N-ary tree
+First and last occurrences of X
+Length Unsorted Subarray
+Akku and Binary Numbers
+Recursively remove all adjacent duplicates
+Minimum indexed character
+Maximum Profit
+Count zeros in a sorted matrix
+Find the longest string
+Plus One
+Smallest Absolute Difference
+Implement Queue using array
+Delete without head pointer
+Sum of Leaf Nodes at Min Level
+Maximum Number of Toys
+Reverse both parts
+Form a number divisible by 3 using array digits
+Reverse a Linked List in groups of given size.
+Kth smallest element
+Height of Binary Tree
+Find first set bit
+Swap kth elements
+Next greater number set digits
+Minimize the sum
+Bit Difference
+Activity Selection
+Maximum Node Level
+Root to Leaf Paths
+Maximum repeating number
+Count possible ways to construct buildings
+Interleaved Strings
+Remove duplicate element from sorted Linked List
+Minimize the sum of product
+Odd to Even
+Generate Parentheses
+Kth largest element in a stream
+Copy Set Bits in Range
+Find the minimum time
+Design a tiny URL or URL shortener
+Factorials of large numbers
+Max Sum Subarray of size K
+Polynomial Addition
+Reach a given score
+Apple Sequences
+Minimum Spanning Tree
+Binary Tree to CDLL
+Binary Tree to DLL
+Subsets with XOR value
+Geeks And The String
+Ishaan Loves Chocolates
+Count Non-Leaf Nodes in Tree
+Allocate minimum number of pages
+Rotate Bits
+Expression Tree
+Huffman Encoding
+Gold Mine Problem
+Last index of One
+X Total Shapes
+Middle Pattern
+Max sum subarray by removing at most one element
+K-th missing element
+Longest Sub-Array with Sum K
+Sorted matrix
+Find n-th term of series 1, 3, 6, 10, 15, 21
+Buildings receiving sunlight
+Addition of submatrix
+Check if all levels of two trees are anagrams or not
+Find the Closest Element in BST
+Carpet into Box
+Count of camel case characters
+Unique Paths in a Grid
+Binary Tree to BST
+The Smurfs
+Container With Most Water
+Shortest path from 1 to n
+Frogs and Jumps
+Prime List
+Factorial
+Professor and Parties
+Check if it is possible to survive on Island
+LCM And GCD
+Find minimum number of Laptops required
+GCD of two numbers
+Build the smallest
+Print first n Fibonacci Numbers
+Make Binary Tree From Linked List
+Anagram
+Is Binary Tree Heap
+k largest elements
+Change the string
+Flatten binary tree to linked list
+Help Classmates
+Smallest factorial number
+Bit Difference
+Shy Geek
+Subset with sum divisible by m
+Product of array elements
+Unique Subsets
+Find first repeated character
+Connect Nodes at Same Level
+Maximum Weight Node
+if-else (Decision Making)
+Vertical Width of a Binary Tree
+Find patterns
+Floor in a Sorted Array
+Geek hates too many 1s
+Jumping Numbers
+Generate IP Addresses
+Matrix Chain Multiplication
+Fighting the darkness
+Shortest path in Directed Acyclic Graph
+Check whether K-th bit is set or not
+Equal Sum
+Lowest Common Ancestor in a BST
+Count Smaller elements
+Pattern 4
+Smallest distinct window
+Min Coin
+C++ Strings
+Check if subtree
+Maximum difference between node and its ancestor
+Maximum of all subarrays of size k
+Reorder List
+Binary number to decimal number
+Count Number of SubTrees having given Sum
+Palindrome Pairs
+Maximize sum(arr[i]*i) of an Array
+Smaller Sum
+Search insert position of K in a sorted array
+Page Faults in LRU
+Break a number
+Count distinct elements in every window
+Subarray with 0 sum
+Find Prime numbers in a range
+Search in a Rotated Array
+Maximum Path Sum between 2 Special Nodes
+Delete Middle of Linked List
+BST Maximum Difference
+Adding Array Elements
+Subarrays with equal 1s and 0s
+Mean
+Power Of Numbers
+Longest Common Substring
+Learning to be precise
+Largest Sum Cycle
+Level order traversal in spiral form
+Flood fill Algorithm
+Number is sparse or not
+Star elements
+Duplicate subtree in Binary Tree
+Subtraction in Linked List
+Even Odd - Java
+Square root of a number
+Count Odd Even
+Angle between hour and minute hand
+Word Wrap
+Stock buy and sell II
+Print an array in Pendulum Arrangement
+Split the binary string into substrings with equal number of 0s and 1s
+Shortest Path in Weighted undirected graph
+Palindrome
+Pythagorean Triplet
+Predict the Column - Java
+Keypad typing
+Implement Atoi
+Fill the Matrix
+Minimum Platforms
+Largest prime factor
+Find the Node with maximum GCD of the siblings of a Binary Tree
+Perfect Arrays
+Rearrange characters
+Check if the number is balanced
+C++ Array (print an element) | Set 2
+Identical Linked Lists
+Union of Two Linked Lists
+Maximum XOR subarray
+N-Queen Problem
+Count Cyclic Paths
+First non-repeating character in a stream
+Sum of Array Elements
+The New Line
+Remove duplicates in small prime array
+Roof Top
+Negative weight cycle
+Pattern 7
+Selection Sort
+Buy and Sell a Share at most twice
+Insert a node in a BST
+Merge k Sorted Arrays
+Nodes at given distance in binary tree
+Count of smaller elements
+ZigZag Tree Traversal
+Check if strings are rotations of each other or not
+Pattern
+Smallest Positive missing number
+Geek collects the balls
+Frequency Game
+Non-Repeating Element
+Sum of Array
+Super Primes
+String with numbers at its end
+Delete middle element of a stack
+Print the left element
+Merge K sorted linked lists
+Sort a stack
+Tower Of Hanoi
+Rectangles in N*N Board
+Quick Left Rotation
+Shortest Common Supersequence
+Expression Add Operators
+Diagonal Traversal of Binary Tree
+Reverse digits
+Java Arrays | Set 1
+Smaller on Left
+Magic Triplets
+Sum of leaf nodes in BST
+0 - 1 Knapsack Problem
+Max Min
+Closest Strings
+The Size of
+Smallest subarray with sum greater than x
+Search an element in sorted and rotated array
+Roman Number to Integer
+Extract Maximum
+Play With OR
+Check for subsequence
+Count distinct pairs with difference k
+Maximum Occuring Character
+Maximum Tip Calculator
+Absolute Difference of 1
+Power Of 2 and Subsequences
+Police and Thieves
+Postorder Traversal (Iterative)
+Count Special Numbers
+Count Digits
+Minimum Steps Required
+Deque Implementations
+K-Pangrams
+Print adjacency list
+Left View of Binary Tree
+Find k-th character in string
+Convert Level Order Traversal to BST
+Trailing zeroes in factorial
+Rotten Oranges
+Median of the Subarrays
+Counting elements in two arrays
+Product of maximum in first array and minimum in second
+Count ways to N'th Stair(Order does not matter)
+Sum Palindrome
+Pair with given sum in a sorted array
+Redundant Parenthesis
+Deletion and Reverse in Linked List
+Walls Coloring II
+Equilibrium index of an array
+Sort in specific order
+C++ Basic Data types
+Fill up buckets
+Number of Subarrays of 0's
+Half N by M
+C++ 2-D Arrays | Set-1
+Arya's Long String
+Construct a Full Binary Tree
+Pattern 8
+Prime Factors
+Need Some Change - Java
+Find the smallest and second smallest element in an array
+Longest Common Prefix in an Array
+Convert array into Zig-Zag fashion
+Count of sum of consecutives
+Knight Walk
+Thief trying to escape
+Elements in the Range
+Clone a Binary Tree
+Sorted Link List to BST
+Count Palindrome Sub-Strings of a String
+Word Search
+BBT counter
+Maximum Profit By Choosing A Subset Of Intervals
+Count Squares
+Valid Compressed String
+Absolute difference divisible by K
+Find Index
+Party of Couples
+Data Types - Java
+Second Largest
+Longest consecutive sequence in Binary tree
+Multiply left and right array sum.
+Closest Palindrome
+Nth Natural Number
+Sort and Reverse Vector
+Update Queries
+Merge 2 sorted linked list in reverse order
+Minimum characters to be added at front to make string palindrome
+Word Boggle
+Largest subarray of 0's and 1's
+Greater on right side
+Deletion in a Binary Tree
+Left most and right most index
+The Celebrity Problem
+Case-specific Sorting of Strings
+Level of Nodes
+Kth largest element in BST
+Fact Digit Sum
+Missing element of AP
+Count the characters
+Find median in a stream
+Convert a sentence into its equivalent mobile numeric keypad sequence
+Last modified ball
+Median of BST
+Modified Numbers and Queries
+Need Some Change
+Count number of free cell
+Count even length
+Total Decoding Messages
+Largest subtree sum in a tree
+Reverse a Doubly Linked List
+Maximum in Struct Array
+Find a pair with given target in BST
+Remove vowels from string
+Mobile numeric keypad
+Max rectangle
+Occurence of an integer in a Linked List
+Maximum Sum Problem
+Counting Sort
+Minimum Depth of a Binary Tree
+Minimum sum
+Max Sum without Adjacents
+Nth catalan number
+Strongly Connected Components (Kosaraju's Algo)
+Frequencies of Limited Range Array Elements
+Print Elements of Array
+Excel Sheet | Part - 1
+Sum of two elements with sum nearest to zero
+Print Anagrams Together
+Handshakes
+Series GP
+Maximum sum Rectangle
+Overlapping rectangles
+Ancestors in Binary Tree
+Repeated String Match
+Cutting Binary String
+Stock buy and sell
+Leaders in an array
+Searching an element in a sorted array
+Check if a number is power of another number
+Insert in a Sorted List
+Josephus problem
+Shortest Path by Removing K walls
+Count More than n/k Occurences
+Move all zeros to the front of the linked list
+Level order traversal
+Rotation
+Combination Sum
+Hamiltonian Path
+Infix to Postfix
+Maximum path sum in matrix
+The Penalty Shootout
+Union-Find
+Remove loop in Linked List
+Substrings of length k with k-1 distinct elements
+Boundary traversal of matrix
+1[0]1 Pattern Count
+Remove Consecutive Characters
+Nearest smaller tower
+Stickler Thief
+Merge Sort
+Remove Duplicates
+Walls Coloring
+Delete node in Doubly Linked List
+Print the pattern | Set-1
+Queue Push & Pop
+Level of a Node in Binary Tree
+Sum of Series
+Normal BST to Balanced BST
+Stack using two queues
+Longest subarray with sum divisible by K
+Maximum Rectangular Area in a Histogram
+Queue using stack
+Rotate a 2D array without using extra space
+Pairwise swap elements of a linked list
+Perfect Numbers
+Run Length Encoding
+Binary Search in forest
+Balloon Everywhere
+Maximum Index
+Array to BST
+Three Sum Closest
+Swap two numbers
+Count Odd Even - Java
+Wine Buying and Selling
+Predict the Column
+LCS of three strings
+Learn to Comment
+Populate Inorder Successor for all nodes
+Maximum Gap
+Java Input/Output
+Index Of an Extra Element
+Best Node
+Red OR Green
+Transitive closure of a Graph
+Intersection of Two Linked Lists
+First Repeating Element
+Level order traversal Line by Line
+Preorder traversal (Iterative)
+Column name from a given column number
+Sum of Leaf Nodes
+Remove Half Nodes
+Maximum Bipartite Matching
+Jump Game
+Product array puzzle
+Brothers From Different Roots
+Nearest multiple of 10
+Express as sum of power of natural numbers
+Black and White
+Sum of all substrings of a number
+Find distinct elements
+Fixing Two swapped nodes of a BST
+Kadane's Algorithm
+Minimum number of jumps
+Maximum difference of zeros and ones in binary string
+Upper case conversion
+Maximum product subset of an array
+Binary Modulo
+Sum of bit differences
+Heap Sort
+Help the Old Man!!!
+Sum of Beauty of All Substrings
+Fibonacci Sum
+Merge two strings
+Good or Bad string
+Find duplicates in an array
+Rotate and delete
+Swap Kth nodes from ends
+Count the paths
+Gray to Binary equivalent
+Alternative Sorting
+Size of Binary Tree
+Check if it is possible to convert one string into another with given constraints
+Smallest sum contiguous subarray
+Check if Tree is Isomorphic
+Bitwise Operators
+Partitions with Given Difference
+Find the Safe Position
+Count subsequences of type a^i, b^j, c^k
+Detect cycle in an undirected graph
+Maximum subset XOR
+Find Number
+Spiral Matrix
+Nth item through sum
+Modular Exponentiation for large numbers
+Max Circular Subarray Sum
+K distance from root
+Largest number with given sum
+Minimum element in a sorted and rotated array
+Print GFG n times
+Minimum Operations
+Remove duplicates from an unsorted linked list
+Number of Coins
+Maximum Difference
+Divide in Incremental Groups
+Most frequent word in an array of strings
+Duplicate Subtrees
+Back to Front
+Flattening a Linked List
+Shortest Distance in a Binary Maze
+Anagram Palindrome
+Find Transition Point
+Java Switch Case statement
+Find the median
+Searching in an array where adjacent differ by at most k
+Transform the array
+Common Elements
+Egg Dropping Puzzle
+Word Break - Part 2
+Game with String
+Topological sort
+Pattern 6
+Rearrange an array with O(1) extra space
+Construct Binary Tree from Parent Array
+Preorder Traversal and BST
+Select Nodes
+Filling Bucket
+Equal Left and Right Subarray Sum
+Longest Increasing Subsequence
+Fitting The Array
+Remove b and ac from a given string
+Third largest element
+Special Stack
+Find anagrams in linked list
+Friends Pairing Problem
+Minimum Deletions
+Number of paths
+Count nodes of linked list
+Shortest Path Using Atmost One Curved Edge
+Make array elements unique
+Max Level Sum in Binary Tree
+Type of array
+Minimum X (xor) A
+Rotate by 90 degree
+Possible paths between 2 vertices
+Stock span problem
+Special Digits
+Sum of upper and lower triangles
+Learning Macros
+Power of Pow | Even Number
+Check if two arrays are equal or not
+Longest Distinct characters in string
+Minimum Number in a sorted rotated array
+Majority Element
+Learn to Comment - Java
+Decode the string
+Find All Four Sum Numbers
+C++ Pointers ( Incrementing a variable) | Set 1
+Array Subset of another array
+Number of Turns in Binary Tree
+Largest Fibonacci Subsequence
+Next Permutation
+Lowest Common Ancestor in a Binary Tree
+Front to Back
+Union of two arrays
+Maximum Identical Bowls
+Maximum no of 1's row
+Maximum sum leaf to root path
+C++ Functions (Sum of numbers) | Set 1
+Shreyansh and his bits
+Decimal Equivalent of Binary Linked List
+Delete a node from BST
+Pairs with certain difference
+Trace Path
+Binary Array Sorting
+Longest Prefix Suffix
+Segregate even and odd nodes in a Link List
+Print 1 To N Without Loop
+Kth element in Matrix
+Maximum sum of Non-adjacent nodes
+Find the element that appears once in sorted array
+Maximize Dot Product
+Insert in Sorted way in a Sorted DLL
+Maximum Length
+Composite and Prime
+Pattern Searching
+Count numbers containing 4
+Reach the Nth point
+Repetitive Addition Of Digits
+Maximum path sum from any node
+Maximum occured integer
+Reverse sub array
+Binary representation
+Find minimum and maximum element in an array
+Median of 2 Sorted Arrays of Different Sizes
+Possible paths
+Anagram of String
+Maximum height of the staircase
+Convert a list of characters into a String
+Print N to 1 without loop
+Reverse a string using Stack
+Rotate by 90 degree
+Reverse words in a given string
+Detect Loop in linked list
+Peak element
+Arithmetic Number
+C++ Data Types
+Evaluation of Postfix Expression
+Subarray with given sum
+Java Hello World
+Pairs which are Divisible by 4
+Good Subtrees
+Reverse Level Order Traversal
+Right View of Binary Tree
+Form a palindrome
+Minimum number of Coins
+Permutations of a given string
+Minimize number of Students to be removed
+Rearrange a linked list
+Maximize The Array
+Move Last Element to Front of a Linked List
+Check if string is rotated by two places
+Sum Of Digits
+Swap two nibbles in a byte
+Check If Circular Linked List
+Delete Alternate Nodes
+Print all nodes that don't have sibling
+Zero Sum Subarrays
+Longest valid Parentheses
+Trie | (Insert and Search)
+Minimum Product of k Integers
+Largest number in K swaps
+Longest Bitonic subsequence
+Modular Multiplicative Inverse
+Sum of all divisors from 1 to n
+Stack Operations
+Find the closest pair from two arrays
+Remainder on dividing by 11
+nextLine and next
+Number of paths in a matrix with k coins
+Element with left side smaller and right side greater
+Make Zeroes
+Bridge edge in a graph
+Anshuman's Favourite Number
+Painting the Fence
+Check if array contains contiguous integers with duplicates allowed
+Sum of primes
+Merge Without Extra Space
+Min operations
+Partition array to K subsets
+Remove repeated digits in a given number
+Add two fractions
+Satisfy the equation
+Number of occurrence
+Print Linked List elements
+Target Sum
+nCr
+Minimum Swaps to Sort
+Powerfull Integer
+Primes sum
+Arrays (Sum of array)
+Find n/k th node in Linked list
+Middle of Three
+Value equal to index value
+Find the Sum of Last N nodes of the Linked List
+Does array represent Heap
+Minimum difference pair
+Average in a stream
+Preorder Traversal
+Min distance between two given nodes of a Binary Tree
+Triplet Sum in Array
+Solve the Sudoku
+BST Downward Traversal
+Check if two strings are k-anagrams or not
+Sum of Subarrays
+Ways to write n as sum
+QuickSort on Doubly Linked List
+Make the array beautiful
+The Painter's Partition Problem-II
+Floyd Warshall
+Integer to Words
+Replace O's with X's
+Number of Unique Paths
+Squares in a Matrix
+Sum of Binary Tree
+Longest Repeating Subsequence
+Nth node from end of linked list
+Given a linked list of 0s, 1s and 2s, sort it.
+Print leaf nodes from preorder traversal of BST
+Bipartite Graph
+Wifi Range
+Check whether BST contains Dead End
+Shortest path in Undirected Graph having unit distance
+Find missing in second array
+Longest Arithmetic Progression
+Flattening a Linked List
+Unique BST's
+Linked List Length Even or Odd?
+Nine Divisors
+Largest square formed in a matrix
+Distance of nearest cell having 1
+BFS of graph
+Unique rows in boolean matrix
+Taxi Booking
+Disjoint set (Union-Find)
+Maximum sum increasing subsequence
+Median in a row-wise sorted Matrix
+Replace all 0's with 5
+Quick Sort on Linked List
+Reverse Bits
+Count Total Setbits
+Construct Binary Tree from String with bracket representation
+Largest Sum Subarray of Size at least K
+Optimal Strategy For A Game
+Count the Zeros
+Tree from Postorder and Inorder
+Power Set
+Nth number made of prime digits
+Minimum sum partition
+Maximum AND Value
+Valid Expression
+N meetings in one room
+Implementing Dijkstra Algorithm
+Remove all duplicates from a given string
+Sum equals to Sum
+M-Coloring Problem
+Add all greater values to every node in a BST
+Nuts and Bolts Problem
+Four Elements
+Equilibrium Point
+Reverse array in groups
+Pattern 3
+Delete Array
+Serialize and Deserialize a Binary Tree
+Subarrays with sum K
+Transform to Sum Tree
+Count Leaves in Binary Tree
+Number of Provinces
+Binary Search
+While loop- printTable
+Rotate a Linked List
+Sort an array according to the other
+Odd or Even
+Magic in CPP
+Odd even level difference
+Palindromic Array
+Winner of an election
+Intersection Point in Y Shaped Linked Lists
+First element to occur k times
+Largest BST
+Check if frequencies can be equal
+Find triplets with zero sum
+Smallest number with sum of digits as N and divisible by 10^N
+Number of pairs
+Segregate Even and Odd numbers
+Even Swap
+Alternate positive and negative numbers
+Sum of elements between k1'th and k2'th smallest elements
+Maximum Index
+Max sum path in two arrays
+Isomorphic Strings
+Check if Linked List is Palindrome
+Step by Step Condition - Java
+Ceil The Floor
+Count the triplets
+Stepping Numbers
+Find unique element
+Print all LCS sequences
+First negative integer in every window of size k
+Pascal Triangle
+Maximum Sum LCM
+Valid Substring
+Max length chain
+Binary Heap Operations
+Sorted subsequence of size 3
+Optimal Array
+Sum of the Longest Bloodline of a Tree (Sum of nodes on the longest path from root to leaf node)
+Count Inversions
+The New Line - Java
+The dice problem
+Max min Height
+Least Prime Factor
+Large Factorial
+Cutting Rectangles
+Sort by Absolute Difference
+Queue Reversal
+Smallest window in a string containing all the characters of another string
+Rightmost different bit
+Search a node in BST
+Check set bits
+Positive and negative elements
+Connect Nodes at Same Level
+Next Greater Element
+Good Stones
+Transform to Sum Tree
+Boolean Parenthesization
+Fractional Knapsack
+Pattern 10
+CamelCase Pattern Matching
+Print Pattern
+Dominant Pairs
+Type it!
+ArrayList Operation
+Remove and Reverse
+Remove K Digits
+Smallest number on left
+Minimum steps to make product equal to one
+Make Array Elements Equal
+Game Of Subsets
+Reorganize The Array
+Count total set bits
+Count Occurences of Anagrams
+Subtree In N-ary Tree
+IPL 2021 - Final
+Knight in Geekland
+Root to leaf paths sum
+Minimum number of deletions.
+Longest K unique characters substring
+Uncommon characters
+Bottom View of Binary Tree
+Sort The Array
+Missing number in array
+Modify Linked List-1
+Smallest greater elements in whole array
+Vertical sum
+GetLine and Ignore
+Symmetric Tree
+Add Minimum Characters
+A Game of LCM
+Minimum Days
+Leaves to DLL
+Minimum Cost Path
+Numbers containing 1, 2 and 3
+G.F Series
+License Key Formatting
+Find the element that appears once
+Length of longest palindrome in linked list
+Pangram Checking
+Reverse a String
+Union of Two Sorted Arrays
+Search Pattern (Rabin-Karp Algorithm)
+Leap Year
+linked list of strings forms a palindrome
+Doubling the value
+Single Number
+Permutation with Spaces
+Multiply two linked lists
+Minimum swaps and K together
+Circular Linked List Traversal
+Check if two Nodes are Cousins
+Sum of two large numbers
+Partition Equal Subset Sum
+Find the fine
+Add 1 to a number represented as linked list
+Rank The Permutations
+Pots of Gold Game
+Avoid Explosion
+Compete the skills
+Number of pairs
+Largest Number formed from an Array
+For Loop- primeCheck
+Lower case to upper case
+Distinct Coloring
+Minimum Integer
+Bubble Sort
+Maximum Width of Tree
+Number of Ways to Arrive at Destination
+Second smallest number
+Shop in Candy Store
+Wildcard Pattern Matching
+Second most repeated string in a sequence
+132 Geeky Buildings
+Two Dimensional World
+C++ STL | Set 1 (vector)
+Find pairs with given sum in doubly linked list
+Array Operations
+Minimum number of deletions and insertions.
+Sum of two numbers without using arithmetic operators
+Help Ishaan
+k-th smallest element in BST
+Total Traversal Time
+Max sum in the configuration
+Sort the string in descending order
+Count pair sum
+Swap all odd and even bits
+logical Operators - Java
+Java Inheritance
+Implement two stacks in an array
+Tom and Jerry
+Next Smallest Palindrome
+DFS of Graph
+Greatest of three numbers
+Seating Arrangement
+Detect cycle in a directed graph
+Merge Sort on Doubly Linked List
+Perfect Sum Problem
+Overlapping Intervals
+Reverse alternate nodes in Link List
+Immediate Smaller Element
+Rearrange a string
+Flip Bits
+Trapping Rain Water
+Even and Odd
+Maximum number of zeroes
+Repeated Character
+Nth Fibonacci Number
+GCD of Array
+Stack Permutations
+Prime Number
+Common elements
+Count of strings that can be formed using a, b and c under given constraints
+Addition of Two Numbers
+Print 1 to n without using loops
+Find Maximum Equal sum of Three Stacks
+Is Sudoku Valid
+Remainder with 7
+Burning Tree
+Find all distinct subset (or subsequence) sums
+Number following a pattern
+Mother Vertex
+Minimum cost to fill given weight in a bag
+Alien Dictionary
+Find the Highest number
+Total count
+Find Pair Given Difference
+Max sum in sub-arrays
+Reverse each word in a given string
+Minimum Multiplications to reach End
+The Modified String
+String Permutations
+Spirally traversing a matrix
+Preorder to PostOrder
+Word Ladder I
+Largest Element in Array
+First and last occurrences of x
+Finding Position
+Rotating an Array
+K-th element of two sorted Arrays
+Maximum Product Subarray
+Santa Banta
+Is Square
+Closest Number
+Cyclically rotate an array by one
+A Simple Fraction
+Replace all 0's with 5
+Count Binary Strings With No Consecutive 1s
+Save Your Life
+Three Great Candidates
+Implement strstr
+Ceil in BST
+Count of Subarrays
+Return two prime numbers
+Max Level Sum in Binary Tree
+Max Sum without Adjacents
+Inorder Traversal and BST
+Find largest word in dictionary
+Reverse First K elements of Queue
+Sorting Elements of an Array by Frequency
+Intersection Point in Y Shaped Linked Lists
+Eventual Safe States
+Distinct palindromic substrings
+Number Formation
+Maximum Triplet product
+Quick Sort
+Print Matrix in snake Pattern
+Maximize sum after K negations
+Delete N nodes after M nodes of a linked list
+Longest subsequence-1
+Job Sequencing Problem
+Sum of k smallest elements in BST
+Count Pairs whose sum is equal to X
+Inorder Traversal
+Chocolate Distribution Problem
+Pattern 5
+Simple Interest
+Bitonic Point
+Transpose of Matrix
+Consecutive 1's not allowed
+Postorder Traversal
+Java 1-d and 2-d Array
+Minimum Number
+Intersection of two arrays
+Minimize the Heights I
+Number Of Islands
+Coin Change
+Nodes at Odd Levels
+At least two greater elements
+Remove the balls
+Special Keyboard
+Find whether path exist
+Geeks Island
+Sum Tree
+Rod Cutting
+Sum of dependencies in a graph
+Bheem Wants Ladoos
+Finding middle element in a linked list
+Count the Reversals
+Node at distance
+Number of Distinct Islands
+Kth Smallest Factor
+Strongly connected component (Tarjans's Algo)
+Fixing Two nodes of a BST
+Next higher palindromic number using the same set of digits
+Last cell in a Matrix
+Unit Area of largest region of 1's
+Balanced Array
+Pair cube count
+Height of Heap
+Parenthesis Checker
+Prefix Suffix String
+Sum of Middle Elements of two sorted arrays
+Adding Ones
+Swapping pairs make sum equal
+Smallest Positive Integer that can not be represented as Sum
+Number of 1 Bits
+Maximize Toys
+Count the Specials
+Search in a row-column sorted Matrix
+Word Ladder II
+Get minimum element from stack
+Scrambled String
+Merge two binary Max heaps
+nPr
+Precise Format - Java
+Transform String
+Division without using multiplication, division and mod operator
+Top K Frequent Elements in Array - |
+Convert String to LowerCase
+Compare two linked lists
+Remove common characters and concatenate
+Special Matrix
+Print alternate elements of an array
+Mirror Tree
+Remainder Evaluation
+Distinct Difference
+C++ if-else (Decision Making)
+Paths to reach origin
+Number of ways
+Shortest Source to Destination Path
+Circular tour
+Box Stacking
+C++ Switch Case Statement
+K largest elements
+Pairwise Consecutive Elements
+Right most non zero digit
+Longest Perfect Piece
+Snake and Ladder Problem
+Find all pairs with a given sum
+Knapsack with Duplicate Items
+Series AP
+Longest Palindromic Subsequence
+Predecessor and Successor
+Palindrome with minimum sum
+Minimum Sum of Absolute Differences of Pairs
+Count Substrings
+Another Coin Change Problem
+Count BST nodes that lie in a given range
+Tic Tac Toe
+Maximum Value
+Merge two sorted linked lists
+Remove Spaces
+Game with nos
+Length of the longest substring
+Remove duplicate elements from sorted Array
+Twice Counter
+Matching Pair
+String rp or pr
+Implement Queue using Linked List
+Full binary tree
+Articulation Point - I
+Sort by Set Bit Count
+Jumping Caterpillars
+Subarray range with given sum
+Next Greater Element
+Sum of AP series
+Search an Element in an array
+Count the Substrings
+Sum of Digit is Pallindrome or not

@@ -1,0 +1,32 @@
+Given a Directed Graph with V vertices and E edges, Find the members of strongly connected components in the graph.
+
+Example 1:
+Input:
+
+
+0 1 2,3,4,
+Explanation:
+
+We can clearly see that there are 3 Strongly
+Connected Components in the Graph as mentioned
+in the Output.
+Example 2:
+Input:
+
+Output:
+0 1 2,
+Explanation:
+All of the nodes are connected to each other.
+So, there's only one SCC as shown.
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function tarjans() which takes the number of vertices V and adjacency list of the graph as input parameters and returns a list of list of integers denoting the members of strongly connected components in the given graph.
+Note: A single strongly connected component must be represented in the form of a list if integers sorted in the ascending order. The resulting list should consist of a list of all SCCs which must be sorted in a way such that a lexicographically smaller list of integers appears first.
+
+Expected Time Complexity: O(V + E).
+Expected Auxiliary Space: O(V).
+
+Constraints:
+1 ≤ V  ≤ 105
+1 ≤ E  ≤ 105
+0 ≤ u, v ≤ N-1

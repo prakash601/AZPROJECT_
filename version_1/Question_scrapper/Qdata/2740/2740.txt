@@ -1,0 +1,21 @@
+A thief trying to escape from a jail has to cross N walls whose heights are given in arr[] each with varying heights. He climbs X feet every time. But, due to the slippery nature of those walls, every time he slips back by Y feet.  Now the task is to calculate the total number of jumps required to cross all walls and escape from the jail.
+Example 1:
+Input: X = 10, Y = 1, N = 1
+arr = {5}
+Output: 1
+Explaination: He jumps 10 feet and cross 
+the walls.
+Example 2:
+Input: X = 4, Y = 1, N = 5
+arr = {6, 9, 11, 4, 5}
+ 12
+Explaination: He will have to jump 2, 3, 4, 1 
+and 2 times to cross all the walls.
+Your Task:
+You do not need to read input or print anything. Your task is to complete the function totalJumps() which takes X, Y, N, and arr as input parameters and returns the total number of jumps to cross all the walls.
+Expected Time Complexity: O(N)
+Expected Auxiliary Space: O(1)
+Constraints:
+1 ≤ N ≤ 100
+X > Y
+1 ≤ arr[i], X, Y ≤ 1000  
