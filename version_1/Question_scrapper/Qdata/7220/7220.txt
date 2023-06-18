@@ -1,0 +1,199 @@
+A permutation of length
+N is an array of
+N integers such that every integer between
+1 and
+N (inclusive) appears in it exactly once.
+Chef creates a set from a permutation
+(P
+1
+,P
+2
+,…,P
+N
+) of length
+N, as follows:
+Initially Chef takes a empty set
+S=ϕ, and then for every index
+i(1≤i≤N), Chef insert a pair of integers
+(l
+i
+,r
+i
+) into
+S, where
+1≤l
+i
+≤r
+i
+≤N and
+(P
+l
+i
+,P
+l
+i
++1
+,…,P
+r
+i
+) denotes the longest subsegment of the permutation with
+P
+i
+as the maximum element.
+Note:
+The elements of the set
+S are always distinct.
+Two pairs
+(l
+i
+,r
+i
+) and
+(l
+j
+,r
+j
+) are same only if
+l
+i
+=l
+j
+and
+r
+i
+=r
+j
+.
+For example, if the permutation is
+(2,3,4,1), Chef creates the following set
+S={(1,1),(1,2),(1,4),(4,4)}.
+You are given a set
+T containing
+N distinct pairs of integers. Find the number of different permutations of length
+N from which Chef can create a set
+S, which is equivalent to set
+T. Since the number can be very large, print it modulo
+(10
+9
++7).
+Two sets
+S and
+T are considered equivalent if:
+∣S∣=∣T∣, where
+∣S∣ denotes the size of set
+S.
+Every element of
+S is present in
+T, i.e, for each
+(l
+i
+,r
+i
+)∈S,(l
+i
+,r
+i
+)∈T.
+Note that the elements of the set
+T may not be given in a particular order.
+Input Format
+The first line of input contains an integer
+T, denoting the number of test cases. The
+T test cases then follow:
+The first line of each test case contains a single integer
+N, denoting the size of set
+T.
+Each of the next
+N lines contains a pair of integers
+(l
+i
+,r
+i
+), denoting the set
+T.
+Output Format
+For each test case, output on a single line the number of valid permutations, modulo
+(10
+9
++7).
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+1≤l
+i
+≤r
+i
+≤N for each valid
+i
+(l
+i
+,r
+i
+)
+
+=(l
+j
+,r
+j
+) if
+i
+
+=j
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+2
+2 2
+1 2
+3
+3 3
+1 3
+2 2
+5
+1 1
+5 5
+1 5
+1 2
+4 5
+7
+1 1
+7 7
+3 3
+1 7
+6 7
+1 4
+3 4
+1
+0
+6
+45
+Explanation:
+Test case
+1: There are two permutations of length
+2.
+[1,2] generates the set
+S={(1,1),(1,2)} which is not equivalent to
+T={(2,2),(1,2)} and
+[2,1] generates the set
+S={(1,2),(2,2)}, which is equivalent to
+T={(2,2),(1,2)}.
+Test case
+2: There is no permutation of length
+3 which can generate a set equivalent to
+T={(3,3),(1,3),(2,2)}.
+Test case
+3: Some of the valid permutations are:
+[2,4,5,3,1],
+[1,4,5,3,2],
+[1,2,5,4,3] etc. However
+[1,2,3,4,5] is not a valid permutation since it generates the set
+S={(1,1),(1,2),(1,3),(1,4),(1,5)} which is not equivalent to set
+T.

@@ -1,0 +1,58 @@
+Chef has a sequence of positive integers
+A
+1
+,A
+2
+,…,A
+N
+. He wants to split this sequence into two non-empty (not necessarily contiguous) subsequences
+B and
+C such that
+GCD(B)+GCD(C) is maximum possible. Help him find this maximum value.
+Note: The greatest common divisor (GCD) of a sequence of positive integers is the largest positive integer that divides each element of this sequence. For example, the GCD of the sequence
+(8,12) is
+4.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer — the maximum value of
+GCD(B)+GCD(C).
+Constraints
+1≤T≤10
+2≤N≤10
+5
+1≤A
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (20 points):
+2≤N≤20
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+1 
+4 
+4 4 7 6
+9
+Explanation:
+Example case 1: For example, the sequence
+A can be divided into subsequences
+B=(4,4,6) and
+C=(7).

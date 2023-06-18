@@ -1,0 +1,31 @@
+Jawbreaker is a one-person game. You start with a square of dimension n*n, composed of small colored stones. One move consists of indicating one stone. Then, the maximal possible connected group of stones the of the same color, containing the indicated stone, is destroyed. The destroyed rocks disappear, and all rocks which have empty space below them drop to a lower row. If any column is left empty, rocks that are to the right of it are shifted accordingly to the left. When a group of k stones is destroyed, you score k2points. Your task is to maximize the total score.
+Input
+First, 50≤n≤100, the size of the starting board. Then, n lines follow, n characters long each, containing a description of the board, with up, down, left, right oriented just as we see it on a computer screen (upper rows first, left columns first). The color of each stone is described by one character, from '0' to '9'.
+Output
+First, output t, the length of answer. The following t pairs of integers are a sequence of moves. Each pair i,j defines one move, i being the 0-based number of a column (column 0 is the one most to the left), and j being the 0-based number of a row (row 0 is the lowest one).
+Example
+Input:
+3
+202
+202
+110
+Output:
+3
+0 0
+2 0
+1 1
+Moves:
+
+202
+202
+110
+..2
+202
+200
+...
+22.
+22.
+Score:
+22+32+42
+Tests
+The size of the tests will be chosen uniformly between 50 and 100, and then the number of colors will be chosen uniformly between 4 and 10. The colors of the rocks are chosen independently at random.

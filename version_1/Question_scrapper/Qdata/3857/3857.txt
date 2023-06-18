@@ -1,0 +1,52 @@
+Chef has
+N slippers,
+L of which are left slippers and the rest are right slippers. Slippers must always be sold in pairs, where each pair contains one left and one right slipper. If each pair of slippers cost
+X rupees, what is the maximum amount of rupees that Chef can get for these slippers?
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains three space-separated integers
+N,
+L, and
+- the total number of slippers, the number of left slippers, and the price of a pair of slippers in rupees.
+Output Format
+For each test case, output on one line the maximum amount of rupees that Chef can get by selling the slippers that are available.
+Constraints
+1≤T≤10
+3
+0≤L≤N≤10
+3
+0≤X≤10
+3
+Sample 1:
+Input
+Output
+4
+0 0 100
+10 1 0
+1000 10 1000
+10 7 1
+0
+0
+10000
+3
+Explanation:
+Test case
+1: Chef has no pairs to sell, so the amount obtained is
+0.
+Test case
+2: The amount earned by selling a pair is
+0, so the total amount obtained is
+0.
+Test case
+3: Chef can sell
+10 pairs of slippers, each giving
+1000 rupees, so the total amount earned is
+1000⋅10=10000.
+Test case
+4: Chef has
+10 slippers of which
+7 are left and
+3 are right. Therefore Chef can sell a maximum of
+3 pairs and in total can get at most
+3⋅1=3.

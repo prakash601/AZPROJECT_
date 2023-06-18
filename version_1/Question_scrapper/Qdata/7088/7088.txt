@@ -1,0 +1,46 @@
+Creatnx, a 7-year-old child, is playing with
+7 sticks with lengths
+1,2,…,7, which can be connected together. He is trying to use some of them to create a polygon. Trans, his father, is looking, and since he is a programmer, he quickly comes up with a problem based on this game:
+There are
+N sticks (line segments) with lengths
+1,2,3,…,N. You should choose a non-empty subset of these sticks and create a (simple, non-degenerate) polygon by connecting their endpoints together. How many such subsets of sticks can you choose? Since this number could be large, compute it modulo
+10
+9
++7.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+N.
+Output
+For each test case, print a single line containing one integer - the number of subsets that can be chosen, modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+Subtasks
+Subtask #1 (50 points):
+1≤T≤50
+1≤N≤50
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+3
+4
+7
+19
+2
+74
+522749
+Explanation:
+Example case 1: There are four sticks with lengths
+1,2,3,4. The only subsets from which we can create a polygon are
+{2,3,4} and
+{1,2,3,4}. On the other hand, we cannot choose e.g.
+{1,2,3} because degenerate polygons are not allowed.

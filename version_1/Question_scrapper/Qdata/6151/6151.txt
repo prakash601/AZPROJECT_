@@ -1,0 +1,74 @@
+Chefland is a
+1D city where each of the
+N houses is located at a distinct positive integer coordinate
+A
+1
+,A
+2
+,…A
+N
+. The chef is planning to create
+K hills in the city. Note that two hills cannot be present at the same location but the location of hills and houses can overlap and each hill will also be at any integer (positive, negative or zero) coordinate.
+Each citizen would want to travel to the farthest hill from his house. Travelling will create air pollution and Chef wants to minimise the total pollution in the city. Help Chef find the minimum sum of distance travelled by everyone. In other words, help Chef create the hills at optimal locations, so that the sum of the distance of every house to the hill farthest from it is minimum possible.
+###Input:
+First line will contain
+, number of testcases. Then the testcases follow.
+Each testcase contains two lines of input.
+First line contains
+2 integers
+N,K separated by a space.
+Second line contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+, representing the location of the houses.
+###Output: For each testcase, find the minimum possible sum of distances if Chef creates the hills at optimal locations, in a separate line.
+###Constraints
+1≤T≤10
+1≤N,K≤10
+5
+1≤A
+i
+≤10
+9
+A
+i
+<A
+i+1
+∀ valid
+i
+Sample 1:
+Input
+Output
+3
+3 1
+1 2 3
+1 5
+1
+2 2
+1 5
+2
+2
+5
+Explanation:
+TestCase 1: Optimal solution includes creating hill at
+2. Its distance from the house at coordinate
+1 is
+1, and so is its distance from the house at coordinate
+3. Its distance from the house at coordinate
+2 is
+0. Thus, total distance is
+1+0+1=2.
+TestCase 2: Optimal solution includes creating hills at
+{−1,0,1,2,3}. The farthest hills from the house at coordinate
+1 are at coordinates
+−1 and
+3. The citizen can choose to travel to any of them, and the distance shall be
+2.
+TestCase 3: Optimal solution includes creating hills at
+{1,2} or
+{4,5}.

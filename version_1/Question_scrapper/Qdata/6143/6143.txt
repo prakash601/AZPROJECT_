@@ -1,0 +1,112 @@
+Given an integer
+N, construct an array
+A of length
+N such that:
+1≤A
+i
+≤10
+18
+for all
+(1≤i≤N);
+There exists a subsequence of length greater than
+1 such that the gcd of all elements of the subsequence is
+i, for all
+1≤i≤N.
+More formally, for all
+(1≤i≤N), there exists a subsequence
+S of array
+A such that the length of the subsequence is
+k(2≤k≤N) and
+gcd(S
+1
+,S
+2
+,…,S
+k
+)=i.
+It can be proven that it is always possible to construct such
+A under given constraints. If there exist multiple such arrays, print any.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follow.
+The only line of each test case contains an integer
+N - the length of the array to be constructed.
+Output Format
+For each test case, output a single line containing
+N space-separated integers, denoting the elements of the array
+A. The
+i
+th
+of these
+N integers is the
+i
+th
+element of the array
+A.
+If there exist multiple such arrays, print any.
+Constraints
+1≤T≤10
+3
+3≤N≤10
+3
+Sum of
+N over all test cases does not exceed
+5⋅10
+3
+.
+Sample 1:
+Input
+Output
+2
+3
+4
+2 3 6
+4 24 10 15
+Explanation:
+Test case
+1: A possible array satisfying all the conditions is [2, 3, 6]:
+For
+i=1: Choose
+S=[A
+1
+,A
+2
+,A
+3
+]=[2,3,6]. Thus,
+gcd(2,3,6)=1.
+For
+i=2: Choose
+S=[A
+1
+,A
+3
+]=[2,6]. Thus,
+gcd(2,6)=2.
+For
+i=3: Choose
+S=[A
+2
+,A
+3
+]=[3,6]. Thus,
+gcd(3,6)=3.
+Test case
+2: A possible array satisfying all the conditions is [4, 24, 10, 15]:
+For
+i=1: Choose
+S=[4,24,10,15]. Thus,
+gcd(4,24,10,15)=1.
+For
+i=2: Choose
+S=[24,10]. Thus,
+gcd(24,10)=2.
+For
+i=3: Choose
+S=[24,15]. Thus,
+gcd(24,15)=3.
+For
+i=4: Choose
+S=[4,24]. Thus,
+gcd(4,24)=4.

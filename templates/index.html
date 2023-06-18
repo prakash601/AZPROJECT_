@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Search Page</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <style>
+    .execution-time {
+      margin-top: 10px;
+    }
+  </style>
 
-<head>
-  <title>Search Page</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-
-</head>
-
-
-<body>
-  <div class="form">
-    <form method="POST">
-      <div class="search-box">
-        <input class="input-search" type="search" name="search" placeholder="Type to Search..." required
-          value="{{ search_term }}">
-        <button class="btn-search" type="submit">Submit</button>
-      </div>
-    </form>
-  </div>
-  <div class="results-container">
-    {% for result in results %}
-    <div class="result-item" style="margin: auto;">
-      <a href="{{ result['Question Link'] }}" target="_blank" title="{% set words = result['text'].split() %}{% if words|length > 25 %}{{ words[:25]|join(' ') }}...{% else %}{{ result['text'] }}{% endif %}">{{ result['Question Link'].rsplit('/',
-        1)[-1].replace('-', ' ')| title }}</a>
-      <button class="link-button" onclick="window.open('{{ result['Question Link'] }}', '_blank')">Go to Question</button>
+  <body>
+    <div class="form">
+      <form method="POST">
+        <div class="search-box">
+          <input
+            class="input-search"
+            type="search"
+            name="search"
+            placeholder="Type to Search..."
+            required
+            value="{{ search_term }}"
+          />
+          <button class="btn-search" type="submit">Submit</button>
+        </div>
+      </form>
     </div>
-    {% endfor %}
-  </div>
-</body>
-
-
+    <div class="execution-time">
+      {% if execution_time %}
+      <p>Execution time: {{ execution_time }} seconds</p>
+      {% endif %}
+    </div>
+    <div class="results-container">
+      {% for result in results %}
+      <div class="result-item" style="margin: auto">
+        <a
+          href="{{ result['Question Link'] }}"
+          target="_blank"
+          title="{% set words = result['text'].split() %}{% if words|length > 25 %}{{ words[:25]|join(' ') }}...{% else %}{{ result['text'] }}{% endif %}"
+          >{{ result['Question Link'].rsplit('/', 1)[-1].replace('-', ' ')|
+          title }}</a
+        >
+        <button
+          class="link-button"
+          onclick="window.open('{{ result['Question Link'] }}', '_blank')"
+        >
+          Go to Question
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
 </html>

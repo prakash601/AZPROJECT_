@@ -1,0 +1,27 @@
+Limak is a problem setter. Since he is lazy and cunning, he usually takes old problems and modifies them a bit (to not be accused of plagiarism), e.g. by swapping two words in the statement. This is how he created the following problem (and your task is to solve it):
+Given a sequence with N positive integers, find the xor of sums of all non-empty segments of the sequence.
+In other words, for each of N*(N+1)/2 non-empty consecutive subsequences find its sum of elements, and print the xor of those sums.
+Input
+The first line of the input contains an integer N denoting the size of the sequence.
+The second line contains N integers a1, a2, ..., aN — elements of the sequence.
+Output
+Print one integer — the xor of sums of all non-empty segments of the sequence.
+Constraints
+1 ≤ N ≤ 300,000
+0 ≤ ai ≤ 50
+Example
+Input1:
+3
+7 5 13
+
+Output1:
+8
+
+Input2:
+6
+11 4 4 13 11 5
+
+Output2:
+14
+Explanation
+In the first example test, there are six non-empty segments. Their sums of elements are: 7, 7+5=12, 7+5+13=25, 5, 5+13=18, 13. The answer is 7 xor 12 xor 25 xor 5 xor 18 xor 13 = 8.

@@ -1,0 +1,45 @@
+  X-24 - the clone of Logan has evil plans, and this time he has decided to reduce Logan to ashes. He has a subset code which can cause havoc, and Logan must know what it is to curb X-24's actions.
+After musing for a long time, Logan finally deduced the subset code.
+Let's say there are N targets of the subset code. Each target has some value associated with it.
+Logan can carry out the following operation any number of times ( even 0 times )
+Logan can choose a particular subset of those N targets (even no element) ( let's say elements ), and the value of those elements by an integer K1, and also increases the value of rest of the targets ( remaining N-X elements ) by another healing integer K2.
+Laura advises Logan to anyhow convert value of at least Y targets to Z if he wants to stop the destruction.
+Help Logan in determining if the destruction can be stopped or not
+  Input
+You are provided with T test cases.
+First line of each test case contains an integer N.
+Second line contains N space separated integers- Arr[ ]
+Third line has 4 integers - K1, K2, Z, Y
+  Output
+For each test case, print "YES" or "NO" (without quotes) as per the condition stated above.
+  Constraints
+1 ≤ T ≤ 10
+1 ≤ N ≤ 105
+1 ≤ Arr[i] ≤ 4*109
+1 ≤ K1,K2 ≤ 4*109
+1 ≤ Z ≤ 4*109
+1 ≤ Y ≤ N
+GCD(K1,K2)=1
+  Example
+Input:
+2
+5
+3 5 6 9 10
+1 2 5 3
+2
+1 2
+1 2 2 2
+Output:
+YES
+NO
+  Explanation
+In the first test case, we need to convert atleast 3 elements into 5.
+One possible set of operations can be like this -
+Decrease subset { 9 } by 1 and increase rest of the elements by 2.
+The new values - { 5, 7, 8, 8, 12 }
+Decrease subset { 8,8 } by 1 and increase rest of the elements by 2.
+The new values - { 7, 9, 7, 7, 14 }
+Decrease subset { 7,7,7 } by 1 and increase rest of the elements by 2.
+The new values - { 6,11, 6, 6, 16 }
+Decrease subset { 6,6,6 } by 1 and increase rest of the elements by 2.
+The new values - { 5,13, 5, 5, 18 }

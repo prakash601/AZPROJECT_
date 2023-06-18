@@ -6,13 +6,19 @@ from nltk.tokenize import regexp_tokenize
 from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
-nltk.download('stopwords')
-nltk.download('wordnet') 
+# nltk.download('stopwords')
+# nltk.download('wordnet') 
 
 with open('leetcode_Scrapper/index.txt','r') as f:
     lines = f.readlines()
     
-index_terms = [term.strip() for term in lines]
+# index_terms = [term.strip() for term in lines]
+index_terms = []
+for line in lines:
+    terms = line.strip().split(' ')
+    index_terms.extend(terms)
+
+print(index_terms)
 
 # def perprocess_qdata(document_text):
 #     tokens = word_tokenize(document_text.strip())
@@ -20,12 +26,10 @@ index_terms = [term.strip() for term in lines]
     
 astop_words = set(stopwords.words('english'))
 custom_stop_words = ['<','<=', '=', '<', '>=','r', ',',']','.','[','(',')','+','-','return','given','--','//','/','*','**','**=','*=','+=','-=','==','!=','!=','+=','-=','*=','/=','%=', '||', '!', '&&', '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '>>=', '<<=','!', '@', '#', '$', '%', '&', '*', '(', ')', '-', '+', '=', '[', ']', '{', '}', '|',
-    '\\', '/', '~', '^', '>', '<', '.', ',', ':', ';', '"', "'", '_', '?', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F', 'G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U', 'V','W','X','Y','Z','`','``','````','``````','````````','``````````','```````````','````````````','`````````````','``````````````','```````````````','````````````````','`````````````````','``````````````````','```````````````````', '``',
-    'the', 'a', 'an', 'is', 'are', 'was', 'were', 'of', 'in', 'on', 'at', 'by', 'to', 'for',
-    'with', 'and', 'or', 'not', 'but', 'from', 'into', 'about', 'after', 'before', 'over',
-    'under', 'between', 'among', 'through', 'during', 'since', 'until', 'unless', 'while',
-    'throughout', 'above', 'below', 'behind', 'beside', 'beneath', 'within', 'without',
-    'Hello', ',', 'how', 'are', 'you', '?', '(', "I'm", 'doing', 'well', ')', '[', 'And', 'you', ']', '{', 'Nice', 'to', 'meet', 'you', '}', '&', '(', '...', ')', ',', '[', '..', ':', ']', '....', '+-----------------+----------+|', '|+-----------------+----------+|', '|+-----------------+----------+', '"||**||**|*"', '", "', '=#', ',', '#,', '#,#"', ',', ',', ':"../"', ').', '"./"', '/"'
+    '\\', '/', '~', '^', '>', '<', '.', ',', ':', ';', '"', "'", '_', '?','`','``','````','``````','````````','``````````','```````````','````````````','`````````````','``````````````','```````````````','````````````````','`````````````````','``````````````````','```````````````````', '``',
+    'the', 'was', 'were',
+     'during', 'since',  'unless', 
+    ',', 'how', 'are', 'you', '?', '(', "I'm", 'doing', 'well', ')', '[',  'you', ']', '{', 'Nice',  'meet', 'you', '}', '&', '(', '...', ')', ',', '[', '..', ':', ']', '....', '+-----------------+----------+|', '|+-----------------+----------+|', '|+-----------------+----------+', '"||**||**|*"', '", "', '=#', ',', '#,', '#,#"', ',', ',', ':"../"', ').', '"./"', '/"'
 
  ]
 stop_words = astop_words.union(custom_stop_words)
@@ -54,7 +58,7 @@ def preprocess(document_text):
     for term in lemmatized_terms:
         if term in index_terms:
             # Assign a higher weight to terms in index_terms
-            weighted_terms.append(term + '^5')  # You can customize the weight here
+            weighted_terms.append(term + '^10')  # You can customize the weight here
         else:
             weighted_terms.append(term)
 

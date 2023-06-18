@@ -1,13 +1,14 @@
 import math
 import nltk
+import time
 from nltk.corpus import stopwords
 from nltk.tokenize import regexp_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
 lemmatizer = WordNetLemmatizer()
-nltk.download('stopwords')
-nltk.download('wordnet') 
-nltk.download('wordnet')
+# nltk.download('stopwords')
+# nltk.download('wordnet') 
+# nltk.download('wordnet')
 
 from flask import Flask, jsonify, url_for, redirect, render_template, request, session
 import math
@@ -16,12 +17,10 @@ import re
 
 astop_words = set(stopwords.words('english'))
 custom_stop_words = ['<','<=', '=', '<', '>=','r', ',',']','.','[','(',')','+','-','return','given','--','//','/','*','**','**=','*=','+=','-=','==','!=','!=','+=','-=','*=','/=','%=', '||', '!', '&&', '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '>>=', '<<=','!', '@', '#', '$', '%', '&', '*', '(', ')', '-', '+', '=', '[', ']', '{', '}', '|',
-    '\\', '/', '~', '^', '>', '<', '.', ',', ':', ';', '"', "'", '_', '?', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F', 'G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U', 'V','W','X','Y','Z','`','``','````','``````','````````','``````````','```````````','````````````','`````````````','``````````````','```````````````','````````````````','`````````````````','``````````````````','```````````````````', '``',
-    'the', 'a', 'an', 'is', 'are', 'was', 'were', 'of', 'in', 'on', 'at', 'by', 'to', 'for',
-    'with', 'and', 'or', 'not', 'but', 'from', 'into', 'about', 'after', 'before', 'over',
-    'under', 'between', 'among', 'through', 'during', 'since', 'until', 'unless', 'while',
-    'throughout', 'above', 'below', 'behind', 'beside', 'beneath', 'within', 'without',
-    'Hello', ',', 'how', 'are', 'you', '?', '(', "I'm", 'doing', 'well', ')', '[', 'And', 'you', ']', '{', 'Nice', 'to', 'meet', 'you', '}', '&', '(', '...', ')', ',', '[', '..', ':', ']', '....', '+-----------------+----------+|', '|+-----------------+----------+|', '|+-----------------+----------+', '"||**||**|*"', '", "', '=#', ',', '#,', '#,#"', ',', ',', ':"../"', ').', '"./"', '/"'
+    '\\', '/', '~', '^', '>', '<', '.', ',', ':', ';', '"', "'", '_', '?','`','``','````','``````','````````','``````````','```````````','````````````','`````````````','``````````````','```````````````','````````````````','`````````````````','``````````````````','```````````````````', '``',
+    'the', 'was', 'were',
+     'during', 'since',  'unless', 
+    ',', 'how', 'are', 'you', '?', '(', "I'm", 'doing', 'well', ')', '[',  'you', ']', '{', 'Nice',  'meet', 'you', '}', '&', '(', '...', ')', ',', '[', '..', ':', ']', '....', '+-----------------+----------+|', '|+-----------------+----------+|', '|+-----------------+----------+', '"||**||**|*"', '", "', '=#', ',', '#,', '#,#"', ',', ',', ':"../"', ').', '"./"', '/"'
 
  ]
 stop_words = astop_words.union(custom_stop_words)
@@ -228,18 +227,27 @@ app.config['SECRET_KEY'] = 'your-secret-key'
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 
+# @app.route("/<query>")
+# def return_links(query):
+#     # q_terms = [term.lower() for term in query.strip().split()]
+#     return jsonify(calc_docs_sorted_order(preprocess(remove_stop_words(query)))[:10:])
+
 @app.route("/<query>")
 def return_links(query):
-    # q_terms = [term.lower() for term in query.strip().split()]
-    return jsonify(calc_docs_sorted_order(preprocess(remove_stop_words(query)))[:10:])
+    start_time = time.time()  # Start measuring time
+    results = calc_docs_sorted_order(preprocess(remove_stop_words(query)))[:10:]
+    end_time = time.time()  # Stop measuring time
 
+    execution_time = end_time - start_time
 
+    return jsonify(results, execution_time)
 
-
+# RESULTS_PER_PAGE = 2 
 @app.route("/", methods=['GET', 'POST'])
 def home():
     search_term = session.pop('search_term', '') if 'search_term' in session else ''
     results = session.pop('results', []) if 'results' in session else []
+    execution_time = session.pop('execution_time', 0) if 'execution_time' in session else 0
 
     if request.method == 'POST':
         query = request.form.get('search', '')
@@ -248,9 +256,20 @@ def home():
         results = calc_docs_sorted_order(preprocess(remove_stop_words(query)))[:10:]
         session['search_term'] = query
         session['results'] = results
+        session['execution_time'] = execution_time
         return redirect(url_for('home'))
+    
+    # page = request.args.get('page', 1, type=int)
+    # total_results = len(results)
+    # total_pages = math.ceil(total_results / RESULTS_PER_PAGE)
+    # start_index = (page - 1) * RESULTS_PER_PAGE
+    # end_index = start_index + RESULTS_PER_PAGE
+    # paginated_results = results[start_index:end_index]
 
-    return render_template('index.html', search_term=search_term, results=results)
+    # return render_template('index.html', search_term=search_term, results=paginated_results, execution_time=execution_time, total_pages=total_pages, current_page=page)
+
+
+    return render_template('index.html', search_term=search_term, results=results, execution_time=execution_time)
 
 
 if __name__ == '__main__':

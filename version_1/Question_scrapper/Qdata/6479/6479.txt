@@ -1,0 +1,72 @@
+Zawad is a rare competitive programmer — he takes his studies seriously. One day, while studying in a library, he found a pattern
+P in a century old book. The pattern is a string of lowercase English letters, with length
+M. Since Zawad is a curious boy, he started experimenting with the pattern.
+In one experiment, Zawad considers all
+26
+N
+strings with length
+N that contain only lowercase English letters. The strings are numbered
+0 through
+26
+N
+−1 in lexicographical order. For each valid
+i, let
+C
+i
+be the length of the longest prefix of
+P which is also a suffix of the
+i-th of these strings (
+0≤C
+i
+≤M).
+For each integer
+k between
+0 and
+M inclusive, let
+S
+k
+denote the sum of all valid indices
+i such that
+C
+i
+=k. Zawad wants to know all these sums, but since they could be huge, it is enough to compute them modulo
+998,244,353.
+Since Zawad is a bit busy at the library, he is asking for your help. Can you find the sums and earn Zawad's respect?
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+M and
+N.
+The second line contains a single string
+P with length
+M.
+Output
+For each test case, print a single line containing
+M+1 space-separated integers
+S
+0
+,S
+1
+,…,S
+M
+— the sums modulo
+998,244,353.
+Constraints
+1≤T≤5
+1≤M≤10
+5
+M≤N≤10
+6
+P contains only lowercase English letters
+Sample 1:
+Input
+Output
+2
+1 1
+a
+3 5
+nan
+325 0
+555099525 502507217 596119576 22936464

@@ -1,0 +1,148 @@
+Given an array
+A with
+N positive integers -
+(A
+1
+,A
+2
+,…,A
+N
+).
+A partition of the array into subarrays refers to dividing the entire array into subarrays (ie. some continuous elements) such that each of the
+N elements is in exactly one subarray.
+We call a partition of the array into subarrays as Valid, if this condition holds true: For all
+i, if
+i and
+i+1 are in the same subarray then
+A
+i+1
+must be divisible by
+A
+i
+.
+Now, among all such Valid partitions, we are interested in the partition with the minimum number of subarrays. It can be proved that there is a unique such partition. We will be interested only with this partition in the problem.
+We call
+S
+i
+the index of the subarray in which element
+i lies.
+We now want to support some operations on the array. In particular, there are
+Q operations of the form -
+1
+i
+X - Change
+A
+i
+to
+X
+2
+i - Given
+i , output the smallest
+j such that
+S
+i
+=S
+j
+. That is, the leftmost index which belongs to the same subarray as the i-th element.
+###Input:
+First line will contain
+N and
+Q denoting the size of
+A and number of operations respectively.
+The second line contains
+N values, the initial values of
+A.
+The next
+Q lines contain the operations as stated above.
+###Output:
+The answer for each query of type 2 on a new line.
+###Constraints
+1≤N≤10
+6
+1≤Q≤2∗10
+5
+1≤i≤N
+1≤A
+i
+,X≤10
+6
+###Subtasks
+30 points :
+A
+i
+
+=A
+i+1
+for
+1≤i≤N−1. This holds throughout, even after updates.
+70 points : Original constraints
+###Sample Input:
+5 5
+2 2 7 14 14
+1 1 3
+1 2 6
+2 2
+2 4
+2 5
+###Sample Output:
+1
+3
+3
+###Explanation: Initially,
+A=[2,2,7,14,14] and
+S=[1,1,2,2,2] (
+A
+2
+is divisible by
+A
+1
+,
+A
+3
+is not divisible by
+A
+2
+,
+A
+4
+is divisible by
+A
+3
+,
+A
+5
+is divisible by
+A
+4
+)
+After the first operation
+A=[3,2,7,14,14] and
+S=[1,2,3,3,3] (
+A
+1
+is 3 now and
+A
+2
+modA
+1
+
+=0 now)
+After the second operation
+A=[3,6,7,14,14] and
+S=[1,1,2,2,2] (
+A
+2
+is 6 now and
+A
+2
+is divisible by
+A
+1
+once again)
+For the queries, we can look at the
+S
+i
+value for the given index and find the smallest index with the same value. Note here that the exact value of
+S
+i
+is irrelevant. We just want the first element of the same chain.

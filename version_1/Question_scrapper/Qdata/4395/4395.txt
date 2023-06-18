@@ -1,0 +1,70 @@
+Chef is teaching his class of
+N students at Hogwarts. He groups students with the same height together for an activity. Some of the students end up in a groups with only themselves and are saddened by this.
+With the help of his magic wand, Chef can increase the height of any student to any value he likes. Now Chef wonders, what is the minimum number of students whose height needs to be increased so that there are no sad students?
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains one integer
+N — the number of students.
+The second line consists of
+N space-separated integers
+H
+1
+,H
+2
+,…,H
+N
+denoting the heights of the students.
+Output Format
+For each test case, output on a single line the minimum number of students whose heights must to be increased.
+Constraints
+1≤T≤5⋅10
+4
+2≤N≤10
+5
+1≤H
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+4
+1 2 1 2
+4
+1 2 2 2
+3
+1 1 1
+5
+1 2 3 4 5
+0
+1
+0
+3
+Explanation:
+Test case
+1: The students form
+2 groups each having
+2 students so no change of heights is required.
+Test case
+2: Initially the student with height
+1 cannot be paired with anyone else. Chef can increase his height to
+2 and now there is only
+1 group with all the
+4 students in it.
+Test case
+3: All students have same height and hence no change of heights is required.
+Test case
+4: One possible way is to increase the height of the first student to
+5 and the heights of the second and third students to
+4, hence forming one group of
+2 students and one of
+3 students. In total, the heights of
+3 students need to be changed.

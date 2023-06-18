@@ -4508,8 +4508,6 @@ https://www.codechef.com/problems/CHDOGS
 https://www.codechef.com/problems/CKWLK
 https://www.codechef.com/problems/SUBMIN
 https://www.codechef.com/problems/XOR_ORDER
-https://www.codechef.com/problems/CHEFFED
-https://www.codechef.com/problems/SDICE
 https://www.codechef.com/problems/VEGETA
 https://www.codechef.com/problems/TRAVELER
 https://www.codechef.com/problems/LUCKY5
@@ -4755,7 +4753,6 @@ https://www.codechef.com/problems/CNTPEAK
 https://www.codechef.com/problems/SUBGCD
 https://www.codechef.com/problems/BINARYSUB
 https://www.codechef.com/problems/COUNTPAL
-https://www.codechef.com/problems/COPRIMEX
 https://www.codechef.com/problems/ENGXOR
 https://www.codechef.com/problems/CHEFSEG
 https://www.codechef.com/problems/MISINTER
@@ -5068,7 +5065,6 @@ https://www.codechef.com/problems/PLANEDIV
 https://www.codechef.com/problems/FENWITER
 https://www.codechef.com/problems/OROFAND
 https://www.codechef.com/problems/CAKEDOOM
-https://www.codechef.com/problems/SPREAD
 https://www.codechef.com/problems/VOWANX
 https://www.codechef.com/problems/GOODPERM
 https://www.codechef.com/problems/LARGESTY
@@ -5354,7 +5350,6 @@ https://www.codechef.com/problems/GUESSNUM
 https://www.codechef.com/problems/FRNDMTNG
 https://www.codechef.com/problems/WINDOW2
 https://www.codechef.com/problems/SEACO
-https://www.codechef.com/problems/ECODE
 https://www.codechef.com/problems/SUB12OP
 https://www.codechef.com/problems/AND
 https://www.codechef.com/problems/CONVSTR
@@ -5414,7 +5409,6 @@ https://www.codechef.com/problems/DISTK
 https://www.codechef.com/problems/LUCKY2
 https://www.codechef.com/problems/PRIMEFACDIV
 https://www.codechef.com/problems/MCHEF
-https://www.codechef.com/problems/COURSE
 https://www.codechef.com/problems/COLLECT
 https://www.codechef.com/problems/GSUB
 https://www.codechef.com/problems/CHEFARC
@@ -5466,7 +5460,6 @@ https://www.codechef.com/problems/CCIRCLES
 https://www.codechef.com/problems/LIKECS03
 https://www.codechef.com/problems/KIRLAB
 https://www.codechef.com/problems/SKIING
-https://www.codechef.com/problems/KNIGHTS
 https://www.codechef.com/problems/MOUNTAIN
 https://www.codechef.com/problems/MEXSTR
 https://www.codechef.com/problems/CHEFWD
@@ -5751,7 +5744,6 @@ https://www.codechef.com/problems/DORADM01
 https://www.codechef.com/problems/LFSTACK
 https://www.codechef.com/problems/TKCONVEX
 https://www.codechef.com/problems/PARPOLY
-https://www.codechef.com/problems/AMSTRING
 https://www.codechef.com/problems/DIGFORST
 https://www.codechef.com/problems/STROPERS
 https://www.codechef.com/problems/DIANE
@@ -5787,7 +5779,6 @@ https://www.codechef.com/problems/JTREE
 https://www.codechef.com/problems/STBMEX
 https://www.codechef.com/problems/ALIKE_THEM
 https://www.codechef.com/problems/TREEROOT
-https://www.codechef.com/problems/BUILDING
 https://www.codechef.com/problems/UWCOI21C
 https://www.codechef.com/problems/INTREP
 https://www.codechef.com/problems/TOOMEAN
@@ -5837,7 +5828,6 @@ https://www.codechef.com/problems/XDCOMP
 https://www.codechef.com/problems/NOPAL2
 https://www.codechef.com/problems/TACNTSTR
 https://www.codechef.com/problems/PROC18D
-https://www.codechef.com/problems/BEARSEG
 https://www.codechef.com/problems/LAPD
 https://www.codechef.com/problems/RCTEXSCC
 https://www.codechef.com/problems/PRUNING
@@ -5860,7 +5850,6 @@ https://www.codechef.com/problems/ANGGRA
 https://www.codechef.com/problems/HCLEAN
 https://www.codechef.com/problems/SEATSTR2
 https://www.codechef.com/problems/SHIFTPAL
-https://www.codechef.com/problems/STREDUC
 https://www.codechef.com/problems/DESTCELL
 https://www.codechef.com/problems/HPARITY
 https://www.codechef.com/problems/CNR
@@ -6037,7 +6026,6 @@ https://www.codechef.com/problems/LUCKYDAY
 https://www.codechef.com/problems/DIVSUBS
 https://www.codechef.com/problems/PALIPALI
 https://www.codechef.com/problems/WRDVLS
-https://www.codechef.com/problems/MANGOMKT
 https://www.codechef.com/problems/SEAGCD
 https://www.codechef.com/problems/ENG5
 https://www.codechef.com/problems/CLGAME
@@ -6271,7 +6259,6 @@ https://www.codechef.com/problems/EXNETWRK
 https://www.codechef.com/problems/FAVGAME
 https://www.codechef.com/problems/XRQRS
 https://www.codechef.com/problems/KSIZEGCD
-https://www.codechef.com/problems/S03E02
 https://www.codechef.com/problems/PAIRCLST
 https://www.codechef.com/problems/ALCARR
 https://www.codechef.com/problems/PEPPERA
@@ -6375,7 +6362,6 @@ https://www.codechef.com/problems/CIELBTL
 https://www.codechef.com/problems/HARRYPSS
 https://www.codechef.com/problems/LAZERTST
 https://www.codechef.com/problems/CO92REST
-https://www.codechef.com/problems/TARPRACT
 https://www.codechef.com/problems/CHANOQ
 https://www.codechef.com/problems/BINSTR
 https://www.codechef.com/problems/WSCAGAIN
@@ -6688,7 +6674,6 @@ https://www.codechef.com/problems/COOLSBST
 https://www.codechef.com/problems/MINMAXIN
 https://www.codechef.com/problems/LAMQUGAM
 https://www.codechef.com/problems/TREEWALK
-https://www.codechef.com/problems/BIBOARD
 https://www.codechef.com/problems/MOREFB
 https://www.codechef.com/problems/MASTER
 https://www.codechef.com/problems/SUBLCS
@@ -6831,7 +6816,6 @@ https://www.codechef.com/problems/UNQMODE
 https://www.codechef.com/problems/CSUBSQ
 https://www.codechef.com/problems/COINPART
 https://www.codechef.com/problems/CENS20C
-https://www.codechef.com/problems/WALKBT
 https://www.codechef.com/problems/SEAPERMS
 https://www.codechef.com/problems/TRAVELAL
 https://www.codechef.com/problems/UPDTREE
@@ -7051,7 +7035,6 @@ https://www.codechef.com/problems/TOOMANYLIS
 https://www.codechef.com/problems/RNG
 https://www.codechef.com/problems/AVGSHORT
 https://www.codechef.com/problems/XORSORT2
-https://www.codechef.com/problems/TREEQRS
 https://www.codechef.com/problems/NDMRK
 https://www.codechef.com/problems/ATMQ
 https://www.codechef.com/problems/MATBEAUT
@@ -7067,11 +7050,9 @@ https://www.codechef.com/problems/COUNTWAY
 https://www.codechef.com/problems/BRBAL
 https://www.codechef.com/problems/TREEUNAT
 https://www.codechef.com/problems/COLORING
-https://www.codechef.com/problems/NPIN
 https://www.codechef.com/problems/CUCUMBER
 https://www.codechef.com/problems/BLWHTREE
 https://www.codechef.com/problems/RIVER
-https://www.codechef.com/problems/KX
 https://www.codechef.com/problems/MIXFLVOR
 https://www.codechef.com/problems/LPARTY
 https://www.codechef.com/problems/ANGSPLIT
@@ -7129,7 +7110,6 @@ https://www.codechef.com/problems/SQRGOOD
 https://www.codechef.com/problems/XETF
 https://www.codechef.com/problems/GCDS
 https://www.codechef.com/problems/MEXPERMDIF
-https://www.codechef.com/problems/COTA
 https://www.codechef.com/problems/APPLE42
 https://www.codechef.com/problems/BIPPAIR
 https://www.codechef.com/problems/CONNECT

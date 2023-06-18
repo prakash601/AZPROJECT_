@@ -3500,3 +3500,4187 @@ Sum of AP series
 Search an Element in an array
 Count the Substrings
 Sum of Digit is Pallindrome or not
+Number Mirror
+Good Turn
+Add Two Numbers
+Age Limit
+Squats
+Saving Taxes
+Water Consumption
+Masterchef finals
+Biryani classes
+Fitness
+Chef Plays Ludo
+Burgers
+How many unattempted problems
+Determine the Score
+Kitchen Timings
+IPL Ticket Rush
+Tax in Chefland
+Audible Range
+Reach on Time
+Who is taller!
+Reach the Target
+Tour of King
+Best of Two
+My very 1st contest!
+Roller Coaster
+CodeChef Learn Problem Solving
+Chef and Brain Speed
+Candy Division
+Chef On Date
+Parity
+Total Prize Money
+Counting Words
+Battery Health
+Tom and Jerry Chase
+Ageing
+Bull or Bear
+Second Max of Three Numbers
+Four Tickets
+Chairs Requirement
+Chef and Donation
+Number of Credits
+Sum it
+Get Subscription
+Enough Space
+Waiting Time
+Just One More Episode
+Tasty Decisions
+Mana Points
+Rain in Chefland
+Equal Distribution
+Bidding
+Overspeeding Fine
+Chess Time
+Max minus Min
+Learning SQL
+Podium Finish
+Passes for Fair
+Read Pages
+Couple Game
+Fever
+Sleep deprivation
+MATH1 Enrolment
+Chef and Chapters
+Water Requirement
+Lunchtime
+Apples and Oranges
+Good Investment or Not
+Final Population
+Alice and Marks
+Chef gives Party
+Time Complexity
+Air Hockey
+Ticket Fine
+Interior Design
+Car Trip
+Multivitamin Tablets
+Email Reminders
+Six Friends
+Chef and Wire Frames
+Minimum Coins
+Spice Level
+Reach Home
+True and False Paper
+The Cheaper Cab
+Rating Improvement
+Discount
+Height of Rationals
+Chef and Chocolates
+Instagram
+Volume Control
+Is it hot or cold
+ATM
+Football Cup
+Profit Increment
+Parking Charges
+Fill the Bucket
+Parliament
+Find Remainder
+Pass the Exam
+Ezio and Guards
+Candy Store
+Scalene Triangle
+Chef and Masks
+Speciality
+Maximum Submissions
+Expiring Bread
+AI Analysing Code
+TV Discount
+Budget of Technex
+Broken Phone
+Tyre problem
+Sum of Digits
+Perfect Trio
+Monthly Budget
+Chef and Instant Noodles
+Credit score
+First and Last Digit
+Enormous Input Test
+Practice makes us perfect
+Course Registration
+Can Chef
+Insurance
+Codechef Airlines
+Favourite Numbers
+Increase IQ
+Battery Low
+Bob at the Bank
+Monopoly in Chefland
+The Mango Truck
+Bucket and Water Flow
+Miami GP
+Dominant Army
+Playlist
+Chef and Chocolates
+Netflix
+Best Coupon
+Chef and Gym
+Greater Average
+Subscriptions
+Cricket Match
+The Cooler Dilemma 1
+Odd Sum Pair
+Janmansh and Assignments
+Shopping Change
+Janmansh and Coins
+Chef in his Office
+Mahasena
+CRED Coins
+Sale Season
+Minimum Pizzas
+400M Race
+Chefland Games
+Test Averages
+Expert Setter
+Chef and NextGen
+Sugarcane Juice Business
+Count the Notebooks
+Chef and Candies
+Is the Score Consistent
+The Three Topics
+Make AP
+Monopoly
+Problems in your to-do list
+High Accuracy
+Air Conditioner Temperature
+Better Deal
+Nearest Exit
+Reverse The Number
+Ranklist Pages
+Chef Drinks Tea
+Chef and Bird farm
+Sasta Shark Tank
+Integers that sum to the same value
+Good Program
+Qualify the round
+Minimum Number of Ones
+Elections in Chefland
+Minimum Cars required
+Test Score
+Bus Seat Numbering
+Jenga Night
+Discus Throw
+Determine the Winner
+Maximise the Tastiness
+Watching Movies at 2x
+Negative Product
+GCD and LCM
+Police and Thief
+Flip the cards
+Hackerman
+Bath in Winters
+Finding Shoes
+Small factorials
+Mario and Transformation
+Mario and Bullet
+Chess Ratings
+Lucky Numbers
+Complementary Strand in a DNA
+Change Row and Column Both
+Chef and Water Bottles
+Turbo Sort
+Candy Distribution
+Finding Square Roots
+Buy Ten Packets
+Score High
+The Last Levels
+Fill Candies
+Blackjack
+X Jumps
+Chessboard Distance
+Valentine is Coming
+It is My Serve
+Water Mixing
+Weights
+Chef and his Apps
+Chef Eren
+Minimum number of coins
+Online or Offline
+Cup Finals
+Self Defence Training
+Too many Floors
+Speed Limit Test
+Important Pages on CodeChef
+Expense List
+Decrement OR Increment
+A or B
+Second Largest
+Pass or Fail
+Cyclic Quadrilateral
+Too many items
+Building Race
+Count the ACs
+Chef and Races
+Black cells in a chessboard
+Sum OR Difference
+Valid Triangles
+Far from origin
+Presents for Cheffina
+Distinct Colors
+Small Factorial
+Return the Change
+Possible Victory
+Janmansh and Games
+Lucky Four
+Packing Books
+Buy Lamps
+Helping Chef
+Mutated Minions
+Reach fast
+Single-use Attack
+Get Lowest Free
+Minimum number of Flips
+Binary Battles
+Economics Class
+Indivisible
+RCB and Playoffs
+The Lead Game
+Degree of Polynomial
+Recent contest problems
+Primality Test
+The Cooler Dilemma 2
+Cost of Groceries
+Paper Cutting
+DNA Storage
+Lazy Chef
+Hardest Problem Bet
+Wordle
+Complete the credits
+Cars and Bikes
+Guess the bottom face
+Mario and the Broken String
+Nearest Court
+Chef and His Fruit Stand
+Gross Salary
+Equalizing Numbers
+The Preparations
+Genes
+Snape and Ladder
+The Block Game
+Mileage matters
+Maximum Production
+Good Weather
+Melt Gold
+MIN To MAX
+Grade The Steel
+Circular Track
+Smallest Numbers of Notes
+Is it a VOWEL or CONSONANT
+Which Mixture
+Redistributing Chocolates
+Chess Format
+Body Mass Index
+Good Quality Bulbs
+Id and Ship
+Make A and B equal
+Valid Pair
+Summer Heat
+Equal Integers
+Ambiguous Permutations
+Coldplay
+Passing Marks
+Chef and Vacation Transportation
+Chefland Visa
+Area OR Perimeter
+Devendra and Water Sports
+Problem Category
+Highest Divisor
+Construct N
+Car Choice
+Total Expenses
+Alternate Additions
+Which Division
+Badminton Serves
+Sums in a Triangle
+Chef and Contest
+Relativity
+Group Assignment
+Odds and Evens
+Counting Pretty Numbers
+Drunk Alcoholic
+Factorial
+Richie Rich
+Chef On Island
+Different Consecutive Characters
+Find the Direction
+Gold Mining
+Farmers League
+Utkarsh and Placement tests
+Secret Recipe
+Chef and Profits
+Chef on Vacation
+Olympics Ranking
+Chef and SnackDown
+Inside The Stadium
+Chef and the Hair Salon
+Peaceful Party
+Running Comparison
+Chef and Battery
+Passing Marks
+Count the Holidays
+Avoid Contact
+HOW MANY DIGITS DO I HAVE
+The Rating Dilemma
+Hidden Numbers
+A - Save Water Save Life
+Two Ranges
+Solubility
+Marbles
+Shoe Fit
+Penalty Shots
+Chef and Remissness
+Make all equal using Pairs
+Existence
+Largest and Second Largest
+Chef and Pairing Slippers
+Chef and Price Control
+Akash and Missing Class
+First and Last
+No Time to Wait
+Back to Campus
+World Chess Championship
+Ciel and Receipt
+Farmer And His Plot
+Two vs Ten
+Car Range
+Vaccine Dates
+Compress the Video
+Bytelandian gold coins
+Tekken
+Janmansh at Fruit Market
+Non-Negative Product
+Rearranging digits to get a multiple of 5
+Chef and Interactive Contests
+The Old Saint And Three Questions
+Marathon
+Chef and Happy String
+La Liga
+Two Rooks
+Can You Eat It
+Avoid Squares Please
+Puppy and Sum
+Chef and Cook-Off
+Blobby Volley Scores
+Judging Delay
+The Begining Era Of Cyberverse
+Snapchat
+Chef and Spells
+Cricket Ranking
+Fill The Grid
+Joining Date
+WA Test Cases
+N Buttons 1 Bulb
+Divisible by 3
+Play Piano
+Bomb the base
+Chef and Lockout Draws
+Red Light, Green Light
+Chef Judges a Competition
+Fit Squares in Triangle
+Playing with Matches
+Malvika is peculiar about color of balloons
+Naive Chef
+Vishesh and his Popcorn Combo
+Can_Reach
+Game between friends
+Transform the Expression
+Keplers Law
+DDMM or MMDD
+Dark Light
+Balls and Boxes
+Kitchen Timetable
+Lucky Four
+Chess Match
+Easy Pronunciation
+Programming Languages
+ATM Machine
+Slow Solution
+Zero Ones Equal One Zeros
+Chef and Dolls
+How much Scholarship
+Adjacent Sum Parity
+Snake Procession
+Candies
+Packaging Cupcakes
+Chef Diet
+Break the Stick
+Encoding Message
+Program Your Own CALCULATOR
+Bear and Candies 123
+Elections in Chefland
+Buying New Tablet
+Card Removal
+Apples and oranges
+Even-tual Reduction
+Chef and Subarrays
+Airline Restrictions
+Zero String
+Odd Pairs
+Efficient PAN Linking
+Weight Balance
+Chef and his Students
+Cutting Recipes
+End Sorted
+Chef and Game with Sequence
+Minimum Attendance Requirement
+Prime Reversal
+Candy Love
+Easy Permutation
+Equal Card Game
+Devu and friendship testing
+Change It
+Food Chain
+Lost Weekends
+Hungry Ashish
+Mask Policy
+Tanu and Head-bob
+Counting Problem
+String protocol
+From heaven to earth
+Pseudo Sorted Array
+Chef and Stock Prices
+Equalize AB
+Prime Generator
+Binary String Cost
+Facebook
+Three Friends
+Coins And Triangle
+The Attack of Queen
+Digit Sum Parities
+Covid and Theatre Tickets
+Peak Finding
+Cut the Board
+Three Way Communications
+Chef and Table Tennis
+Magician versus Chef
+Far Away
+Equal Strings
+Group Assignment
+Uncle Johny
+Holes in the text
+That Is My Score!
+Chef and Strings
+Bi_lindrome!
+The Great Run
+Motivation
+Path Parity
+Friends Meetup
+Plus 2 or Minus 1
+Ada and crayons
+Odd Even Binary String
+Remove Bad elements
+Chef and Serves
+Make Money
+Football
+String Game
+Weird Modulo Problem
+Laptop Recommendation
+Chef and Glove
+The One Where It All Began
+Playing with Strings
+Chef vs Doof
+N Queens Puzzle Solved !
+Dividing Stamps
+Chef and Steps
+Sort the String
+Lucky Boundaries
+Discrepancies in the Voters List
+Alternating String
+FlatLand
+Travel Pass
+Akash and Function
+Game of Pooks
+Chef and Socks
+Chef and Proportion
+Stick Break
+Studying Alphabet
+Equal Elements
+Chef and String
+Testing Robot
+Chef and Card Game
+Processing a string
+Chef and Fruits
+Pet Store
+Devu and an Array
+Sign Moves
+Mathison and pangrams
+Non Adjacent Flips
+Xor Palindrome
+Chef and Difficult Contests
+Printing Binary Array
+Valid Minimum
+Buying Sweets
+Easy Math
+Fit in Data Type
+Double Strings
+Chef and Eid
+Coin Flip
+Multiple Choice Exam
+Game of Piles Version 1
+Distinct Opposite Sums
+Ciel and A-B Problem
+Medel
+Two Dishes
+Permutation and Modulus
+Little Elephant and Candies
+Average of Three
+Chef and Employment Test
+Similar Dishes
+Priya and AND
+Max Binary
+Piece of cake
+Journey of the Knight
+Final Sum
+Workers
+Rectangle
+Download file
+Attendance
+Chef And Coloring
+Farmer Feb
+Strange operations
+Bear and Segment 01
+AND Plus OR
+Find Your Gift
+Diagonal movement
+Odd GCD Permutation
+Lapindromes
+Large Square
+Lazy Salesman
+Infernos
+Make Multiple
+Good Joke!
+Little Elephant and Strings
+IPL and RCB
+Hostel Room
+AP Free Sequences
+Dominant Element
+Ping Paja Pong
+Palindrome Flipping
+Random Pair
+Movie Weekend
+A - Books
+Chef and Groups
+Dazzling GCD Pair
+Positive Products
+Count of Maximum
+The product mystery
+Pawri Meme
+Three Boxes
+Divisible by i
+A Balanced Contest
+Luigi and Uniformity
+Chef and Cook-Off Contests
+Chef and Work
+Train Partner
+Hungry Chef
+Chef and Number Game
+Break the elements
+Retrieve the Array
+Split N
+Convert to permutation
+Ups and Downs
+Trace of Matrix
+Chef and Feedback
+Append for OR
+How Many Maximums
+Average Number
+Broken Telephone
+Weapon Value
+Drumpf for President!
+ICPC Balloons
+Chef and String
+Watson asks Does Permutation Exist
+Brackets
+Chef and digits of a number
+Making a Meal
+Two Different Palindromes
+Jumping in the hills
+New Piece
+Single Operation Part 1
+Version Control System
+A Subtask Problem
+Odd Repeat
+Vaccine Distribution
+Coronavirus Spread
+Maximum Length Even Subarray
+Simple Statistics
+Daily Train
+Chef and Coupon
+Chef and Party
+Cool Name
+EVM Hacking
+To Divide or Not To Divide
+Chef in Fantasy League
+Sarthak and his Magic Grid
+Top Batsmen
+Maximise XOR
+Chef and Mean
+Two Trains
+Another Card Game Problem
+Sum of palindromic numbers
+The One with Russ
+Asymmetric Swaps
+Racing Horses
+Truth and Dare
+A Good Set
+Chef-jumping
+Minimum or Maximum
+Equal Coins
+Mode of Frequencies
+Distinct Codes
+Disabled King
+Ada and Dishes
+Chef and His Apartment Dues
+Palindromic substrings
+Swapping Chefs Way
+Subanagrams
+Suspense String
+Laddu
+Doubled Distances
+Closest Vowels
+Just Like Mob!
+Cops and the Thief Devu
+Chef and Subset
+Bear and Milky Cookies
+Chef and Secret Ingredient
+Magic Pairs
+Garden Squares
+Dazzling AXNODR Challenge
+Lift Requests
+Walk
+Breaking Bricks
+Popular Rice Recipe
+Good Pairs
+Jewels and Stones
+Subtraction Game 1
+Chef and Demonetisation
+Avoid Fixed Points
+Split the Str Ing
+Little Chef and Sums
+Tourist Translations
+Three Powers of Two
+Chef-Detective
+Geometric Mean Inequality
+The Two Dishes
+Chef and the Wildcard Matching
+Chef and Notebooks
+Chef and Memory Limit
+Golf
+Open the Dragon Scroll
+A Big Sale
+Hiring Test
+Little Elephant and Permutations
+Sticks
+Distinct Binary Strings
+Gasoline Introduction
+Chef and Subset Additions
+Make A and B equal
+Carvans
+Pushpa
+Minimum Deletions
+Make them equal
+The Morning Commute
+Chef and Street Food
+Chef And Salary Pay
+Chef and Icecream
+Phone Prices
+Recruit Villagers
+Helping Lira
+Fierce Battles
+Chef and Fixed Deposits
+Red Alert
+Add smallest prime factor
+Equinox Strings
+Check Algorithm
+Single Operation Part 2
+Weird Walk
+Chef and The Right Triangles
+Andrew and the Meatballs
+At the Gates
+Plus Multiply
+Beat the Average
+Hard Sequence
+Fancy Quotes
+Matrix Game
+Nahaane Jaa
+Copy-Paste
+Array Equality
+Max power
+Even Splits
+Chef and Pal
+Print Pattern
+Chef And His Characters
+Spell Bob
+Longest Common Pattern
+Little Elephant and Bombs
+Favourite String of Chef
+Your Name is Mine
+The Minimum Number Of Moves
+False Number
+Equal Distinct
+Reversal Sorting
+Prefix Permutation
+Closing the Tweets
+Strong Language
+Exact Marks
+Chef and his daily routine
+Count Steps in Matrix
+Chef and An Ideal Problem
+Chef Chick
+Attic Crossing
+Points and Lines
+Digit Longest Increasing Subsequences 2
+Possible GCD
+Whats in the Name
+Andrash and Stipendium
+Chef and Apple Trees
+Maximise Function
+Lucky lucky number
+Help Voldemort
+Spoon in Matrix
+Distinct Palindrome
+Isolation Centers
+Is this priority or parity!
+The Ball And Cups
+Gift Rift
+Funny Hand
+Greedy puppy
+Smallest Possible Whole Number
+Construct String
+Maximum Weight Difference
+Permutation Clear
+Maximise the Subsequence Sum
+Cleaning Up
+Button Pairs
+Chef and new recipe
+Expensive Steps
+Approximately
+Sorted Substrings
+Akash and Grid
+Split and Maximize
+Pintu and Fruits
+Maximum OR Minimum
+Distinct Characters Subsequence
+The Best Box
+Splitting Candies
+Minimum Sum
+Hello Equation
+Minimum Good Permutation
+Number Game Revisited
+Pairing Chefs
+Chef in Heaven
+Villages and Tribes
+Permutation And Median
+Two Numbers
+Chef and Cube
+Ada and the Staircase
+Cache Hits
+Archi and Comparsion
+Chopsticks
+Strike or Spare
+Make them Zero
+Problem Difficulties
+Arranging Cup-cakes
+Chef and Keyboard
+Permutation Creation
+Pair Pain
+Chef and Stones
+Yet Another Palindrome Making Problem
+Permutation GCD
+Cooking Machine
+Divisible by K
+Forgotten Language
+Akhil And Colored Balls
+Indivisible Permutation
+Count Substrings
+Chef and Ground
+Chef and Chain
+Bob and His Friends
+Tickets
+Xor Again
+Faded Palindromes
+Cricket Score
+Make A-B Same
+Minimum distance between 1s
+The Tom and Jerry Game!
+Granama Recipes
+Xor Palindrome
+Sum of Product 1
+Chain Reaction
+Devu and Grapes
+Chef Feeds Cats
+Chef and Chocolate
+Careless Chef
+Chef And Babla
+Covid Spread
+Shuffling Parities
+Maximum Trio
+Camp Or Not
+Turn It
+Crazy Bishops on Chessboard
+Collisions
+The Smallest Pair
+Valid Expression
+Magical Doors
+Make a Permutation
+Appy and Contest
+Maximize the Minimum
+Palindromes Not Allowed
+Simple XOR
+Internet Media Types
+Fake GCD
+Subsequence Equality
+Buggy Calculator
+Even Equal Odd
+Not Divisible
+Gift Shop and Coupon
+Watermelon
+Bowling Strategy
+Kill them with your success
+Minimise LCS
+Obtain the Sum
+Cards Game
+Chocolate Monger
+Lcm hates Gcd
+Maximum Pairwise Modular Sum
+Eat Twice
+Xenny and Coin Rankings
+Mean and Median
+Please like me
+The Deadly Sin
+Nobel Prize
+Walk on the Axis
+Distribute Apples
+Missing Sums
+Interesting Subarray
+Even Matrix
+Chef and Secret Ingredients
+Difference Matrix
+Ada King
+Eidi Gift
+Tom And Jerry 1
+Make it Divisible
+Football Match
+Max count of 1
+Chef and Proxy
+Nothing in Common
+Chef and Equality
+Chef and Kingship
+Daanish and Problems
+Cats and Dogs
+The Unchanging OR
+XOR! Wait for it
+Similar Heights
+Sad Splits
+Maximise Score
+Find the Maximum Value
+Minimum Maximum
+Make Palindrome 2
+An Interesting Sequence
+The Grid Fill Problem
+Chef and Left-Right
+Byte to Bit
+Chef and Numbers
+Deputy Chef
+Chef and Recipe
+Chef and Ballons
+Average Permutation
+Chef and Bored Games
+Name Reduction
+Xor Equality
+Hotel Bytelandia
+Mighty Friend
+Chef and Problem Setting
+Tax Slabs
+Array Halves
+Alternating subarray prefix
+Different Medians
+Chef and easy problem
+Guessing Game
+Bella ciao
+Plusle and Minun on Array
+B - Valentine Couples
+String Game
+Shortest Path in Binary Trees
+Remove Element
+Maximize Colours
+Courses in an university
+Fit to Play
+Mix the Colors
+Equality
+Distinct Dilemma
+Chef and Gift
+Professor And Directions
+Knight Chess
+Chef and Girlfriend
+The Largest Bouquet
+Decreasing Srrnmieeda
+Average Array
+Say No To Drugs
+Parallel Processing
+Full Barrier Alchemist
+Reversing directions
+N Triplets
+Divide the Cake
+Equal Mex Splitting
+The Tricky Deal
+Most Popular Friend
+Prefix Sums
+Maximum Angriness
+Take Not Less
+Chef and Walking on the rectangle
+Spliting Balls
+Permutation Xority
+Ada Matrix
+Sum Queries
+Akash and Dinner
+Chef Learning Hungarian Algorithm
+The Nights Watch
+Mr Pr in a Dilemma
+HTML Tags
+Chef and the stones
+Chef and Coins Game
+Substring of a Substring
+Average Flex
+High Frequency
+Make Array Odd
+Sleepy Chef
+Fun with Rotation
+Superheroes and villains
+Cutting Pizza
+Counting Flags
+Chef and Interview
+Binary Base Basics
+Vedant and his Hidden Array
+Total Score
+Task for Alexey
+Money Transformation
+K-MEX
+Control the Pollution
+Chef And his Cake
+Prefix Ones
+Missing some chairs
+Yet another SOD problem
+Polygon Relationship
+Chef and Pick Digit
+Four Equidistant Points on a Grid
+Dilemma
+Triangle Classification
+Chef and Adventures
+Prime Sum
+Arranging the Appetizers
+GCD operations
+BIT Magazine
+Maxim and Dividers
+Chef and Rainbow Array
+Row and Column Operations
+Magical Planks
+Good Pairs
+Password
+Approximately II
+Dense Bracket Sequence
+Magic Set
+Little Elephant and Lemonade
+Prime in a binary string
+Chef and Three Dogs
+Cakewalk
+Little Elephant and Subarrays
+Order by XOR
+Majin Vegeta
+Chef Travel Routes
+Lucky Long
+Max Mex
+Count Subarrays
+Yet another subarray problem
+Distinct Pair Sums
+Maximum Light Up
+Chef and GCD
+Digital clock
+Mike and Matrices
+Correctness of Knight Move
+emitL
+Alternating Divisibility
+Xor Permutation
+Jogging
+Tweedle-Dee and Tweedle-Dum
+Correct Sentence
+Friend or Girlfriend
+Chef Odd
+Alternating Work Days
+Weird Palindrome Making
+Interesting XOR!
+CAO Stage-1
+Confusing Concatenations
+Anti Palindrome
+Stone
+Little Chef and Numbers
+Chef Goes to the Cinema
+Maximum Expression
+Musical Chairs
+Reach The Point
+Harrenhal
+Exactly N plus 1 Values
+Who dares to be a millionaire
+Gcd of Subarrays
+Positive Prefixes
+Chef goes Left Right Left
+Total Correct Submissions
+Lucky Number Game
+Equal Difference
+Chef and Magical Jars
+Subarray permutations
+Longest AND Subarray
+Chef And Magical Path
+Tennis Tournament
+One Stone or Two Stones
+Subarray Removal
+Chef and Ridges
+Palindrome Pain
+Equal by XORing
+Magda and Silly Pairs
+Reduce to One
+Strong Elements
+Chef and the Cake I
+Climbing Stairs
+Chef and Replication
+Levy Conjecture
+Adjacency Hatred
+Predictopus
+Space Arrays
+Chef Drinks Coke
+Team of Two
+Infinite Grid Game
+Restore Sequence
+Lack of Logic
+Black And White Cells
+Chef of the Year
+One-XOR Deletions
+Hello Hello
+Chef And The Patents
+The Wave
+Prime Xor
+College Life 2
+Greg and Grid
+Permutation Subsequence
+Compress the List
+K-th Maximum
+Concat Palindrome
+Mean Maximization
+Recipe Reconstruction
+Square Digit Squares
+When to take medicine
+Median of adjacent maximum numbers
+Plagiarism
+Split Sums
+Guddu on a Date
+Positive or Negative Subarrays
+Remember the recipe
+Admins and Shopping
+Fast Food
+The White Knight
+Make Length 1
+Prefix Permutation
+Largest Family
+Minimum Number of Pizzas
+Crying Colours
+Sheokand and Number
+One more weird game
+FIXFIX
+Three Different Numbers
+Javelin Qualification
+Flip the String
+Smallest KMP
+maximize the sum
+Paying up
+Randomly Testing Circuits
+Palindrome by Splitting
+Maximize Difference
+Magic Rankings
+Expected move
+Chef and Dynamo
+Dish Of Life
+Na2a and lucky stone
+Stable Sequence
+Chef And Binary Operation
+Unstable Subarray
+Chef and Meetings
+The two numbers
+Doof on Cartesian
+Bread
+Count K-Primes
+Event
+Chef and Inequality
+Catch the Thief
+XxOoRr
+XOR N-bonacci Sequence
+Bus full of passengers
+The New Scheme
+Sticks and Rectangles
+Phantasialand
+Increasing Decreasing
+Sereja and Array and Subtracting
+Tri-Hexagonal Puzzle
+Sereja and ASum
+The Leaking Robot
+Make the Sum Even
+Maximum Score
+AP Grid
+Chef and Sign Sequences
+Nice Pairs
+Boring String
+Easy Fibonacci
+Periodic Palindrome Construction
+Split The String
+Minion AND Range
+Maximizing LCS
+List of Lists
+Gravity Guy
+AB plus C
+Divisible by A_i
+Maximal crosses
+Chef and calculation
+Right Triangle
+Balsa For The Three
+Good Binary Strings
+Help Watson Escape
+Chef and a Beautiful Digit
+Median Minimization
+Chef and squares
+Chef Teams
+The Attack of Knight
+Dibs on Fibs
+Yet Another Constructive Problem
+Ada King
+Chef In Infinite Plane
+Odd GCD
+Buckets Full of Candies
+Smart Strategy
+Flip Sorting
+Free Shuttle Service
+Lucy and the Number Game
+Collision in Space
+Sereja and Votes
+Lavanya Loves DFA
+Distinct Sequence
+Frog Sort
+Compilers and parsers
+Stupid Machine
+Adjacency Love
+Road Signs
+Ciel Numbers II
+Superpowers of 2
+Chef and Happiness
+Yet Another Palindrome Problem
+Missing Numbers
+Copy and Push Back
+The One On The Last Night
+Dish Distribution
+Chef and Weird Queries
+Andrew and the Meatballs again
+A Small Array
+Kisses & Hugs
+Equal MEX
+Beautiful Garland
+Problem Sort
+Polo the Penguin and the Test
+Chef And Adjacent Sums
+Chef and Piano Scales
+Counting Inversions Revisited
+Chef and Bulb Invention
+Penalty Shoot-out
+Count Relations
+Magical Girl and Colored Liquid Potions
+Pairwise Xors
+ChefWatson uses Social Network
+Sums in a cuboid
+Chain of Doughnuts
+Consecutive Xor
+Event Organizer
+Squirrel and chestnut
+Bench Press
+Different String
+Maximum Subarray
+Chef And The Hiring Event
+Birthday Gifts
+Operations on a Matrix
+Chef and Digits
+Array Rotation
+Johnny and the Beanstalk
+Delivery Boy
+Survive in ChocoLand
+GCD of Prefixes
+MaxEdges
+Array Swaps
+A Prime Conjecture
+Positive array
+Even Subarray XOR
+Let us construct palindrome
+Max Out
+Sebi and the highway
+Home Delivery
+XOR-ORED
+Rooks
+Array Modification
+Contruct Array
+XOR and AND
+Triple Xor
+Zebra Crossing
+Reduce to zero
+SnackUp
+Count Number of Peaks
+Subarray GCD
+Binary Substituition
+Count palindromes
+XOR Engine
+Chef and Segment Game
+Misinterpretation
+Decomposition Reaction
+Chef and the Feast
+UEFA Champions League
+Bitwise Tuples
+Treasure Hunting
+XOR with smallest element
+Valleys and Hills
+Maximum Damage
+Concat Sort
+Mixi Game
+Rendezvous
+Bear and Row 01
+Exam Cheating
+Balance Zeroes and Ones
+Word Couting
+Chef and Balls
+Chef and Integers
+Maximize Disjoint Pair Sum
+Charges
+Chef and Interesting Subsequences
+Romantic Reversals
+Minimum Distance
+Real obtuse
+Maximum Median Matching
+Dinner by Candlelight
+Tree Product
+Self-Destructing Strings
+Range Assign, Number of Distinct Elements Minimize
+MEX-OR
+Count Permutations
+College Life 5
+Permutation and Palindrome
+Find eX
+Frequency Array Retrieval
+Planting Trees
+Sridhar Likes Travelling
+OR Matrix
+Odd Divisors
+Aditi and Magic Trick
+OR-thodox Distinction
+Unpleasant Ones
+Barcelona Gameplay Tactics
+Make Him Happy
+Just a Graph
+Guess the Number
+Zombie and the Caves
+Chef and the XORed Number
+Lost Primes
+Paint the Wall
+K-Subarrays
+Am I a Fibonacci Number
+Black&White Ring Game
+Puppy and game
+Pizza Delivery
+The Optimal Pairs
+Statistics Construction
+Chef and Frogs
+Robot Movings
+Team Split
+Ada Bishop 2
+Fire Escape Routes
+Painting
+Chef and Rainbow Array - 2
+Special Triplets
+Gcd Queries
+Coloring the Grid
+Bodybuilder
+Chef and Mover
+Three Numbers
+Maximum Scoring Position
+Help Martha
+CAO Stage-2
+Reservior
+Weirwood Trees
+Greedy Candidates
+Stacking Pancakes
+Bitwise Equation
+Nice Quadrangles
+Array sorting
+Weight of Numbers
+Doraemon
+DevuLand, Dinosaurs and Laddus
+Chef and Water Car
+Pogo Stick Competition
+Almost Sorted Permutation
+Fixed Weight
+Forgot Password
+Code
+Minimize the Maximum
+Little Elephant and Cards
+Make it Divisible
+Younger Brother
+Gritty Grid
+Little Elephant and Music
+Subarrays with length
+Chef and Polygons
+Rupsa and the Game
+Flu Shot Lineup
+Suffix Sort
+Sherlock and the Grid
+Building Towers
+Recover the Sequence
+Fake Swaps
+Fencing
+Perfect Permutation
+Churu and Balls
+Distinct Pairs
+Remove One Element
+Chef and Football Match
+Average Gift
+Mystical Numbers
+OR Tuples
+Chef and Codes
+Game on a Strip
+Buying Sweets
+Spreading Charges
+Devu and Perfume
+Lumpy - The Bus Driver
+Summary Power
+Number of Factors
+Ceiling Sum
+Minimum Coloring
+Sum Product Segments
+War of XORs
+Matchsticks
+Max Mex
+Car-pal Tunnel
+Find an integer
+Team Formation
+Little Elephant and Divisors
+Marbles
+Chef and Time Machine
+Chef Anup
+Polo the Penguin and the Numbers
+The Theatre Problem
+Chef and Prime Divisors
+Little Elephant and Order
+Age Calculator
+Iron, Magnet and Wall
+Oracle Devu and Longest Common Subsequence
+Binary Nim
+Book Exercises
+And Or Union
+Set Difference
+K-important Strings
+Box of Chocolates
+End Of The World
+XOR Equal
+Vaccine Drive
+Easy Subsequence Selection
+Moving Coins
+Bon Appetit
+Penalty Shoot-Out II
+Chefina and Swap
+Crushed Apples and a Balance Scale
+Add to Subsequence
+Maximum Value
+Greatest Dumpling Fight
+Pokemon Battles
+Xor and Multiply
+Weird Subarrays
+Many Chefs
+Houses and Restaurants
+Modular GCD
+Games of Wasseypur
+Chef and Red Black Tree
+Army Training
+K-Foldable String
+Funny Marbles
+Chef and Patients
+One Dimensional Kingdoms
+Lucky Palin
+My Fair Coins
+Copy and Paste
+Eugene and function
+Palindromic Game
+Binary Shuffle
+Thief and Police
+Chef got Recipes
+Same Parity Swaps in Binary Strings
+Team Name
+Golf course
+The One Who Knocks!
+Counting Matrices
+Meet In The Median
+Chef and String
+Chefs new Pet
+Time measure
+Bear and AB
+Too Many Candies
+Digit Removal
+Robot Game
+Shortest Route
+Compare those strings
+Another Birthday Present!
+K-Flip
+Subarray XOR
+Count Good Prefixes
+Flip the Prefix
+Cool Guys
+Maximum Array Xor
+Racing
+Optimal Denomination
+Anti Palindrome
+Chef And Special Dishes
+Brush Fire
+Little Elephant and Bamboo
+Resistance
+Chef&#39;s Dream
+Modular Equation
+Breaking Into Atoms
+Distribute idlis Equally
+Distinct Elements
+Crossing Blocks
+Chef Restores a Matrix
+Vote for the Noodle Soup
+Chefland and Electricity
+Matches
+Stingy Strings
+Strings
+Rectangles Counting
+Cybalphabit
+The Probability Of Winning
+Chef and Shop
+Pairwise union of sets
+Triplets
+Broken Life
+Lunchtime
+Chef and Polygon Cakes
+Chef and Ingredients
+Palpal Strings
+Monks
+Binod
+Chef Restaurant
+Average of Pairs
+Snake Snaky
+Chef and Closure
+Substring Minimum Function
+Rectangular Queries
+Online Chess
+Capital Movement
+K-Concatenation
+Coronavirus Spread 2
+Minion Chef and Bananas
+01 Subsequence
+Minimum Sum
+Max and Electrical Panel
+Total Diamonds
+Hail XOR
+Colored Array
+Again XOR problem
+Digit Rotation
+The Last Problem
+Palindrome
+Art of Balance
+Strange Function
+Prefix Zeros
+Chef and Hamming Distance of arrays
+Server Trouble
+Maximum Unique Segment
+Generalized Arithmetic Progression Free Sequence
+Prime Game
+String Reverse
+Remy paints the fence
+Matrix Decomposition
+Project Spoon
+The Great Wall of Byteland
+A Plus B Again!
+XOR Folding
+Sum and GCD
+Digit Operation
+Stacks
+Beautiful Array
+New Restaurant
+Plant Location
+Counter Test For CHEFSUM
+Chef Hates Palindromes
+Dessert Wizard
+The One with All the Candy
+Witua and Math
+Magnet Sort
+Sereja and Line
+Subsegment Divisibility
+Maximize an Expression
+Prime Tuples
+W String
+Little Elephant and Exams
+Chef and Easy Problem
+Chef and Pepperoni Pizza
+A Weird Device
+Garden Game
+Little Elephant and Alcohol
+XD Subsequences
+Chef and Modulo Game
+Curry Stained Napkin
+Segmentation Fault
+A Home for Chef
+Logan and his XOR debacle
+Joker and Batman
+Chef and Strange Formula
+Worthy Matrix
+Dazzling Even-Odd Challenge
+The Promised Land
+Array Rotation Returns
+Fibonacci String
+Plane Division
+Fenwick Iterations
+OR of ANDs
+Doom Bakes Cakes
+Vowel Anxiety
+Good Permutations
+Largest Y
+Binary Tournament
+Adjacent Xors
+The hardest gcd problem
+Forest Gathering
+Minions and Voting
+Air Blimp
+Connecting Soldiers
+Go Round
+Parity Again
+Bathwater
+A-E Hash Function
+Expected Weight
+Palindromic Numbers
+Adding Fractions
+Angled Flip
+Divisible Pairs
+Binary Mismatch
+Maximal Score Path
+Minimum Absolute Score
+Chef and Big Soccer
+Gru is Handing Out Bananas
+Equality
+Alice vs Bob Faceoff
+Path-etic Sums
+A String Game
+Divide the Tangerine
+Chef and Wedding Arrangements
+Healthy dinner party
+Mod Equality
+Find A, B, C
+Chef and Array and K
+Bytelandian Robots
+Way Out
+From Rational to Binary
+XOR Product
+Rapid Re-Orderings
+Chef and Round Run
+A puzzle game
+Equal LIS
+Dish Owner
+Divisors and Reciprocals
+Yet Another Cute Girl
+Kingdom Unity
+Restaurant Rating
+Check Mate
+Prime Pattern
+Chef and Triangles
+Reign
+Not All Flavours
+College Life 4
+C - Chef and Maths
+Circle of death
+Product of divisors
+Maze of Digits
+Chef and Strange Operations
+Galactik Football
+Bad Shuffle
+Return of the Gargoyle King
+Pythagorean Pair
+Minimize Digitsum
+IPC Trainers
+Chef Goes Through Segments
+Fake Binary Search
+Word Stem
+Matrix XOR
+Lyra and the Alethiometer
+Physical Exercise
+Count the squares
+Binary Inversion
+Count Substrings
+Chef vs Bharat
+Birthday Gift
+Atleast and Atmost
+Choosing from Buckets
+Lights Off
+The LCS Problem Revisited
+Chef and A Large Permutation
+Maximum Sum Permutation
+Equal Hamming Distance
+Ciel Numbers I
+PerMEXuation
+Three is Crowd
+Super-plane
+Lucky Sum
+Ciel and Tomya
+Good Permutation
+Remove and Add
+Cleaning Tables
+Field Trip
+Mike and Task Packages
+XOR with Subset
+Chef and Reversing
+Range of Data
+Rupsa and Equilateral Triangle
+Squash the Bugs
+Different Neighbours
+ChefTown Parade
+Weird Question
+Box Game
+Highway Crossing
+Bogosort
+Drink Slush
+Chef team
+Partition the numbers
+Chefs Bad Day
+Alice Potter And Dumbledore Army
+Chef and Digit Jumps
+Array Filling
+Sign Wave
+Chef & Cook Game
+Dr Geros lab
+The Lost Array
+The Black and White Knights
+Lucky Count
+Chess Pushing Game
+Magic Trick
+Positive Spewing
+Devu and binary String
+Total Components
+Chef, Chefina and Their Friendship
+Bombing
+Petersen Graph
+Manhattan Rectangle
+Maximum Candies
+Save The Princess
+Tree Coloring
+Query over Matrix
+Repeated String
+Summing Slopes
+Chef and Strange Matrix
+Forced Output
+K-Unique Sequence
+Worst Case Analysis
+One Dimensional Game of Life
+Find XOR
+Minimum Beauty
+Mike and Stamps
+Gerrymander
+Game of Piles Version 2
+Soccer League
+Power Sum
+Maximum AND
+Spheres
+Misha and Nice Sets
+Chef and Sub Array
+Strange Swaps
+Yet Another Nice Girl
+Pied Piper vs Hooli
+The Gray-Similar Code
+And Operation
+Last Digit Sum
+Distinct Numbers
+Guddu and his Mother
+Sereja and Transformation
+Sam, The Charming Angel
+Logging Game
+Knight Fork
+Magic sequence
+Graph Counting
+The Postal Service
+Permutation Shuffle
+Minimal Inversions
+The One with Ross Wedding
+Antimatching
+Byteknights and Byteknaves
+Mathison and the Dynamo shuffle
+Chef and sequence
+Strange Matrix
+The Birthday Tears
+Division
+Find the Sum
+Opposite Cites
+Chef and a great voluntary Program
+Chef and Counting Test
+Multiple of 3
+The N Queens Puzzle Revisited
+Addition
+Aujasvit and the Circle Game
+Strange Minimization
+Binary Nim 2
+Best Cake Ever
+Chef and Strings
+Chef and Interactive XOR
+Battleship V
+A Coin Game
+Binary String on Steroids
+Vision
+Appy Loves One
+Maximise Islands
+Binary XOR
+Cheating Time
+Root the Tree
+Blocked websites
+Where to Build the Roads
+Add and Divide
+Bank robbery
+Red Blue Flowers
+Gap Filler Game
+Chef and Tuples
+Devu and decorating birthday cake
+Devu and a light discussion
+Clean The Sequence
+Quadratic Equations
+Paparazzi Gennady
+Mysterious Sequence
+Chef and Segments
+Little Elephant and Balance
+Closest Ranking
+Little Elephant and Mouses
+Cascading Style Sheets
+Rectangle
+Subsequence-Numbers Divisible by 7
+Chef and Tetris
+Calculus
+Chef and Tic-Tac-Toe
+Binary String Xor
+Inversions of subsequences
+Draughts
+Even Edges
+Chef Designed a Network
+Equal After And
+Queen Blocks
+Appy and Balloons
+D-Or
+Steady tables
+Omax
+Non Coprime Neighbours
+Central Point
+Delicious Dishes
+Circular Intervals
+Lucky Driving
+Chef and Queries
+ChefWM
+No Minimum No Maximum
+Need More Diamonds
+Chef and Reunion
+How to Minimize a String
+Spaghetti Monsters
+Cooking dishes
+Smart Frog
+A Bowling Game
+String Merging
+Rank of the Number
+Count Sequences
+Chef and Friends
+SudokuX
+No Strings Attached
+Matrix Again
+Preparing Dishes
+Bear and Clique Distances
+Sum of Product 2
+Maximise the bridges
+Are These Equal
+Two Variables
+Non Zero Xor
+Random decreasing function
+Restaurant Expansion
+A wolf, a sheep and cabbage
+The powerful sum
+Brutal-Xors
+Ratings and Rankings
+Sleep Cycle
+Merged LIS
+The Hungry Bear
+Delivery Man
+Consecutive XOR
+Sheokand and String
+Bitwise Blend
+Multiples of 3
+Doof fires Brackets
+Chef and Trump Cards
+Chef and Walk
+Chef and Rotation
+Girl Friend and String Gift
+Lighthouses
+Sereja and Graph
+The Number Of Solutions
+Fetching Cooking Tools
+Guess the number
+Chef and His Friend
+Whole submatrix
+Sereja and Commands
+Subtract 12 Operation
+Pairwise AND sum
+Convert the String
+Reach Equilibrium
+Palindromic Binary Numbers
+The Uncountable Ways
+Product Pain
+Solve More Problems!
+Chef and Square
+Gasoline
+Average Sorting
+Chef and Asteroids
+Distinct Neighbours
+Socializing Game around Pizza
+Permutation XOR Sum
+Chef and Good Subsequences
+Sereja and Arrays
+Bear and House Queries
+Pizza or Broccoli
+Nil Xor
+c8kbf and Tree
+Tidying Posters
+Most Frequent Element
+Magical Candy Store
+Chef and Gcd Queries
+Glass Measurement
+Chef and Magical Steps
+Trip
+Chef and Line
+Maximum Factors Problem
+Devu and his Class
+Chef and Secret Password
+Winter
+Subarray Removal
+A Pizza Slice
+Consecutive Deletions
+Even tuples
+The Rumbling
+Maximise Set Bits
+Subtree Removal
+Birthday Gift Again
+Chipped Tree
+Yet Another Problem About Sequences
+Longest Weird Subsequence
+Alternative Sufferings
+Triple Sort
+Chef and Pairwise Distances
+Swapping
+Guess It Right
+The Lost Arithmetic Sequences
+Changing Numbers
+Rock Paper Scissors
+Chef and Minimum Colouring
+Ants and Anteaters
+Distinct Numbers
+K Distinct Array
+Lucky Number
+Prime Factor Division
+MasterChef
+Collecting Magical Berries
+Chef Likes Good Sequences
+Chef and Robots Competition
+Sum this up
+Chef and Subsequences
+Mix Mix Game
+Chef and easy problem 2
+Just a simple sum
+Magical Flips
+Little Elephant and Median
+Tree House
+Ciel and Eggs
+Akhil And Random String
+Gift and Chef
+Maze Love
+Game with numbers
+Queries About Numbers
+XOR Game
+Maximum And Or
+The Baking Business
+Boolean Game
+No sequence
+Chef and Destruction
+Dual Nim
+Minimum Dual Area
+Gold Mining
+Physics Class
+Under the Tunnels
+Clear the Array
+Consecutive Adding
+Cracking the Code
+K Increment Palindrome
+Chef and Filters
+Puppy and Board
+Symmetric Swaps
+Se7en
+Chef and Circle Run
+Partition the Graph
+Alok-nath and His Sanskars
+Empire Business
+Balanced Walks
+Buggy algorithm
+Divide and conquer
+Paragraph Formatting
+Counting Terms
+Optimal Sorting
+Chef And Array Construction
+Chef and Circles
+Infinite OR Game
+Kirito in labyrinth
+Skiing
+Mountain
+Binary String MEX
+Chef World
+Reduce to 1
+Little Elephant and Bubble Sort
+Our Base is Under Attack
+Guess the Prime!
+Strategy for the World Cup
+Rotate the String
+Chef and Trip
+Flipping Failure
+Max Range Queries
+Kayaks
+ChefGame
+Minimise the Size
+KBG and GN-Theory
+Make them Equal
+Bob and Pallindromes
+Stone Game
+Traffic jam
+Valid Paths
+Maximum Points
+Subtract Leading Digit
+Balanced Array
+Markers and Caps
+Fill The Matrix
+Circle of towers
+GukiZ and Candies
+Cell Phone Towers
+Training Plans
+Super Numbers
+Pleasing Chief
+Summation over nCr
+2-D Point Meeting
+Player
+Pumping Water
+Washing Windows
+Churu and lost string
+Chef and Dice
+Dividing Machine
+Second Largest Element
+Rectangles of Love
+Magic Strings
+An Interesting Sequence
+Table Game
+Angry Cyborg
+Double Burgers
+Chef and Subarrays
+Chef and Meatballs
+Split AND Sum
+Infinite polygons
+Sort the Array
+How to Repaint a Fence
+The Rise and Fall of Power
+Effective Sets
+Milestones
+Maximizing LIS
+Fixed Points
+Chef Find XOR Beautiful
+String Game
+Tree Expectancy
+Cube Cakes
+Cooking Schedule
+Makx Sum
+Two Groups
+Maximum Number
+Grouping Chefs
+Just Some Permutations 3
+Ciel and Map
+Travelling Salesman Again !
+Missing Number
+Playing with Numbers
+Equivalent Numbers
+Three Points
+Chef and Rectangle Array
+Restock
+Simple Sum
+Tree Counting
+Palindrome Partition
+C - Mission Gotham
+Lent Money
+Twos and Zeros
+Prime Permutations
+Little Elephant and Product
+All Substrings
+Congruent triangles
+Full Path Eraser
+TripTastic
+Can You Reach The End
+The Lucky Draw
+Cosine Partition Function
+Beats and Pieces
+Maxim and Progressions
+Kamehameha
+Parallel Computing
+Chairs
+Offer for Chef
+A Wonderful Chocolate
+Friends Meeting
+Non Zero Subarray Xor
+Yet Again a Subarray Problem
+Ripple-Carry Adder
+Prime words
+Chef and Gift
+Count Substrings
+Happy Days
+Subtraction Game 2
+Integer Sequences
+Packing the Golden Triangles
+Change the Signs
+Box and Ball System
+Odd Binomial Coefficients
+Travelling in the Graph
+Fly height mode
+Some More Homework
+Crazy Subsequences
+The Evil Professor
+Maximum Size
+Trees Again
+Chef and Cookies
+Little Elephant and Painting
+Candy Collecting Game
+Card Shuffle
+Chef and Surprise Chessboard
+Good Median
+Bulbs and Wires
+Flooring
+Mountain Holidays
+Online Shopping
+The Guessing Game
+Sherlock and the Ugly Flower
+Chef and Words
+Multiple Games
+Coal Scam
+Queries on the String
+Useful Number
+Crazy Substrings
+Chef and Cycled Cycles
+Tennis Tournament
+Secret Machine Mania
+Lucky Balance
+A Story with Strings
+Firdavs and Planet F
+Per Capita Income
+Tourists in Mancunia
+Professor X and Grouping of Numbers
+Chef and Sorting
+Distances
+Retrieve back the Array
+Swapping mismatches
+Roads in Chefland
+Signature
+Chef and Prime Queries
+Bear and Species
+Devu And Churu
+K - balanced string
+Chef and Functions
+B - Candy Love
+Interesting Array
+Different Subarrays Rearrange
+Chefs in Queue
+Operations on a Tuple
+Swapping to Palindrome
+Chef and Divisor Tree
+Sereja and Data Structures
+OneTwo
+Love Squares Hate Cubes
+Jam Board
+Statements Checking
+Stable market
+SUM OR
+Positive Mex
+Increasing Addition
+Strict Permutation
+Gcd and Lcm
+Chef and Subtree MEXs
+Chefina and Ranges
+A Christmas Pizza Puzzle
+Nikitosh and xor
+Musical Rods
+Binary Substitution
+Chemical reactions
+Chef and Square Set
+Equalization
+Chef and Numbers
+Chef Goes Shopping
+Minimize swaps
+Minimize Digit Sum
+Sum of Goodness
+Shift The String
+Puppy and Catchers
+Rearranging Digits
+Another Shortest Paths Problem
+Maximum number, GCD condition
+Triple Inversions
+Inversion sorting
+Addition and Multiplication
+Minimum Operation
+An interesting subsequence
+D - Pilgrims Destination
+The Magical Stone
+Increase 2 consecutive characters
+Cutting Plants
+Chef and Subarrays
+Bytelandian Shoppers
+Chef and Cake
+Help the judge
+Sereja and Salesman
+The battlefield
+Collect the Chocolate Chips
+Maximum Plus
+Sort the Leaves
+Expected Value
+Inversions
+Beautiful Bricks
+Little Elephant and Balloons
+Binary String Game
+Cherry and Bits
+Largest Square in the garden
+The Mine Field
+Wildcard Matching
+Perfect Power Divisors
+Chef Is Just Throwing Random Words
+Sereja and Two Lines
+Chef and Escaping from the Labyrinth
+Gears
+Wireless Network
+The Biggest Restaurant
+Xor It
+Longest non regular parentheses sub-sequence
+Los Pollos Hermanos
+Queries on a Binary Tree
+Chef Game
+Chefina and Prefix Suffix Sums
+Chef And Easy Xor Queries
+Base Plans
+Sardar and GCD
+Lights
+Mexy Array
+Broken Clock
+Squares Game
+Sorting Segments
+Valid String
+Pyramid Traversal
+Circle of Chaos
+Heroes of Magical Might
+Magician versus Chef 2
+Chef and Universe
+Restore the Recipe
+Permutation AND
+Chef and insomnia
+Juno Puzzle for May
+Magic Board
+From Zero to Infinity
+Xor Equation
+Yalalovichik Numbers
+Number of Paths
+Chef and math
+Partition It
+Random Game
+Eugene and big number
+Point Grid
+Tree Game
+Chef and Inflation
+Exponential Game
+Delete a Subarray
+Chef and cities
+Is This JEE
+Chef and Bracket-Pairs
+Crease Painting
+Circular Merging
+The Best Tower
+Matrix
+Chef and Segments
+Swarm of Polygons
+Chef Under Pressure
+Stepping Numbers
+Rich Substrings
+Mahesh and his lost array
+Simple Operations
+Lights Out
+Lock-Free Stack
+Two k-Convex Polygons
+Polynomial Partition Function
+Digits Forest
+String Operations
+Yet Another Crossover Episode
+Fibonacci Queries
+Kth Max Subarray
+Pishty and tree
+Corrupted Seven-Segment Display
+Remove Balance
+Sereja and D
+Meteor
+Chef and Two String
+Earning A Profit
+Existence Of X
+Zeta-Nim Game
+Cute Chef Gift
+Xor it
+Distinct Values
+Points Inside A Polygon
+Chef and String
+Knapsack Problem
+Blade Master
+Useless Clocks
+Corruption in Freedonia
+Binary Concatenation
+Equation Solver
+Minimum Subtree Cover
+Little Elephant and T-Shirts
+Colorful Chain
+Alien Invasion
+Chef and Ants
+Expected GCD
+JosephLand
+Stable Mex
+Make Them Alike
+Root of the Problem
+Organisation
+Interesting Representation
+Too Mean
+Mountain Holidays 2
+Urban Development
+Choosing Cook Off Problems
+Maximise Subsequence Value
+Maximize 1s
+Odd Array
+The Warehouse
+A Bit Easy
+RGB Construction
+Tri XOR
+Sticky Notes
+Smallest Beautiful Number
+Sum of Cube
+Chef and Same Old Recurrence
+Maximum K Sums
+Pishty and Triangles
+Cards, bags and coins
+Accurate XOR
+Polo the Penguin and the XOR
+Chef and Magic Arrays
+Chef and His Garden
+Pishty and birthday
+ABC-Strings
+Sereja and Ballons
+Saving a gift of love
+Tree of Trees
+Longest Subarray
+Coin Denominations
+Perfect Necklace
+Just multiply
+Tic Tac Toe
+Chef And Fibonacci Array
+The Alternating Sum
+Ada Rooks 2
+Game of Divisors
+Hotel Balifornia 2
+Interval Game
+Longest Xommon Subsequence
+Chef and The Divisibility Queries
+Dance Floor Energy
+Subarray LCM
+The Grand Cook Off
+Xor Decomposition
+Palindromes Not Allowed
+Counting Strings
+Algebra Score
+Biladerim Icin
+Expected Number of SCCs
+Pruning Trees
+Christmas Time
+Directing Edges
+Little Elephant and Swapping
+Dalgona Treat
+Block Game
+Impressing Chefina
+Chef and Yoda
+Min Max Equality
+Dream Problem
+Time to Study Graphs with Chef
+X AND Y Tree
+Packing the Boxes
+Optimal Trip
+Chef and medium problem 2
+Little Elephant and Movies
+Angry Grandfather
+House Cleaning
+Sereja and Two Strings 2
+Shifted Palindrome
+Destroy Cells
+Coloring in Hypercube
+Combinatorial Numbers
+Convenient Airports
+Strings and Graphs
+Alternating Diameter
+Fuzzy Linear Combinations
+Matrix
+Genetics
+Range AND
+The Reversed World
+Lowest Sum
+Attack of the Clones
+Sereja and two strings
+Maximum Topological Sort
+Find the Modulus
+XOR Sums
+K-Subarrays
+Arigeom Beats
+Chef and collection of stamps
+Robot Detector
+Merciless Chef
+Cylinder
+English
+Minesweeper Reversed
+Exact Walks
+Guests like slippers
+Renting Spare Oven Time
+Alien language
+Minimum Product
+Maximize Letter Beauty
+Sereja and Random Array
+Rohith and Circles
+Big Queries
+Cyclist Race
+Chefs Favourite Function
+Music Shopping
+Chef and Bitwise Product
+Prefix Suffix Operations
+Sed Max
+Wildcard Replacement
+Alternating Strings
+Selection for Training Camps
+Merging Binary Strings
+Red Green Grids
+Sealing up
+Charles and the BRUTAL subsequences
+Centeroid
+Chef and his Best Friend
+Palindrome In Making
+ABABAABA
+Dividing Products
+Team Formation
+MEX on Trees
+CAO Stage-3
+Place the balloon
+PDS Number
+Throw and Take
+Make that Array!
+Ancient Berland Roads
+Lucky Array
+Potato to Gold
+Chef and Queries
+Chef and cinema
+Chefina on a Trip
+Chef and Swaps
+Minimum SubArray
+Candies
+Dense Graph
+Friends
+First non-Palindrome
+Little Elephant and Blocks
+Generalized Spanning Trees
+Two Flowers
+Codechef War
+Square in numbers
+Haunted Maze
+Perfection
+Receipt Recovery
+The Kingdom of Exodiastaan
+Coordinate Compression
+Task Times
+Number of Ways
+Tracy and Charlie
+Careful Calculation
+Purify It
+Nice SubSegments
+Chef and Subarray Queries
+Gotham PD
+Favourite Numbers
+Dynamic Inversion
+Kira Loves Palindromes
+Billboards
+Bitwise swaps
+Old Farmer
+Chef and His Dish
+Paying optimally
+Array Sorting
+Cooking Game
+Maximize the Tax
+Yet Another Partition Problem
+Matrix and Chef
+Checkpoints
+A Special Tree
+Encoding
+Devu and good strings
+Hedwig The Smart Bird
+Two Averages
+Tywins Tactics
+BLACK LINE
+Chef and Way
+Chef and Dragon Dens
+Subsequence Frequency Counting
+Destroy the EMP Chip
+Even Coefficients
+Chef and Array
+Chef and Riffles
+Igzi and Burly Array
+Music & Lyrics
+Greedy Grid Moves
+Expected Xor
+Median Rearrangement
+A-B Game
+Fast squarer
+Lucy and the Math Analysis
+Anticommutative implication
+Sereja and Game 2
+Subtraction Game
+Tree Permutations
+Another Tree with Number Theory
+Chef and GCD Game
+Planetary Path
+Longest Arithmetic Progressions
+Subarray Jumps
+Fitness Exercises
+Digits Cannot Separate
+Fombinatorial
+Asmany Number Verification
+Must Be Divisible
+Sereja and GCD 2
+Interactive Matrix
+Lucky Game
+Too Much Sweetness
+Chef and Favourite Sequence
+Primes in the GCD table
+Toll Trolls
+Sereja and LCM
+Generalized Independent Sets
+Chef and Land
+Run Direction
+Minimal Travel Time
+Yet Another Tree Problem
+Ice Cream Queue
+Rush Hour
+Friend Groups In A Line
+Little Elephant and Magic
+Adding Least Common Multiples
+S-T Mincut
+Sum Of Binomial Coefficent
+Tree Distances
+Sum Divides Product
+Fly-overs
+Hiring Workers
+Furik and Rubik and Sub Array
+Communicating Servers
+Graph on a Plane
+Triple-tree decomposition
+Matrix Maximum Sum
+Maximum Subsequence Sum
+Doofish Matrix
+Make Palindrome
+Two Circles
+Lucky Days
+Divisible Subset
+Palindrome Palindrome
+Weird Values
+Sereja and GCD
+Ross goes for Shopping
+Up for a Game
+Lasers Everywhere
+Word Play
+Valet Parking
+Block Drop
+Ball Sequence
+Cheating on Queue
+Perfect Subarrays
+Joint XOR
+Bear and Shop Trip
+D-Dimensional MST
+Little Elephant and Boxes
+Departments (Easy Version)
+Wall
+Buying Land
+Dinner Party Socializing
+Misinterpretation 2
+Matchable Permutations
+Single Point of Failure
+Red and blue points
+Candidate walk
+Earthquake
+Travelling Saleschef
+Construct Array
+Shortest Circuit Evaluation
+Lighting the shop
+Ranka
+Painting the Boxes
+Minimum Longest Substring
+Searching for a Biclique
+Triangular Queries
+Bears and Bees
+Connect All Cities
+Chef and Girls
+Good Pairs
+Hotel Balifornia
+Bear and Random Grid
+Devu and his three Hands
+One or All
+Smallest Difference
+Ski Resort
+Secret Mission
+GCD Queries
+Chef and Circle
+Insanely Hard School Exams
+Escape the Tree
+Andrew and the Birthday
+Two Counters
+Separate Them All
+Awkward Pairs
+Bitsetbaba and Power Grid
+Golden Trees
+Angry Chef - Crispy Chips
+Book Game with Chef
+Is it Sorted or Not, That is the Question
+Row Bombing
+Valentine Vex
+Coprime Components
+Mercury Poisoning
+K Flip
+Sereja and Tree 2
+Game
+Remys last tour
+Parenthesis with Maximum Sum Subarray
+Sereja and Permutations
+Expectations on a Permutation
+Chef and Soccer
+Cyclic shifts in permutation
+Integer concatenation
+Complex Spanning Tree
+Minion Circle
+A Short Counting Problem
+Pizza Delivery
+Funny gnomes
+ForbiddenSum
+Dual Distance
+Kingdom Attack
+K - Beautiful Permutation
+Chef and Digits
+Tree difference
+Students-Far From Hostel
+BiCo Gaming Grid
+Exponential Sub-Palindromes
+Get a Clue
+Queries On Tree
+Ciel and a new island
+Two Coins
+Interrogating Gangsters
+Uniform
+Max Shift After XOR
+Reign 2
+Sine Partition Function
+Lost Graph
+Red-blue Trees
+Balanced Suffix
+Xor Compare
+P Equal To NP
+CPI Crisis
+Akhil Recovers The Lost Array
+Defacing Score
+Sereja and Pairs
+Grumpy Granny
+Best Buggy Ratings
+Random Chocolates
+Codechef Password Recovery
+And Tuples
+Bubbles
+Chef Does Coke Yet Again
+Good Sequence
+Permute Digits
+Archi and Tree
+Treeversion
+Construct An Array
+Long Sandwich
+Harmonious Decorating
+CyclesAndColorings
+K Perfect Matchings
+Roses for Alexey
+Chef And Hungry Birds
+Ingredients
+Chef and Hills
+Chefina and Sums
+Ciel and Quiz Game
+Conservative Graph
+The Delicious Cake
+Polo the Penguin and the Lucky String
+Seeding The Pattern
+Minimum Popping
+Squares Counting
+Maximum Size Hollow Square
+Masha and Minions
+Parity tree
+Across the River
+Machine Gun
+Baking Cupcakes
+Backup Functions
+Batteries Needed!
+Alien Clock
+Sereja and Game
+Path-etic Products
+Most Distant Points
+Dividing the Students
+Magical Modulo
+Expected Greatest Common Divisor
+Count Arrays
+Beautiful Subsequence
+Largest Increasing Subsequence
+Gii and His Club
+Path containing K Nodes
+Lucky Fives
+Sebi and the corrupt goverment
+Count Special Matrices
+The Grux Permutation
+Ankit, Srijan and a game of stone piles
+Chef and Problems
+Game Of Life
+Increasing String
+A Game of Primes
+Divide Candies
+Dragonado And XOR
+Square Function
+Intersecting Paths
+Chef and Subsequences
+Golomb Sequence
+Delicious Queries
+Treasure Hunt
+Better call Saul!
+Coprime Triples
+Sequence Transmission
+Jeremy gets a gift
+What Is This, a Crossover Episode
+Nasty Queries
+Chef and Pie
+Mean equals Median
+Colored Domino Tilings and Cuts
+Two-lane Road
+Tug of War
+Puppy and cats
+Evil Book
+Hit the Coconuts
+Doubly Increasing Path
+Graduate Work Matters
+Mex Subsequence
+Chef Up
+Find The Point
+Short
+Expected Sum
+Another Deli-ceilous problem!
+Do Not Touch the MEX!!!
+College Admissions
+Destructive Nim
+Prime Graph
+Difficult Choice
+Maximum Possible Sweetness
+Maximum Xor Sum
+Compressed String
+Traversing Trees
+Yalalovichik Strings
+Time of collisions
+World War 2
+Square Submatrices
+Equivalent Exchange of Triangles
+How to Write a Message
+XOR Times 2 Is Sum
+Minimum OR Path
+Chef and Combinatorics
+Inverse of a Function
+Guess the Tiling
+Fast forward travelling
+Cell Shell
+Simple Editor
+Xor Jar Muluk Tar
+Killing Zombies
+Robots in Chefland
+Profitable Paths
+Harshikaa and the Rain
+Game Count
+Cloning
+Fibonacci concatenation
+Prime Distance On Tree
+Weasel does Xor on Tree
+Pappu and DFS
+Sorting Array
+L-R queries
+Chef Challenge
+Party
+Counting Graphs
+Computer Network
+Completing favorite game
+Xor Queries
+Maximum of GCDs
+Two Closest
+Alice and the Array
+Chef and Pepperoni Pizza Again
+Folding Paper
+Sereja and Two Arrays
+Chef and Amazingness of Numbers
+Lucy and the Flowers
+Bear and Three Colours
+Dynamic GCD
+Devu, his friends and birthday gifts
+Ada Matrix
+Unusual Queries
+Selinas the Chefs Falling on the Tree
+Two Companies
+Overlapping discs
+Absolute Min Max
+The Subarray XOR
+Game of Numbers
+Devu and Manhattan Distance
+Chef and DAG
+D-Value
+Antipodal Points
+Level Of Difference
+Endgame
+Drawing Lines
+Krillin is dead AGAIN
+Adding Special Sum
+Ways to Work
+Wanderer
+Balanced 0-1 Tree
+Scalar Product Tree
+Subsequence LCM
+Tom and Jerry
+Remove Adjacent
+Efficient Delivery
+Count the Ones
+Longest Good Segment
+Arrays Sum
+X-24 and his SUBSET code
+Sereja and Equality
+Snake and Apple Tree
+Counting Hexagons
+LOVEMUFFIN
+Count the Permutations (always)
+Rise of Cyborgs
+Fantastic Four
+Chef And Division
+Doofish Set
+Break into Powers
+Chef and Graph Queries
+Concurrent Lines
+Minimum Replacement
+Chef and Gordon Ramsay
+Chef and special numbers
+Bacterial Reproduction
+Sed Passwords
+Trees and Subtrees
+Servers
+Common Ancestors
+Icing Crowns
+Amazing Experiment
+Least Size
+AND Square Subsegments
+Bear and Bribing Tree
+Bear and Digit Virus
+GCD Sort
+The XOR-OR Dilemma
+Half Sequence
+Traveling Plan
+Different Trips
+Double Delivery
+Chef and Churu
+Maximum Grid
+Logan and DIGIT IMMUNE numbers
+Make array great again
+Sereja and Bubble Sort
+Yet Another Palindromic Problem
+Forgotten Tree 9
+F - Stone Land
+Banana String
+India Fights Corona
+Party Planning
+Guess All
+Moving between Floors
+Filling the maze
+Sequence GCD
+Count Nodes
+Triangle Query
+Lonely Cycles
+Company and Club Hierarchies
+Counting D-sets
+Count of Array
+Anti-knapsack
+Minimum Insertions
+Sasha and Photos
+Knight Covering
+Edges in Spanning Trees
+King Killing
+Hopscotch
+Ciel and Battle Arena
+Wingardium Leviosa
+Lasers Everywhere Alternative
+Chef Restores an Array
+Chef and odd queries
+Binary Strings
+Deja Vu
+Broken Heart
+Sorting Vases
+Complement Spanning Trees
+Travelling Chef Problem
+Longest Constrained Subsequence
+Chef Rami and Inventions
+Maximize It
+Xor Becoming Uncanny
+Chefs Homework Dilemma
+Charge Scheduling
+The Street
+XOR & Sum
+Zombinatorial
+Chef and Sets
+They are COMING
+Roll the Bar
+Chef and Same Old Recurrence 2
+Priya and Parity
+Product on the segment by modulo
+Hill Jumping
+Maximum Palindrome
+Alien Chefs
+Hiring Chefs
+Scoring Pairs
+Vaibhav and Ministers
+Prefix Suffix Distinct
+Chef Land
+Mininum XOR over Tree
+Not Tree Again!
+Chef And Land Labeling
+A Game With a Sheet of Paper
+Counting Inversions Again!
+Arithmetic Progressions
+Stack Of Rectangles
+Shooting
+Counting Spaghetti
+Magic Hull
+Mystery Tree
+Xor Matrix
+Sorted Distances
+Substring Probability
+Where the Wild Things Are
+Permutation Swaps
+Erase All But One
+Find a Subsequence
+Can you do it better
+Minimize the Bits
+Infinite Graph
+Shooting on the array
+Kostomuksha and AESC MSU
+Energetic Node(Hard Version)
+Matrix Pain
+Gormint Aunty
+Motorbike Racing
+Lowest Common Ancestor
+Trial of Doom
+Black and White
+A New Door
+Arya and the Grid of Stars
+Festivals
+Chef at the Food Fair
+Blocks
+Graph Construction
+Count Partitions
+Chef and Good Array
+Query on a tree VI
+Distinct Rows in Submatrices
+Authentication Failed
+Binary Land
+Hussain Set
+Max Heat
+Secret Tree
+Chef and Science
+Some Impact
+Chef and Spice Grid
+Prefix borders
+Tree Upshot
+Power Sum
+Product on Tree
+Chef and Numbers
+Easy Queries
+Sebi and the cube
+Pasha and Good Ones
+Niceness of the Arrays
+Lucy and Palindromes
+Not Too Colourful
+Sonya and Segments
+Rebuilding Byteland
+Move the Coins - Creating Tests
+Nice Subsets
+Bear and Oveflow Points
+First To Last
+Chef and Gordon Ramsay 2
+Misplaced Signs
+Save the nature
+Hidden Colored Graph
+Chef and Chefness
+Team Divisions
+Sequence Creation
+Binomial Fever
+Surgical Strikes
+FastFood Combos
+Permutation Composition Queries
+Total Overlap
+Kirito in Memeland
+Array Division
+The Inexplicable Giant Floating Baby Head
+Bunny Hops
+Fun with AGp
+Heavy-light Decompositions
+Bomb Blast
+Zawad and Index Sum
+Peaceful Calculator
+Deadpool and his COOLEST Problem Ever
+Counting Subsequences
+Subarray Sum
+Rotate to Minimum
+Interactive Equivalency
+Greedy Trip
+Tree Flow
+Banned Quotient
+Flip or Compress
+Subset Numbering
+Short II
+Selling Tickets
+Chef and Bitwise OR Operation
+Cats and Rats
+The First Cube
+Rooted Minimum Spanning Tree
+Monsters Battle
+Dodgers
+Node Codon
+Terrible vectors
+Frequency Function
+Painter Problem
+Subarray Weight
+Knight Moving
+Tower Counting
+Ambidextrous Chefs
+Chef and Or
+Flappy Bird
+Not Divisible
+Make everything divisible by 3
+Sorting
+Lovers Gift
+Restoration
+Tree Game
+Max BIT Sum
+Math Hatter
+Bear and Haircut
+Call Center Schedule
+Post Office
+Chef and Array
+Primitive Queries
+Hasan and boring classes
+Entangled Strings
+Chef and Finding Direction
+Harry in the Chamber of Secrets
+Queries on tree again!
+Is This a Long Challenge
+Solve the Assignment
+Yet another substring problem
+Expected Product
+Carry All Fruits
+Too Much Xor
+Digit Multiplication By K
+Palindrome Pairs
+Tasty Dishes
+Sweetest Candy
+Devus and their voting system
+Something About Divisors
+Weird Product
+Beautiful Array
+Factorize
+A drawing game
+Sereja and Stones
+Sleep Technique
+Seven-Segment Factoring
+Geometry 1
+All Roads Lead To Rome
+End Of The World 2
+Maximize the NOSS
+Newspaper Puzzle
+Mouse Meets Cheese
+Segment Queries
+Function Function
+Mathology
+Chef and Sorting
+MinAdd
+Partition into Permutations
+Colorblind Feast
+Devu and most energetic minion
+Killing Monsters
+Ciel and Genjiko
+Solve what you want
+Special Economic Zone
+Similar Subsequence
+Sorting the Binary String
+Substrings and Repetitions
+Sticks
+Flip to Invert
+Partition Queries
+Egg-free DAG
+Chef and Minimum Cost of His Tree
+Final Battle of Chef
+Gifts at Olympics
+Divide the Set
+Little Elephant and Filling
+Independent Set
+Sereja and Dividing
+XOR Tree
+D - Break the Rules
+Sonya and Gifts
+Median
+Break the Balance
+Evaluate the polynomial
+Counting The Important Pairs
+Subarray Game
+Passing Through!
+Sherlock and His Device
+Disjoint XOR
+Binary Puzzle
+Maximum Sum
+Square Root of LCA Convolution
+Shuffling
+Easy Numbers
+Buying a New String
+Guessing Game
+The In-XOR-able Task
+Sines Sum Queries
+The Challenge Day
+Traffic in Chefland
+Country Tour
+Energetic Node(Easy Version)
+Chef and Path
+Expected Difference
+Matrix Transformation
+Palindromic number
+XOR Sum
+String Matching
+Safe Partition
+Four Arrays
+Split Powers Of 2
+A humongous Query
+Dynamic Trees and Queries
+Winning Ways 2
+Cool Numbers
+Transfiguring Trees
+Tree Fun
+Tom & Jerry
+Swap Shift
+Winter Is Here
+Minimum Ugliness
+Learning Dishes
+Fibonacci Number
+Elevators
+Minimum BFS Length
+Binary Movements
+The Dirty Path
+The Bytelandian Union
+Adjacent Pairs
+Substring Query
+Chef and Recipes
+Mean Mean Medians
+Euler Sum
+Permutation Pairs
+Polynomials
+Modular Circular Permutations
+Evil Infection
+Lazy Ancestors
+Ada Pawns
+Chef and Pizza
+Sum and OR
+Game on Stick
+Compress all Subsegments
+Equal Average
+Danya and Different Values
+Prefix And
+Square Sort
+Defeating Beerus
+Chef and Dancing Steps
+The Most Amazing Dish
+Present for Andrii
+Vacation
+K - Magical String
+Chef and Magic Numbers
+Match the Streams
+Cybertree
+Pizza Tossing
+Yet Another XOR Sort
+Chef and The String of Digits
+Expected Buildings
+Alice Potter and OWL
+Add By Permutation
+Equal Subsequences
+Taxi Driver
+K Forests
+Binary String Happiness
+War in Treeland Again
+Chef and Interval Painting
+Big Number
+Floor Distribution
+Winning Ways
+Locked Safe
+Biased Judgement
+Cool Subsets
+Minimum and Maximum
+Lame Queen Game
+Walk on Tree
+Another Fibonacci
+Sequence Master
+Subsequence LCS
+Chef Cuts Tree
+The Melancholy of Problem Setter
+Alone Alice!
+Chef and the Combination Lock
+Jam
+Range Minimum Queries
+Gamer
+Sereja and BOX
+Sereja and Order
+Medicine Strength
+Chef and Rainbow Road
+Counting The Acute Triangles
+S Semi-palindromic
+Grid Path
+Bullets and Enemies
+Max LCA Sum
+Danya and Numbers
+Rearrange Ranges
+K-Beautiful Subarrays
+Maximum and Minimum
+Maximum Score
+Room Corner
+Ivan Pesic and His World Tour
+Palindrome Swaps
+Chef And Fibonacci Tree
+Lucas Theorem
+Polo the Penguin and the Tree
+Visit Them All
+Anay and Polynomial
+Add Subtract Equalize
+X and Two Groups
+Best board fill
+Edge Addition
+Many bananas
+Chef and LCS
+Puppy and Palindromes
+SuperFunction
+Chef attic window
+In-tree-active Node Coloring
+Preferred Cooking Schools
+To add or to multiply game
+Chef and Balanced Strings
+Minimum value of special tables
+Killjee and k-th letter
+Min-Fund Country
+Chef and Queries
+Almost Palindromic
+Correct Bracket Sequence
+Dot Time
+Sereja and Subsegment Increasings
+Coronavirus
+Picking Fruit for Chefs
+Piles Parity
+Rotate Point
+E - Minimum Operation
+Queries on Matrix
+Perfect Partitions
+Finding Pairs
+Stringology is Magic
+Akhil And Pending Homework
+Good Subsequences
+Graph Challenge
+Sereja and Increasing subsequence
+Xor Separation
+Andrew and the Balls
+Coffee Breaks
+Distinct Neighbours
+Break
+Subway Ride
+Subsequence
+Precious Stones
+Edgy
+Chef and Tree
+Divisible Subarray Counting
+Chef and Polygons
+GukiZ Has More Candies
+Chef and medium problem
+A Counting Problem
+Saber Slays
+How many sequences
+Sort a String
+Fuzzy Conversions
+3-Palindromes
+Hidden Sequence
+Harry Potter and the Goblet of Fire
+The Minimum Game
+Tree and Divisors
+Chef 2 Chef
+Trees and Degrees
+Gru and his Robbery of Mars
+Crash It
+Transmutation Diamonds
+Eat Rock!
+Escape One
+Counting Is Fun
+Chef Goro
+Chess Kings Chasing Game
+Chefland Squads and the Army Chief
+Good galaxy
+Remove Numbers
+Rectangle Query
+Chef and Average on a Tree
+No Unpaired Chefs
+Yet another MEX problem
+Misha and Permutation
+Sum of Cubes
+A Good Problem
+Mosaic
+Morosoph Todd
+Mario and Luigi
+LCM equation
+Heavy-Light Decomposition
+Neil and his Binary Tree
+Checkpoint
+Estimating progress
+Xorangements
+Battle Royale
+A Tree to Remember
+Non-Decreasing Subsequence of size K
+Chef and Lost Story
+Cutting Cake
+Watermelon Farmer
+Robots Again
+LCM Constraints
+Expected Maximum Matching
+Raid Systems
+Profitable Paths 2
+Farmers of Wasseypur
+Swag Subsets
+Chefina and Strange Tree
+Period on tree
+Warriors
+Crystals
+Pile Partition
+More Inversions
+Unique Mode
+Count Subsequences
+Coin Partition
+Cherry and Pyramid
+Sereja and Permutations
+Travel to all Points
+Updating Edges on Trees
+Searching for the Recipe
+Black and White Tree
+Chef Cooks Permutation
+Two Merchants
+Distant Relatives
+Min-Max Rotations
+Hamiltonian Tree
+Two Magicians
+Observing the Tree
+Exponentiation Commutativity
+Place the mines!
+Sum on Tree
+Special Agents
+Sort String
+Yet Another Mex Problem
+Paisa Double
+Fractions
+Puppy and GCD
+Perfect Imperfections 2
+Numbers Game
+Brand New Game
+Rotate the Polyline
+Pattern matching
+Yet Another Chef And Numbers
+Mathison and the teleportation game
+Bitwise Operations on Circle
+Longest Article
+Interactive Tree
+Bash Matrix
+Treasure Hunt
+Chef and Elephant Tree
+Power Sums
+Departments (Hard Version)
+Buying Candies
+Unbalanced Reversals
+Chef Thanos Wants Perfect Balance
+Break And Fix The Tree
+Lucy and Question Marks
+Good Arrays
+Digit Longest Increasing Subsequences
+Good Speech
+Points and Convex Hulls
+Gangsters of Treeland
+Chef and Programming Contest by His Friend
+Longest Spanning Substrings
+Restore Communication
+Chefina and Dishes
+Chef and Maximum Sum Matrices
+Four Friends
+Black-white Board Game
+Three-People Contests
+Ddakji
+Beauty of Pairs
+Will and Closed Set
+A Study in Bake Street
+Falling Zero
+Tree Master
+Maximum Distance
+Team Trees
+Asteroids
+Hypertrees
+MEX Sequences
+XOR, The Detective
+Slingshot
+Functional Array
+Divide or die
+Counting on a Tree
+Adding on Segments
+Beautiful Permutation
+Flower Pots
+The In-XOR-able Task
+Sereja and Arcs
+Chef And A Complete Graph
+Bad Luck
+The Gifting Problem
+LCP Maximization
+The potato problem
+Finding Second Maximum
+Magic Weed
+Before Having Donuts
+Good Arrangement
+Little Elephant and Colored Coins
+Roads in Stars
+Little Elephant and Lucky Segment
+Few Different Elements
+Water Transfer
+Darts
+Prefix Suffix And Or
+Min Manhattan Distance
+Oh I Dont Care
+Cringe Queries
+Ghayeeth vs Siroj
+Finding the matrix
+Dai Ma Chu Shi
+Multiplication Program
+Help Chef
+Jump mission
+Minimum Digit Sum 2
+Two Roads
+Roots of a Tree
+Closest Power
+Tree Sequences
+Chef and Tree Game
+Count The Arrays
+Range Array
+Annual Parade
+Chef and Queries on a Tree
+D-Power Permutations
+Permutation Sorting Game
+Maximise the Minimum
+Y Figures
+Panic! at the Disco
+Inversions in Permutations
+Deja Vu
+Escape
+A Game of Thrones
+AND Palindromes
+Mock Turtle
+Team Sigma and Fibonacci
+Chef and Direction
+Chef, Leonardo And Queries
+Divisors number divisibility
+Series Sum
+Rubber Band
+Strange Bitwise Operation
+Chef and Uniqueness
+MST Queries
+Not a Real World Problem
+Rook Placement
+Equivalent Suffix Tries
+Weird GCD Value
+Carry Bed
+Sebi and the black money
+Sereja and Inversions
+Martial Arts
+Pack the balls in a box!
+Tiptoe through the tulips
+Division Sorting
+Make It One
+String Break
+Closest points queries
+Petya and Sequence
+Minimum and Maximum
+Travelling in a tree
+Palindromes Machine
+The One Where Joey Dates Rachel
+Chef and Equations
+Max-digit Tree
+Joined Subarrays on Tree
+3D Queries
+Odd bits
+Weasel finds Staircase
+Princess and Dragons
+Boring Trip
+Sum of distances
+Longest Unfriendly Subsequence
+VS and his marking scheme
+Dearrange sorting
+Invincible Shield
+How to Choose a Subset
+Substrings on a Tree
+Chef and Reordering
+Faulty System
+Maximize Walk Value
+Metro
+Tokens On A Tree
+Restore the Permutation
+To Queue or not to Queue
+Bear and Cat Trap
+In The Green Zone
+Special String
+Covering Sets
+Weird Sum
+Array Partition
+Guess My Age
+Chef and Balanced Polygons
+Yet Another Tree Problem
+Servers
+Maximum Diversity
+Lights Off, Revisited!
+Random OR
+A Game of Game
+Rook Path
+Ada Pawns
+Counting Is Fun
+Families of Chefland
+Balancing Network Revisited
+Good Permutations
+Defend the Recipe
+Army of Me
+Rocket Pack
+Greenhouse and Plants
+Chef and Pairs
+Many Lists
+Help the DJ
+Xor Array
+Fat Hut
+Covaxin vs Covishield
+Children Trips
+Chef and Sums
+Perfect Tree Problem
+Tree Again
+Permutation and GCD Set
+Split or Decrease
+Blackjack
+Disgust Minimization
+LR Shirts
+Find the Special Node
+Magical Menu
+Area Sums in Convex Polygons
+Forces in the crystal
+The Counties
+Too Many LIS
+Random Number Generator
+Short in Average
+Unusual Sorting
+Node Marking
+ATM Queue
+Make the Matrix Beautiful
+Peaks
+The New Restaurant
+Beauty of Segments
+Bored of Nim
+Tennis
+Tree Xor
+Cersei and her Soldiers
+Escape Plan
+Sherlock Counts Ways
+Balancing Game
+Tree Unattractiveness
+Tree Coloring
+Cucumber Boy and Cucumber Girl
+Black-and-White Tree
+Chef at the River
+Mixing flavors
+Little Party
+Anagram Split
+Sequence Cost
+Differentiation
+Rotation Puzzle
+Chef and Sort
+Chef and Sad Pairs
+Save Jewels
+Pairs of Pairs
+Find Best Path
+Count It
+Circular Permutation Recovery
+Lucky Edge
+E - Guess the Number
+F - Random Strings
+Pretty Boxes
+Devu and Locks
+Little Elephant and CNSes
+Limited Shopping
+Cheapest Office
+Counting on a directed graph
+Helping Dustin
+Selecting Edges
+Jawbreaker
+Nikitosh and Sauron-tetrahedron
+Chef and Divisors
+So Close Yet So Far
+Jake and His Halloween challenge
+Dream and the Multiverse
+Good Indices
+Polygon & Circles
+Stick and polygon
+Interactive Tree 2
+Pricing Tollbooths
+Sherlock and Smallest Window
+Tree
+Maximum GCD
+Min-Max Path
+Hackerman
+Beautiful Subsequence
+Magical Coins
+Random Walk Queries
+Convex Hulk
+Good Operations
+Coprime 6-tuples
+Subtree Center
+Communication Channel
+XOR Minimization
+Chef and Digits of Large Numbers
+Second Player
+Persistent oak
+The Kingdom of Ererraveth
+Simplify the Square Root
+Euler Totient Function Extended
+GCD Subsequences
+MEX Permutation Difference
+Apples and Oranges
+Precise Bipartite Pairing
+Find a special connected block
+Interesting Pairs
+Sum of range distinct queries
+Easy exam
+Chef and Triangles
+Special String
+Logan and his ARRAY Queries
+Bishops
+Maximizing Minimum Segment Sum
+Counting Pairs
+Graph Challenge
+Path Triples On Tree
+Power Tree
+Course Selection
+Palindromic Equivalence
+Tree Labelling
+Create Permutation
+Table Covering
+Meet over Grid
+Set Queries
+Array operations
+Game of Length
+Power Tree
+Get the Segment
+Line Line Line Graph
+Mex Segments
+Sorting device
+Maximum XOR
+Tree Obsession
+Chef and Substrings
+Expected Spanning Trees
+Kuroni and the Cowsheds
+Bear and Xor of Sums
+Tree Queries
+Polynomial Root
+Bear and Shuffled Points
+Flood
+Irrational Root
+Polygon Chain
+Painting Tree
+Product of Diameters
+Mixing Colors
+Circle Eating
+Greedy Students
+The Secret Recipe
+OR-XOR
+Delivering Bread
+Equal Median
+Batman and Tree
+String Query
+Expected Number of Customers
+Integer Combinations Of Vectors
+Permutations
+Cleaning Drive
+Binary Game
+Mysterious Sequence
+Chef and Words
+Chef in Evil Land
+Swap Sort
+Chef and Bike
+Count Arrays
+Precise Pairing
+A Leisurely Journey
+Point constraints
+Chef and Dominating Subarrays
+Permutation Xor
+Chef Protection Plan
+Intersection Matrix
+Tree Connectivity
+Mode!
+Bit Twister on a Tree
+A DT Chip
+Partition Ways
+Chef and Function
+Base or Bias
+Flippable Points
+Minimum OR Spanning Tree
+DP Made Easy
+Probability
+The Amazing All-In-One Cooking Machine - Challenge
+Queen of Hearts
+Special Shortest Walk
+Block Tower
+Lulymp
+Permutation Split
+Sussy Rooks
+Test Generation
+Deletion Sort
+Random Knapsack
+Gun Distribution
+Max Circumference
+Replace and Substring Queries
+Vishesh and his Hate for Even Numbers
+Sereja and Tree
+Chef Chooses a Subset
+Idols and Fans
+Logan and his STRING dilemma
+Characteristic Polynomial Verification
+Black and White Tree
+Hack Fulu
+Strange BST
+Dakimakura Distribition
+D-Dart
+Harry Potter and the Deathly Hallows - 2
+Squeeze OR
+Hidden Permutation
+Coloring Colorable Graphs
+Push the Flow!
+Finding Sum
+Cake Production Line
+Splitting Giant Subs
+Maximal Prefix After Flip
+Three-Degree-Bounded Maximum Cost Subtree
+Chef and Cut
+MEX-ception
+Maximum Value from Binary strings
+Buying Seedlings
+Chef and Vectors
+Misha and Gym
+Chef and Horcrux
+Queries With Points
+Prime Cycle
+Sereja and Permutations 3
+Fibonacci Numbers on Tree
+Chef and Polyhedron
+Red-Black Boolean Expression
+And-Or Game
+Ada Function
+Curious Matrix
+Bracket Removal
+Chef and the Number Sequence
+Guess the row
+Count on a Treap
+Not even planar
+Sum Over All Arrays
+Maze
+Twice GCD Thrice LCM
+Maximum Matching
+Improve the Permutation
+String Power
+Linear Combination
+Optimal Xor Set
+Generating Cycles
+Permutation Deletion
+Restore the Permutation
+GCD of the Submasks
+Ciel and Earthquake
+Tom And Jerry
+A game on a graph
+Crazy Row
+Count Number Of Pairs
+Maximum Special Sum
+Recipe for Philosopher Stone
+Avoid The Landmines
+Permutation Segments
+MathBuzz
+Large Kitchen
+Strange Queries
+Sonya and Queries
+Unreasonable Updates
+Querying on a Grid
+Decompose the Tree
+Madoka and Ladder Decomposition
+Counting Subgraphs
+Subsegment Sum
+Divisible Distances
+Drawing
+Easy Geo xD
+Cumulative Palindrome Count
+Maximum Tree Path
+Chef and Tree
+Chef and Tree
+Counting Tuples
+H - Solve It Ashi
+Coordinate Points
+The Chosen One
+Chef And Partytions
+Trees Are Fun
+Palindromeness
+Pawn Chess
+Trip and Palindromes
+Ghost Chase
+Interactive Tree
+Build the Tree
+Nearest Color
+Iron Islands
+Magical Subsequence
+Maximise Score
+An Inveractive Problem
+Or Sum
+Connect Points
+Curing Kingdom
+Gaming Inversion
+Bickering Cooks
+Game of Theory
+Palindrome Love
+Plus Equation
+Prefix XORs
+Three Bikes
+Data Pipelines
+MAX-SEG
+Jumping Fever
+Optimal Splitting
+Rotate it
+Unique Substring
+Chef and Guard Towers
+Broken Dreams
+Second LIS
+Lucky Ali
+Xor X,Get MAX
+Binary Tree
+Minimum Xor On Segment
+Spinning Wheels
+Mushroom Cave
+Moonwalk
+Digit Matrix
+Hidden Points
+Chef and the Cards
+Alice Potter and Wingardium Leviosa
+Sonya and Tree
+Sebi and the equation 2
+Xor Travellers
+Ada Bishop
+Magic Permutations
+Friends and Candies
+Prefix Max
+Chef and Pair Flips
+Fixed Sum
+Chef and Big Matrix
+Decorate It
+Table Tilt
+Circle Coloring
+Devu, his sister and Rangoli
+Coloured Pairings
+The Great Plain
+Tree Balancing
+Graphs in Euclidean Space
+Paths
+Equal Inversions
+Array and Operations
+Alternating LG Queries
+CCDSAP Exam
+Village Road Network
+The Illusionist
+Bad Tuples
+Counting manuls
+Shortest path queries
+Tree Retrieval
+Beauty Sum
+Winter Is Here
+Mex On Subtrees
+Chef and Strange Graph
+Shubham Loves Maths
+City Mapping 2
+Yet Another LIS Problem
+From Your GGANBU
+Maximum Frequent Subarray Sum
+Good ranking
+Flight Distance
+Ciel and Random Walk
+Max Minus Min
+The Last Droid
+Chefbook
+Dot It
+Advanced Cooking Machine
+Where Is the Root
+Avoid Alternating
+Interactive MST
+Hamel Paths
+Non-decreasing AND and OR
+Misha and Geometry
+Collinear Points
+Optimal Memory Address
+Brahma and Shiva
+Yet Another Counting Problem
+Yet Another XOR Sort 2
+Rebel rescue
+How to Operate a Robot
+Move the Coins 2
+Median Pairs
+Expected Repetitions
+Binary String Randomizer
+Powers of 2
+Bank of Wasseypur
+Too Many LIS 2
+High Interview
+Make It
+So Straight
+Picnic with Chef
+Clique Boolean Expression
+Even Odd Partition
+Chef and Fencing
+Tree Walk
+Equal Gifts
+Our Enemy does not Tire
+Chef and Array
+Adding Up Sequences of Towers
+Weird Competition
+Sweet Change
+Chef and The Recursive Algorithm
+Chef and Professor
+Distinct Integers
+D-Function
+Deathly Hallows and The Cloak Of Invisibility
+Room Of Requirement
+Graph on a Table
+Product Mex Queries
+Hill Sequence
+Tree Distance Sum
+Chef and the Orders
+Couples sit next to each other
+Sarthak and his Set of Primes
+Help your friends
+Xor Grid
+The One Where They Get Back Together
+BFS before DFS
+Safe Routes
+Sort Permutation
+Count Digits
+Future of draughts
+Simple Queries
+Sum of Primes
+Triangles in a Grid
+Minimum Divisibility Set
+Ticket Machine
+Haha
+Standard Tree Task
+Chef And Palindromes
+Making Change
+Swimming Pool
+Three Arrays
+Cherry and Squares
+Similar Arrays
+Delivery Problems
+Shops in Mirzapur
+Key-bored
+Chef, Chefina and Restoration
+Bounded Spanning Tree
+Strange Queries
+Ciel Numbers III
+Perry learns Binary
+Double Distance Query
+Isomorphic Morphism
+Optimal Subset
+Subtree swapping
+Construct a String
+And Equals Or
+G - Maxpool
+Arithmetic Jumping
+Payton numbers
+Planning the Trip
+AP On Trees
+Inverse Binomial Coefficient
+Elevator
+Alice
+Quest for Dragon Balls
+Union on Tree
+Day Schedule
+The Faulty Tree
+Smallest Element In Progression
+Graph Count
+Island Hopping
+The Frictionless Bisected 2-Dimensional World
+Hidden Cell
+Tsetso Subarrays
+Chef and Isomorphic Array
+Triple Sundae
+Mathison and the cubic tree
+Quasi-Polynomial Sum
+Chef and Modular Sequence
+Chef and The Colored Grid
+Random Convex Hull
+Parity Fun
+A Special Tree 2
+Game on a Grid
+Ciel and password cracking
+Chef and Working Plan
+Company Club Membership
+Smart Chef vs Evil Chef
+Binary OP
+Graph Labelling
+Chef and Math Test
+Make It Zero 3
+On Graphs, Probability Theory and Cakes
+Adjacent Pair Swaps
+Adjacent leaves
+Max Min Circle Difference
+Mex Pairs
+Tree Query
+Max Graph
+Rearrangement
+Square Loop
+Dragonstone
+Pie Tasting
+Convert Strings by Flips 2
+Count Number of Sequences
+Killing Gs
+Conquer Beyond the Wall
+Curious Queries
+Sereja and Shuffling
+Maximum GCD Subset
+ABCD
+Mex Chef
+Addition chains
+Dipole Moment
+Chef and Chefcoin
+Chef has a Spaghetti Garden
+Similar Graphs
+How many cuts
+Palindromes and Queries
+The query problem
+Hot Meals and Queues
+Elephants in a Pond
+Computer Virus
+Roman Routing
+GCD Sums
+K0KALARU47 and CP task
+Closest Points
+Yet Another Shortest Path Problem
+Sweet Rectangles
+K-th Element on Grid
+Odd Split
+Ada Rooks
+Very Long Suffix Array
+Maximum Tree Jumps
+Factorial to Square
+Best Triangle
+Eastern Draughts
+Mega mu - 1
+No Queries No Fun
+Make Grid Comparable
+Many Left
+Odd Sum Partition
+Chef and Mala
+Random Permutation
+I Hate Symbo-LIS-m
+WordNinjas
+Tree and Brilliant Array
+SPLIT With XOR Not X
+Ancient Magic
+Maximum Sub-rectangle in Matrix
+Simultaneous Nim
+Bear and Almost Row
+Minesweeper
+Another Standard Problem
+Chefina and Swaps
+The Malaysian Flight Search
+Xor Counting
+Yet Another XOR Task
+Chef and Edge Flipping
+A Fence for Byteland
+Chef and Condition Zero (Challenge)
+Puppy and Triangles
+Chef and the Cake II
+Tandem
+Password Cracking Challenge
+Fault Tolerance
+Low Budget Sanitization
+To challenge or not
+Sereja and Sorting
+Plus Xor Increase
+Sussy Perms
+Not a Convex Hull (Challenge)
+Sereja and Vectors
+Efficient Painting
+Paint the Tree
+(Challenge) Chef Exchange
+Edit Distance on Grid
+Sum of Areas
+Substring and five rules
+Deleting numbers
+Warehouseman (Challenge)
+Chef and War with Taran (Challenge)
+Beautiful Branch
+One Pile
+Art in Digital Age
+Sereja and Snake
+(Challenge) Chef and Palindromes
+Chef and Array (Challenge)
+Outside of Brackets
+Tree Interval Queries
+Chef, Primes and Trees (Challenge)
+Far Graphs
+(Challenge) Delete DAG
+(Challenge) Coloring Triangulations
+(Challenge) Codechef War II
+Chefland Army
+Bus Station
+Moving Rectangles (Challenge)
+Scrabble on a Graph
+Sereja and Permutation
+Optimal Shopping II
+(Challenge) SnackDown 99
+Permutations LCS
+Byteland Tours
+(Challenge) Interleaving Strings
+Chef and Making Triples
+Embedding a Tree (Challenge)
+XOR maximum-minimum matrices
+(Challenge) Cubical Virus
+Place Balls Twice
+(Challenge) Sebi and CPU Design
+Convert Strings by Flips
+Tanks
+(Challenge) 300 IQ Ants
+Sereja and Ways in the Cube
+Connect on a Grid (Challenge)
+Sereja and Sorting 2
+DARTS501
+Wireless Electricity (Challenge)
+(Challenge) Building Anthills
+Chef and Job and Rest
+Make It Zero 2
+Chef and Number Guessing
+Kali and Devtas
+Stack-Queue Sort (Challenge)
+Factorisation
+Phineas and Marks
+(Challenge) Chef and Matching Game
+Edit Distance Revisited
+Cut the Cake (Challenge)
+(Challenge) Maximizing LIS
+The Spelling Problem
+Maximum Difference Walk
+Embedding
+Shopping
+Game of snakes on a grid
+(Challenge) Chef with Orchestra in the Kitchen
+Sereja and Progressions
+Chef and Rectangle Genome
+Chef and Painting
+Fighting Ebola
+Santa Delivering Problem
+Chef and Chetris
+Sereja and Matrix Division
+(Challenge) Bacteria Synthesis
+Division of Lands
+(Challenge) Nanobots
+Jigsaw Puzzle Solving
+Chef and New Game
+Scheduling jobs on a cluster
+Alice and her garden
+Sereja and Circles
+Efficient Delivery
+(CH) Bear and Sorted Rows
+Chef in a Mysterious Land (Challenge)
+Social Cluster
+Sereja and Number Division 2
+Servers (Challenge)
+Chef and Battleship
+Chef and Intersection Line
+Vibrating Paths (Challenge)
+(CH) Serejs and Billiards
+(Challenge) Biased Committee
+Chef and Matrix Division
+Water Sort Puzzle (Challenge)
+(Challenge) Connecting computers
+Mathison and the Data Warehouse (Challenge)
+Saboteur (Challenge)
+Ants (Challenge)
+(Challenge) Dynamic Hull
+Sereja and Functions (Challenge)
+Inversions Retrieval
+Matrix Permutations
+Increase to Zero
+Maximal GCD
+Count Sequences
+Maximal Trigonal Area
+Binary String Game
+Weird full graph
+Clamp Paths on Tree
+Tangling Tree

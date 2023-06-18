@@ -1,0 +1,36 @@
+  Prof. Charles: "She is like you. Very much like you !! "
+Logan recently understood that Laura is his daughter. Transigen was breeding mutant children using DNA samples from several mutants for the "X-23" project. His own DNA was used.
+To save Laura, Logan has to find out how many of his attributes are also present in Laura. He gets access to N strings.
+Logan must know the set X(contains unique elements) of unique substrings of all the N strings
+Consider 2 strings "abab" and "abac". Set X of all unique substrings of both these strings is -
+Prof. Charles asks him Q queries.
+In a query, Logan will be provided ID (say P) of one of those N strings (1 ≤ P ≤ N) , and another integer D.
+For each query, Logan needs to tell the number of substrings in set X which have Longest Common Prefix ( LCP ) with string P of length greater than or equal to D
+  Input
+First line of every input file comprises an integer N denoting the number of strings to be input.
+N lines follows, each comprising the ith string.- Str[i]
+Then an integer Q is input- denoting the number of queries.
+Next Q lines contains two integers P and D respectively where P denotes the string ID, and D denotes the required LCP length as stated above
+  Output
+For each of the Q queries, output the number of substrings of set X which satisfy the condition stated above.
+  Constraints
+Strings comprise only lowercase characters ['a'-'z']
+1 ≤ N ≤ 105
+1 ≤ |Str[i]| ≤ 105
+Sum of length of all strings will not exceed 106
+1 ≤ Q ≤ 105
+1 ≤ P ≤ N
+1 ≤ D ≤ Sum of length of all strings
+  Example
+Input:
+2
+abac
+abab
+2
+2 2
+1 1
+Output:
+4
+6
+  Explanation
+For 2nd string - "abab" , there are 4 unique substrings which have LCP with it of length ≥ 2. {ab , aba, abac, abab }

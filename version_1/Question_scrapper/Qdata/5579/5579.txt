@@ -1,0 +1,73 @@
+Do you know Professor Saeed? He is the algorithms professor at Damascus University. Yesterday, he gave his students hard homework (he is known for being so evil) - for a given binary string
+S, they should compute the sum of
+F(S,L,R) over all pairs of integers
+(L,R) (
+1≤L≤R≤∣S∣), where the function
+F(S,L,R) is defined as follows:
+Create a string
+U: first, set
+U=S, and for each
+i (
+L≤i≤R), flip the
+i-th character of
+U (change '1' to '0' or '0' to '1').
+Then,
+F(S,L,R) is the number of valid pairs
+(i,i+1) such that
+U
+i
+=U
+i+1
+.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single string
+S.
+Output
+For each test case, print a single line containing one integer
+∑
+1≤L≤R≤∣S∣
+F(S,L,R).
+Constraints
+1≤T≤100
+1≤∣S∣≤3⋅10
+6
+the sum of
+∣S∣ over all test cases does not exceed
+6⋅10
+6
+Subtasks
+Subtask #1 (50 points):
+1≤∣S∣≤300
+the sum of
+∣S∣ over all test cases does not exceed
+600
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+1
+001
+6
+Explanation:
+Example case 1:
+L=1,R=1:
+U is "101",
+F=0
+L=2,R=2:
+U is "011",
+F=1
+L=3,R=3:
+U is "000",
+F=2
+L=1,R=2:
+U is "111",
+F=2
+L=2,R=3:
+U is "010",
+F=0
+L=1,R=3:
+U is "110",
+F=1

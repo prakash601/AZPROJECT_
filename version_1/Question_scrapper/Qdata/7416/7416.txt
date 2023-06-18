@@ -1,0 +1,98 @@
+MoEngage gives you an array
+A of length
+N.
+You are required to perform exactly
+(N−1) operations on the array. In one operation, you have to pick two indices
+i and
+j
+(1≤i<j≤N) and do the following:
+Remove the elements
+A
+i
+and
+A
+j
+from array.
+Append
+∣A
+i
+−A
+j
+∣ to the array.
+Note that, after each operation, the size of the array is reduced by one. Thus, after
+(N−1) operations, only one element remains in the array.
+Find the number of distinct values the remaining element can have after
+(N−1) operations.
+Input Format
+First line of the input contains
+T, the number of test cases. Then the test cases follow.
+First line of each test case contains an integer
+N denoting the length of the array.
+Second line of each test case contains
+N space-separated integers describing the array
+A.
+Output Format
+For each test case, print the number of distinct values the remaining element can have after
+(N−1) operations.
+Constraints
+1≤T≤1000
+1≤N≤2⋅10
+3
+0≤A
+i
+≤2⋅10
+3
+Sum of
+N over all test cases does not exceed
+2⋅10
+3
+.
+Sample 1:
+Input
+Output
+3
+3
+4 8 5
+1
+5
+2
+2 4
+2
+1
+1
+Explanation:
+Test Case
+1: The given array is
+[4,8,5]. There are two possible values the remaining element can have after all the operations. These values are
+1 and
+7.
+To get
+1, we first choose
+i=1 and
+j=2. We remove the elements
+4 and
+8 and append
+∣4−8∣=4 to the array. After performing the operation,
+A=[5,4]. Next, we choose
+i=1 and
+j=2. After performing the operation,
+A=[1].
+To get
+7, we first choose
+i=1 and
+j=3. We remove the elements
+4 and
+5 and append
+∣4−5∣=1 to the array. After performing the operation,
+A=[8,1]. Next, we choose
+i=1 and
+j=2. After performing the operation,
+A=[7].
+Test Case
+2 : The given array is
+[1]. No operations are possible in the array. So, the only possible value of the remaining element is
+1.
+Test Case
+3 : The given array is
+[2,4]. The only possible value of the remaining element after performing one operation is
+2.

@@ -1,0 +1,102 @@
+There are
+N chefs (numbered
+1 through
+N) and
+M dishes (numbered
+1 through
+M). For each valid
+i, the
+i-th chef can cook dishes of exactly one type
+F
+i
+. Also, each chef is a friend of
+K different chefs.
+Whenever some chef cooks a dish, he asks all chefs who either are his friends or know how to cook this dish to evaluate the dish. No chef may evaluate his own dish.
+All the chefs are arranged in a row from chef
+1 to chef
+N. Chefina is going to choose two valid integers
+L and
+R and allow the chefs
+L,L+1,…,R to cook their dishes and have them evaluated as described above. She wants to choose
+L and
+R in such a way that each of the
+N chefs evaluates at least one dish. Find the number of such pairs.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+M and
+K.
+The second line contains
+N space-separated integers
+F
+1
+,F
+2
+,…,F
+N
+.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains
+K space-separated integers
+D
+1
+,D
+2
+,…,D
+K
+denoting the friends of the
+i-th chef.
+Output
+For each test case, print a single line containing one integer ― the number of pairs such that each chef evaluates at least one dish.
+Constraints
+1≤T≤1,000
+1≤M≤N≤3⋅10
+5
+1≤K≤3
+1≤F
+i
+≤M for each valid
+i
+1≤D
+i
+≤N for each valid
+i
+i !=D
+i
+for each valid
+i
+D
+1
+,D
+2
+,…,D
+K
+are pairwise disticnt
+the sum of
+N⋅(K+1) over all test cases does not exceed
+2⋅10
+6
+Sample 1:
+Input
+Output
+2
+3 3 1
+1 2 3
+3
+3
+1
+6 2 1
+1 1 1 2 2 2
+2
+1
+4
+3
+6
+5
+0
+9

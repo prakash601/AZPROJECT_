@@ -22,7 +22,7 @@ driver = webdriver.Chrome(service=s)
 
 heading_class = "._titleStatus__container_15tum_839"
 body_class = "._problemBody_15v7d_29"
-index = 1
+index = 3503
 QDATA_FOLDER = "version_1/Question_scrapper/Qdata"
 
 def get_array_of_links():
@@ -35,30 +35,30 @@ def get_array_of_links():
     return arr
 
 
-# def add_text_to_index_file(text):
-#     index_file_path = os.path.join(QDATA_FOLDER, "index.txt")
-#     with open(index_file_path, "a") as index_file:
-#         index_file.write(text + "\n")
+def add_text_to_index_file(text):
+    index_file_path = os.path.join(QDATA_FOLDER, "index.txt")
+    with open(index_file_path, "a") as index_file:
+        index_file.write(text + "\n")
 
 
-# def add_link_to_Qindex_file(text):
-#     index_file_path = os.path.join(QDATA_FOLDER, "Qindex.txt")
-#     with open(index_file_path, "a", encoding="utf-8", errors="ignore") as Qindex_file:
-#         Qindex_file.write(text)
+def add_link_to_Qindex_file(text):
+    index_file_path = os.path.join(QDATA_FOLDER, "Qindex.txt")
+    with open(index_file_path, "a", encoding="utf-8", errors="ignore") as Qindex_file:
+        Qindex_file.write(text)
 
 
-# def create_and_add_text_to_file(file_name, text):
-#     folder_path = os.path.join(QDATA_FOLDER, file_name)
-#     os.makedirs(folder_path, exist_ok=True)
-#     file_path = os.path.join(folder_path, file_name + ".txt")
-#     with open(file_path, "w", encoding="utf-8", errors="ignore") as new_file:
-#         new_file.write(text)
+def create_and_add_text_to_file(file_name, text):
+    folder_path = os.path.join(QDATA_FOLDER, file_name)
+    os.makedirs(folder_path, exist_ok=True)
+    file_path = os.path.join(folder_path, file_name + ".txt")
+    with open(file_path, "w", encoding="utf-8", errors="ignore") as new_file:
+        new_file.write(text)
 
 
 def getPagaData(url, index):
     try:
         driver.get(url)
-        WebDriverWait(driver, 5).until(
+        WebDriverWait(driver, 6).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, body_class)))
         time.sleep(1)
         # heading = driver.find_element(By.CSS_SELECTOR, heading_class)
@@ -77,11 +77,11 @@ def getPagaData(url, index):
         # Join the lines back into a single string
         modified_body_text = '\n'.join(lines_except_first)
         print(heading.text)
-        print(modified_body_text)
-        # if (heading.text):
-        #     add_text_to_index_file(heading.text)
-        #     add_link_to_Qindex_file(url)
-        #     create_and_add_text_to_file(str(index), modified_body_text)
+        # print(modified_body_text)
+        if (heading.text):
+            add_text_to_index_file(heading.text)
+            add_link_to_Qindex_file(url)
+            create_and_add_text_to_file(str(index), modified_body_text)
         time.sleep(1)
         return True
     except Exception as e:
@@ -94,7 +94,6 @@ for link in arr:
     success = getPagaData(link, index)
     if (success):
         index = index+1
-    break
 
 
 driver.quit()

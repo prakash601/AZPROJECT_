@@ -1,0 +1,36 @@
+Chef has finally entered Guinness world records as a maker of longest sandwich in the world by breaking the previous record by making a sandwich of length N meters.
+Celebrating this achievement, Chef decided to have a sandwich party with his friends, and of course no need to make more sandwiches, he will just cut his sandwich of length N meters into parts such that each part has positive integer length, and that too of at most K meters, otherwise it will be too long and it will be hard to be finished.
+Help Chef by telling him what's the minimum number of sandwiches (since he does not have many friends) the big sandwich has to be cut into, and in how many ways this can be done. Since the number of ways can be large output it modulo M
+Two ways are said to be different if the positions of the cuts of first way is different from the positions of cuts of the second way.
+Input
+The first line of the input contains an integer T denoting the number of test cases. The description of T test cases follow.
+Each line of the next T describes a test-case and contains three integers N, K and M.
+Output
+For each test case, output a single line containing two space separated integers, minimum number of sandwiches and number of ways to cut the large sandwich into minimum number of sandwiches modulo M.
+Constraints
+1 ≤ T ≤ 5
+1 ≤ N ≤ 1018
+1 ≤ K ≤ 1018
+2 ≤ M ≤ 106
+Subtasks
+Subtask #1 (10 points) 1 ≤ N, K ≤ 50
+Subtask #2 (20 points) 1 ≤ N, K ≤ 1,000,000
+Subtask #3 (20 points) M is prime
+Subtask #4 (50 points) original constraints
+Sample 1:
+Input
+Output
+2
+7 3 500
+10 2 1000
+3 6
+5 1
+Explanation:
+Example case 1. The minimum number of sandwiches is 3, and there are 6 ways to make 2 cuts:
+positions: 1 4
+positions: 3 4
+positions: 3 6
+positions: 2 4
+positions: 2 5
+positions: 3 5
+Example case 2. The minimum number of sandwiches is 5, and the only way is to make all the 5 sandwiches have length 2

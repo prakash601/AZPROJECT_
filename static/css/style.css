@@ -54,3 +54,13 @@ form {
   width: 100%;
   max-width: 17em;
 }
+
+.execution-time {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.execution-time p {
+  margin: 0;
+}

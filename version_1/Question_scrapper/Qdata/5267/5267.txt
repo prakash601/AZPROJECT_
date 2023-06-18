@@ -1,0 +1,90 @@
+Chef has a garden containing
+N cells. The
+i-th cell has
+R
+i
+red flowers and
+B
+i
+blue flowers. Chef can collect only one type of flowers (either red or blue) from each cell.
+Let
+X denote the total number of red flowers Chef collects and
+Y denote the total number of blue flowers Chef collects. Chef wants to maximize the value of
+min(X,Y). Can you help Chef?
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — the number of cells in Chef's garden.
+The second line of each test case contains
+N space-separated integers
+R
+1
+,R
+2
+,…,R
+N
+denoting the number of red flowers in each cell.
+The third line of each test case contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+denoting the number of blue flowers in each cell.
+Output Format
+For each test case, output the maximum value of
+min(X,Y).
+Constraints
+1≤T≤100
+1≤N≤100
+1≤R
+i
+,B
+i
+≤200
+The sum of
+N over all test cases does not exceed
+100.
+Sample 1:
+Input
+Output
+3
+1
+101
+3
+2
+1 200
+199 1
+4
+1 2 3 10
+3 1 3 5
+0
+199
+7
+Explanation:
+Test case 1: If Chef collects
+101 red flowers from the cell, Chef will have a total of
+101 red flowers
+(X=101) and
+0 blue flowers
+(Y=0).
+If Chef collects the
+3 blue flowers from the cell, Chef will have a total of
+0 red flowers
+(X=0) and
+3 blue flowers
+(Y=3).
+Either way,
+min(X,Y)=0, the answer is
+0.
+Test case 2: Chef collects the
+199 blue flowers from the first cell and the
+200 red flowers from the second cell, so
+min(X,Y)=199, which is maximum.
+Test case 3: Chef collects blue cells from the first three cells
+(Y=3+1+3) and red flowers from the fourth cell
+(X=10), so
+min(X,Y)=7, which is maximum.

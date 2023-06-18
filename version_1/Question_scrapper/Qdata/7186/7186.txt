@@ -1,0 +1,107 @@
+Cyberverse is in the form of a rectangular grid of
+N rows and
+M columns. There is one cyborg living in each cell of the grid. The rows of the grid are numbered from
+1 to
+N, top to bottom. The columns of the grid numbered from
+1 to
+M, left to right.
+Each cell contains a DT chip designed by doctor Aditi and each DT chip is connected with 4 side adjacent DT chips ( if it exists) in the grid.
+Initially all DT chips are working. Hence every cyborg in cyberverse can communicate with each other. DT chip at
+(x,y) is directly connected to its 4 neighboring DT chips and Cyborg at
+(x1,y1) can communicate with cyborg at
+(x2,y2) if and only if there exists a path of connected working DT chips between them. Cyborg Vaishakh wants to destroy the cyberverse so he starts with taking down communication. Doctor Aditi will have to keep a check on the connectivity of the cyborgs in order to build a better DT chip from time to time.
+In total
+Q events take place and there are only two types of events.
+In the first type, Vaishakh can cut connections of every cyborg present in some sub-rectangle, with every other cyborg outside the sub-rectangle. The top-leftmost cell of sub-rectangle will be
+(x1,y1) and down-rightmost cell will be
+(x2,y2).
+All the sub-rectangles in first type of event are non overlapping. But they can be nested. Consider sub-rectangles as hollow rectangular frames
+In second type, given two cells
+(x1,y1) and
+(x2,y2), Doctor Aditi checks if cyborgs living in those cells can communicate with each other or not.
+Since Doctor Aditi is busy upgrading DT chips. Help her to save the cyberverse.
+Input:
+The first line of input contains three space-separated integers
+N,
+M, and
+Q respectively.
+Each of the next
+Q lines will contain 5 space-separated integers in one of the two forms:
+1x1y1x2y2
+2x1y1x2y2
+If the first integer is
+1, it represents event of first type with
+(x1,y1) as top-leftmost cell of subrectangle and
+(x2,y2) as down-rightmost cell of the subrectangle.
+If the first integer is
+2, it represents event of second type with
+(x1,y1) as first cell and
+(x2,y2) as second cell.
+Output:
+For each event of second type, print
+YES if two cyborgs can communicate with each other and
+NO if they cannot.
+Please note that output is case sensitive.
+Constraints:
+1≤Q≤300000
+1≤N∗M≤200000
+1≤x1,x2≤N
+1≤y1,y2≤M
+All the sub-rectangles in first type of event are non overlapping. But they can be nested.
+Sample Input 1:
+4 5 3
+1 1 2 4 4
+2 2 3 3 3
+2 1 1 4 5
+Sample output 1:
+YES
+NO
+Sample Input 2:
+5 6 3
+1 2 2 5 5
+2 1 1 5 6
+2 1 1 3 4
+Sample output 2:
+YES
+NO
+Explanation:
+Here B represents disconnected DT chips and D represents working DT chips
+In Sample
+1:
+N=4,M=5
+DDDDD
+DDDDD
+DDDDD
+DDDDD
+If Cyborg Vaishakh Disconnected rectangle
+((1,2),(4,4))
+DBBBD
+DBDBD
+DBDBD
+DBBBD
+Then the grid will become like this
+so cyborg at
+(2,3) can communicate with cyborg at
+(3,3) but Cyborg at
+(1,1) can not communicate with cyborg at
+(4,5)
+In Sample
+2:
+N=5,M=6
+DDDDDD
+DDDDDD
+DDDDDD
+DDDDDD
+DDDDDD
+If Cyborg Vaishakh Disconnected rectangle
+((2,2),(5,5))
+DDDDDD
+DBBBBD
+DBDDBD
+DBDDBD
+DBBBBD
+Then the grid will become like this
+so cyborg at
+(1,1) can communicate with cyborg at
+(5,6) but not with cyborg at
+(3,4)

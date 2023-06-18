@@ -1,0 +1,112 @@
+The longest increasing subsequence (LIS) of a sequence
+B
+1
+,B
+2
+,…,B
+L
+is the longest sequence of valid indices
+i
+1
+,i
+2
+,…,i
+k
+such that
+i
+1
+<i
+2
+<…<i
+k
+and
+B
+i
+1
+<B
+i
+2
+<…<B
+i
+k
+.
+You are given a sequence
+A
+1
+,A
+2
+,…,A
+N
+. You may modify it by performing the following operation zero or more times:
+Let
+K be the length of the LIS of the current sequence
+A.
+Choose a position in this sequence (possibly the beginning or end of the sequence) and insert a new element
+K into this sequence at this position.
+This way, the sequence
+A changes and the next operation is performed on this changed sequence.
+For example, if
+A=[3,3,4], then the LIS of
+A has length
+2, so we can insert
+2 anywhere into
+A, obtaining one of the sequences
+[2,3,3,4],
+[3,2,3,4],
+[3,3,2,4] or
+[3,3,4,2].
+Find the maximum length of the LIS of
+A that can be obtained after performing the given operation a finite number of times.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer ― the maximum possible length of the LIS.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+6
+1≤A
+i
+≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+2
+5
+5 4 3 2 1
+5
+5 4 3 1 2
+5
+2
+Explanation:
+Example case 1: We can perform the following operations (the newly inserted elements, which are always equal to the length of the LIS of the previous sequence, are underlined):
+[5,4,3,2,1]→[
+1
+,5,4,3,2,1]→[1,
+2
+,5,4,3,2,1]→[1,2,
+3
+,5,4,3,2,1]→[1,2,3,
+4
+,5,4,3,2,1].
