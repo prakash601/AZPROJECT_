@@ -1,0 +1,156 @@
+You are given an array which is initially empty. You need to perform
+n
+operations of the given format:
+"
+a
+l
+r
+k
+": append
+a
+to the end of the array. After that count the number of integer pairs
+x,y
+such that
+l≤x≤y≤r
+and
+mex(ax,ax+1,…,ay)=k
+.
+The elements of the array are numerated from
+1
+in the order they are added to the array.
+To make this problem more tricky we don't say your real parameters of the queries. Instead your are given
+a′
+,
+l′
+,
+r′
+,
+k′
+. To get
+a
+,
+l
+,
+r
+,
+k
+on the
+i
+-th operation you need to perform the following:
+a:=(a′+lans)mod(n+1)
+,
+l:=(l′+lans)modi+1
+,
+r:=(r′+lans)modi+1
+,
+if
+l>r
+swap
+l
+and
+r
+,
+k:=(k′+lans)mod(n+1)
+,
+where
+lans
+is the answer to the previous operation, initially
+lans
+is equal to zero.
+i
+is the id of the operation, operations are numbered from
+1
+.
+The
+mex(S)
+, where
+S
+is a multiset of non-negative integers, is the smallest non-negative integer which does not appear in the set. For example,
+mex({2,2,3})=0
+and
+mex({0,1,4,1,6})=2
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅105
+) — the length of the array.
+The next
+n
+lines contain the description of queries.
+Each of them
+n
+lines contains four non-negative integers
+a′
+,
+l′
+,
+r′
+,
+k′
+(
+0,≤a′,l′,r′,k′≤109
+), describing one operation.
+Output
+For each query print a single integer — the answer to this query.
+Examples
+input
+Copy
+5
+0 0 0 1
+0 1 0 5
+5 2 1 0
+5 2 1 0
+2 4 3 3
+output
+Copy
+1
+1
+2
+6
+3
+input
+Copy
+5
+2 0 0 2
+2 0 1 1
+0 0 2 0
+3 2 2 0
+0 2 3 0
+output
+Copy
+0
+0
+3
+0
+0
+Note
+For the first example the decoded values of
+a
+,
+l
+,
+r
+,
+k
+are the following:
+a1=0,l1=1,r1=1,k1=1
+a2=1,l2=1,r2=2,k2=0
+a3=0,l3=1,r3=3,k3=1
+a4=1,l4=1,r4=4,k4=2
+a5=2,l5=1,r5=5,k5=3
+For the second example the decoded values of
+a
+,
+l
+,
+r
+,
+k
+are the following:
+a1=2,l1=1,r1=1,k1=2
+a2=2,l2=1,r2=2,k2=1
+a3=0,l3=1,r3=3,k3=0
+a4=0,l4=2,r4=2,k4=3
+a5=0,l5=3,r5=4,k5=0

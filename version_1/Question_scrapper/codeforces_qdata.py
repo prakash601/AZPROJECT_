@@ -22,7 +22,7 @@ driver = webdriver.Chrome(service=s)
 
 heading_class = ".title"
 body_class = ".problem-statement"
-index = 1
+index = 11383
 QDATA_FOLDER = "version_1/Question_scrapper/Qdata"
 
 def get_array_of_links():
@@ -63,12 +63,14 @@ def getPagaData(url, index):
         time.sleep(1)
         heading = driver.find_element(By.CSS_SELECTOR, heading_class)
         body = driver.find_element(By.CSS_SELECTOR, body_class)
-        print(heading.text)
-        print(body.text)
-        # if (heading.text):
-        #     add_text_to_index_file(heading.text)
-        #     add_link_to_Qindex_file(url)
-        #     create_and_add_text_to_file(str(index), body.text)
+        body_lines = body.text.split('\n')
+        filtered_body = '\n'.join(body_lines[5:])
+        print(heading.text.split(' ', 1)[1])  # Print heading.text without the first word
+        # print(filtered_body)  # Print body.text without the first 5 lines
+        if (heading.text):
+            add_text_to_index_file(heading.text.split(' ', 1)[1])
+            add_link_to_Qindex_file(url)
+            create_and_add_text_to_file(str(index), filtered_body)
         time.sleep(1)
         return True
     except Exception as e:
@@ -78,10 +80,10 @@ def getPagaData(url, index):
 
 arr = get_array_of_links()
 for link in arr:
+    print(index)
     success = getPagaData(link, index)
     if (success):
         index = index+1
-    break
 
 
 driver.quit()

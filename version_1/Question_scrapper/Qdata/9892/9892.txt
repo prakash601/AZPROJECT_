@@ -1,0 +1,121 @@
+You are given a directed acyclic graph (a directed graph that does not contain cycles) of
+n
+vertices and
+m
+arcs. The
+i
+-th arc leads from the vertex
+xi
+to the vertex
+yi
+and has the weight
+wi
+.
+Your task is to select an integer
+av
+for each vertex
+v
+, and then write a number
+bi
+on each arcs
+i
+such that
+bi=axi−ayi
+. You must select the numbers so that:
+all
+bi
+are positive;
+the value of the expression
+m
+∑
+i=1
+wibi
+is the lowest possible.
+It can be shown that for any directed acyclic graph with non-negative
+wi
+, such a way to choose numbers exists.
+Input
+The first line contains two integers
+n
+and
+m
+(
+2≤n≤18
+;
+0≤m≤
+n(n−1)
+2
+).
+Then
+m
+lines follow, the
+i
+-th of them contains three integers
+xi
+,
+yi
+and
+wi
+(
+1≤xi,yi≤n
+,
+1≤wi≤105
+,
+xi≠yi
+) — the description of the
+i
+-th arc.
+It is guaranteed that the lines describe
+m
+arcs of a directed acyclic graph without multiple arcs between the same pair of vertices.
+Output
+Print
+n
+integers
+a1
+,
+a2
+, ...,
+an
+(
+0≤av≤109
+), which must be written on the vertices so that all
+bi
+are positive, and the value of the expression
+m
+∑
+i=1
+wibi
+is the lowest possible. If there are several answers, print any of them. It can be shown that the answer always exists, and at least one of the optimal answers satisfies the constraints
+0≤av≤109
+.
+Examples
+input
+Copy
+3 2
+2 1 4
+1 3 2
+output
+Copy
+1 2 0
+input
+Copy
+5 4
+1 2 1
+2 3 1
+1 3 6
+4 5 8
+output
+Copy
+43 42 41 1337 1336
+input
+Copy
+5 5
+1 2 1
+2 3 1
+3 4 1
+1 5 1
+5 4 10
+output
+Copy
+4 3 2 1 2

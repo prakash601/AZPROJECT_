@@ -1,0 +1,105 @@
+Kid was gifted a tree of
+𝑛
+vertices with the root in the vertex
+1
+. Since he really like symmetrical objects, Kid wants to find out if this tree is symmetrical.
+For example, the trees in the picture above are symmetrical.
+And the trees in this picture are not symmetrical.
+Formally, a tree is symmetrical if there exists an order of children such that:
+The subtree of the leftmost child of the root is a mirror image of the subtree of the rightmost child;
+the subtree of the second-left child of the root is a mirror image of the subtree of the second-right child of the root;
+...
+if the number of children of the root is odd, then the subtree of the middle child should be symmetrical.
+Input
+The first line of input data contains single integer
+𝑡
+(
+1≤𝑡≤
+10
+4
+) — the number of test cases in the test.
+The first line of each case contains an integer
+𝑛
+(
+1≤𝑛≤2⋅
+10
+5
+) — the number of vertices in the tree.
+The following
+𝑛−1
+lines contain two integers each
+𝑢
+and
+𝑣
+(
+1≤𝑢,𝑣≤𝑛
+,
+𝑢≠𝑣
+) — indices of vertices connected by an edge.
+It is guaranteed that the sum of
+𝑛
+over all cases does not exceed
+2⋅
+10
+5
+.
+Output
+Output
+𝑡
+strings, each of which is the answer to the corresponding test case. As an answer, output "YES" if this tree is symmetrical, and "NO" otherwise.
+You can output the answer in any case (for example, the strings "yEs", "yes", "Yes" and "YES" will be recognized as a positive answer).
+Example
+input
+Copy
+6
+6
+1 5
+1 6
+1 2
+2 3
+2 4
+7
+1 5
+1 3
+3 6
+1 4
+4 7
+4 2
+9
+1 2
+2 4
+2 3
+3 5
+1 7
+7 6
+7 8
+8 9
+10
+2 9
+9 10
+2 3
+6 7
+4 3
+1 2
+3 8
+2 5
+6 5
+10
+3 2
+8 10
+9 7
+4 2
+8 2
+2 1
+4 5
+6 5
+5 7
+1
+output
+Copy
+YES
+NO
+YES
+NO
+NO
+YES

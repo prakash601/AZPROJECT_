@@ -1,0 +1,18 @@
+Least common multiple (LCM) of two numbers is the smallest positive integer which is divisible by both of them. You are given integers a and b. Calculate their LCM.
+Input
+The input contains two integers a and b (1 ≤ a, b ≤ 103), separated by a single space.
+Output
+Output LCM(a, b).
+Examples
+input
+Copy
+10 42
+output
+Copy
+210
+input
+Copy
+123 41
+output
+Copy
+123

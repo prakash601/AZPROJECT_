@@ -1,0 +1,192 @@
+Jeevan has two arrays
+a
+and
+b
+of size
+n
+. He is fond of performing weird operations on arrays. This time, he comes up with two types of operations:
+Choose any
+i
+(
+1≤i≤n
+) and increment
+aj
+by
+1
+for every
+j
+which is a multiple of
+i
+and
+1≤j≤n
+.
+Choose any
+i
+(
+1≤i≤n
+) and decrement
+aj
+by
+1
+for every
+j
+which is a multiple of
+i
+and
+1≤j≤n
+.
+He wants to convert array
+a
+into an array
+b
+using the minimum total number of operations. However, Jeevan seems to have forgotten the value of
+b1
+. So he makes some guesses. He will ask you
+q
+questions corresponding to his
+q
+guesses, the
+i
+-th of which is of the form:
+If
+b1=xi
+, what is the minimum number of operations required to convert
+a
+to
+b
+?
+Help him by answering each question.
+Input
+The first line contains a single integer
+n
+(1≤n≤2⋅105)
+ — the size of arrays
+a
+and
+b
+.
+The second line contains
+n
+integers
+a1,a2,...,an
+(1≤ai≤106)
+.
+The third line contains
+n
+integers
+b1,b2,...,bn
+(1≤bi≤106
+for
+i≠1
+;
+b1=−1
+, representing that the value of
+b1
+is unknown
+)
+.
+The fourth line contains a single integer
+q
+(1≤q≤2⋅105)
+ — the number of questions.
+Each of the following
+q
+lines contains a single integer
+xi
+(1≤xi≤106)
+ — representing the
+i
+-th question.
+Output
+Output
+q
+integers  — the answers to each of his
+q
+questions.
+Examples
+input
+Copy
+2
+3 7
+-1 5
+3
+1
+4
+3
+output
+Copy
+2
+4
+2
+input
+Copy
+6
+2 5 4 1 3 6
+-1 4 6 2 3 5
+3
+1
+8
+4
+output
+Copy
+10
+29
+9
+Note
+Consider the first test case.
+b1=1
+: We need to convert
+[3,7]→[1,5]
+. We can perform the following operations:
+[3,7]
+i = 1
+→
+decrease
+[2,6]
+i = 1
+→
+decrease
+[1,5]
+Hence the answer is
+2
+.
+b1=4
+: We need to convert
+[3,7]→[4,5]
+. We can perform the following operations:
+[3,7]
+i = 2
+→
+decrease
+[3,6]
+i = 2
+→
+decrease
+[3,5]
+i = 1
+→
+increase
+[4,6]
+i = 2
+→
+decrease
+[4,5]
+Hence the answer is
+4
+.
+b1=3
+: We need to convert
+[3,7]→[3,5]
+. We can perform the following operations:
+[3,7]
+i = 2
+→
+decrease
+[3,6]
+i = 2
+→
+decrease
+[3,5]
+Hence the answer is
+2
+.

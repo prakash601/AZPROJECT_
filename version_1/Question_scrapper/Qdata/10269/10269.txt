@@ -1,0 +1,84 @@
+We define
+xmody
+as the remainder of division of
+x
+by
+y
+(
+%
+operator in C++ or Java, mod operator in Pascal).
+Let's call an array of positive integers
+[a1,a2,…,ak]
+stable if for every permutation
+p
+of integers from
+1
+to
+k
+, and for every non-negative integer
+x
+, the following condition is met:
+(((xmoda1)moda2)…modak−1)modak=(((xmodap1)modap2)…modapk−1)modapk
+That is, for each non-negative integer
+x
+, the value of
+(((xmoda1)moda2)…modak−1)modak
+does not change if we reorder the elements of the array
+a
+.
+For two given integers
+n
+and
+k
+, calculate the number of stable arrays
+[a1,a2,…,ak]
+such that
+1≤a1<a2<⋯<ak≤n
+.
+Input
+The only line contains two integers
+n
+and
+k
+(
+1≤n,k≤5⋅105
+).
+Output
+Print one integer — the number of stable arrays
+[a1,a2,…,ak]
+such that
+1≤a1<a2<⋯<ak≤n
+. Since the answer may be large, print it modulo
+998244353
+.
+Examples
+input
+Copy
+7 3
+output
+Copy
+16
+input
+Copy
+3 7
+output
+Copy
+0
+input
+Copy
+1337 42
+output
+Copy
+95147305
+input
+Copy
+1 1
+output
+Copy
+1
+input
+Copy
+500000 1
+output
+Copy
+500000

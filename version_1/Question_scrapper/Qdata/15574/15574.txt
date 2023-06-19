@@ -1,0 +1,19 @@
+You are given a positive integer n. Output its prime factorization.
+If n = a1b1 a2b2 ... akbk (bi > 0), where ak are prime numbers, the output of your program should look as follows: a1*...*a1*a2*...*a2*...*ak*...*ak, where the factors are ordered in non-decreasing order, and each factor ai is printed bi times.
+Input
+The only line of input contains an integer n (2 ≤ n ≤ 10000).
+Output
+Output the prime factorization of n, as described above.
+Examples
+input
+Copy
+245
+output
+Copy
+5*7*7
+input
+Copy
+19
+output
+Copy
+19

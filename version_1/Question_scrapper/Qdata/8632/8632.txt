@@ -1,0 +1,85 @@
+Let's call a string good if its length is at least
+2
+and all of its characters are
+A
+except for the last character which is
+B
+. The good strings are
+AB,AAB,AAAB,…
+. Note that
+B
+is not a good string.
+You are given an initially empty string
+s1
+.
+You can perform the following operation any number of times:
+Choose any position of
+s1
+and insert some good string in that position.
+Given a string
+s2
+, can we turn
+s1
+into
+s2
+after some number of operations?
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤104
+) — the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single string
+s2
+(
+1≤|s2|≤2⋅105
+).
+It is guaranteed that
+s2
+consists of only the characters
+A
+and
+B
+.
+It is guaranteed that the sum of
+|s2|
+over all test cases does not exceed
+2⋅105
+.
+Output
+For each test case, print "YES" (without quotes) if we can turn
+s1
+into
+s2
+after some number of operations, and "NO" (without quotes) otherwise.
+You can output "YES" and "NO" in any case (for example, strings "yEs", "yes" and "Yes" will be recognized as a positive response).
+Example
+input
+Copy
+4
+AABAB
+ABB
+AAAAAAAAB
+A
+output
+Copy
+YES
+NO
+YES
+NO
+Note
+In the first test case, we transform
+s1
+as such:
+∅→AAB→AABAB
+.
+In the third test case, we transform
+s1
+as such:
+∅→AAAAAAAAB
+.
+In the second and fourth test case, it can be shown that it is impossible to turn
+s1
+into
+s2
+.

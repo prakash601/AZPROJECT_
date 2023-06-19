@@ -1,0 +1,169 @@
+You are given a tree of
+n
+vertices and
+n−1
+edges. The
+i
+-th vertex has an initial weight
+ai
+.
+Let the distance
+dv(u)
+from vertex
+v
+to vertex
+u
+be the number of edges on the path from
+v
+to
+u
+. Note that
+dv(u)=du(v)
+and
+dv(v)=0
+.
+Let the weighted distance
+wv(u)
+from
+v
+to
+u
+be
+wv(u)=dv(u)+au
+. Note that
+wv(v)=av
+and
+wv(u)≠wu(v)
+if
+au≠av
+.
+Analogically to usual distance, let's define the eccentricity
+e(v)
+of vertex
+v
+as the greatest weighted distance from
+v
+to any other vertex (including
+v
+itself), or
+e(v)=
+max
+1≤u≤n
+wv(u)
+.
+Finally, let's define the radius
+r
+of the tree as the minimum eccentricity of any vertex, or
+r=
+min
+1≤v≤n
+e(v)
+.
+You need to perform
+m
+queries of the following form:
+vj
+xj
+ — assign
+avj=xj
+.
+After performing each query, print the radius
+r
+of the current tree.
+Input
+The first line contains the single integer
+n
+(
+2≤n≤2⋅105
+) — the number of vertices in the tree.
+The second line contains
+n
+integers
+a1,…,an
+(
+0≤ai≤106
+) — the initial weights of vertices.
+Next
+n−1
+lines contain edges of tree. The
+i
+-th line contains two integers
+ui
+and
+vi
+(
+1≤ui,vi≤n
+;
+ui≠vi
+) — the corresponding edge. The given edges form a tree.
+The next line contains the single integer
+m
+(
+1≤m≤105
+) — the number of queries.
+Next
+m
+lines contain queries — one query per line. The
+j
+-th query contains two integers
+vj
+and
+xj
+(
+1≤vj≤n
+;
+0≤xj≤106
+) — a vertex and it's new weight.
+Output
+Print
+m
+integers — the radius
+r
+of the tree after performing each query.
+Example
+input
+Copy
+6
+1 3 3 7 0 1
+2 1
+1 3
+1 4
+5 4
+4 6
+5
+4 7
+4 0
+2 5
+5 10
+5 5
+output
+Copy
+7
+4
+5
+10
+7
+Note
+After the first query, you have the following tree:
+The marked vertex in the picture is the vertex with minimum
+e(v)
+, or
+r=e(4)=7
+. The eccentricities of the other vertices are the following:
+e(1)=8
+,
+e(2)=9
+,
+e(3)=9
+,
+e(5)=8
+,
+e(6)=8
+.
+The tree after the second query:
+The radius
+r=e(1)=4
+.
+After the third query, the radius
+r=e(2)=5
+:

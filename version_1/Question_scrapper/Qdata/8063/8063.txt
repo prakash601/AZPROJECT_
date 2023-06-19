@@ -1,0 +1,142 @@
+Joi has an array
+𝑎
+of
+𝑛
+positive integers. Koxia wants you to determine whether there exists a positive integer
+𝑥>0
+such that
+gcd(
+𝑎
+𝑖
++𝑥,
+𝑎
+𝑗
++𝑥)=1
+for all
+1≤𝑖<𝑗≤𝑛
+.
+Here
+gcd(𝑦,𝑧)
+denotes the greatest common divisor (GCD) of integers
+𝑦
+and
+𝑧
+.
+Input
+Each test consists of multiple test cases. The first line contains a single integer
+𝑡
+(
+1≤𝑡≤100
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains an integer
+𝑛
+(
+2≤𝑛≤100
+) — the size of the array.
+The second line of each test case contains
+𝑛
+integers
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+(
+1≤
+𝑎
+𝑖
+≤
+10
+18
+).
+It is guaranteed that the sum of
+𝑛
+over all test cases does not exceed
+1000
+.
+Output
+For each test case, output "YES" (without quotes) if there exists a positive integer
+𝑥
+such that
+gcd(
+𝑎
+𝑖
++𝑥,
+𝑎
+𝑗
++𝑥)=1
+for all
+1≤𝑖<𝑗≤𝑛
+, and "NO" (without quotes) otherwise.
+You can output the answer in any case (upper or lower). For example, the strings "yEs", "yes", "Yes", and "YES" will be recognized as positive responses.
+Example
+input
+Copy
+2
+3
+5 7 10
+3
+3 3 4
+output
+Copy
+YES
+NO
+Note
+In the first test case, we can set
+𝑥=4
+. This is valid because:
+When
+𝑖=1
+and
+𝑗=2
+,
+gcd(
+𝑎
+𝑖
++𝑥,
+𝑎
+𝑗
++𝑥)=gcd(5+4,7+4)=gcd(9,11)=1
+.
+When
+𝑖=1
+and
+𝑗=3
+,
+gcd(
+𝑎
+𝑖
++𝑥,
+𝑎
+𝑗
++𝑥)=gcd(5+4,10+4)=gcd(9,14)=1
+.
+When
+𝑖=2
+and
+𝑗=3
+,
+gcd(
+𝑎
+𝑖
++𝑥,
+𝑎
+𝑗
++𝑥)=gcd(7+4,10+4)=gcd(11,14)=1
+.
+In the second test case, any choice of
+𝑥
+makes
+gcd(
+𝑎
+1
++𝑥,
+𝑎
+2
++𝑥)=gcd(3+𝑥,3+𝑥)=3+𝑥
+. Therefore, no such
+𝑥
+exists.

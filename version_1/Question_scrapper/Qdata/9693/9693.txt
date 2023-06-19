@@ -1,0 +1,111 @@
+Consider a road consisting of several rows. Each row is divided into several rectangular tiles, and all tiles in the same row are equal. The first row contains exactly one rectangular tile. Look at the picture below which shows how the tiles are arranged.
+The road is constructed as follows:
+the first row consists of
+1
+tile;
+then
+a1
+rows follow; each of these rows contains
+1
+tile greater than the previous row;
+then
+b1
+rows follow; each of these rows contains
+1
+tile less than the previous row;
+then
+a2
+rows follow; each of these rows contains
+1
+tile greater than the previous row;
+then
+b2
+rows follow; each of these rows contains
+1
+tile less than the previous row;
+...
+then
+an
+rows follow; each of these rows contains
+1
+tile greater than the previous row;
+then
+bn
+rows follow; each of these rows contains
+1
+tile less than the previous row.
+An example of the road with
+n=2
+,
+a1=4
+,
+b1=2
+,
+a2=2
+,
+b2=3
+. Rows are arranged from left to right.
+You start from the only tile in the first row and want to reach the last row (any tile of it). From your current tile, you can move to any tile in the next row which touches your current tile.
+Calculate the number of different paths from the first row to the last row. Since it can be large, print it modulo
+998244353
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤1000
+).
+Then
+n
+lines follow. The
+i
+-th of them contains two integers
+ai
+and
+bi
+(
+1≤ai,bi≤105
+;
+|ai−bi|≤5
+).
+Additional constraint on the input: the sequence of
+ai
+and
+bi
+never results in a row with non-positive number of tiles.
+Output
+Print one integer — the number of paths from the first row to the last row, taken modulo
+998244353
+.
+Examples
+input
+Copy
+2
+4 2
+2 3
+output
+Copy
+850
+input
+Copy
+3
+4 1
+2 3
+3 1
+output
+Copy
+10150
+input
+Copy
+8
+328 323
+867 868
+715 718
+721 722
+439 435
+868 870
+834 834
+797 796
+output
+Copy
+759099319

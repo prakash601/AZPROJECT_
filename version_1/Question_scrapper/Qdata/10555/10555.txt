@@ -1,0 +1,116 @@
+You are given a matrix
+n×m
+, initially filled with zeroes. We define
+ai,j
+as the element in the
+i
+-th row and the
+j
+-th column of the matrix.
+Two cells of the matrix are connected if they share a side, and the elements in these cells are equal. Two cells of the matrix belong to the same connected component if there exists a sequence
+s1
+,
+s2
+, ...,
+sk
+such that
+s1
+is the first cell,
+sk
+is the second cell, and for every
+i∈[1,k−1]
+,
+si
+and
+si+1
+are connected.
+You are given
+q
+queries of the form
+xi
+yi
+ci
+(
+i∈[1,q]
+). For every such query, you have to do the following:
+replace the element
+ax,y
+with
+c
+;
+count the number of connected components in the matrix.
+There is one additional constraint: for every
+i∈[1,q−1]
+,
+ci≤ci+1
+.
+Input
+The first line contains three integers
+n
+,
+m
+and
+q
+(
+1≤n,m≤300
+,
+1≤q≤2⋅106
+) — the number of rows, the number of columns and the number of queries, respectively.
+Then
+q
+lines follow, each representing a query. The
+i
+-th line contains three integers
+xi
+,
+yi
+and
+ci
+(
+1≤xi≤n
+,
+1≤yi≤m
+,
+1≤ci≤max(1000,⌈
+2⋅106
+nm
+⌉)
+). For every
+i∈[1,q−1]
+,
+ci≤ci+1
+.
+Output
+Print
+q
+integers, the
+i
+-th of them should be equal to the number of components in the matrix after the first
+i
+queries are performed.
+Example
+input
+Copy
+3 2 10
+2 1 1
+1 2 1
+2 2 1
+1 1 2
+3 1 2
+1 2 2
+2 2 2
+2 1 2
+3 2 4
+2 1 5
+output
+Copy
+2
+4
+3
+3
+4
+4
+4
+2
+2
+4

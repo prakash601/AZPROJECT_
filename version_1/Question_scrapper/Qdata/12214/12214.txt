@@ -1,0 +1,88 @@
+You are given two integers
+a
+and
+b
+. Moreover, you are given a sequence
+s0,s1,…,sn
+. All values in
+s
+are integers
+1
+or
+−1
+. It's known that sequence is
+k
+-periodic and
+k
+divides
+n+1
+. In other words, for each
+k≤i≤n
+it's satisfied that
+si=si−k
+.
+Find out the non-negative remainder of division of
+n
+∑
+i=0
+sian−ibi
+by
+109+9
+.
+Note that the modulo is unusual!
+Input
+The first line contains four integers
+n,a,b
+and
+k
+(1≤n≤109,1≤a,b≤109,1≤k≤105)
+.
+The second line contains a sequence of length
+k
+consisting of characters '+' and '-'.
+If the
+i
+-th character (0-indexed) is '+', then
+si=1
+, otherwise
+si=−1
+.
+Note that only the first
+k
+members of the sequence are given, the rest can be obtained using the periodicity property.
+Output
+Output a single integer — value of given expression modulo
+109+9
+.
+Examples
+input
+Copy
+2 2 3 3
++-+
+output
+Copy
+7
+input
+Copy
+4 1 5 1
+-
+output
+Copy
+999999228
+Note
+In the first example:
+(
+n
+∑
+i=0
+sian−ibi)
+=
+2230−2131+2032
+= 7
+In the second example:
+(
+n
+∑
+i=0
+sian−ibi)=−1450−1351−1252−1153−1054=−781≡999999228(mod109+9)
+.

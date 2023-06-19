@@ -1,0 +1,114 @@
+Since next season are coming, you'd like to form a team from two or three participants. There are
+n
+candidates, the
+i
+-th candidate has rank
+ai
+. But you have weird requirements for your teammates: if you have rank
+v
+and have chosen the
+i
+-th and
+j
+-th candidate, then
+GCD(v,ai)=X
+and
+LCM(v,aj)=Y
+must be met.
+You are very experienced, so you can change your rank to any non-negative integer but
+X
+and
+Y
+are tied with your birthdate, so they are fixed.
+Now you want to know, how many are there pairs
+(i,j)
+such that there exists an integer
+v
+meeting the following constraints:
+GCD(v,ai)=X
+and
+LCM(v,aj)=Y
+. It's possible that
+i=j
+and you form a team of two.
+GCD
+is the greatest common divisor of two number,
+LCM
+— the least common multiple.
+Input
+First line contains three integers
+n
+,
+X
+and
+Y
+(
+1≤n≤2⋅105
+,
+1≤X≤Y≤1018
+) — the number of candidates and corresponding constants.
+Second line contains
+n
+space separated integers
+a1,a2,…,an
+(
+1≤ai≤1018
+) — ranks of candidates.
+Output
+Print the only integer — the number of pairs
+(i,j)
+such that there exists an integer
+v
+meeting the following constraints:
+GCD(v,ai)=X
+and
+LCM(v,aj)=Y
+. It's possible that
+i=j
+.
+Examples
+input
+Copy
+12 2 2
+1 2 3 4 5 6 7 8 9 10 11 12
+output
+Copy
+12
+input
+Copy
+12 1 6
+1 3 5 7 9 11 12 10 8 6 4 2
+output
+Copy
+30
+Note
+In the first example next pairs are valid:
+aj=1
+and
+ai=[2,4,6,8,10,12]
+or
+aj=2
+and
+ai=[2,4,6,8,10,12]
+. The
+v
+in both cases can be equal to
+2
+.
+In the second example next pairs are valid:
+aj=1
+and
+ai=[1,5,7,11]
+;
+aj=2
+and
+ai=[1,5,7,11,10,8,4,2]
+;
+aj=3
+and
+ai=[1,3,5,7,9,11]
+;
+aj=6
+and
+ai=[1,3,5,7,9,11,12,10,8,6,4,2]
+.

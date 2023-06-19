@@ -1,0 +1,172 @@
+Ada operates a network that consists of
+𝑛
+servers and
+𝑚
+direct connections between them. Each direct connection between a pair of distinct servers allows bidirectional transmission of information between these two servers. Ada knows that these
+𝑚
+direct connections allow to directly or indirectly transmit information between any two servers in this network. We say that server
+𝑣
+is a neighbor of server
+𝑢
+if there exists a direct connection between these two servers.
+Ada needs to configure her network's WRP (Weird Routing Protocol). For each server
+𝑢
+she needs to select exactly one of its neighbors as an auxiliary server
+𝑎(𝑢)
+. After all
+𝑎(𝑢)
+are set, routing works as follows. Suppose server
+𝑢
+wants to find a path to server
+𝑣
+(different from
+𝑢
+).
+Server
+𝑢
+checks all of its direct connections to other servers. If it sees a direct connection with server
+𝑣
+, it knows the path and the process terminates.
+If the path was not found at the first step, server
+𝑢
+asks its auxiliary server
+𝑎(𝑢)
+to find the path.
+Auxiliary server
+𝑎(𝑢)
+follows this process starting from the first step.
+After
+𝑎(𝑢)
+finds the path, it returns it to
+𝑢
+. Then server
+𝑢
+constructs the resulting path as the direct connection between
+𝑢
+and
+𝑎(𝑢)
+plus the path from
+𝑎(𝑢)
+to
+𝑣
+.
+As you can see, this procedure either produces a correct path and finishes or keeps running forever. Thus, it is critically important for Ada to configure her network's WRP properly.
+Your goal is to assign an auxiliary server
+𝑎(𝑢)
+for each server
+𝑢
+in the given network. Your assignment should make it possible to construct a path from any server
+𝑢
+to any other server
+𝑣
+using the aforementioned procedure. Or you should report that such an assignment doesn't exist.
+Input
+The first line of the input contains two integers
+𝑛
+and
+𝑚
+(
+2≤𝑛≤20
+,
+𝑛−1≤𝑚≤
+𝑛⋅(𝑛−1)
+2
+) — the number of servers and the number of direct connections in the given network.
+Then follow
+𝑚
+lines containing two integers
+𝑢
+𝑖
+and
+𝑣
+𝑖
+(
+1≤
+𝑢
+𝑖
+,
+𝑣
+𝑖
+≤𝑛
+,
+𝑢
+𝑖
+≠
+𝑣
+𝑖
+) each, the
+𝑖
+-th line describes the
+𝑖
+-th direct connection.
+It is guaranteed that there is no more than one direct connection between any two servers. It is guaranteed that there is a direct or indirect route (consisting only of the given direct connections) between any two servers.
+Output
+If there is no way to assign an auxiliary server
+𝑎(𝑢)
+for each server
+𝑢
+in such a way that WRP will be able to find a path from any server
+𝑢
+to any other server
+𝑣
+, print "No" in the only line of the output.
+Otherwise, print "Yes" in the first line of the output. In the second line of the output print
+𝑛
+integers, the
+𝑖
+-th of these integers should be equal to
+𝑎(𝑖)
+ – the index of the auxiliary server for server
+𝑖
+. Do not forget that there must be a direct connection between server
+𝑖
+and server
+𝑎(𝑖)
+.
+You can output the answer in any case (upper or lower). For example, the strings "yEs", "yes", "Yes", and "YES" will be recognized as positive responses.
+Examples
+input
+Copy
+6 7
+1 2
+2 3
+3 1
+4 5
+5 6
+4 6
+2 5
+output
+Copy
+Yes
+2 5 2 5 2 5
+input
+Copy
+3 2
+1 2
+2 3
+output
+Copy
+Yes
+2 1 2
+input
+Copy
+4 4
+1 3
+2 3
+4 1
+4 2
+output
+Copy
+Yes
+3 3 1 1
+input
+Copy
+6 5
+1 2
+2 3
+3 4
+4 5
+5 6
+output
+Copy
+No

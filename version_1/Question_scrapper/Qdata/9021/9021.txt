@@ -1,0 +1,108 @@
+A number
+a2
+is said to be the arithmetic mean of two numbers
+a1
+and
+a3
+, if the following condition holds:
+a1+a3=2⋅a2
+.
+We define an arithmetic mean deviation of three numbers
+a1
+,
+a2
+and
+a3
+as follows:
+d(a1,a2,a3)=|a1+a3−2⋅a2|
+.
+Arithmetic means a lot to Jeevan. He has three numbers
+a1
+,
+a2
+and
+a3
+and he wants to minimize the arithmetic mean deviation
+d(a1,a2,a3)
+. To do so, he can perform the following operation any number of times (possibly zero):
+Choose
+i,j
+from
+{1,2,3}
+such that
+i≠j
+and increment
+ai
+by
+1
+and decrement
+aj
+by
+1
+Help Jeevan find out the minimum value of
+d(a1,a2,a3)
+that can be obtained after applying the operation any number of times.
+Input
+The first line contains a single integer
+t
+(1≤t≤5000)
+ — the number of test cases.
+The first and only line of each test case contains three integers
+a1
+,
+a2
+and
+a3
+(1≤a1,a2,a3≤108)
+.
+Output
+For each test case, output the minimum value of
+d(a1,a2,a3)
+that can be obtained after applying the operation any number of times.
+Example
+input
+Copy
+3
+3 4 5
+2 2 6
+1 6 5
+output
+Copy
+0
+1
+0
+Note
+Note that after applying a few operations, the values of
+a1
+,
+a2
+and
+a3
+may become negative.
+In the first test case,
+4
+is already the Arithmetic Mean of
+3
+and
+5
+.
+d(3,4,5)=|3+5−2⋅4|=0
+In the second test case, we can apply the following operation:
+(2,2,6)
+decrement a1
+→
+increment a2
+(1,3,6)
+d(1,3,6)=|1+6−2⋅3|=1
+It can be proven that answer can not be improved any further.
+In the third test case, we can apply the following operations:
+(1,6,5)
+decrement a2
+→
+increment a3
+(1,5,6)
+decrement a2
+→
+increment a1
+(2,4,6)
+d(2,4,6)=|2+6−2⋅4|=0

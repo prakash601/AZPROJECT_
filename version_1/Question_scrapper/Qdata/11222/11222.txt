@@ -1,0 +1,87 @@
+At first, there was a legend related to the name of the problem, but now it's just a formal statement.
+You are given
+n
+points
+a1,a2,…,an
+on the
+OX
+axis. Now you are asked to find such an integer point
+x
+on
+OX
+axis that
+fk(x)
+is minimal possible.
+The function
+fk(x)
+can be described in the following way:
+form a list of distances
+d1,d2,…,dn
+where
+di=|ai−x|
+(distance between
+ai
+and
+x
+);
+sort list
+d
+in non-descending order;
+take
+dk+1
+as a result.
+If there are multiple optimal answers you can print any of them.
+Input
+The first line contains single integer
+T
+(
+1≤T≤2⋅105
+) — number of queries. Next
+2⋅T
+lines contain descriptions of queries. All queries are independent.
+The first line of each query contains two integers
+n
+,
+k
+(
+1≤n≤2⋅105
+,
+0≤k<n
+) — the number of points and constant
+k
+.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+1≤a1<a2<⋯<an≤109
+) — points in ascending order.
+It's guaranteed that
+∑n
+doesn't exceed
+2⋅105
+.
+Output
+Print
+T
+integers — corresponding points
+x
+which have minimal possible value of
+fk(x)
+. If there are multiple answers you can print any of them.
+Example
+input
+Copy
+3
+3 2
+1 2 5
+2 1
+1 1000000000
+1 0
+4
+output
+Copy
+3
+500000000
+4

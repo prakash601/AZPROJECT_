@@ -1,0 +1,23 @@
+Input
+The input contains two integers a1, a2 (0 ≤ ai ≤ 109), separated by a single space.
+Output
+Output a single integer.
+Examples
+input
+Copy
+3 14
+output
+Copy
+44
+input
+Copy
+27 12
+output
+Copy
+48
+input
+Copy
+100 200
+output
+Copy
+102

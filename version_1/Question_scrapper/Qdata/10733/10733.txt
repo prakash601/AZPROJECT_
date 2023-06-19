@@ -1,0 +1,79 @@
+You are given an integer
+x
+of
+n
+digits
+a1,a2,…,an
+, which make up its decimal notation in order from left to right.
+Also, you are given a positive integer
+k<n
+.
+Let's call integer
+b1,b2,…,bm
+beautiful if
+bi=bi+k
+for each
+i
+, such that
+1≤i≤m−k
+.
+You need to find the smallest beautiful integer
+y
+, such that
+y≥x
+.
+Input
+The first line of input contains two integers
+n,k
+(
+2≤n≤200000,1≤k<n
+): the number of digits in
+x
+and
+k
+.
+The next line of input contains
+n
+digits
+a1,a2,…,an
+(
+a1≠0
+,
+0≤ai≤9
+): digits of
+x
+.
+Output
+In the first line print one integer
+m
+: the number of digits in
+y
+.
+In the next line print
+m
+digits
+b1,b2,…,bm
+(
+b1≠0
+,
+0≤bi≤9
+): digits of
+y
+.
+Examples
+input
+Copy
+3 2
+353
+output
+Copy
+3
+353
+input
+Copy
+4 2
+1234
+output
+Copy
+4
+1313

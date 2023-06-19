@@ -1,0 +1,93 @@
+You have an array
+a1,a2,…,an
+.
+Let's call some subarray
+al,al+1,…,ar
+of this array a subpermutation if it contains all integers from
+1
+to
+r−l+1
+exactly once. For example, array
+a=[2,2,1,3,2,3,1]
+contains
+6
+subarrays which are subpermutations:
+[a2…a3]
+,
+[a2…a4]
+,
+[a3…a3]
+,
+[a3…a5]
+,
+[a5…a7]
+,
+[a7…a7]
+.
+You are asked to calculate the number of subpermutations.
+Input
+The first line contains one integer
+n
+(
+1≤n≤3⋅105
+).
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤n
+).
+This array can contain the same integers.
+Output
+Print the number of subpermutations of the array
+a
+.
+Examples
+input
+Copy
+8
+2 4 1 3 4 2 1 2
+output
+Copy
+7
+input
+Copy
+5
+1 1 2 1 2
+output
+Copy
+6
+Note
+There are
+7
+subpermutations in the first test case. Their segments of indices are
+[1,4]
+,
+[3,3]
+,
+[3,6]
+,
+[4,7]
+,
+[6,7]
+,
+[7,7]
+and
+[7,8]
+.
+In the second test case
+6
+subpermutations exist:
+[1,1]
+,
+[2,2]
+,
+[2,3]
+,
+[3,4]
+,
+[4,4]
+and
+[4,5]
+.

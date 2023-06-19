@@ -1,0 +1,269 @@
+A transformation of an array of positive integers
+a1,a2,…,an
+is defined by replacing
+a
+with the array
+b1,b2,…,bn
+given by
+bi=ai⊕a(imodn)+1
+, where
+⊕
+denotes the bitwise XOR operation.
+You are given integers
+n
+,
+t
+, and
+w
+. We consider an array
+c1,c2,…,cn
+(
+0≤ci≤2w−1
+) to be bugaboo if and only if there exists an array
+a1,a2,…,an
+such that after transforming
+a
+for
+t
+times,
+a
+becomes
+c
+.
+For example, when
+n=6
+,
+t=2
+,
+w=2
+, then the array
+[3,2,1,0,2,2]
+is bugaboo because it can be given by transforming the array
+[2,3,1,1,0,1]
+for
+2
+times:
+[2,3,1,1,0,1]→[2⊕3,3⊕1,1⊕1,1⊕0,0⊕1,1⊕2]=[1,2,0,1,1,3];[1,2,0,1,1,3]→[1⊕2,2⊕0,0⊕1,1⊕1,1⊕3,3⊕1]=[3,2,1,0,2,2].
+And the array
+[4,4,4,4,0,0]
+is not bugaboo because
+4>22−1
+. The array
+[2,3,3,3,3,3]
+is also not bugaboo because it can't be given by transforming one array for
+2
+times.
+You are given an array
+c
+with some positions lost (only
+m
+positions are known at first and the remaining positions are lost). And there are
+q
+modifications, where each modification is changing a position of
+c
+. A modification can possibly change whether the position is lost or known, and it can possibly redefine a position that is already given.
+You need to calculate how many possible arrays
+c
+(with arbitrary elements on the lost positions) are bugaboos after each modification. Output the
+i
+-th answer modulo
+pi
+(
+pi
+is a given array consisting of
+q
+elements).
+Input
+The first line contains four integers
+n
+,
+m
+,
+t
+and
+w
+(
+2≤n≤107
+,
+0≤m≤min(n,105)
+,
+1≤t≤109
+,
+1≤w≤30
+).
+The
+i
+-th line of the following
+m
+lines contains two integers
+di
+and
+ei
+(
+1≤di≤n
+,
+0≤ei<2w
+). It means the position
+di
+of the array
+c
+is given and
+cdi=ei
+. It is guaranteed that
+1≤d1<d2<…<dm≤n
+.
+The next line contains only one number
+q
+(
+1≤q≤105
+) — the number of modifications.
+The
+i
+-th line of the following
+q
+lines contains three integers
+fi
+,
+gi
+,
+pi
+(
+1≤fi≤n
+,
+−1≤gi<2w
+,
+11≤pi≤109+7
+). The value
+gi=−1
+means changing the position
+fi
+of the array
+c
+to a lost position, otherwise it means changing the position
+fi
+of the array
+c
+to a known position, and
+cfi=gi
+. The value
+pi
+means you need to output the
+i
+-th answer modulo
+pi
+.
+Output
+The output contains
+q
+lines, denoting your answers.
+Examples
+input
+Copy
+3 2 1 1
+1 1
+3 1
+4
+2 0 123456789
+2 1 111111111
+1 -1 987654321
+3 -1 555555555
+output
+Copy
+1
+0
+1
+2
+input
+Copy
+24 8 5 4
+4 4
+6 12
+8 12
+15 11
+16 7
+20 2
+21 9
+22 12
+13
+2 13 11
+3 15 12
+5 7 13
+9 3 14
+10 5 15
+11 15 16
+13 14 17
+14 1 18
+18 9 19
+19 6 20
+23 10 21
+24 8 22
+21 13 23
+output
+Copy
+1
+4
+9
+2
+1
+0
+1
+10
+11
+16
+16
+0
+16
+Note
+In the first example,
+n=3
+,
+t=1
+, and
+w=1
+. Let
+?
+denote a lost position of
+c
+.
+In the first query,
+c=[1,0,1]
+. The only possible array
+[1,0,1]
+is bugaboo because it can be given by transforming
+[0,1,1]
+once. So the answer is
+1mod123456789=1
+.
+In the second query,
+c=[1,1,1]
+. The only possible array
+[1,1,1]
+is not bugaboo. So the answer is
+0mod111111111=0
+.
+In the third query,
+c=[?,1,1]
+. There are two possible arrays
+[1,1,1]
+and
+[0,1,1]
+. Only
+[0,1,1]
+is bugaboo because it can be given by transforming
+[1,1,0]
+once. So the answer is
+1mod987654321=1
+.
+In the fourth query,
+c=[?,1,?]
+. There are four possible arrays.
+[0,1,1]
+and
+[1,1,0]
+are bugaboos.
+[1,1,0]
+can be given by performing
+[1,0,1]
+once. So the answer is
+2mod555555555=2
+.

@@ -1,0 +1,18 @@
+Print the factorial of the given integer number n. The factorial of n is equal to 1·2·...·n.
+Input
+The only line contains n (1 ≤ n ≤ 10).
+Output
+Print the factorial of n.
+Examples
+input
+Copy
+3
+output
+Copy
+6
+input
+Copy
+5
+output
+Copy
+120

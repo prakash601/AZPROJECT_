@@ -1,0 +1,196 @@
+You are given a permutation
+a1,a2,…,an
+of numbers from
+1
+to
+n
+. Also, you have
+n
+sets
+S1,S2,…,Sn
+, where
+Si={ai}
+. Lastly, you have a variable
+cnt
+, representing the current number of sets. Initially,
+cnt=n
+.
+We define two kinds of functions on sets:
+f(S)=
+min
+u∈S
+u
+;
+g(S)=
+max
+u∈S
+u
+.
+You can obtain a new set by merging two sets
+A
+and
+B
+, if they satisfy
+g(A)<f(B)
+(Notice that the old sets do not disappear).
+Formally, you can perform the following sequence of operations:
+cnt←cnt+1
+;
+Scnt=Su∪Sv
+, you are free to choose
+u
+and
+v
+for which
+1≤u,v<cnt
+and which satisfy
+g(Su)<f(Sv)
+.
+You are required to obtain some specific sets.
+There are
+q
+requirements, each of which contains two integers
+li
+,
+ri
+, which means that there must exist a set
+Ski
+(
+ki
+is the ID of the set, you should determine it) which equals
+{au∣li≤u≤ri}
+, which is, the set consisting of all
+ai
+with indices between
+li
+and
+ri
+.
+In the end you must ensure that
+cnt≤2.2×106
+. Note that you don't have to minimize
+cnt
+. It is guaranteed that a solution under given constraints exists.
+Input
+The first line contains two integers
+n,q
+(1≤n≤212,1≤q≤216)
+ — the length of the permutation and the number of needed sets correspondently.
+The next line consists of
+n
+integers
+a1,a2,⋯,an
+(
+1≤ai≤n
+,
+ai
+are pairwise distinct)  — given permutation.
+i
+-th of the next
+q
+lines contains two integers
+li,ri
+(1≤li≤ri≤n)
+, describing a requirement of the
+i
+-th set.
+Output
+It is guaranteed that a solution under given constraints exists.
+The first line should contain one integer
+cntE
+(n≤cntE≤2.2×106)
+, representing the number of sets after all operations.
+cntE−n
+lines must follow, each line should contain two integers
+u
+,
+v
+(
+1≤u,v≤cnt′
+, where
+cnt′
+is the value of
+cnt
+before this operation), meaning that you choose
+Su
+,
+Sv
+and perform a merging operation. In an operation,
+g(Su)<f(Sv)
+must be satisfied.
+The last line should contain
+q
+integers
+k1,k2,⋯,kq
+(1≤ki≤cntE)
+, representing that set
+Ski
+is the
+i
+th required set.
+Please notice the large amount of output.
+Examples
+input
+Copy
+3 2
+1 3 2
+2 3
+1 3
+output
+Copy
+6
+3 2
+1 3
+5 2
+4 6 
+input
+Copy
+2 4
+2 1
+1 2
+1 2
+1 2
+1 1
+output
+Copy
+5
+2 1
+2 1
+2 1
+5 3 3 1
+Note
+In the first sample:
+We have
+S1={1},S2={3},S3={2}
+initially.
+In the first operation, because
+g(S3)=2<f(S2)=3
+, we can merge
+S3,S2
+into
+S4={2,3}
+.
+In the second operation, because
+g(S1)=1<f(S3)=2
+, we can merge
+S1,S3
+into
+S5={1,2}
+.
+In the third operation, because
+g(S5)=2<f(S2)=3
+, we can merge
+S5,S2
+into
+S6={1,2,3}
+.
+For the first requirement,
+S4={2,3}={a2,a3}
+, satisfies it, thus
+k1=4
+.
+For the second requirement,
+S6={1,2,3}={a1,a2,a3}
+, satisfies it, thus
+k2=6
+Notice that unused sets, identical sets, outputting the same set multiple times, and using sets that are present initially are all allowed.

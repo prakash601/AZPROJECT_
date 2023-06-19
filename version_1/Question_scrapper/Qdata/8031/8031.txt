@@ -1,0 +1,106 @@
+ChthollyNotaSeniorious received a special gift from AquaMoon:
+n
+binary arrays of length
+m
+. AquaMoon tells him that in one operation, he can choose any two arrays and any position
+pos
+from
+1
+to
+m
+, and swap the elements at positions
+pos
+in these arrays.
+He is fascinated with this game, and he wants to find the minimum number of operations needed to make the numbers of
+1
+s in all arrays the same. He has invited you to participate in this interesting game, so please try to find it!
+If it is possible, please output specific exchange steps in the format described in the output section. Otherwise, please output
+−1
+.
+Input
+The first line of the input contains a single integer
+t
+(
+1≤t≤2⋅104
+)  — the number of test cases. The description of test cases follows.
+The first line of each test case contains two integers
+n
+and
+m
+(
+2≤n≤105
+,
+2≤m≤105
+).
+The
+i
+-th of the following
+n
+lines contains
+m
+integers
+ai,1,ai,2,…,ai,m
+(0≤ai,j≤1)
+ — the elements of the
+i
+-th array.
+It is guaranteed that the sum of
+n⋅m
+over all test cases does not exceed
+106
+.
+Output
+For each test case, if the objective is not achievable, output
+−1
+.
+Otherwise, in the first line output
+k
+(0≤k≤mn)
+ — the minimum number of operations required.
+The
+i
+-th of the following
+k
+lines should contain
+3
+integers,
+xi,yi,zi
+(1≤xi,yi≤n,1≤zi≤m)
+, which describe an operation that swap
+axi,zi,ayi,zi
+: swap the
+zi
+-th number of the
+xi
+-th and
+yi
+-th arrays.
+Example
+input
+Copy
+3
+3 4
+1 1 1 0
+0 0 1 0
+1 0 0 1
+4 3
+1 0 0
+0 1 1
+0 0 1
+0 0 0
+2 2
+0 0
+0 1
+output
+Copy
+1
+2 1 1
+1
+4 2 2
+-1
+Note
+In the first test case, it's enough to do a single operation: to swap the first element in the second and the first rows. The arrays will become
+[0,1,1,0],[1,0,1,0],[1,0,0,1]
+, each of them contains exactly two
+1
+s.

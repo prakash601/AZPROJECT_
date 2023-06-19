@@ -1,0 +1,206 @@
+Kirill wants to weave the very beautiful blanket consisting of
+𝑛×𝑚
+of the same size square patches of some colors. He matched some non-negative integer to each color. Thus, in our problem, the blanket can be considered a
+𝐵
+matrix of size
+𝑛×𝑚
+consisting of non-negative integers.
+Kirill considers that the blanket is very beautiful, if for each submatrix
+𝐴
+of size
+4×4
+of the matrix
+𝐵
+is true:
+𝐴
+11
+⊕
+𝐴
+12
+⊕
+𝐴
+21
+⊕
+𝐴
+22
+=
+𝐴
+33
+⊕
+𝐴
+34
+⊕
+𝐴
+43
+⊕
+𝐴
+44
+,
+𝐴
+13
+⊕
+𝐴
+14
+⊕
+𝐴
+23
+⊕
+𝐴
+24
+=
+𝐴
+31
+⊕
+𝐴
+32
+⊕
+𝐴
+41
+⊕
+𝐴
+42
+,
+where
+⊕
+means bitwise exclusive OR
+Kirill asks you to help her weave a very beautiful blanket, and as colorful as possible!
+He gives you two integers
+𝑛
+and
+𝑚
+.
+Your task is to generate a matrix
+𝐵
+of size
+𝑛×𝑚
+, which corresponds to a very beautiful blanket and in which the number of different numbers maximized.
+Input
+The first line of input data contains one integer number
+𝑡
+(
+1≤𝑡≤1000
+) — the number of test cases.
+The single line of each test case contains two integers
+𝑛
+and
+𝑚
+(4≤𝑛,𝑚≤200)
+— the size of matrix
+𝐵
+.
+It is guaranteed that the sum of
+𝑛⋅𝑚
+does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, in first line output one integer
+𝑐𝑛𝑡
+(1≤𝑐𝑛𝑡≤𝑛⋅𝑚)
+— the maximum number of different numbers in the matrix.
+Then output the matrix
+𝐵
+(0≤
+𝐵
+𝑖𝑗
+<
+2
+63
+)
+of size
+𝑛×𝑚
+. If there are several correct matrices, it is allowed to output any one.
+It can be shown that if there exists a matrix with an optimal number of distinct numbers, then there exists among suitable matrices such a
+𝐵
+that
+(0≤
+𝐵
+𝑖𝑗
+<
+2
+63
+)
+.
+Example
+input
+Copy
+4
+5 5
+4 4
+4 6
+6 6
+output
+Copy
+25
+9740 1549 9744 1553 9748
+1550 1551 1554 1555 1558
+10252 2061 10256 2065 10260
+2062 2063 2066 2067 2070
+10764 2573 10768 2577 10772
+16
+3108 3109 3112 3113
+3110 3111 3114 3115
+3620 3621 3624 3625
+3622 3623 3626 3627
+24
+548 549 552 553 556 557
+550 551 554 555 558 559
+1060 1061 1064 1065 1068 1069
+1062 1063 1066 1067 1070 1071
+36
+25800 25801 25804 25805 25808 25809
+25802 4294993099 25806 4294993103 25810 4294993107
+26312 26313 26316 26317 26320 26321
+26314 4294993611 26318 4294993615 26322 4294993619
+26824 26825 26828 26829 26832 26833
+26826 4294994123 26830 4294994127 26834 4294994131
+Note
+In the first test case, there is only 4 submatrix of size
+4×4
+. Consider a submatrix whose upper-left corner coincides with the upper-left corner of the matrix
+𝐵
+:
+⎡
+⎣
+⎢
+⎢
+⎢
+⎢
+9740
+1550
+10252
+2062
+1549
+1551
+2061
+2063
+9744
+1554
+10256
+2066
+1553
+1555
+2065
+2067
+⎤
+⎦
+⎥
+⎥
+⎥
+⎥
+[
+9740⊕1549⊕1550⊕1551
+=
+10256⊕2065⊕2066⊕2067
+=
+8192
+;
+10252⊕2061⊕2062⊕2063
+=
+9744⊕1553⊕1554⊕1555
+=
+8192
+.
+So, chosen submatrix fits the condition. Similarly, you can make sure that the other three submatrices also fit the condition.

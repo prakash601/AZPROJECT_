@@ -1,0 +1,46 @@
+Consider a string
+s
+of
+n
+lowercase English letters. Let
+ti
+be the string obtained by replacing the
+i
+-th character of
+s
+with an asterisk character *. For example, when
+s=abc
+, we have
+t1=∗bc
+,
+t2=a∗c
+, and
+t3=ab∗
+.
+Given a string
+s
+, count the number of distinct strings of lowercase English letters and asterisks that occur as a substring of at least one string in the set
+{s,t1,…,tn}
+. The empty string should be counted.
+Note that *'s are just characters and do not play any special role as in, for example, regex matching.
+Input
+The only line contains a string
+s
+of
+n
+lowercase English letters (
+1≤n≤105
+).
+Output
+Print a single integer — the number of distinct strings of
+s,t1,…,tn
+.
+Example
+input
+Copy
+abc
+output
+Copy
+15
+Note
+For the sample case, the distinct substrings are (empty string), a, b, c, *, ab, a*, bc, b*, *b, *c, abc, ab*, a*c, *bc.

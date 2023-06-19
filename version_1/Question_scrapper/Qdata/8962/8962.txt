@@ -1,0 +1,61 @@
+Monocarp wrote down two numbers on a whiteboard. Both numbers follow a specific format: a positive integer
+x
+with
+p
+zeros appended to its end.
+Now Monocarp asks you to compare these two numbers. Can you help him?
+Input
+The first line contains a single integer
+t
+(
+1≤t≤104
+) — the number of testcases.
+The first line of each testcase contains two integers
+x1
+and
+p1
+(
+1≤x1≤106;0≤p1≤106
+) — the description of the first number.
+The second line of each testcase contains two integers
+x2
+and
+p2
+(
+1≤x2≤106;0≤p2≤106
+) — the description of the second number.
+Output
+For each testcase print the result of the comparison of the given two numbers. If the first number is smaller than the second one, print '<'. If the first number is greater than the second one, print '>'. If they are equal, print '='.
+Example
+input
+Copy
+5
+2 1
+19 0
+10 2
+100 1
+1999 0
+2 3
+1 0
+1 0
+99 0
+1 2
+output
+Copy
+>
+=
+<
+=
+<
+Note
+The comparisons in the example are:
+20>19
+,
+1000=1000
+,
+1999<2000
+,
+1=1
+,
+99<100
+.

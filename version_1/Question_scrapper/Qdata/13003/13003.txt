@@ -1,0 +1,11 @@
+Input
+The input contains a single integer a (1 ≤ a ≤ 30).
+Output
+Output a single integer.
+Example
+input
+Copy
+3
+output
+Copy
+27

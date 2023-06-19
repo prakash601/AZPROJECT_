@@ -1,0 +1,32 @@
+The famous joke programming language HQ9+ has only 4 commands. In this problem we will explore its subset — a language called HQ...
+Input
+The only line of the input is a string between 1 and 106 characters long.
+Output
+Output "Yes" or "No".
+Examples
+input
+Copy
+HHHH
+output
+Copy
+Yes
+input
+Copy
+HQHQH
+output
+Copy
+No
+input
+Copy
+HHQHHQH
+output
+Copy
+No
+input
+Copy
+HHQQHHQQHH
+output
+Copy
+Yes
+Note
+The rest of the problem statement was destroyed by a stray raccoon. We are terribly sorry for the inconvenience.

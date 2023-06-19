@@ -1,0 +1,20 @@
+You are given a positive integer n. Output its binary notation.
+Input
+The only line of input data contains an integer n (1 ≤ n ≤ 106).
+Output
+Output the binary notation of n (without any leading zeros).
+Examples
+input
+Copy
+5
+output
+Copy
+101
+input
+Copy
+126
+output
+Copy
+1111110
+Note
+In the first example 5 = 1 * 22 + 0 * 21 + 1 * 20.

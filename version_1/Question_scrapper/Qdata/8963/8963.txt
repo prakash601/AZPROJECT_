@@ -1,0 +1,111 @@
+You are given an array
+c=[c1,c2,…,cm]
+. An array
+a=[a1,a2,…,an]
+is constructed in such a way that it consists of integers
+1,2,…,m
+, and for each
+i∈[1,m]
+, there are exactly
+ci
+occurrences of integer
+i
+in
+a
+. So, the number of elements in
+a
+is exactly
+m
+∑
+i=1
+ci
+.
+Let's define for such array
+a
+the value
+f(a)
+as
+f(a)=
+∑
+1≤i<j≤n
+ai=aj
+j−i.
+In other words,
+f(a)
+is the total sum of distances between all pairs of equal elements.
+Your task is to calculate the maximum possible value of
+f(a)
+and the number of arrays yielding the maximum possible value of
+f(a)
+. Two arrays are considered different, if elements at some position differ.
+Input
+The first line contains a single integer
+m
+(
+1≤m≤5⋅105
+) — the size of the array
+c
+.
+The second line contains
+m
+integers
+c1,c2,…,cm
+(
+1≤ci≤106
+) — the array
+c
+.
+Output
+Print two integers — the maximum possible value of
+f(a)
+and the number of arrays
+a
+with such value. Since both answers may be too large, print them modulo
+109+7
+.
+Examples
+input
+Copy
+6
+1 1 1 1 1 1
+output
+Copy
+0 720
+input
+Copy
+1
+1000000
+output
+Copy
+499833345 1
+input
+Copy
+7
+123 451 234 512 345 123 451
+output
+Copy
+339854850 882811119
+Note
+In the first example, all possible arrays
+a
+are permutations of
+[1,2,3,4,5,6]
+. Since each array
+a
+will have
+f(a)=0
+, so maximum value is
+f(a)=0
+and there are
+6!=720
+such arrays.
+In the second example, the only possible array consists of
+106
+ones and its
+f(a)=
+∑
+1≤i<j≤106
+j−i=166666666666500000
+and
+166666666666500000mod109+7=499833345
+.

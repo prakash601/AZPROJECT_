@@ -1,0 +1,11 @@
+Input
+The input contains a single integer a (1 ≤ a ≤ 18257).
+Output
+Print a single integer output (1 ≤ output ≤ 2·109).
+Examples
+input
+Copy
+2
+output
+Copy
+13

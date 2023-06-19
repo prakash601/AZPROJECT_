@@ -1,0 +1,284 @@
+Given a permutation
+a1,a2,…,an
+of integers from
+1
+to
+n
+, and a threshold
+k
+with
+0≤k≤n
+, you compute a sequence
+b1,b2,…,bn
+as follows.
+For every
+1≤i≤n
+in increasing order, let
+x=ai
+.
+If
+x≤k
+, set
+bx
+to the last element
+aj
+(
+1≤j<i
+) that
+aj>k
+. If no such element
+aj
+exists, set
+bx=n+1
+.
+If
+x>k
+, set
+bx
+to the last element
+aj
+(
+1≤j<i
+) that
+aj≤k
+. If no such element
+aj
+exists, set
+bx=0
+.
+Unfortunately, after the sequence
+b1,b2,…,bn
+has been completely computed, the permutation
+a1,a2,…,an
+and the threshold
+k
+are discarded.
+Now you only have the sequence
+b1,b2,…,bn
+. Your task is to find any possible permutation
+a1,a2,…,an
+and threshold
+k
+that produce the sequence
+b1,b2,…,bn
+. It is guaranteed that there exists at least one pair of permutation
+a1,a2,…,an
+and threshold
+k
+that produce the sequence
+b1,b2,…,bn
+.
+A permutation of integers from
+1
+to
+n
+is a sequence of length
+n
+which contains all integers from
+1
+to
+n
+exactly once.
+Input
+Each test contains multiple test cases. The first line contains an integer
+t
+(
+1≤t≤105
+) — the number of test cases. The following lines contain the description of each test case.
+The first line of each test case contains an integer
+n
+(
+1≤n≤105
+), indicating the length of the permutation
+a
+.
+The second line of each test case contains
+n
+integers
+b1,b2,…,bn
+(
+0≤bi≤n+1
+), indicating the elements of the sequence
+b
+.
+It is guaranteed that there exists at least one pair of permutation
+a1,a2,…,an
+and threshold
+k
+that produce the sequence
+b1,b2,…,bn
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+105
+.
+Output
+For each test case, output the threshold
+k
+(
+0≤k≤n
+) in the first line, and then output the permutation
+a1,a2,…,an
+(
+1≤ai≤n
+) in the second line such that the permutation
+a1,a2,…,an
+and threshold
+k
+produce the sequence
+b1,b2,…,bn
+. If there are multiple solutions, you can output any of them.
+Example
+input
+Copy
+3
+4
+5 3 1 2
+6
+7 7 7 3 3 3
+6
+4 4 4 0 0 0
+output
+Copy
+2
+1 3 2 4
+3
+1 2 3 4 5 6
+3
+6 5 4 3 2 1
+Note
+For the first test case, permutation
+a=[1,3,2,4]
+and threshold
+k=2
+will produce sequence
+b
+as follows.
+When
+i=1
+,
+x=ai=1≤k
+, there is no
+aj
+(
+1≤j<i
+) that
+aj>k
+. Therefore,
+b1=n+1=5
+.
+When
+i=2
+,
+x=ai=3>k
+, the last element
+aj
+that
+aj≤k
+is
+a1
+. Therefore,
+b3=a1=1
+.
+When
+i=3
+,
+x=ai=2≤k
+, the last element
+aj
+that
+aj>k
+is
+a2
+. Therefore,
+b2=a2=3
+.
+When
+i=4
+,
+x=ai=4>k
+, the last element
+aj
+that
+aj≤k
+is
+a3
+. Therefore,
+b4=a3=2
+.
+Finally, we obtain sequence
+b=[5,3,1,2]
+.
+For the second test case, permutation
+a=[1,2,3,4,5,6]
+and threshold
+k=3
+will produce sequence
+b
+as follows.
+When
+i=1,2,3
+,
+ai≤k
+, there is no
+aj
+(
+1≤j<i
+) that
+aj>k
+. Therefore,
+b1=b2=b3=n+1=7
+.
+When
+i=4,5,6
+,
+ai>k
+, the last element
+aj
+that
+aj≤k
+is
+a3
+. Therefore,
+b4=b5=b6=a3=3
+.
+Finally, we obtain sequence
+b=[7,7,7,3,3,3]
+.
+For the third test case, permutation
+a=[6,5,4,3,2,1]
+and threshold
+k=3
+will produce sequence
+b
+as follows.
+When
+i=1,2,3
+,
+ai>k
+, there is no
+aj
+(
+1≤j<i
+) that
+aj≤k
+. Therefore,
+b4=b5=b6=0
+.
+When
+i=4,5,6
+,
+ai≤k
+, the last element
+aj
+that
+aj>k
+is
+a3
+. Therefore,
+b1=b2=b3=a3=4
+.
+Finally, we obtain sequence
+b=[4,4,4,0,0,0]
+.

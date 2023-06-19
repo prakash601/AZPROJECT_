@@ -1,0 +1,35 @@
+Input
+The input contains two integers
+row
+,
+col
+(
+0≤row,col≤63
+), separated by a single space.
+Output
+Output "IN" or "OUT".
+Examples
+input
+Copy
+0 0
+output
+Copy
+OUT
+input
+Copy
+27 0
+output
+Copy
+IN
+input
+Copy
+0 27
+output
+Copy
+OUT
+input
+Copy
+27 27
+output
+Copy
+IN

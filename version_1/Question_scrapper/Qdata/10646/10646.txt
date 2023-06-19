@@ -1,0 +1,59 @@
+Today, as a friendship gift, Bakry gave Badawy
+n
+integers
+a1,a2,…,an
+and challenged him to choose an integer
+X
+such that the value
+max
+1≤i≤n
+(ai⊕X)
+is minimum possible, where
+⊕
+denotes the bitwise XOR operation.
+As always, Badawy is too lazy, so you decided to help him and find the minimum possible value of
+max
+1≤i≤n
+(ai⊕X)
+.
+Input
+The first line contains integer
+n
+(
+1≤n≤105
+).
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+0≤ai≤230−1
+).
+Output
+Print one integer — the minimum possible value of
+max
+1≤i≤n
+(ai⊕X)
+.
+Examples
+input
+Copy
+3
+1 2 3
+output
+Copy
+2
+input
+Copy
+2
+1 5
+output
+Copy
+4
+Note
+In the first sample, we can choose
+X=3
+.
+In the second sample, we can choose
+X=5
+.

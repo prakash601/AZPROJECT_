@@ -1,0 +1,177 @@
+The famous magician Borya Budini traveled through the country
+𝑋
+, which consists of
+𝑛
+cities. However, an accident happened, and he was robbed in the city number
+1
+. Now Budini will have a hard way home to the city number
+𝑛
+.
+He's going to get there by plane. In total, there are
+𝑚
+flights in the country,
+𝑖
+-th flies from city
+𝑎
+𝑖
+to city
+𝑏
+𝑖
+and costs
+𝑠
+𝑖
+coins. Note that the
+𝑖
+-th flight is one-way, so it can't be used to get from city
+𝑏
+𝑖
+to city
+𝑎
+𝑖
+. To use it, Borya must be in the city
+𝑎
+𝑖
+and have at least
+𝑠
+𝑖
+coins (which he will spend on the flight).
+After the robbery, he has only
+𝑝
+coins left, but he does not despair! Being in the city
+𝑖
+, he can organize performances every day, each performance will bring him
+𝑤
+𝑖
+coins.
+Help the magician find out if he will be able to get home, and what is the minimum number of performances he will have to organize.
+Input
+Each test consists of multiple test cases. The first line contains a single integer
+𝑡
+(
+1≤𝑡≤80
+) – the number of test cases. The description of test cases follows.
+The first line contains three integers
+𝑛
+,
+𝑚
+and
+𝑝
+(
+2≤𝑛≤800
+,
+1≤𝑚≤3000
+,
+0≤𝑝≤
+10
+9
+) — the number of cities, the number of flights and the initial amount of coins.
+The second line contains
+𝑛
+integers
+𝑤
+1
+,
+𝑤
+2
+,…,
+𝑤
+𝑛
+(1≤
+𝑤
+𝑖
+≤
+10
+9
+)
+ — profit from representations.
+The following
+𝑚
+lines each contain three integers
+𝑎
+𝑖
+,
+𝑏
+𝑖
+and
+𝑠
+𝑖
+(
+1≤
+𝑎
+𝑖
+,
+𝑏
+𝑖
+≤𝑛
+,
+1≤
+𝑠
+𝑖
+≤
+10
+9
+) — the starting and ending city, and the cost of
+𝑖
+-th flight.
+It is guaranteed that the sum of
+𝑛
+over all test cases does not exceed
+800
+and the sum of
+𝑚
+over all test cases does not exceed
+10000
+.
+Output
+For each test case print a single integer — the minimum number of performances Borya will have to organize to get home, or
+−1
+if it is impossible to do this.
+Example
+input
+Copy
+4
+4 4 2
+7 4 3 1
+1 2 21
+3 2 6
+1 3 8
+2 4 11
+4 4 10
+1 2 10 1
+1 2 20
+2 4 30
+1 3 25
+3 4 89
+4 4 7
+5 1 6 2
+1 2 5
+2 3 10
+3 4 50
+3 4 70
+4 1 2
+1 1 1 1
+1 3 2
+output
+Copy
+4
+24
+10
+-1
+Note
+In the first example, it is optimal for Borya to make
+4
+performances in the first city, having as a result
+2+7⋅4=30
+coins, and then walk along the route
+1−3−2−4
+, spending
+6+8+11=25
+coins. In the second example, it is optimal for Borya to make
+15
+performances in the first city, fly to
+3
+city, make
+9
+performances there, and then go to
+4
+city.

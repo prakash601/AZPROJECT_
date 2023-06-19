@@ -1,0 +1,91 @@
+You are given
+n
+distinct points
+p1,p2,…,pn
+on the plane and a positive integer
+R
+.
+Find the number of pairs of indices
+(i,j)
+such that
+1≤i<j≤n
+, and for every possible
+k
+(
+1≤k≤n
+) the distance from the point
+pk
+to the segment between points
+pi
+and
+pj
+is at most
+R
+.
+Input
+The first line contains two integers
+n
+,
+R
+(
+1≤n≤3000
+,
+1≤R≤105
+) — the number of points and the maximum distance between a point and a segment.
+Each of the next
+n
+lines contains two integers
+xi
+,
+yi
+(
+−105≤xi,yi≤105
+) that define the
+i
+-th point
+pi=(xi,yi)
+. All points are distinct.
+It is guaranteed that the answer does not change if the parameter
+R
+is changed by at most
+10−2
+.
+Output
+Print the number of suitable pairs
+(i,j)
+.
+Examples
+input
+Copy
+4 2
+0 1
+0 -1
+3 0
+-3 0
+output
+Copy
+1
+input
+Copy
+3 3
+1 -1
+-1 -1
+0 1
+output
+Copy
+3
+Note
+In the first example, the only pair of points
+(−3,0)
+,
+(3,0)
+is suitable. The distance to the segment between these points from the points
+(0,1)
+and
+(0,−1)
+is equal to
+1
+, which is less than
+R=2
+.
+In the second example, all possible pairs of points are eligible.

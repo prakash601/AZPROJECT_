@@ -1,0 +1,235 @@
+Mom bought the boy Vasya a
+𝑛
+-dimensional chocolate bar, which is a
+𝑛
+-dimensional cube with the length of each side equal to
+1
+. The chocolate is planned to be divided into slices. According to the
+𝑖
+th dimension, it can be divided by hyperplanes into
+𝑎
+𝑖
+equal parts. Thus, the chocolate is divided in total into
+𝑎
+1
+⋅
+𝑎
+2
+⋅
+𝑎
+3
+⋅…⋅
+𝑎
+𝑛
+slices, each slice has a length of
+𝑖
+-th dimension equal to
+1
+𝑎
+𝑖
+, respectively, the volume of each slice is
+1
+𝑎
+1
+𝑎
+2
+⋯
+𝑎
+𝑛
+.
+Vasya and his friends want to cut a chocolate bar to get at least
+𝑘
+pieces, while Vasya wants to maximize the volume of the smallest of them. It is possible to cut the chocolate bar only at the junction of the lobules, and each incision must pass through the entire chocolate bar along some hyperplane involved in the formation of lobules. Only after making all the cuts, Vasya disassembles the chocolate into pieces.
+More formally, Vasya wants to choose the numbers
+𝑏
+1
+,
+𝑏
+2
+,…,
+𝑏
+𝑛
+(
+1≤
+𝑏
+𝑖
+≤
+𝑎
+𝑖
+) — the number of parts into which Vasya will cut the chocolate bar along each dimension. The condition
+𝑏
+1
+⋅
+𝑏
+2
+⋅…⋅
+𝑏
+𝑛
+≥𝑘
+must be met to get at least
+𝑘
+pieces after all cuts. It can be noted that with optimal cutting with such parameters, the minimum piece will contain
+⌊
+𝑎
+1
+𝑏
+1
+⌋⋯⌊
+𝑎
+𝑛
+𝑏
+𝑛
+⌋
+slices, and its volume will be equal to
+⌊
+𝑎
+1
+𝑏
+1
+⌋⋯⌊
+𝑎
+𝑛
+𝑏
+𝑛
+⌋⋅
+1
+𝑎
+1
+𝑎
+2
+⋯
+𝑎
+𝑛
+.
+Vasya wants to get the maximum possible value of the volume of the minimum piece multiplied by
+𝑘
+, that is, he wants to maximize the number of
+⌊
+𝑎
+1
+𝑏
+1
+⌋⋯⌊
+𝑎
+𝑛
+𝑏
+𝑛
+⌋⋅
+1
+𝑎
+1
+𝑎
+2
+⋯
+𝑎
+𝑛
+⋅𝑘
+. Help him with this.
+Input
+The first line contains two integers
+𝑛
+and
+𝑘
+(1≤𝑛≤100
+,
+1≤𝑘≤
+10
+7
+)
+ — the dimension of the chocolate bar, and how many parts it needs to be divided into.
+The second line contains
+𝑛
+integers
+𝑎
+1
+, 
+𝑎
+2
+, …, 
+𝑎
+𝑛
+(1≤
+𝑎
+𝑖
+≤
+10
+7
+)
+ — the number of pieces on which the chocolate is placed along each of the dimensions.
+Output
+Print one number  — the maximum possible volume of the smallest of the obtained pieces, multiplied by
+𝑘
+, with an absolute or relative error of no more than
+10
+−9
+.
+If it is impossible to cut a chocolate bar into at least
+𝑘
+pieces under the given restrictions, output
+0
+.
+Examples
+input
+Copy
+1 2
+5
+output
+Copy
+0.8
+input
+Copy
+2 6
+5 10
+output
+Copy
+0.72
+input
+Copy
+2 7
+4 4
+output
+Copy
+0.875
+input
+Copy
+2 3
+4 5
+output
+Copy
+0.75
+input
+Copy
+4 444
+57 179 239 2
+output
+Copy
+0.97557326850704739751
+input
+Copy
+2 5
+2 2
+output
+Copy
+0
+Note
+In the first example, a one – dimensional chocolate bar can be divided as follows:
+Then the answer will be
+2
+5
+⋅2=0.8
+In the second example, the chocolate bar can be cut as follows:
+Then the answer will be
+2
+5
+⋅
+3
+10
+⋅6=0.72
+In the third example, the chocolate bar can be cut as follows:
+Then the answer will be
+2
+4
+⋅
+1
+4
+⋅7=0.875

@@ -1,0 +1,150 @@
+Define the beauty value of a sequence
+b1,b2,…,bc
+as the maximum value of
+q
+∑
+i=1
+bi+
+t
+∑
+i=s
+bi
+, where
+q
+,
+s
+,
+t
+are all integers and
+s>q
+or
+t≤q
+. Note that
+bi=0
+when
+i<1
+or
+i>c
+,
+t
+∑
+i=s
+bi=0
+when
+s>t
+.
+For example, when
+b=[−1,−2,−3]
+, we may have
+q=0
+,
+s=3
+,
+t=2
+so the beauty value is
+0+0=0
+. And when
+b=[−1,2,−3]
+, we have
+q=s=t=2
+so the beauty value is
+1+2=3
+.
+You are given a sequence
+a
+of length
+n
+, determine the sum of the beauty value of all non-empty subsegments
+al,al+1,…,ar
+(
+1≤l≤r≤n
+) of the sequence
+a
+.
+Print the answer modulo
+998244353
+.
+Input
+Each test contains multiple test cases. The first line contains an integer
+T
+(
+1≤T≤104
+) — the number of test cases.
+The first line contains an integer
+n
+(
+1≤n≤106
+) — the length of
+a
+.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+−106≤ai≤106
+) — the given sequence.
+It's guaranteed that the sum of
+n
+does not exceed
+106
+.
+Output
+For each test case, print a line containing a single integer — the answer modulo
+998244353
+.
+Example
+input
+Copy
+4
+7
+80 59 100 -52 -86 -62 75
+8
+-48 -14 -26 43 -41 34 13 55
+1
+74
+20
+56 -60 62 13 88 -48 64 36 -10 19 94 25 -69 88 87 79 -70 74 -26 59
+output
+Copy
+5924
+2548
+148
+98887
+Note
+In the second test case, for the subsequence
+[−26,43,−41,34,13]
+, when
+q=5
+,
+s=2
+,
+t=5
+,
+q
+∑
+i=1
+bi+
+t
+∑
+i=s
+bi=23+49=72
+.
+In the third test case, there is only one non-empty consecutive subsequence
+[74]
+. When
+q=1
+,
+s=1
+,
+t=1
+,
+q
+∑
+i=1
+bi+
+t
+∑
+i=s
+bi=148
+.

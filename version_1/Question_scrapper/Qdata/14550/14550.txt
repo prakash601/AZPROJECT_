@@ -1,0 +1,30 @@
+Little Chris is having a nightmare. Even in dreams all he thinks about is math.
+Chris dreams about m binary strings of length n, indexed with numbers from 1 to m. The most horrifying part is that the bits of each string are ordered in either ascending or descending order. For example, Chris could be dreaming about the following 4 strings of length 5:
+The Hamming distance H(a, b) between two strings a and b of length n is the number of positions at which the corresponding symbols are different.
+Сhris thinks that each three strings with different indices constitute a single triple. Chris's delusion is that he will wake up only if he counts the number of such string triples a, b, c that the sum H(a, b) + H(b, c) + H(c, a) is maximal among all the string triples constructed from the dreamed strings.
+Help Chris wake up from this nightmare!
+Input
+The first line of input contains two space-separated integers n and m (1 ≤ n ≤ 109; 3 ≤ m ≤ 105), the length and the number of strings. The next m lines contain the description of the strings. The i-th line contains two space-separated integers si and fi (0 ≤ si ≤ 1; 1 ≤ fi ≤ n), the description of the string with index i; that means that the first fi bits of the i-th string are equal to si, and the remaining n - fi bits are equal to 1 - si. There can be multiple equal strings in Chris's dream.
+Output
+Output a single integer, the number of such string triples among the given that the sum of the Hamming distances between the strings of the triple is maximal.
+Examples
+input
+Copy
+5 4
+0 3
+0 5
+1 4
+1 5
+output
+Copy
+3
+input
+Copy
+10 4
+1 5
+0 5
+0 5
+1 5
+output
+Copy
+4

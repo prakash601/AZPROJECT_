@@ -1,0 +1,179 @@
+In the city of Capypaland where Kuro and Shiro resides, there are
+n
+towns numbered from
+1
+to
+n
+and there are
+m
+bidirectional roads numbered from
+1
+to
+m
+connecting them. The
+i
+-th road connects towns
+ui
+and
+vi
+. Since traveling between the towns is quite difficult, the taxi industry is really popular here. To survive the harsh competition, each taxi company has to find a distinctive trait for their customers.
+Kuro is the owner of a taxi company. He has decided to introduce a new fee model for his taxi brand, where the fee for each ride is not calculated based on the trip length, but on the sum of the prices of the roads traveled. The price for each of the
+m
+roads has been decided by Kuro himself.
+As of now, the price for the road
+i
+is
+wi
+and hence the fee for a taxi ride traveling through roads
+e1,e2,…,ek
+is
+∑
+k
+i=1
+wei
+.
+However, Kuro himself is an indecisive person, so he has drafted
+q
+plans to change the road price. Each of the plans will be based on the original prices
+wi
+, except for a single road
+tj
+, the price of which is changed to
+xj
+. Note, that the plans are independent of each other.
+Shiro is a regular customer of the Kuro's taxi brand since she uses the taxi to travel from town
+1
+to town
+n
+every day. Since she's so a regular customer, Kuro decided to show her all his
+q
+plans before publishing them to the public. Now, Shiro wants to know the lowest fee she must pay to travel from the town
+1
+to the town
+n
+for each Kuro's plan.
+Input
+The first line contains three integers
+n
+,
+m
+and
+q
+(
+2≤n≤2⋅105
+,
+1≤m,q≤2⋅105
+) — the number of towns, the number of roads, and the number of plans that Kuro has drafted respectively.
+The
+i
+-th of the next
+m
+contains three integers
+ui
+,
+vi
+and
+wi
+(
+1≤ui,vi≤n
+,
+1≤wi≤109
+,
+ui≠vi
+) — two endpoints and the original price of the
+i
+-th road.
+It is guaranteed, that there is at least one way to travel from town
+1
+to town
+n
+using these
+m
+bidirectional roads.
+Each of the next
+q
+lines contains two integers
+tj
+and
+xj
+(
+1≤tj≤m,1≤xj≤109
+) — the index of the road Kuro has planned to change and its new price respectively.
+Output
+Print
+q
+integers — the lowest fee Shiro must pay to get from town
+1
+to town
+n
+in each of those
+q
+plans.
+Examples
+input
+Copy
+4 5 6
+1 2 2
+2 4 3
+1 4 7
+1 3 1
+3 4 5
+3 4
+5 1
+3 8
+1 4
+2 1
+3 1
+output
+Copy
+4
+2
+5
+6
+3
+1
+input
+Copy
+2 4 4
+1 2 2
+1 2 3
+1 2 4
+1 2 5
+2 1
+3 2
+4 3
+1 5
+output
+Copy
+1
+2
+2
+3
+input
+Copy
+2 1 1
+1 2 1
+1 3
+output
+Copy
+3
+Note
+In the first example, the original overview of Capypaland looks like this, where the number next to each road denotes the original prices of the roads,
+The overview of the first plan,
+The lowest fee Shiro must pay in this plan is
+4
+, which corresponds to the path
+1→4
+.
+The overview of the second plan,
+The lowest fee Shiro must pay in this plan is
+2
+, which corresponds to the path
+1→3→4
+.
+The overview of the third plan,
+The lowest fee Shiro must pay in this plan is
+5
+, which corresponds to the path
+1→2→4
+.

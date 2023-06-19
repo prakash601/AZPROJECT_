@@ -1,0 +1,23 @@
+Input
+The input contains two integers a, b (1 ≤ a ≤ 10, 0 ≤ b ≤ 22·a - 1) separated by a single space.
+Output
+Output two integers separated by a single space.
+Examples
+input
+Copy
+1 0
+output
+Copy
+0 0
+input
+Copy
+2 15
+output
+Copy
+3 0
+input
+Copy
+4 160
+output
+Copy
+12 12

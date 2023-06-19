@@ -1,0 +1,109 @@
+In a certain video game, the player controls a hero characterized by a single integer value: power. The hero will have to beat monsters that are also characterized by a single integer value: armor.
+On the current level, the hero is facing
+n
+caves. To pass the level, the hero must enter all the caves in some order, each cave exactly once, and exit every cave safe and sound. When the hero enters cave
+i
+, he will have to fight
+ki
+monsters in a row: first a monster with armor
+ai,1
+, then a monster with armor
+ai,2
+and so on, finally, a monster with armor
+ai,ki
+.
+The hero can beat a monster if and only if the hero's power is strictly greater than the monster's armor. If the hero can't beat the monster he's fighting, the game ends and the player loses. Note that once the hero enters a cave, he can't exit it before he fights all the monsters in it, strictly in the given order.
+Each time the hero beats a monster, the hero's power increases by
+1
+.
+Find the smallest possible power the hero must start the level with to be able to enter all the caves in some order and beat all the monsters.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤105
+). Description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤105
+) — the number of caves.
+The
+i
+-th of the next
+n
+lines contains an integer
+ki
+(
+1≤ki≤105
+) — the number of monsters in the
+i
+-th cave, followed by
+ki
+integers
+ai,1,ai,2,…,ai,ki
+(
+1≤ai,j≤109
+) — armor levels of the monsters in cave
+i
+in order the hero has to fight them.
+It is guaranteed that the sum of
+ki
+over all test cases does not exceed
+105
+.
+Output
+For each test case print a single integer — the smallest possible power the hero must start the level with to be able to enter all the caves in some order and beat all the monsters.
+Example
+input
+Copy
+2
+1
+1 42
+2
+3 10 15 8
+2 12 11
+output
+Copy
+43
+13
+Note
+In the first test case, the hero has to beat a single monster with armor
+42
+, it's enough to have power
+43
+to achieve that.
+In the second test case, the hero can pass the level with initial power
+13
+as follows:
+enter cave
+2
+:
+beat a monster with armor
+12
+, power increases to
+14
+;
+beat a monster with armor
+11
+, power increases to
+15
+;
+enter cave
+1
+:
+beat a monster with armor
+10
+, power increases to
+16
+;
+beat a monster with armor
+15
+, power increases to
+17
+;
+beat a monster with armor
+8
+, power increases to
+18
+.

@@ -1,0 +1,79 @@
+You are given an array
+a
+consisting of
+n
+integers. In one move, you can jump from the position
+i
+to the position
+i−ai
+(if
+1≤i−ai
+) or to the position
+i+ai
+(if
+i+ai≤n
+).
+For each position
+i
+from
+1
+to
+n
+you want to know the minimum the number of moves required to reach any position
+j
+such that
+aj
+has the opposite parity from
+ai
+(i.e. if
+ai
+is odd then
+aj
+has to be even and vice versa).
+Input
+The first line of the input contains one integer
+n
+(
+1≤n≤2⋅105
+) — the number of elements in
+a
+.
+The second line of the input contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤n
+), where
+ai
+is the
+i
+-th element of
+a
+.
+Output
+Print
+n
+integers
+d1,d2,…,dn
+, where
+di
+is the minimum the number of moves required to reach any position
+j
+such that
+aj
+has the opposite parity from
+ai
+(i.e. if
+ai
+is odd then
+aj
+has to be even and vice versa) or -1 if it is impossible to reach such a position.
+Example
+input
+Copy
+10
+4 5 7 6 7 5 4 4 6 4
+output
+Copy
+1 1 1 2 -1 1 1 3 1 1 

@@ -1,0 +1,285 @@
+Recently Lynyrd and Skynyrd went to a shop where Lynyrd bought a permutation
+𝑝
+of length
+𝑛
+, and Skynyrd bought an array
+𝑎
+of length
+𝑚
+, consisting of integers from
+1
+to
+𝑛
+.
+Lynyrd and Skynyrd became bored, so they asked you
+𝑞
+queries, each of which has the following form: "does the subsegment of
+𝑎
+from the
+𝑙
+-th to the
+𝑟
+-th positions, inclusive, have a subsequence that is a cyclic shift of
+𝑝
+?" Please answer the queries.
+A permutation of length
+𝑛
+is a sequence of
+𝑛
+integers such that each integer from
+1
+to
+𝑛
+appears exactly once in it.
+A cyclic shift of a permutation
+(
+𝑝
+1
+,
+𝑝
+2
+,…,
+𝑝
+𝑛
+)
+is a permutation
+(
+𝑝
+𝑖
+,
+𝑝
+𝑖+1
+,…,
+𝑝
+𝑛
+,
+𝑝
+1
+,
+𝑝
+2
+,…,
+𝑝
+𝑖−1
+)
+for some
+𝑖
+from
+1
+to
+𝑛
+. For example, a permutation
+(2,1,3)
+has three distinct cyclic shifts:
+(2,1,3)
+,
+(1,3,2)
+,
+(3,2,1)
+.
+A subsequence of a subsegment of array
+𝑎
+from the
+𝑙
+-th to the
+𝑟
+-th positions, inclusive, is a sequence
+𝑎
+𝑖
+1
+,
+𝑎
+𝑖
+2
+,…,
+𝑎
+𝑖
+𝑘
+for some
+𝑖
+1
+,
+𝑖
+2
+,…,
+𝑖
+𝑘
+such that
+𝑙≤
+𝑖
+1
+<
+𝑖
+2
+<…<
+𝑖
+𝑘
+≤𝑟
+.
+Input
+The first line contains three integers
+𝑛
+,
+𝑚
+,
+𝑞
+(
+1≤𝑛,𝑚,𝑞≤2⋅
+10
+5
+) — the length of the permutation
+𝑝
+, the length of the array
+𝑎
+and the number of queries.
+The next line contains
+𝑛
+integers from
+1
+to
+𝑛
+, where the
+𝑖
+-th of them is the
+𝑖
+-th element of the permutation. Each integer from
+1
+to
+𝑛
+appears exactly once.
+The next line contains
+𝑚
+integers from
+1
+to
+𝑛
+, the
+𝑖
+-th of them is the
+𝑖
+-th element of the array
+𝑎
+.
+The next
+𝑞
+lines describe queries. The
+𝑖
+-th of these lines contains two integers
+𝑙
+𝑖
+and
+𝑟
+𝑖
+(
+1≤
+𝑙
+𝑖
+≤
+𝑟
+𝑖
+≤𝑚
+), meaning that the
+𝑖
+-th query is about the subsegment of the array from the
+𝑙
+𝑖
+-th to the
+𝑟
+𝑖
+-th positions, inclusive.
+Output
+Print a single string of length
+𝑞
+, consisting of
+0
+and
+1
+, the digit on the
+𝑖
+-th positions should be
+1
+, if the subsegment of array
+𝑎
+from the
+𝑙
+𝑖
+-th to the
+𝑟
+𝑖
+-th positions, inclusive, contains a subsequence that is a cyclic shift of
+𝑝
+, and
+0
+otherwise.
+Examples
+input
+Copy
+3 6 3
+2 1 3
+1 2 3 1 2 3
+1 5
+2 6
+3 5
+output
+Copy
+110
+input
+Copy
+2 4 3
+2 1
+1 1 2 2
+1 2
+2 3
+3 4
+output
+Copy
+010
+Note
+In the first example the segment from the
+1
+-st to the
+5
+-th positions is
+1,2,3,1,2
+. There is a subsequence
+1,3,2
+that is a cyclic shift of the permutation. The subsegment from the
+2
+-nd to the
+6
+-th positions also contains a subsequence
+2,1,3
+that is equal to the permutation. The subsegment from the
+3
+-rd to the
+5
+-th positions is
+3,1,2
+, there is only one subsequence of length
+3
+(
+3,1,2
+), but it is not a cyclic shift of the permutation.
+In the second example the possible cyclic shifts are
+1,2
+and
+2,1
+. The subsegment from the
+1
+-st to the
+2
+-nd positions is
+1,1
+, its subsequences are not cyclic shifts of the permutation. The subsegment from the
+2
+-nd to the
+3
+-rd positions is
+1,2
+, it coincides with the permutation. The subsegment from the
+3
+to the
+4
+positions is
+2,2
+, its subsequences are not cyclic shifts of the permutation.

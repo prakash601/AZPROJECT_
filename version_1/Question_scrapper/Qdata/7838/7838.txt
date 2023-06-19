@@ -1,0 +1,81 @@
+You are given a string
+𝑠
+. You can apply this operation to the string exactly once: choose index
+𝑖
+and move character
+𝑠
+𝑖
+to the beginning of the string (removing it at the old position). For example, if you apply the operation with index
+𝑖=4
+to the string "abaacd" with numbering from
+1
+, you get the string "aabacd". What is the lexicographically minimal
+†
+string you can obtain by this operation?
+†
+A string
+𝑎
+is lexicographically smaller than a string
+𝑏
+of the same length if and only if the following holds:
+in the first position where
+𝑎
+and
+𝑏
+differ, the string
+𝑎
+has a letter that appears earlier in the alphabet than the corresponding letter in
+𝑏
+.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+𝑡
+(
+1≤𝑡≤
+10
+4
+). The description of the test cases follows.
+The first line of each test case contains a single integer
+𝑛
+(
+1≤𝑛≤
+10
+5
+) — the length of the string.
+The second line of each test case contains the string
+𝑠
+of length
+𝑛
+, consisting of lowercase English letters.
+It is guaranteed that the sum of
+𝑛
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case, on a separate line print the lexicographically smallest string that can be obtained after applying the operation to the original string exactly once.
+Example
+input
+Copy
+4
+3
+cba
+4
+acac
+5
+abbcb
+4
+aaba
+output
+Copy
+acb
+aacc
+abbcb
+aaab
+Note
+In the first test case, you need to move the last character to the beginning.
+In the second case, you need to move the second letter "a".
+In the third set you need to apply the operation with
+𝑖=1
+, then the string will not change.

@@ -1,0 +1,123 @@
+The prime factorization of a positive integer
+m
+is the unique way to write it as
+m=p
+e1
+1
+⋅p
+e2
+2
+⋅…⋅p
+ek
+k
+, where
+p1,p2,…,pk
+are prime numbers,
+p1<p2<…<pk
+and
+e1,e2,…,ek
+are positive integers.
+For each positive integer
+m
+,
+f(m)
+is defined as the multiset of all numbers in its prime factorization, that is
+f(m)={p1,e1,p2,e2,…,pk,ek}
+.
+For example,
+f(24)={2,3,3,1}
+,
+f(5)={1,5}
+and
+f(1)={}
+.
+You are given a list consisting of
+2n
+integers
+a1,a2,…,a2n
+. Count how many positive integers
+m
+satisfy that
+f(m)={a1,a2,…,a2n}
+. Since this value may be large, print it modulo
+998244353
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤2022
+).
+The second line contains
+2n
+integers
+a1,a2,…,a2n
+(
+1≤ai≤106
+)  — the given list.
+Output
+Print one integer, the number of positive integers
+m
+satisfying
+f(m)={a1,a2,…,a2n}
+modulo
+998244353
+.
+Examples
+input
+Copy
+2
+1 3 2 3
+output
+Copy
+2
+input
+Copy
+2
+2 2 3 5
+output
+Copy
+5
+input
+Copy
+1
+1 4
+output
+Copy
+0
+Note
+In the first sample, the two values of
+m
+such that
+f(m)={1,2,3,3}
+are
+m=24
+and
+m=54
+. Their prime factorizations are
+24=23⋅31
+and
+54=21⋅33
+.
+In the second sample, the five values of
+m
+such that
+f(m)={2,2,3,5}
+are
+200,225,288,500
+and
+972
+.
+In the third sample, there is no value of
+m
+such that
+f(m)={1,4}
+. Neither
+14
+nor
+41
+are prime factorizations because
+1
+and
+4
+are not primes.

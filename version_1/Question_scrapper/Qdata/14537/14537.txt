@@ -1,0 +1,29 @@
+Input
+The input contains a single integer a (1 ≤ a ≤ 64).
+Output
+Output a single integer.
+Examples
+input
+Copy
+2
+output
+Copy
+1
+input
+Copy
+4
+output
+Copy
+2
+input
+Copy
+27
+output
+Copy
+5
+input
+Copy
+42
+output
+Copy
+6

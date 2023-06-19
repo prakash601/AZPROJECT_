@@ -1,0 +1,89 @@
+You are given two arrays
+a
+and
+b
+, both consisting of
+n
+integers.
+In one move, you can choose two indices
+i
+and
+j
+(
+1≤i,j≤n
+;
+i≠j
+) and swap
+ai
+with
+aj
+and
+bi
+with
+bj
+. You have to perform the swap in both arrays.
+You are allowed to perform at most
+104
+moves (possibly, zero). Can you make both arrays sorted in a non-decreasing order at the end? If you can, print any sequence of moves that makes both arrays sorted.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤100
+) — the number of testcases.
+The first line of each testcase contains a single integer
+n
+(
+2≤n≤100
+) — the number of elements in both arrays.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤n
+) — the first array.
+The third line contains
+n
+integers
+b1,b2,…,bn
+(
+1≤bi≤n
+) — the second array.
+Output
+For each testcase, print the answer. If it's impossible to make both arrays sorted in a non-decreasing order in at most
+104
+moves, print -1. Otherwise, first, print the number of moves
+k
+(0≤k≤104)
+. Then print
+i
+and
+j
+for each move
+(1≤i,j≤n
+;
+i≠j)
+.
+If there are multiple answers, then print any of them. You don't have to minimize the number of moves.
+Example
+input
+Copy
+3
+2
+1 2
+1 2
+2
+2 1
+1 2
+4
+2 3 1 2
+2 3 2 3
+output
+Copy
+0
+-1
+3
+3 1
+3 2
+4 3

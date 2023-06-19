@@ -1,0 +1,290 @@
+After hearing the story of Dr. Zhang, Wowo decides to plan his own flight around the world.
+He already chose
+n
+checkpoints in the world map. Due to the landform and the clouds, he cannot fly too high or too low. Formally, let
+bi
+be the height of Wowo's aircraft at checkpoint
+i
+,
+x
+−
+i
+≤bi≤x
++
+i
+should be satisfied for all integers
+i
+between
+1
+and
+n
+, where
+x
+−
+i
+and
+x
++
+i
+are given integers.
+The angle of Wowo's aircraft is also limited. For example, it cannot make a
+90
+-degree climb. Formally,
+y
+−
+i
+≤bi−bi−1≤y
++
+i
+should be satisfied for all integers
+i
+between
+2
+and
+n
+, where
+y
+−
+i
+and
+y
++
+i
+are given integers.
+The final limitation is the speed of angling up or angling down. An aircraft should change its angle slowly for safety concerns. Formally,
+z
+−
+i
+≤(bi−bi−1)−(bi−1−bi−2)≤z
++
+i
+should be satisfied for all integers
+i
+between
+3
+and
+n
+, where
+z
+−
+i
+and
+z
++
+i
+are given integers.
+Taking all these into consideration, Wowo finds that the heights at checkpoints are too hard for him to choose. Please help Wowo decide whether there exists a sequence of real numbers
+b1,…,bn
+satisfying all the contraints above.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤66666
+). Description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+3≤n≤100000
+).
+The
+i
+-th of the next
+n
+lines contains two integers
+x
+−
+i
+,
+x
++
+i
+(
+−108≤x
+−
+i
+≤x
++
+i
+≤108
+) denoting the lower and upper bound of
+bi
+.
+The
+i
+-th of the next
+n−1
+lines contains two integers
+y
+−
+i+1
+,
+y
++
+i+1
+(
+−108≤y
+−
+i+1
+≤y
++
+i+1
+≤108
+) denoting the lower and upper bound of
+bi+1−bi
+.
+The
+i
+-th of the next
+n−2
+lines contains two integers
+z
+−
+i+2
+,
+z
++
+i+2
+(
+−108≤z
+−
+i+2
+≤z
++
+i+2
+≤108
+) denoting the lower and upper bound of
+(bi+2−bi+1)−(bi+1−bi)
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+200000
+.
+It is guaranteed that relaxing every constraint by
+10−6
+(i.e., decrease
+x
+−
+i
+,y
+−
+i
+,z
+−
+i
+by
+10−6
+and increase
+x
++
+i
+,y
++
+i
+,z
++
+i
+by
+10−6
+) will not change the answer.
+Output
+For each test case, output YES if a sequence
+b1,…,bn
+satisfying the constraints exists and NO otherwise. The sequence
+b1,…,bn
+is not required.
+Example
+input
+Copy
+4
+3
+0 1
+0 1
+0 1
+1 1
+1 1
+-100 100
+3
+-967 541
+-500 834
+-724 669
+-858 978
+-964 962
+-645 705
+4
+0 0
+0 1
+0 1
+1 1
+0 1
+0 1
+0 1
+0 0
+0 0
+4
+0 0
+33 34
+65 66
+100 100
+0 100
+0 100
+0 100
+0 0
+0 0
+output
+Copy
+NO
+YES
+YES
+NO
+Note
+In the first test case, all
+bi
+'s are in
+[0,1]
+. Because of the constraints
+1=y
+−
+2
+≤b2−b1≤y
++
+2
+=1
+,
+b2−b1
+must be
+1
+. So
+b2=1
+and
+b1=0
+must hold. Then by
+1=y
+−
+3
+≤b3−b2≤y
++
+3
+=1
+,
+b3
+equals
+2
+. This contradicts the constraint of
+b3≤1
+. So no solution exists.
+In the second test case, we can let all
+bi
+'s be
+0
+.
+In the third test case, one possible solution is
+b1=0
+,
+b2=1/3
+,
+b3=2/3
+,
+b4=1
+.

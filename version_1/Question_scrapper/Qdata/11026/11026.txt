@@ -1,0 +1,160 @@
+You are given a tree of
+n
+nodes. The tree is rooted at node
+1
+, which is not considered as a leaf regardless of its degree.
+Each leaf of the tree has one of the two colors: red or blue. Leaf node
+v
+initially has color
+sv
+.
+The color of each of the internal nodes (including the root) is determined as follows.
+Let
+b
+be the number of blue immediate children, and
+r
+be the number of red immediate children of a given vertex.
+Then the color of this vertex is blue if and only if
+b−r≥k
+, otherwise red.
+Integer
+k
+is a parameter that is same for all the nodes.
+You need to handle the following types of queries:
+1 v: print the color of node
+v
+;
+2 v c: change the color of leaf
+v
+to
+c
+(
+c=0
+means red,
+c=1
+means blue);
+3 h: update the current value of
+k
+to
+h
+.
+Input
+The first line of the input consists of two integers
+n
+and
+k
+(
+2≤n≤105
+,
+−n≤k≤n
+) — the number of nodes and the initial parameter
+k
+.
+Each of the next
+n−1
+lines contains two integers
+u
+and
+v
+(
+1≤u,v≤n
+), denoting that there is an edge between vertices
+u
+and
+v
+.
+The next line consists of
+n
+space separated integers — the initial array
+s
+(
+−1≤si≤1
+).
+si=0
+means that the color of node
+i
+is red.
+si=1
+means that the color of node
+i
+is blue.
+si=−1
+means that the node
+i
+is not a leaf.
+The next line contains an integer
+q
+(
+1≤q≤105
+), the number of queries.
+q
+lines follow, each containing a query in one of the following queries:
+1 v (
+1≤v≤n
+): print the color of node
+v
+;
+2 v c (
+1≤v≤n
+,
+c=0
+or
+c=1
+): change the color of leaf
+v
+to
+c
+(
+c=0
+means red,
+c=1
+means blue). It is guaranteed that
+v
+is a leaf;
+3 h (
+−n≤h≤n
+): update the current value of
+k
+to
+h
+.
+Output
+For each query of the first type, print
+0
+if the color of vertex
+v
+is red, and
+1
+otherwise.
+Example
+input
+Copy
+5 2
+1 2
+1 3
+2 4
+2 5
+-1 -1 0 1 0
+9
+1 1
+1 2
+3 -2
+1 1
+1 2
+3 1
+2 5 1
+1 1
+1 2
+output
+Copy
+0
+0
+1
+1
+0
+1
+Note
+Figures:
+(i) The initial tree
+(ii) The tree after the 3rd query
+(iii) The tree after the 7th query

@@ -1,0 +1,95 @@
+You are given an integer
+n
+(
+n≥0
+) represented with
+k
+digits in base (radix)
+b
+. So,
+n=a1⋅bk−1+a2⋅bk−2+…ak−1⋅b+ak.
+For example, if
+b=17,k=3
+and
+a=[11,15,7]
+then
+n=11⋅172+15⋅17+7=3179+255+7=3441
+.
+Determine whether
+n
+is even or odd.
+Input
+The first line contains two integers
+b
+and
+k
+(
+2≤b≤100
+,
+1≤k≤105
+) — the base of the number and the number of digits.
+The second line contains
+k
+integers
+a1,a2,…,ak
+(
+0≤ai<b
+) — the digits of
+n
+.
+The representation of
+n
+contains no unnecessary leading zero. That is,
+a1
+can be equal to
+0
+only if
+k=1
+.
+Output
+Print "even" if
+n
+is even, otherwise print "odd".
+You can print each letter in any case (upper or lower).
+Examples
+input
+Copy
+13 3
+3 2 7
+output
+Copy
+even
+input
+Copy
+10 9
+1 2 3 4 5 6 7 8 9
+output
+Copy
+odd
+input
+Copy
+99 5
+32 92 85 74 4
+output
+Copy
+odd
+input
+Copy
+2 2
+1 0
+output
+Copy
+even
+Note
+In the first example,
+n=3⋅132+2⋅13+7=540
+, which is even.
+In the second example,
+n=123456789
+is odd.
+In the third example,
+n=32⋅994+92⋅993+85⋅992+74⋅99+4=3164015155
+is odd.
+In the fourth example
+n=2
+.

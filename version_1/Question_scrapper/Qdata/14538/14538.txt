@@ -1,0 +1,23 @@
+Input
+The input contains a single floating-point number x with exactly 6 decimal places (0 < x < 5).
+Output
+Output two integers separated by a single space. Each integer should be between 1 and 10, inclusive. If several solutions exist, output any of them. Solution will exist for all tests.
+Examples
+input
+Copy
+1.200000
+output
+Copy
+3 2
+input
+Copy
+2.572479
+output
+Copy
+10 3
+input
+Copy
+4.024922
+output
+Copy
+9 9

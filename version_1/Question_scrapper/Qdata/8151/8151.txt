@@ -1,0 +1,253 @@
+A binary string is a string where every character is
+0
+or
+1
+. Call a binary string decent if it has an equal number of
+0
+s and
+1
+s.
+Initially, you have an infinite binary string
+t
+whose characters are all
+0
+s. You are given a sequence
+a
+of
+n
+updates, where
+ai
+indicates that the character at index
+ai
+will be flipped (
+0↔1
+). You need to keep and modify after each update a set
+S
+of disjoint ranges such that:
+for each range
+[l,r]
+, the substring
+tl…tr
+is a decent binary string, and
+for all indices
+i
+such that
+ti=1
+, there exists
+[l,r]
+in
+S
+such that
+l≤i≤r
+.
+You only need to output the ranges that are added to or removed from
+S
+after each update. You can only add or remove ranges from
+S
+at most
+106
+times.
+More formally, let
+Si
+be the set of ranges after the
+i
+-th update, where
+S0=∅
+(the empty set). Define
+Xi
+to be the set of ranges removed after update
+i
+, and
+Yi
+to be the set of ranges added after update
+i
+. Then for
+1≤i≤n
+,
+Si=(Si−1∖Xi)∪Yi
+. The following should hold for all
+1≤i≤n
+:
+∀a,b∈Si,(a≠b)→(a∩b=∅)
+;
+Xi⊆Si−1
+;
+(Si−1∖Xi)∩Yi=∅
+;
+n
+∑
+i=1
+(|Xi|+|Yi|)≤106
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅105
+) — the number of updates.
+The next
+n
+lines each contain a single integer
+ai
+(
+1≤ai≤2⋅105
+) — the index of the
+i
+-th update to the string.
+Output
+After the
+i
+-th update, first output a single integer
+xi
+— the number of ranges to be removed from
+S
+after update
+i
+.
+In the following
+xi
+lines, output two integers
+l
+and
+r
+(
+1≤l<r≤106
+), which denotes that the range
+[l,r]
+should be removed from
+S
+. Each of these ranges should be distinct and be part of
+S
+.
+In the next line, output a single integer
+yi
+— the number of ranges to be added to
+S
+after update
+i
+.
+In the following
+yi
+lines, output two integers
+l
+and
+r
+(
+1≤l<r≤106
+), which denotes that the range
+[l,r]
+should be added to
+S
+. Each of these ranges should be distinct and not be part of
+S
+.
+The total number of removals and additions across all updates must not exceed
+106
+.
+After processing the removals and additions for each update, all the ranges in
+S
+should be disjoint and cover all ones.
+It can be proven that an answer always exists under these constraints.
+Example
+input
+Copy
+5
+1
+6
+5
+5
+6
+output
+Copy
+0
+1
+1 2
+
+0
+1
+5 6
+
+1
+5 6
+2
+6 7
+4 5
+
+1
+4 5
+0
+
+1
+6 7
+0
+Note
+Line breaks are provided in the sample only for the sake of clarity, and you don't need to print them in your output.
+After the first update, the set of indices where
+ai=1
+is
+{1}
+. The interval
+[1,2]
+is added, so
+S1={[1,2]}
+, which has one
+0
+and one
+1
+.
+After the second update, the set of indices where
+ai=1
+is
+{1,6}
+. The interval
+[5,6]
+is added, so
+S2={[1,2],[5,6]}
+, each of which has one
+0
+and one
+1
+.
+After the third update, the set of indices where
+ai=1
+is
+{1,5,6}
+. The interval
+[5,6]
+is removed and the intervals
+[4,5]
+and
+[6,7]
+are added, so
+S3={[1,2],[4,5],[6,7]}
+, each of which has one
+0
+and one
+1
+.
+After the fourth update, the set of indices where
+ai=1
+is
+{1,6}
+. The interval
+[4,5]
+is removed, so
+S4={[1,2],[6,7]}
+, each of which has one
+0
+and one
+1
+.
+After the fifth update, the set of indices where
+ai=1
+is
+{1}
+. The interval
+[6,7]
+is removed, so
+S5={[1,2]}
+, which has one
+0
+and one
+1
+.

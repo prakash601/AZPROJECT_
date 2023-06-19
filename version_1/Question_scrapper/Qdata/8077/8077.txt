@@ -1,0 +1,218 @@
+You are given an array
+𝑎
+of
+𝑛
+integers.
+Find two permutations
+†
+𝑝
+and
+𝑞
+of length
+𝑛
+such that
+max(
+𝑝
+𝑖
+,
+𝑞
+𝑖
+)=
+𝑎
+𝑖
+for all
+1≤𝑖≤𝑛
+or report that such
+𝑝
+and
+𝑞
+do not exist.
+†
+A permutation of length
+𝑛
+is an array consisting of
+𝑛
+distinct integers from
+1
+to
+𝑛
+in arbitrary order. For example,
+[2,3,1,5,4]
+is a permutation, but
+[1,2,2]
+is not a permutation (
+2
+appears twice in the array), and
+[1,3,4]
+is also not a permutation (
+𝑛=3
+but there is
+4
+in the array).
+Input
+The first line contains a single integer
+𝑡
+(
+1≤𝑡≤
+10
+4
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains a single integer
+𝑛
+(
+1≤𝑛≤2⋅
+10
+5
+).
+The second line of each test case contains
+𝑛
+integers
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+(
+1≤
+𝑎
+𝑖
+≤𝑛
+) — the array
+𝑎
+.
+It is guaranteed that the total sum of
+𝑛
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, if there do not exist
+𝑝
+and
+𝑞
+that satisfy the conditions, output "NO" (without quotes).
+Otherwise, output "YES" (without quotes) and then output
+2
+lines. The first line should contain
+𝑛
+integers
+𝑝
+1
+,
+𝑝
+2
+,…,
+𝑝
+𝑛
+and the second line should contain
+𝑛
+integers
+𝑞
+1
+,
+𝑞
+2
+,…,
+𝑞
+𝑛
+.
+If there are multiple solutions, you may output any of them.
+You can output "YES" and "NO" in any case (for example, strings "yEs", "yes" and "Yes" will be recognized as a positive response).
+Example
+input
+Copy
+3
+1
+1
+5
+5 3 4 2 5
+2
+1 1
+output
+Copy
+YES
+1 
+1 
+YES
+1 3 4 2 5 
+5 2 3 1 4 
+NO
+Note
+In the first test case,
+𝑝=𝑞=[1]
+. It is correct since
+𝑎
+1
+=𝑚𝑎𝑥(
+𝑝
+1
+,
+𝑞
+1
+)=1
+.
+In the second test case,
+𝑝=[1,3,4,2,5]
+and
+𝑞=[5,2,3,1,4]
+. It is correct since:
+𝑎
+1
+=max(
+𝑝
+1
+,
+𝑞
+1
+)=max(1,5)=5
+,
+𝑎
+2
+=max(
+𝑝
+2
+,
+𝑞
+2
+)=max(3,2)=3
+,
+𝑎
+3
+=max(
+𝑝
+3
+,
+𝑞
+3
+)=max(4,3)=4
+,
+𝑎
+4
+=max(
+𝑝
+4
+,
+𝑞
+4
+)=max(2,1)=2
+,
+𝑎
+5
+=max(
+𝑝
+5
+,
+𝑞
+5
+)=max(5,4)=5
+.
+In the third test case, one can show that no such
+𝑝
+and
+𝑞
+exist.

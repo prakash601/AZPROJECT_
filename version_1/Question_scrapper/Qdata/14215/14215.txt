@@ -1,0 +1,30 @@
+Vanya decided to walk in the field of size n × n cells. The field contains m apple trees, the i-th apple tree is at the cell with coordinates (xi, yi). Vanya moves towards vector (dx, dy). That means that if Vanya is now at the cell (x, y), then in a second he will be at cell . The following condition is satisfied for the vector: , where is the largest integer that divides both a and b. Vanya ends his path when he reaches the square he has already visited.
+Vanya wonders, from what square of the field he should start his path to see as many apple trees as possible.
+Input
+The first line contains integers n, m, dx, dy(1 ≤ n ≤ 106, 1 ≤ m ≤ 105, 1 ≤ dx, dy ≤ n) — the size of the field, the number of apple trees and the vector of Vanya's movement. Next m lines contain integers xi, yi (0 ≤ xi, yi ≤ n - 1) — the coordinates of apples. One cell may contain multiple apple trees.
+Output
+Print two space-separated numbers — the coordinates of the cell from which you should start your path. If there are several answers you are allowed to print any of them.
+Examples
+input
+Copy
+5 5 2 3
+0 0
+1 2
+1 3
+2 4
+3 1
+output
+Copy
+1 3
+input
+Copy
+2 3 1 1
+0 0
+0 1
+1 1
+output
+Copy
+0 0
+Note
+In the first sample Vanya's path will look like: (1, 3) - (3, 1) - (0, 4) - (2, 2) - (4, 0) - (1, 3)
+In the second sample: (0, 0) - (1, 1) - (0, 0)

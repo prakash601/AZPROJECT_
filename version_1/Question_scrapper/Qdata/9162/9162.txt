@@ -1,0 +1,166 @@
+There are
+n
+cities in a row numbered from
+1
+to
+n
+.
+The cities will be building broadcasting stations. The station in the
+i
+-th city has height
+hi
+and range
+wi
+. It can broadcast information to city
+j
+if the following constraints are met:
+i≤j≤wi
+, and
+for each
+k
+such that
+i<k≤j
+, the following condition holds:
+hk<hi
+.
+In other words, the station in city
+i
+can broadcast information to city
+j
+if
+j≥i
+,
+j
+is in the range of
+i
+-th station, and
+i
+is strictly highest on the range from
+i
+to
+j
+(including city
+j
+).
+At the beginning, for every city
+i
+,
+hi=0
+and
+wi=i
+.
+Then
+q
+events will take place. During
+i
+-th event one of the following will happen:
+City
+ci
+will rebuild its station so that its height will be strictly highest among all stations and
+wci
+will be set to
+gi
+.
+Let
+bj
+be the number of stations that can broadcast information to city
+j
+. Print the sum of
+bj
+over all
+j
+satisfying
+li≤j≤ri
+.
+Your task is to react to all events and print answers to all queries.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n,q≤2⋅105
+) — number of cities and number of events.
+Then
+q
+lines follow. The
+i
+-th line begins with an integer
+pi
+(
+pi=1
+or
+pi=2
+).
+If
+pi=1
+a station will be rebuilt. Then two integers
+ci
+and
+gi
+(
+1≤ci≤gi≤n
+) follow — the city in which the station is rebuilt and its new broadcasting range.
+If
+pi=2
+you are given a query. Then two integers
+li
+and
+ri
+(
+1≤li≤ri≤n
+) follow — the range of cities in the query.
+Output
+For each query, print in a single line the sum of
+bj
+over the given interval.
+Examples
+input
+Copy
+1 3
+2 1 1
+1 1 1
+2 1 1
+output
+Copy
+1
+1
+input
+Copy
+5 10
+1 3 4
+2 3 5
+1 1 5
+2 1 5
+1 4 5
+2 2 4
+1 2 3
+2 1 3
+1 5 5
+2 2 5
+output
+Copy
+4
+10
+5
+4
+5
+Note
+In the first test case, only station
+1
+reaches city
+1
+before and after it is rebuilt.
+In the second test case, after each rebuild, the array
+b
+looks as follows:
+[1,1,1,2,1]
+;
+[1,2,2,3,2]
+;
+[1,2,2,1,2]
+;
+[1,1,2,1,2]
+;
+[1,1,2,1,1]
+.

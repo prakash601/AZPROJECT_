@@ -1,0 +1,55 @@
+You are given a sequence
+a1,a2,…,an
+consisting of
+n
+non-zero integers (i.e.
+ai≠0
+).
+You have to calculate two following values:
+the number of pairs of indices
+(l,r)
+(l≤r)
+such that
+al⋅al+1…ar−1⋅ar
+is negative;
+the number of pairs of indices
+(l,r)
+(l≤r)
+such that
+al⋅al+1…ar−1⋅ar
+is positive;
+Input
+The first line contains one integer
+n
+(1≤n≤2⋅105)
+— the number of elements in the sequence.
+The second line contains
+n
+integers
+a1,a2,…,an
+(−109≤ai≤109;ai≠0)
+— the elements of the sequence.
+Output
+Print two integers — the number of subsegments with negative product and the number of subsegments with positive product, respectively.
+Examples
+input
+Copy
+5
+5 -3 3 -1 1
+output
+Copy
+8 7
+input
+Copy
+10
+4 2 -4 3 1 2 -4 3 2 3
+output
+Copy
+28 27
+input
+Copy
+5
+-1 -2 -3 -4 -5
+output
+Copy
+9 6

@@ -1,0 +1,89 @@
+You are given five integers
+n
+,
+dx1
+,
+dy1
+,
+dx2
+and
+dy2
+. You have to select
+n
+distinct pairs of integers
+(xi,yi)
+in such a way that, for every possible pair of integers
+(x,y)
+, there exists exactly one triple of integers
+(a,b,i)
+meeting the following constraints:
+{
+x=xi+a⋅dx1+b⋅dx2,
+y=yi+a⋅dy1+b⋅dy2.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤105
+).
+The second line contains two integers
+dx1
+and
+dy1
+(
+−106≤dx1,dy1≤106
+).
+The third line contains two integers
+dx2
+and
+dy2
+(
+−106≤dx2,dy2≤106
+).
+Output
+If it is impossible to correctly select
+n
+pairs of integers, print NO.
+Otherwise, print YES in the first line, and then
+n
+lines, the
+i
+-th of which contains two integers
+xi
+and
+yi
+(
+−109≤xi,yi≤109
+).
+If there are multiple solutions, print any of them.
+Examples
+input
+Copy
+4
+2 0
+0 2
+output
+Copy
+YES
+0 0
+0 1
+1 0
+1 1
+input
+Copy
+5
+2 6
+1 5
+output
+Copy
+NO
+input
+Copy
+2
+3 4
+1 2
+output
+Copy
+YES
+0 0
+0 1

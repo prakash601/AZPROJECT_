@@ -1,0 +1,116 @@
+Misha has a square
+n×n
+matrix, where the number in row
+i
+and column
+j
+is equal to
+ai,j
+. Misha wants to modify the matrix to contain exactly
+k
+distinct integers. To achieve this goal, Misha can perform the following operation zero or more times:
+choose any square submatrix of the matrix (you choose
+(x1,y1)
+,
+(x2,y2)
+, such that
+x1≤x2
+,
+y1≤y2
+,
+x2−x1=y2−y1
+, then submatrix is a set of cells with coordinates
+(x,y)
+, such that
+x1≤x≤x2
+,
+y1≤y≤y2
+),
+choose an integer
+k
+, where
+1≤k≤n2
+,
+replace all integers in the submatrix with
+k
+.
+Please find the minimum number of operations that Misha needs to achieve his goal.
+Input
+The first input line contains two integers
+n
+and
+k
+(
+1≤n≤500,1≤k≤n2
+)  — the size of the matrix and the desired amount of distinct elements in the matrix.
+Then
+n
+lines follows. The
+i
+-th of them contains
+n
+integers
+ai,1,ai,2,…,ai,n
+(
+1≤ai,j≤n2
+) — the elements of the
+i
+-th row of the matrix.
+Output
+Output one integer — the minimum number of operations required.
+Examples
+input
+Copy
+3 4
+1 1 1
+1 1 2
+3 4 5
+output
+Copy
+1
+input
+Copy
+3 2
+2 1 3
+2 1 1
+3 1 2
+output
+Copy
+2
+input
+Copy
+3 3
+1 1 1
+1 1 2
+2 2 2
+output
+Copy
+1
+input
+Copy
+3 2
+1 1 1
+1 2 1
+2 2 2
+output
+Copy
+0
+Note
+In the first test case the answer is
+1
+, because one can change the value in the bottom right corner of the matrix to
+1
+. The resulting matrix can be found below:
+1 1 1
+1 1 2
+3 4 1
+In the second test case the answer is
+2
+. First, one can change the entire matrix to contain only
+1
+s, and the change the value of any single cell to
+2
+. One of the possible resulting matrices is displayed below:
+1 1 1
+1 1 1
+1 1 2

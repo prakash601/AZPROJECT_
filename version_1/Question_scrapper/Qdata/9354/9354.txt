@@ -1,0 +1,87 @@
+Suppose you are given two strings
+a
+and
+b
+. You can apply the following operation any number of times: choose any contiguous substring of
+a
+or
+b
+, and sort the characters in it in non-descending order. Let
+f(a,b)
+the minimum number of operations you have to apply in order to make them equal (or
+f(a,b)=1337
+if it is impossible to make
+a
+and
+b
+equal using these operations).
+For example:
+f(ab,ab)=0
+;
+f(ba,ab)=1
+(in one operation, we can sort the whole first string);
+f(ebcda,ecdba)=1
+(in one operation, we can sort the substring of the second string starting from the
+2
+-nd character and ending with the
+4
+-th character);
+f(a,b)=1337
+.
+You are given
+n
+strings
+s1,s2,…,sk
+having equal length. Calculate
+n
+∑
+i=1
+n
+∑
+j=i+1
+f(si,sj)
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤2⋅105
+) — the number of strings.
+Then
+n
+lines follow, each line contains one of the strings
+si
+, consisting of lowercase Latin letters.
+|s1|=|s2|=…=|sn|
+, and
+n⋅|s1|≤2⋅105
+. All these strings are pairwise distinct.
+Output
+Print one integer:
+n
+∑
+i=1
+n
+∑
+j=i+1
+f(si,sj)
+.
+Examples
+input
+Copy
+4
+zzz
+bac
+abc
+acb
+output
+Copy
+4015
+input
+Copy
+2
+a
+b
+output
+Copy
+1337

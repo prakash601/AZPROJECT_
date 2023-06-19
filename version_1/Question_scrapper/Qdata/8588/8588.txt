@@ -1,0 +1,116 @@
+Tokitsukaze has a sequence
+a
+of length
+n
+. For each operation, she selects two numbers
+ai
+and
+aj
+(
+i≠j
+;
+1≤i,j≤n
+).
+If
+ai=aj
+, change one of them to
+0
+.
+Otherwise change both of them to
+min(ai,aj)
+.
+Tokitsukaze wants to know the minimum number of operations to change all numbers in the sequence to
+0
+. It can be proved that the answer always exists.
+Input
+The first line contains a single positive integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+For each test case, the first line contains a single integer
+n
+(
+2≤n≤100
+) — the length of the sequence
+a
+.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+0≤ai≤100
+) — the sequence
+a
+.
+Output
+For each test case, print a single integer — the minimum number of operations to change all numbers in the sequence to
+0
+.
+Example
+input
+Copy
+3
+3
+1 2 3
+3
+1 2 2
+3
+1 2 0
+output
+Copy
+4
+3
+2
+Note
+In the first test case, one of the possible ways to change all numbers in the sequence to
+0
+:
+In the
+1
+-st operation,
+a1<a2
+, after the operation,
+a2=a1=1
+. Now the sequence
+a
+is
+[1,1,3]
+.
+In the
+2
+-nd operation,
+a1=a2=1
+, after the operation,
+a1=0
+. Now the sequence
+a
+is
+[0,1,3]
+.
+In the
+3
+-rd operation,
+a1<a2
+, after the operation,
+a2=0
+. Now the sequence
+a
+is
+[0,0,3]
+.
+In the
+4
+-th operation,
+a2<a3
+, after the operation,
+a3=0
+. Now the sequence
+a
+is
+[0,0,0]
+.
+So the minimum number of operations is
+4
+.

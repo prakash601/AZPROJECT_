@@ -1,0 +1,89 @@
+You have given an array
+a
+of length
+n
+and an integer
+x
+to a brand new robot. What the robot does is the following: it iterates over the elements of the array, let the current element be
+q
+. If
+q
+is divisible by
+x
+, the robot adds
+x
+copies of the integer
+q
+x
+to the end of the array, and moves on to the next element. Note that the newly added elements could be processed by the robot later. Otherwise, if
+q
+is not divisible by
+x
+, the robot shuts down.
+Please determine the sum of all values of the array at the end of the process.
+Input
+The first input line contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases.
+The first line of each test case contains two integers
+n
+and
+x
+(
+1≤n≤105
+,
+2≤x≤109
+) — the length of the array and the value which is used by the robot.
+The next line contains integers
+a1
+,
+a2
+, ...,
+an
+(
+1≤ai≤109
+) — the initial values in the array.
+It is guaranteed that the sum of values
+n
+over all test cases does not exceed
+105
+.
+Output
+For each test case output one integer — the sum of all elements at the end of the process.
+Example
+input
+Copy
+2
+1 2
+12
+4 2
+4 6 8 2
+output
+Copy
+36
+44
+Note
+In the first test case the array initially consists of a single element
+[12]
+, and
+x=2
+. After the robot processes the first element, the array becomes
+[12,6,6]
+. Then the robot processes the second element, and the array becomes
+[12,6,6,3,3]
+. After the robot processes the next element, the array becomes
+[12,6,6,3,3,3,3]
+, and then the robot shuts down, since it encounters an element that is not divisible by
+x=2
+. The sum of the elements in the resulting array is equal to
+36
+.
+In the second test case the array initially contains integers
+[4,6,8,2]
+, and
+x=2
+. The resulting array in this case looks like
+[4,6,8,2,2,2,3,3,4,4,1,1,1,1,1,1]
+.

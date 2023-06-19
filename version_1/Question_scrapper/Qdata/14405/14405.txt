@@ -1,0 +1,29 @@
+In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation
+F1 = 1; F2 = 1; Fn = Fn - 1 + Fn - 2 (n > 2).
+DZY loves Fibonacci numbers very much. Today DZY gives you an array consisting of n integers: a1, a2, ..., an. Moreover, there are m queries, each query has one of the two types:
+Format of the query "1 l r". In reply to the query, you need to add Fi - l + 1 to each element ai, where l ≤ i ≤ r.
+Format of the query "2 l r". In reply to the query you should output the value of modulo 1000000009 (109 + 9).
+Help DZY reply to all the queries.
+Input
+The first line of the input contains two integers n and m (1 ≤ n, m ≤ 300000). The second line contains n integers a1, a2, ..., an (1 ≤ ai ≤ 109) — initial array a.
+Then, m lines follow. A single line describes a single query in the format given in the statement. It is guaranteed that for each query inequality 1 ≤ l ≤ r ≤ n holds.
+Output
+For each query of the second type, print the value of the sum on a single line.
+Examples
+input
+Copy
+4 4
+1 2 3 4
+1 1 4
+2 1 4
+1 2 4
+2 1 3
+output
+Copy
+17
+12
+Note
+After the first query, a = [2, 3, 5, 7].
+For the second query, sum = 2 + 3 + 5 + 7 = 17.
+After the third query, a = [2, 4, 6, 9].
+For the fourth query, sum = 2 + 4 + 6 = 12.

@@ -1,0 +1,117 @@
+For a vector
+→
+v
+=(x,y)
+, define
+|v|=
+√
+x2+y2
+.
+Allen had a bit too much to drink at the bar, which is at the origin. There are
+n
+vectors
+→
+v1
+,
+→
+v2
+,⋯,
+→
+vn
+. Allen will make
+n
+moves. As Allen's sense of direction is impaired, during the
+i
+-th move he will either move in the direction
+→
+vi
+or
+−
+→
+vi
+. In other words, if his position is currently
+p=(x,y)
+, he will either move to
+p+
+→
+vi
+or
+p−
+→
+vi
+.
+Allen doesn't want to wander too far from home (which happens to also be the bar). You need to help him figure out a sequence of moves (a sequence of signs for the vectors) such that his final position
+p
+satisfies
+|p|≤1.5⋅106
+so that he can stay safe.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤105
+) — the number of moves.
+Each of the following lines contains two space-separated integers
+xi
+and
+yi
+, meaning that
+→
+vi
+=(xi,yi)
+. We have that
+|vi|≤106
+for all
+i
+.
+Output
+Output a single line containing
+n
+integers
+c1,c2,⋯,cn
+, each of which is either
+1
+or
+−1
+. Your solution is correct if the value of
+p=∑
+n
+i=1
+ci
+→
+vi
+, satisfies
+|p|≤1.5⋅106
+.
+It can be shown that a solution always exists under the given constraints.
+Examples
+input
+Copy
+3
+999999 0
+0 999999
+999999 0
+output
+Copy
+1 1 -1 
+input
+Copy
+1
+-824590 246031
+output
+Copy
+1 
+input
+Copy
+8
+-67761 603277
+640586 -396671
+46147 -122580
+569609 -2112
+400 914208
+131792 309779
+-850150 -486293
+5272 721899
+output
+Copy
+1 1 1 1 1 1 1 -1 

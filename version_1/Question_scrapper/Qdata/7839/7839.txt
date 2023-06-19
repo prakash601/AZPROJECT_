@@ -1,0 +1,115 @@
+There is an array
+𝑎
+consisting of non-negative integers. You can choose an integer
+𝑥
+and denote
+𝑏
+𝑖
+=
+𝑎
+𝑖
+⊕𝑥
+for all
+1≤𝑖≤𝑛
+, where
+⊕
+denotes the bitwise XOR operation. Is it possible to choose such a number
+𝑥
+that the value of the expression
+𝑏
+1
+⊕
+𝑏
+2
+⊕…⊕
+𝑏
+𝑛
+equals
+0
+?
+It can be shown that if a valid number
+𝑥
+exists, then there also exists
+𝑥
+such that (
+0≤𝑥<
+2
+8
+).
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+𝑡
+(
+1≤𝑡≤1000
+). The description of the test cases follows.
+The first line of the test case contains one integer
+𝑛
+(
+1≤𝑛≤
+10
+3
+) — the length of the array
+𝑎
+.
+The second line of the test case contains
+𝑛
+integers — array
+𝑎
+(
+0≤
+𝑎
+𝑖
+<
+2
+8
+).
+It is guaranteed that the sum of
+𝑛
+over all test cases does not exceed
+10
+3
+.
+Output
+For each set test case, print the integer
+𝑥
+(
+0≤𝑥<
+2
+8
+) if it exists, or
+−1
+otherwise.
+Example
+input
+Copy
+5
+3
+1 2 5
+3
+1 2 3
+4
+0 1 2 3
+4
+1 2 2 3
+1
+1
+output
+Copy
+6
+0
+3
+-1
+1
+Note
+In the first test case, after applying the operation with the number
+6
+the array
+𝑏
+becomes
+[7,4,3]
+,
+7⊕4⊕3=0
+.
+There are other answers in the third test case, such as the number
+0
+.

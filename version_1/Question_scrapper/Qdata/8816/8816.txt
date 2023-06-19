@@ -1,0 +1,127 @@
+You are given an array
+a
+of length
+n
+. Let
+cntx
+be the number of elements from the array which are equal to
+x
+. Let's also define
+f(x,y)
+as
+(cntx+cnty)⋅(x+y)
+.
+Also you are given
+m
+bad pairs
+(xi,yi)
+. Note that if
+(x,y)
+is a bad pair, then
+(y,x)
+is also bad.
+Your task is to find the maximum value of
+f(u,v)
+over all pairs
+(u,v)
+, such that
+u≠v
+, that this pair is not bad, and also that
+u
+and
+v
+each occur in the array
+a
+. It is guaranteed that such a pair exists.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤10000
+) — the number of test cases.
+The first line of each test case contains two integers
+n
+and
+m
+(
+2≤n≤3⋅105
+,
+0≤m≤3⋅105
+) — the length of the array and the number of bad pairs.
+The second line of each test case contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤109
+) — elements of the array.
+The
+i
+-th of the next
+m
+lines contains two integers
+xi
+and
+yi
+(
+1≤xi<yi≤109
+), which represent a bad pair. It is guaranteed that no bad pair occurs twice in the input. It is also guaranteed that
+cntxi>0
+and
+cntyi>0
+.
+It is guaranteed that for each test case there is a pair of integers
+(u,v)
+,
+u≠v
+, that is not bad, and such that both of these numbers occur in
+a
+.
+It is guaranteed that the total sum of
+n
+and the total sum of
+m
+don't exceed
+3⋅105
+.
+Output
+For each test case print a single integer — the answer to the problem.
+Example
+input
+Copy
+3
+6 1
+6 3 6 7 3 3
+3 6
+2 0
+3 4
+7 4
+1 2 2 3 1 5 1
+1 5
+3 5
+1 3
+2 5
+output
+Copy
+40
+14
+15
+Note
+In the first test case
+3
+,
+6
+,
+7
+occur in the array.
+f(3,6)=(cnt3+cnt6)⋅(3+6)=(3+2)⋅(3+6)=45
+. But
+(3,6)
+is bad so we ignore it.
+f(3,7)=(cnt3+cnt7)⋅(3+7)=(3+1)⋅(3+7)=40
+.
+f(6,7)=(cnt6+cnt7)⋅(6+7)=(2+1)⋅(6+7)=39
+.
+The answer to the problem is
+max(40,39)=40
+.

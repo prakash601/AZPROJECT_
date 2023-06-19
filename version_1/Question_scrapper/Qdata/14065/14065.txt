@@ -1,0 +1,18 @@
+You are given integers N and D. Find N positive integers x1...xN such that the difference of their product and their sum equals D.
+Input
+The only line of input contains integers N (2 ≤ N ≤ 1000) and D (0 ≤ D ≤ 1000).
+Output
+Output N integers that satisfy the given condition in non-decreasing order (in a single line, separated with spaces). Note that some numbers can be equal. Numbers printed by you must not exceed 106.
+Examples
+input
+Copy
+2 1
+output
+Copy
+2 3
+input
+Copy
+3 5
+output
+Copy
+1 2 8

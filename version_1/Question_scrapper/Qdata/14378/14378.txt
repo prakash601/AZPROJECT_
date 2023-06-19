@@ -1,0 +1,23 @@
+You are given a permutation of numbers from 1 to n. Determine whether there's a pair of integers a, b (1 ≤ a, b ≤ n; a ≠ b) such that the element (note, that it is usual division, not integer one) is between a and b in this permutation.
+Input
+First line consists of a single integer n (1 ≤ n ≤ 300000) — the size of permutation.
+Second line contains n integers — the permutation itself.
+Output
+Print "YES", if such a pair exists, "NO" otherwise (in both cases without quotes, the answer is case insensitive).
+Examples
+input
+Copy
+4
+1 3 4 2
+output
+Copy
+NO
+input
+Copy
+5
+1 5 2 4 3
+output
+Copy
+YES
+Note
+In the second example 2 is between 1 and 3. Additionally 4 is between 3 and 5.

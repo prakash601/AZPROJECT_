@@ -1,0 +1,20 @@
+Aenar has an array
+a
+consisting of
+n
+integers.
+Input
+The first line is the integer
+n
+(
+1≤n≤100
+).
+The second line contains
+n
+integers
+ai
+(
+0≤ai≤3979
+) — the contents of the array.
+Output
+Output a single number.

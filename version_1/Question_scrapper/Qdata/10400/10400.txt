@@ -1,0 +1,88 @@
+This is the hard version of the problem. The only difference between easy and hard versions is the constraint of
+m
+. You can make hacks only if both versions are solved.
+Chiori loves dolls and now she is going to decorate her bedroom!
+ As a doll collector, Chiori has got
+n
+dolls. The
+i
+-th doll has a non-negative integer value
+ai
+(
+ai<2m
+,
+m
+is given). Chiori wants to pick some (maybe zero) dolls for the decoration, so there are
+2n
+different picking ways.
+Let
+x
+be the bitwise-xor-sum of values of dolls Chiori picks (in case Chiori picks no dolls
+x=0
+). The value of this picking way is equal to the number of
+1
+-bits in the binary representation of
+x
+. More formally, it is also equal to the number of indices
+0≤i<m
+, such that
+⌊
+x
+2i
+⌋
+is odd.
+Tell her the number of picking ways with value
+i
+for each integer
+i
+from
+0
+to
+m
+. Due to the answers can be very huge, print them by modulo
+998244353
+.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤2⋅105
+,
+0≤m≤53
+)  — the number of dolls and the maximum value of the picking way.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+0≤ai<2m
+)  — the values of dolls.
+Output
+Print
+m+1
+integers
+p0,p1,…,pm
+ —
+pi
+is equal to the number of picking ways with value
+i
+by modulo
+998244353
+.
+Examples
+input
+Copy
+4 4
+3 5 8 14
+output
+Copy
+2 2 6 6 0 
+input
+Copy
+6 7
+11 45 14 9 19 81
+output
+Copy
+1 2 11 20 15 10 5 0 

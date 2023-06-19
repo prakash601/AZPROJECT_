@@ -1,0 +1,129 @@
+Ivan wants to have a good dinner. A good dinner should consist of a first course, a second course, a drink, and a dessert.
+There are
+n1
+different types of first courses Ivan can buy (the
+i
+-th of them costs
+ai
+coins),
+n2
+different types of second courses (the
+i
+-th of them costs
+bi
+coins),
+n3
+different types of drinks (the
+i
+-th of them costs
+ci
+coins) and
+n4
+different types of desserts (the
+i
+-th of them costs
+di
+coins).
+Some dishes don't go well with each other. There are
+m1
+pairs of first courses and second courses that don't go well with each other,
+m2
+pairs of second courses and drinks, and
+m3
+pairs of drinks and desserts that don't go well with each other.
+Ivan wants to buy exactly one first course, one second course, one drink, and one dessert so that they go well with each other, and the total cost of the dinner is the minimum possible. Help him to find the cheapest dinner option!
+Input
+The first line contains four integers
+n1
+,
+n2
+,
+n3
+and
+n4
+(
+1≤ni≤150000
+) — the number of types of first courses, second courses, drinks and desserts, respectively.
+Then four lines follow. The first line contains
+n1
+integers
+a1,a2,…,an1
+(
+1≤ai≤108
+), where
+ai
+is the cost of the
+i
+-th type of first course. Three next lines denote the costs of second courses, drinks, and desserts in the same way (
+1≤bi,ci,di≤108
+).
+The next line contains one integer
+m1
+(
+0≤m1≤200000
+) — the number of pairs of first and second courses that don't go well with each other. Each of the next
+m1
+lines contains two integers
+xi
+and
+yi
+(
+1≤xi≤n1
+;
+1≤yi≤n2
+) denoting that the first course number
+xi
+doesn't go well with the second course number
+yi
+. All these pairs are different.
+The block of pairs of second dishes and drinks that don't go well with each other is given in the same format. The same for pairs of drinks and desserts that don't go well with each other (
+0≤m2,m3≤200000
+).
+Output
+If it's impossible to choose a first course, a second course, a drink, and a dessert so that they go well with each other, print
+−1
+. Otherwise, print one integer — the minimum total cost of the dinner.
+Examples
+input
+Copy
+4 3 2 1
+1 2 3 4
+5 6 7
+8 9
+10
+2
+1 2
+1 1
+2
+3 1
+3 2
+1
+1 1
+output
+Copy
+26
+input
+Copy
+1 1 1 1
+1
+1
+1
+1
+1
+1 1
+0
+0
+output
+Copy
+-1
+Note
+The best option in the first example is to take the first course
+2
+, the second course
+1
+, the drink
+2
+and the dessert
+1
+.
+In the second example, the only pair of the first course and the second course is bad, so it's impossible to have dinner.

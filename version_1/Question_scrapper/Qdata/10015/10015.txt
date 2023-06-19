@@ -1,0 +1,138 @@
+There are
+n
+robbers at coordinates
+(a1,b1)
+,
+(a2,b2)
+, ...,
+(an,bn)
+and
+m
+searchlight at coordinates
+(c1,d1)
+,
+(c2,d2)
+, ...,
+(cm,dm)
+.
+In one move you can move each robber to the right (increase
+ai
+of each robber by one) or move each robber up (increase
+bi
+of each robber by one). Note that you should either increase all
+ai
+or all
+bi
+, you can't increase
+ai
+for some points and
+bi
+for some other points.
+Searchlight
+j
+can see a robber
+i
+if
+ai≤cj
+and
+bi≤dj
+.
+A configuration of robbers is safe if no searchlight can see a robber (i.e. if there is no pair
+i,j
+such that searchlight
+j
+can see a robber
+i
+).
+What is the minimum number of moves you need to perform to reach a safe configuration?
+Input
+The first line of input contains two integers
+n
+and
+m
+(
+1≤n,m≤2000
+): the number of robbers and the number of searchlight.
+Each of the next
+n
+lines contains two integers
+ai
+,
+bi
+(
+0≤ai,bi≤106
+), coordinates of robbers.
+Each of the next
+m
+lines contains two integers
+ci
+,
+di
+(
+0≤ci,di≤106
+), coordinates of searchlights.
+Output
+Print one integer: the minimum number of moves you need to perform to reach a safe configuration.
+Examples
+input
+Copy
+1 1
+0 0
+2 3
+output
+Copy
+3
+input
+Copy
+2 3
+1 6
+6 1
+10 1
+1 10
+7 7
+output
+Copy
+4
+input
+Copy
+1 2
+0 0
+0 0
+0 0
+output
+Copy
+1
+input
+Copy
+7 3
+0 8
+3 8
+2 7
+0 10
+5 5
+7 0
+3 5
+6 6
+3 11
+11 5
+output
+Copy
+6
+Note
+In the first test, you can move each robber to the right three times. After that there will be one robber in the coordinates
+(3,0)
+.
+The configuration of the robbers is safe, because the only searchlight can't see the robber, because it is in the coordinates
+(2,3)
+and
+3>2
+.
+In the second test, you can move each robber to the right two times and two times up. After that robbers will be in the coordinates
+(3,8)
+,
+(8,3)
+.
+It's easy the see that the configuration of the robbers is safe.
+It can be proved that you can't reach a safe configuration using no more than
+3
+moves.

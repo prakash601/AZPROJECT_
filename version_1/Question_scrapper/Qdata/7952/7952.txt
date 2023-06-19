@@ -1,0 +1,112 @@
+Given an integer
+n
+.
+Consider all pairs of integer arrays
+a
+and
+p
+of the same length such that
+n=∏a
+pi
+i
+(i.e.
+a
+p1
+1
+⋅a
+p2
+2
+⋅…
+) (
+ai>1;pi>0
+) and
+ai
+is the product of some (possibly one) distinct prime numbers.
+For example, for
+n=28=22⋅71=41⋅71
+the array pair
+a=[2,7]
+,
+p=[2,1]
+is correct, but the pair of arrays
+a=[4,7]
+,
+p=[1,1]
+is not, because
+4=22
+is a product of non-distinct prime numbers.
+Your task is to find the maximum value of
+∑ai⋅pi
+(i.e.
+a1⋅p1+a2⋅p2+…
+) over all possible pairs of arrays
+a
+and
+p
+. Note that you do not need to minimize or maximize the length of the arrays.
+Input
+Each test contains multiple test cases. The first line contains an integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+Each test case contains only one integer
+n
+(
+2≤n≤109
+).
+Output
+For each test case, print the maximum value of
+∑ai⋅pi
+.
+Example
+input
+Copy
+7
+100
+10
+864
+130056192
+1000000000
+2
+999999018
+output
+Copy
+20
+10
+22
+118
+90
+2
+333333009
+Note
+In the first test case,
+100=102
+so that
+a=[10]
+,
+p=[2]
+when
+∑ai⋅pi
+hits the maximum value
+10⋅2=20
+. Also,
+a=[100]
+,
+p=[1]
+does not work since
+100
+is not made of distinct prime factors.
+In the second test case, we can consider
+10
+as
+101
+, so
+a=[10]
+,
+p=[1]
+. Notice that when
+10=21⋅51
+,
+∑ai⋅pi=7
+.

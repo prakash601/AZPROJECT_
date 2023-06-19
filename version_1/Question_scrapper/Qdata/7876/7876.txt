@@ -1,0 +1,223 @@
+Let's call an array
+b1,b2,…,bm
+a test if
+b1=m−1
+.
+Let's call an array
+b1,b2,…,bm
+a multitest if the array
+b2,b3,…,bm
+can be split into
+b1
+non-empty subarrays so that each of these subarrays is a test. Note that each element of the array must be included in exactly one subarray, and the subarrays must consist of consecutive elements.
+Let's define the function
+f
+from the array
+b1,b2,…,bm
+as the minimum number of operations of the form "Replace any
+bi
+with any non-negative integer
+x
+", which needs to be done so that the array
+b1,b2,…,bm
+becomes a multitest.
+You are given an array of positive integers
+a1,a2,…,an
+. For each
+i
+from
+1
+to
+n−1
+, find
+f([ai,ai+1,…,an])
+.
+Below are some examples of tests and multitests.
+Tests:
+[
+1
+_
+,5]
+,
+[
+2
+_
+,2,2]
+,
+[
+3
+_
+,4,1,1]
+,
+[
+5
+_
+,0,0,0,0,0]
+,
+[
+7
+_
+,1,2,3,4,5,6,7]
+,
+[
+0
+_
+]
+. These arrays are tests since their first element (underlined) is equal to the length of the array minus one.
+Multitests:
+[1,
+1
+_
+,1
+_
+]
+,
+[2,
+3
+_
+,0,0,1
+_
+,
+1
+_
+,12
+_
+]
+,
+[3,
+2
+_
+,2,7
+_
+,
+1
+_
+,1
+_
+,
+3
+_
+,4,4,4
+_
+]
+,
+[4,
+0
+_
+_
+,
+3
+_
+,1,7,9
+_
+,
+4
+_
+,2,0,0,9
+_
+,
+1
+_
+,777
+_
+]
+. Underlined are the subarrays after the split, and double underlined are the first elements of each subarray.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤300000
+). The description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+2≤n≤300000
+) — the length of the array
+a
+.
+The second line of each test case contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤300000
+) — elements of the array
+a
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+300000
+.
+Output
+For each test case print
+n−1
+numbers —
+f([ai,ai+1,…,an])
+for each
+i
+from
+1
+to
+n−1
+.
+Examples
+input
+Copy
+3
+4
+1 2 1 7
+7
+3 1 3 1 2 1 1
+4
+2 7 1 1
+output
+Copy
+0 1 1 
+0 1 1 0 1 1 
+1 1 1 
+input
+Copy
+1
+19
+3 4 1 2 1 7 7 3 1 3 1 2 1 1 4 2 7 1 1
+output
+Copy
+0 0 1 1 1 1 1 1 1 0 1 0 1 0 2 1 1 1 
+Note
+In the first test case of the first test the array
+[1,2,1,7]
+is a multitest since the array
+[2,1,7]
+is a test. The array
+[2,1,7]
+is not a multitest, but after replacing the first number with
+1
+, an array
+[1,1,7]
+is obtained, which is a multitest. The array
+[1,7]
+is also not a multitest, but the array
+[1,0]
+is, so
+f([1,7])=1
+.
+In the second test case of first test, for
+i=2
+,
+f([ai,ai+1,…,an])=f([1,3,1,2,1,1])=1
+, since the array itself is not a multitest, but after replacing the second element with
+4
+you get multitest.
+In the third test case of first test, for
+i=1
+,
+f([ai,ai+1,…,an])=f([2,7,1,1])=1
+, since the array itself is not a multitest, but after replacing the second element with
+0
+you get multitest.
+The second test is an array composed of all the numbers of the first test. Therefore
+f([a1,a2,…,an])
+naturally equals to
+0
+.

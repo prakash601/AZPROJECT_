@@ -1,0 +1,109 @@
+For a sequence of strings
+[t1,t2,…,tm]
+, let's define the function
+f([t1,t2,…,tm])
+as the number of different strings (including the empty string) that are subsequences of at least one string
+ti
+.
+f([])=0
+(i. e. the number of such strings for an empty sequence is
+0
+).
+You are given a sequence of strings
+[s1,s2,…,sn]
+. Every string in this sequence consists of lowercase Latin letters and is sorted (i. e., each string begins with several (maybe zero) characters a, then several (maybe zero) characters b, ..., ends with several (maybe zero) characters z).
+For each of
+2n
+subsequences of
+[s1,s2,…,sn]
+, calculate the value of the function
+f
+modulo
+998244353
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤23
+) — the number of strings.
+Then
+n
+lines follow. The
+i
+-th line contains the string
+si
+(
+1≤|si|≤2⋅104
+), consisting of lowercase Latin letters. Each string
+si
+is sorted.
+Output
+Since printing up to
+223
+integers would be really slow, you should do the following:
+For each of the
+2n
+subsequences (which we denote as
+[si1,si2,…,sik]
+), calculate
+f([si1,si2,…,sik])
+, take it modulo
+998244353
+, then multiply it by
+k⋅(i1+i2+⋯+ik)
+. Print the XOR of all
+2n
+integers you get.
+The indices
+i1,i2,…,ik
+in the description of each subsequences are
+1
+-indexed (i. e. are from
+1
+to
+n
+).
+Examples
+input
+Copy
+3
+a
+b
+c
+output
+Copy
+92
+input
+Copy
+2
+aa
+a
+output
+Copy
+21
+input
+Copy
+2
+a
+a
+output
+Copy
+10
+input
+Copy
+2
+abcd
+aabb
+output
+Copy
+124
+input
+Copy
+3
+ddd
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaabbbbbbbbbbbcccccccccccciiiiiiiiiiiiiiiiiiiiiiooooooooooqqqqqqqqqqqqqqqqqqvvvvvzzzzzzzzzzzz
+output
+Copy
+15706243380

@@ -1,0 +1,66 @@
+Let
+fx=c2x−6⋅fx−1⋅fx−2⋅fx−3
+for
+x≥4
+.
+You have given integers
+n
+,
+f1
+,
+f2
+,
+f3
+, and
+c
+. Find
+fnmod(109+7)
+.
+Input
+The only line contains five integers
+n
+,
+f1
+,
+f2
+,
+f3
+, and
+c
+(
+4≤n≤1018
+,
+1≤f1
+,
+f2
+,
+f3
+,
+c≤109
+).
+Output
+Print
+fnmod(109+7)
+.
+Examples
+input
+Copy
+5 1 2 5 3
+output
+Copy
+72900
+input
+Copy
+17 97 41 37 11
+output
+Copy
+317451037
+Note
+In the first example,
+f4=90
+,
+f5=72900
+.
+In the second example,
+f17≈2.28×1029587
+.

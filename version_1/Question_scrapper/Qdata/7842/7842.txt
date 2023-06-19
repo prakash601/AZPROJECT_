@@ -1,0 +1,251 @@
+Jack has a graph of
+𝑛
+vertices and
+𝑚
+edges. All edges are bidirectional and of unit length. The graph is connected, i. e. there exists a path between any two of its vertices. There can be more than one edge connecting the same pair of vertices. The graph can contain self-loops, i. e. edges connecting a node to itself.
+The distance between vertices
+𝑢
+and
+𝑣
+is denoted as
+𝜌(𝑢,𝑣)
+and equals the minimum possible number of edges on a path between
+𝑢
+and
+𝑣
+. The diameter of graph
+𝐺
+is defined as the maximum possible distance between some pair of its vertices. We denote it as
+𝑑(𝐺)
+. In other words,
+𝑑(𝐺)=
+max
+1≤𝑢,𝑣≤𝑛
+𝜌(𝑢,𝑣).
+d
+(
+G
+)
+(
+)
+Jack plans to consecutively apply
+𝑞
+updates to his graph. Each update adds exactly one edge to the graph. Denote as
+𝐺
+𝑖
+the graph after exactly
+𝑖
+updates are made. Jack wants to calculate
+𝑞+1
+values
+𝑑(
+𝐺
+0
+),𝑑(
+𝐺
+1
+),𝑑(
+𝐺
+2
+),…,𝑑(
+𝐺
+𝑞
+)
+.
+However, Jack suspects that finding the exact diameters of
+𝑞+1
+graphs might be a difficult task, so he is fine with approximate answers that differ from the correct answers no more than twice. Formally, Jack wants to find a sequence of positive integers
+𝑎
+0
+,
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑞
+such that
+⌈
+𝑑(
+𝐺
+𝑖
+)
+2
+⌉≤
+𝑎
+𝑖
+≤2⋅𝑑(
+𝐺
+𝑖
+)
+⌈
+(
+)
+⌉
+for each
+𝑖
+.
+Hacks
+You cannot make hacks in this problem.
+Input
+The first line of the input contains three integers
+𝑛
+,
+𝑚
+, and
+𝑞
+(
+2≤𝑛≤
+10
+5
+,
+𝑛−1≤𝑚≤
+10
+5
+,
+0≤𝑞≤
+10
+5
+), the number of vertices in the given graph, the number of edges and the number of updates, respectively.
+Then follow
+𝑚
+lines describing the initial edges of the graph. The
+𝑖
+-th of these lines contains two integers
+𝑢
+𝑖
+and
+𝑣
+𝑖
+(
+1≤
+𝑢
+𝑖
+,
+𝑣
+𝑖
+≤𝑛
+), the indexes of the vertices connected by the
+𝑖
+-th edge.
+Then follow
+𝑞
+lines describing the updates. The
+𝑖
+-th of these lines contains two integers
+𝑢
+′
+𝑖
+and
+𝑣
+′
+𝑖
+(
+1≤
+𝑢
+′
+𝑖
+,
+𝑣
+′
+𝑖
+≤𝑛
+), the indexes of the vertices connected by the edge that is added to the graph in the
+𝑖
+-th update.
+Important note. For testing purposes, the input data may contain some extra lines after the mentioned input format. These will be used by the checker to verify your answer. They are not a part of the test data, you should not use them in any way and you can even omit reading them.
+Output
+Print a sequence of
+𝑞+1
+positive integers
+𝑎
+0
+,
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑞
+. The
+𝑖
+-th of these integers should differ from the diameter of graph
+𝐺
+𝑖
+no more than twice.
+Examples
+input
+Copy
+9 10 8
+1 2
+2 3
+2 4
+3 5
+4 5
+5 6
+5 7
+6 8
+7 8
+8 9
+3 4
+6 7
+2 8
+1 9
+1 6
+4 9
+3 9
+7 1
+output
+Copy
+10 6 5 6 2 4 2 2 1
+input
+Copy
+8 7 9
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+1 5
+3 7
+2 4
+4 6
+6 8
+8 2
+5 4
+2 4
+3 3
+1 652997 124613 653029 653029 124613 124613 124613 648901 124613 653029
+output
+Copy
+7 5 4 4 4 3 3 3 3 3
+Note
+In the first example, the correct sequence of
+𝑑(
+𝐺
+0
+),𝑑(
+𝐺
+1
+),𝑑(
+𝐺
+2
+),…,𝑑(
+𝐺
+𝑞
+)
+is
+6,6,6,3,3,3,2,2,2
+.
+In the second example, the input contains an extra line that you can omit reading. It is not a part of the test and will be used for verifying your answer. The output of the second example contains the correct values of
+𝑑(
+𝐺
+𝑖
+)
+.

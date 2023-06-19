@@ -1,0 +1,86 @@
+You are given
+n
+elements numbered from
+1
+to
+n
+, the element
+i
+has value
+ai
+and color
+ci
+, initially,
+ci=0
+for all
+i
+.
+The following operation can be applied:
+Select three elements
+i
+,
+j
+and
+k
+(
+1≤i<j<k≤n
+), such that
+ci
+,
+cj
+and
+ck
+are all equal to
+0
+and
+ai=ak
+, then set
+cj=1
+.
+Find the maximum value of
+n
+∑
+i=1
+ci
+that can be obtained after applying the given operation any number of times.
+Input
+The first line contains an integer
+n
+(
+3≤n≤2⋅105
+) — the number of elements.
+The second line consists of
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤n
+), where
+ai
+is the value of the
+i
+-th element.
+Output
+Print a single integer in a line — the maximum value of
+n
+∑
+i=1
+ci
+that can be obtained after applying the given operation any number of times.
+Examples
+input
+Copy
+7
+1 2 1 2 7 4 7
+output
+Copy
+2
+input
+Copy
+13
+1 2 3 2 1 3 3 4 5 5 5 4 7
+output
+Copy
+7
+Note
+In the first test, it is possible to apply the following operations in order:

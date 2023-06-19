@@ -1,0 +1,145 @@
+A squad of
+n
+warriors is defending a castle from a dragon attack. There are
+m
+barricades between the castle and the dragon.
+The warriors are numbered from
+1
+to
+n
+. The
+i
+-th warrior knows
+ki
+attacks: the
+j
+-th of them deals
+ai,j
+damage to the dragon and can only be applied if there are exactly
+bi,j
+barricades between the castle and the dragon.
+The warriors make turns one after another, starting from warrior
+1
+. After warrior
+n
+makes his turn, the total damage to the dragon is calculated. The
+i
+-th warrior performs exactly one of three possible moves in his turn:
+destroys one barricade (if there are any left);
+deploys one of his
+ki
+attacks;
+skips a turn.
+The total damage is the sum of damages dealt by the warriors who chose to deploy their attacks in their turn. What is the maximum total damage the warriors can deal to the dragon?
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤3⋅105
+) — the number of warriors and the initial number of barricades.
+Then the descriptions of attacks for each warrior follow. The
+i
+-th description consists of three lines.
+The first line contains a single integer
+ki
+(
+1≤ki≤m+1
+) — the number of attacks the
+i
+-th warrior knows.
+The second line contains
+ki
+integers
+ai,1,ai,2,…,ai,ki
+(
+1≤ai,j≤109
+) — the damage of each attack.
+The third line contains
+ki
+integers
+bi,1,bi,2,…,bi,ki
+(
+0≤bi,j≤m
+) — the required number of barricades for each attack.
+bi,j
+for the
+i
+-th warrior are pairwise distinct. The attacks are listed in the increasing order of the barricades requirement, so
+bi,1<bi,2<⋯<bi,ki
+.
+The sum of
+ki
+over all warriors doesn't exceed
+3⋅105
+.
+Output
+Print a single integer — the maximum total damage the warriors can deal to the dragon.
+Examples
+input
+Copy
+2 4
+1
+2
+4
+2
+10 5
+3 4
+output
+Copy
+10
+input
+Copy
+3 3
+1
+1
+0
+1
+20
+2
+1
+100
+3
+output
+Copy
+100
+input
+Copy
+2 1
+2
+10 10
+0 1
+2
+30 20
+0 1
+output
+Copy
+30
+Note
+In the first example, the optimal choice is the following:
+warrior
+1
+destroys a barricade, now there are
+3
+barricades left;
+warrior
+2
+deploys his first attack (he can do it because
+b1,1=3
+, which is the current number of barricades).
+The total damage is
+10
+.
+If the first warrior used his attack or skipped his turn, then the second warrior would only be able to deploy his second attack. Thus, the total damage would be
+2+5=7
+or
+5
+.
+In the second example, the first warrior skips his move, the second warrior skips his move and the third warrior deploys his only attack.
+In the third example, two equivalent options are:
+both warriors deploy their second attacks;
+the first warrior destroys one barricade and the second warrior deploys his first attack.
+Both options yield
+30
+total damage.

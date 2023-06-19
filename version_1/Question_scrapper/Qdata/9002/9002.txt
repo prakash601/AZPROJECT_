@@ -1,0 +1,148 @@
+The chef has cooked
+n
+dishes yet again: the
+i
+-th dish consists of
+ai
+grams of fish and
+bi
+grams of meat.
+Banquet organizers consider two dishes
+i
+and
+j
+equal if
+ai=aj
+and
+bi=bj
+at the same time.
+The banquet organizers estimate the variety of
+n
+dishes as follows. The variety of a set of dishes is equal to the number of different dishes in it. The less variety is, the better.
+In order to reduce the variety, a taster was invited. He will eat exactly
+mi
+grams of food from each dish. For each dish, the taster determines separately how much fish and how much meat he will eat. The only condition is that he will eat exactly
+mi
+grams of the
+i
+-th dish in total.
+Determine how much of what type of food the taster should eat from each dish so that the value of variety is the minimum possible. If there are several correct answers, you may output any of them.
+Input
+The first line of input data contains an integer
+t
+(
+1≤t≤104
+) — the number of test cases.
+Each test case's description is preceded by a blank line. Next comes a line that contains an integer
+n
+(
+1≤n≤2⋅105
+) — the number of dishes. Then follows
+n
+lines,
+i
+-th of which contains three integers
+ai
+,
+bi
+and
+mi
+(
+0≤ai,bi≤106
+;
+0≤mi≤ai+bi
+) — the mass of fish in
+i
+-th dish, the mass of meat in
+i
+-th dish and how many grams in total the taster should eat in
+i
+-th dish.
+The sum of all
+n
+values for all input data sets in the test does not exceed
+2⋅105
+.
+Output
+For each test case, print on the first line the minimum value of variety that can be achieved by eating exactly
+mi
+grams of food (for all
+i
+from
+1
+to
+n
+) from a dish
+i
+.
+Then print
+n
+lines that describe a way to do this: the
+i
+-th line should contain two integers
+xi
+and
+yi
+(
+0≤xi≤ai
+;
+0≤yi≤bi
+;
+xi+yi=mi
+), where
+xi
+is how many grams of fish the taster should eat from
+i
+-th dish, and
+yi
+is how many grams of meat.
+If there are several ways to achieve a minimum balance, print any of them.
+Example
+input
+Copy
+5
+
+3
+10 10 2
+9 9 0
+10 9 1
+
+2
+3 4 1
+5 1 2
+
+3
+7 2 5
+6 5 4
+5 5 6
+
+1
+13 42 50
+
+5
+5 7 12
+3 1 4
+7 3 7
+0 0 0
+4 1 5
+output
+Copy
+1
+1 1
+0 0
+1 0
+2
+0 1
+1 1
+2
+3 2
+0 4
+1 5
+1
+8 42
+2
+5 7
+3 1
+4 3
+0 0
+4 1

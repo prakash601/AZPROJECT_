@@ -1,0 +1,144 @@
+Hossam woke up bored, so he decided to create an interesting array with his friend Hazem.
+Now, they have an array
+𝑎
+of
+𝑛
+positive integers, Hossam will choose a number
+𝑎
+𝑖
+and Hazem will choose a number
+𝑎
+𝑗
+.
+Count the number of interesting pairs
+(
+𝑎
+𝑖
+,
+𝑎
+𝑗
+)
+that meet all the following conditions:
+1≤𝑖,𝑗≤𝑛
+;
+𝑖≠𝑗
+;
+The absolute difference
+|
+𝑎
+𝑖
+−
+𝑎
+𝑗
+|
+must be equal to the maximum absolute difference over all the pairs in the array. More formally,
+|
+𝑎
+𝑖
+−
+𝑎
+𝑗
+|=
+max
+1≤𝑝,𝑞≤𝑛
+|
+𝑎
+𝑝
+−
+𝑎
+𝑞
+|
+.
+Input
+The input consists of multiple test cases. The first line contains a single integer
+𝑡
+(
+1≤𝑡≤100
+), which denotes the number of test cases. Description of the test cases follows.
+The first line of each test case contains an integer
+𝑛
+(
+2≤𝑛≤
+10
+5
+).
+The second line of each test case contains
+𝑛
+integers
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+(
+1≤
+𝑎
+𝑖
+≤
+10
+5
+).
+It is guaranteed that the sum of
+𝑛
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case print an integer — the number of interesting pairs
+(
+𝑎
+𝑖
+,
+𝑎
+𝑗
+)
+.
+Example
+input
+Copy
+2
+5
+6 2 3 8 1
+6
+7 2 8 3 2 10
+output
+Copy
+2
+4
+Note
+In the first example, the two ways are:
+Hossam chooses the fourth number
+8
+and Hazem chooses the fifth number
+1
+.
+Hossam chooses the fifth number
+1
+and Hazem chooses the fourth number
+8
+.
+In the second example, the four ways are:
+Hossam chooses the second number
+2
+and Hazem chooses the sixth number
+10
+.
+Hossam chooses the sixth number
+10
+and Hazem chooses the second number
+2
+.
+Hossam chooses the fifth number
+2
+and Hazem chooses the sixth number
+10
+.
+Hossam chooses the sixth number
+10
+and Hazem chooses the fifth number
+2
+.

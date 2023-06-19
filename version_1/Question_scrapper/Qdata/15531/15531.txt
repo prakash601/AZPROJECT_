@@ -1,0 +1,29 @@
+Input
+The only line of input contains three integers a1, a2, a3 (1 ≤ a1, a2, a3 ≤ 20), separated by spaces.
+Output
+Output a single integer.
+Examples
+input
+Copy
+2 3 2
+output
+Copy
+5
+input
+Copy
+13 14 1
+output
+Copy
+14
+input
+Copy
+14 5 9
+output
+Copy
+464
+input
+Copy
+17 18 3
+output
+Copy
+53

@@ -1,0 +1,18 @@
+Given the number n, find the smallest positive integer which has exactly n divisors. It is guaranteed that for the given n the answer will not exceed 1018.
+Input
+The first line of the input contains integer n (1 ≤ n ≤ 1000).
+Output
+Output the smallest positive integer with exactly n divisors.
+Examples
+input
+Copy
+4
+output
+Copy
+6
+input
+Copy
+6
+output
+Copy
+12

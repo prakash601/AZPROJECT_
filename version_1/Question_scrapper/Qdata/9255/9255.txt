@@ -1,0 +1,62 @@
+You have an array
+a
+consisting of
+n
+distinct positive integers, numbered from
+1
+to
+n
+. Define
+pk
+as
+pk=
+∑
+1≤i,j≤k
+aimodaj,
+where
+xmody
+denotes the remainder when
+x
+is divided by
+y
+. You have to find and print
+p1,p2,…,pn
+.
+Input
+The first line contains
+n
+— the length of the array (
+2≤n≤2⋅105
+).
+The second line contains
+n
+space-separated distinct integers
+a1,…,an
+(
+1≤ai≤3⋅105
+,
+ai≠aj
+if
+i≠j
+).
+Output
+Print
+n
+integers
+p1,p2,…,pn
+.
+Examples
+input
+Copy
+4
+6 2 7 3
+output
+Copy
+0 2 12 22
+input
+Copy
+3
+3 2 1
+output
+Copy
+0 3 5

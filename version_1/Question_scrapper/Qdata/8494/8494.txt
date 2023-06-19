@@ -1,0 +1,178 @@
+Fishingprince is playing with an array
+[a1,a2,…,an]
+. He also has a magic number
+m
+.
+He can do the following two operations on it:
+Select
+1≤i≤n
+such that
+ai
+is divisible by
+m
+(that is, there exists an integer
+t
+such that
+m⋅t=ai
+). Replace
+ai
+with
+m
+copies of
+ai
+m
+. The order of the other elements doesn't change. For example, when
+m=2
+and
+a=[2,3]
+and
+i=1
+,
+a
+changes into
+[1,1,3]
+.
+Select
+1≤i≤n−m+1
+such that
+ai=ai+1=⋯=ai+m−1
+. Replace these
+m
+elements with a single
+m⋅ai
+. The order of the other elements doesn't change. For example, when
+m=2
+and
+a=[3,2,2,3]
+and
+i=2
+,
+a
+changes into
+[3,4,3]
+.
+Note that the array length might change during the process. The value of
+n
+above is defined as the current length of the array (might differ from the
+n
+in the input).
+Fishingprince has another array
+[b1,b2,…,bk]
+. Please determine if he can turn
+a
+into
+b
+using any number (possibly zero) of operations.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤104
+). Description of the test cases follows.
+The first line of each test case contains two integers
+n
+and
+m
+(
+1≤n≤5⋅104
+,
+2≤m≤109
+).
+The second line of each test case contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤109
+).
+The third line of each test case contains one integer
+k
+(
+1≤k≤5⋅104
+).
+The fourth line of each test case contains
+k
+integers
+b1,b2,…,bk
+(
+1≤bi≤109
+).
+It is guaranteed that the sum of
+n+k
+over all test cases does not exceed
+2⋅105
+.
+Output
+For each testcase, print Yes if it is possible to turn
+a
+into
+b
+, and No otherwise. You can print each letter in any case (upper or lower).
+Example
+input
+Copy
+5
+5 2
+1 2 2 4 2
+4
+1 4 4 2
+6 2
+1 2 2 8 2 2
+2
+1 16
+8 3
+3 3 3 3 3 3 3 3
+4
+6 6 6 6
+8 3
+3 9 6 3 12 12 36 12
+16
+9 3 2 2 2 3 4 12 4 12 4 12 4 12 4 4
+8 3
+3 9 6 3 12 12 36 12
+7
+12 2 4 3 4 12 56
+output
+Copy
+Yes
+Yes
+No
+Yes
+No
+Note
+In the first test case of the sample, we can do the second operation with
+i=2
+:
+[1,2,2,4,2]→[1,4,4,2]
+.
+In the second testcase of the sample, we can:
+do the second operation with
+i=2
+:
+[1,2,2,8,2,2]→[1,4,8,2,2]
+.
+do the second operation with
+i=4
+:
+[1,4,8,2,2]→[1,4,8,4]
+.
+do the first operation with
+i=3
+:
+[1,4,8,4]→[1,4,4,4,4]
+.
+do the second operation with
+i=2
+:
+[1,4,4,4,4]→[1,8,4,4]
+.
+do the second operation with
+i=3
+:
+[1,8,4,4]→[1,8,8]
+.
+do the second operation with
+i=2
+:
+[1,8,8]→[1,16]
+.

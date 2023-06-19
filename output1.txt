@@ -1,16 +1,1515 @@
-Before modification - File: version_1/Question_scrapper/Qdata/7676/7676.txt
-Lines: ['Sereja is stuck with a problem and asks for your help. You readily agree to help Sereja and he poses the following problem to you.\n', 'Sereja has a matrix A of size N x N. Each cell in row i and column j contains a number A[i][j]. Every element of the matrix can either be 0 or 1. Initially, all the elements are zero.\n', 'Sereja informs you that he only likes the functions of the form\n', 'Here the division is integer division, i.e. x/y means integer division of x by y.\n', 'Sereja can choose a set of integers a1, a2, b1, b2, c1, c2, d and two other integers l, r and applies the function f to the matrix as follows. He will substitute 1 in the every cell (i, j) where l ≤ i ≤ r and j = f(i).\n', 'Sereja gives you a matrix A after applying a certain number of functions to it. He asks you to find the minimal amount of functions such that after applying them Sereja will get the matrix A. You need not create the matrix A exactly, you are allowed to have at most 100 distinct cells in the matrix obtained after your operations and the matrix A. Your task is to minimize the number of such functions applied.\n', 'Input\n', 'The first line of input contains an integer T denoting the number of test cases.\n', 'First line of each test case contains an integer N. Each of the next N lines contains N digits (zero or one) without spaces denoting the matrix A.\n', 'Output\n', 'For each test case in first line output an integer corresponding to the number of functions Q.\n', 'Next Q lines should contain information about functions. Each lines should contain set of integers a1, a2, b1, b2, c1, c2, d, l, r.\n', 'The following constraints must be satisfied for the output.\n', '0 ≤ Q ≤ N*N\n', '-N ≤ a1, b1, c1, d ≤ N\n', '1 ≤ a2, b2, c2 ≤ N\n', '1 ≤ l ≤ r ≤ N\n', 'Constraints\n', '1 ≤ T ≤ 20\n', '1 ≤ N ≤ 100\n', 'Tests generation\n', 'There will be 10 official tests. During contest you will be able to get your score on first 2 tests. After contest there will be rejudge on full tests set.\n', 'In every test, T is equal to 20 and N is chosen randomly in the range [95, 100]. Further for each test case integer K is chosen:\n', 'For first 5 tests, K is chosen randomly in range [1, 5]\n', 'For next 5 tests, K is chosen randomly in range [50, 100]\n', 'For next 5 tests, K is chosen randomly in range [500, 1000]\n', 'For next 5 tests, K is chosen randomly in range [1000, 3000]\n', 'After K is chosen we generate K functions in next way:\n', 'With probability 1/3, a1 = b1 = 0\n', 'With probability 2/3, a1 = 0\n', 'For all other numbers, the way of generation is hidden\n', 'Scoring\n', "You will receive a WA if the operation doesn't satisfy the output constraints specified in the statement or the number of distinct cells in the final matrix after applying all the operations exceeds 100.\n", 'Lets S denote the sum of Q / (N * N + 1 - ONES) (where ONES is number of digit 1 in given matrix) for all the test cases. Your score will be to S which you should try to minimize.\n', 'Example\n', 'Input:\n', '1\n', '5\n', '00010\n', '00100\n', '01000\n', '10000\n', '11111\n', 'Output:\n', '2\n', '0 1 0 1 -1 1 5 1 4\n', '0 1 0 1 0 1 5 1 5']
-After modification - File: version_1/Question_scrapper/Qdata/7676/7676.txt
-Lines: ['Sereja is stuck with a problem and asks for your help. You readily agree to help Sereja and he poses the following problem to you.\n', 'Sereja has a matrix A of size N x N. Each cell in row i and column j contains a number A[i][j]. Every element of the matrix can either be 0 or 1. Initially, all the elements are zero.\n', 'Sereja informs you that he only likes the functions of the form\n', 'Here the division is integer division, i.e. x/y means integer division of x by y.\n', 'Sereja can choose a set of integers a1, a2, b1, b2, c1, c2, d and two other integers l, r and applies the function f to the matrix as follows. He will substitute 1 in the every cell (i, j) where l ≤ i ≤ r and j = f(i).\n', 'Sereja gives you a matrix A after applying a certain number of functions to it. He asks you to find the minimal amount of functions such that after applying them Sereja will get the matrix A. You need not create the matrix A exactly, you are allowed to have at most 100 distinct cells in the matrix obtained after your operations and the matrix A. Your task is to minimize the number of such functions applied.\n', 'Input\n', 'The first line of input contains an integer T denoting the number of test cases.\n', 'First line of each test case contains an integer N. Each of the next N lines contains N digits (zero or one) without spaces denoting the matrix A.\n', 'Output\n', 'For each test case in first line output an integer corresponding to the number of functions Q.\n', 'Next Q lines should contain information about functions. Each lines should contain set of integers a1, a2, b1, b2, c1, c2, d, l, r.\n', 'The following constraints must be satisfied for the output.\n', '0 ≤ Q ≤ N*N\n', '-N ≤ a1, b1, c1, d ≤ N\n', '1 ≤ a2, b2, c2 ≤ N\n', '1 ≤ l ≤ r ≤ N\n', 'Constraints\n', '1 ≤ T ≤ 20\n', '1 ≤ N ≤ 100\n', 'Tests generation\n', 'There will be 10 official tests. During contest you will be able to get your score on first 2 tests. After contest there will be rejudge on full tests set.\n', 'In every test, T is equal to 20 and N is chosen randomly in the range [95, 100]. Further for each test case integer K is chosen:\n', 'For first 5 tests, K is chosen randomly in range [1, 5]\n', 'For next 5 tests, K is chosen randomly in range [50, 100]\n', 'For next 5 tests, K is chosen randomly in range [500, 1000]\n', 'For next 5 tests, K is chosen randomly in range [1000, 3000]\n', 'After K is chosen we generate K functions in next way:\n', 'With probability 1/3, a1 = b1 = 0\n', 'With probability 2/3, a1 = 0\n', 'For all other numbers, the way of generation is hidden\n', 'Scoring\n', "You will receive a WA if the operation doesn't satisfy the output constraints specified in the statement or the number of distinct cells in the final matrix after applying all the operations exceeds 100.\n", 'Lets S denote the sum of Q / (N * N + 1 - ONES) (where ONES is number of digit 1 in given matrix) for all the test cases. Your score will be to S which you should try to minimize.\n', 'Example\n', 'Input:\n', '1\n', '5\n', '00010\n', '00100\n', '01000\n', '10000\n', '11111\n', 'Output:\n', '2\n', '0 1 0 1 -1 1 5 1 4\n', '0 1 0 1 0 1 5 1 5']
-Before modification - File: version_1/Question_scrapper/Qdata/7677/7677.txt
-Lines: ['There is a hidden vector\n', 'F, which initially has\n', 'N values\n', 'F\n', '0\n', ',F\n', '1\n', ',…,F\n', 'N−1\n', ', which are a permutation of\n', '{0,1,…,N−1}. You want to find the number of inversions in\n', 'F, that is, the number of pairs\n', '(i,j) with\n', '0≤i<j≤N−1 and\n', 'F\n', 'i\n', '>F\n', 'j\n', '.\n', 'By calling some functions defined later, you can append some values to the end of\n', 'F. Say, currently\n', 'F=[F\n', '0\n', ',F\n', '1\n', ',…,F\n', 'k−1\n', ']. At any instant, any value in\n', 'F must be in the range\n', '[0,10\n', '9\n', '], otherwise you get a wrong answer verdict. You can call the following functions, each of which appends some value to\n', 'F:\n', 'put\n', 'i: This function appends\n', 'i to the end of\n', 'F.\n', 'compose\n', 'i (\n', '0≤i<k,0≤F\n', 'i\n', '<k) : This function appends\n', 'F\n', 'F\n', 'i\n', 'to the end of\n', 'F.\n', 'add\n', 'i\n', 'j (\n', '0≤i,j<k) : This function appends\n', 'F\n', 'i\n', '+F\n', 'j\n', 'to the end of\n', 'F.\n', 'subtract\n', 'i\n', 'j (\n', '0≤i,j<k) : This function appends\n', 'F\n', 'i\n', '−F\n', 'j\n', 'to the end of\n', 'F.\n', 'multiply\n', 'i\n', 'j (\n', '0≤i,j<k) : This function appends\n', 'F\n', 'i\n', '×F\n', 'j\n', 'to the end of\n', 'F.\n', 'xor\n', 'i\n', 'j (\n', '0≤i,j<k) : This function appends\n', 'F\n', 'i\n', '⊕F\n', 'j\n', 'to the end of\n', 'F, where\n', '⊕ denotes the bitwise exclusive-or operator.\n', 'compare\n', 'i\n', 'j (\n', '0≤i,j<k) : This function appends\n', '1 to the end of\n', 'F, if\n', 'F\n', 'i\n', '<F\n', 'j\n', 'and\n', '0 otherwise.\n', 'You are only given the value of\n', 'N. You need to make at most\n', '10\n', '6\n', 'function calls such that in the end, the last value in\n', 'F contains the number of inversions in the original permutation, i.e, the number of inversions in\n', '[F\n', '0\n', ',F\n', '1\n', ',…,F\n', 'N−1\n', '].\n', 'Note that to get the points for a subtask, your output for that subtask should be able to provide the correct answer for every possible permutation of\n', '{0,1,…,N−1} that satisfies the constraints of that subtask. See the explanation of the sample provided below for an example.\n', 'Input Format\n', 'Each test case consists of two lines of input.\n', 'The first line of the input will contain a single integer\n', 'N, denoting the size of the hidden permutation.\n', 'The second line of the input will contain a single integer with the value\n', '1 if the test case belongs to subtask\n', '1 and\n', '0 otherwise.\n', 'Output Format\n', 'In the first line, output the number of function calls you to want to make. This number should not exceed\n', '10\n', '6\n', '.\n', 'In each of the following lines, output the function call as described in the problem statement.\n', 'Constraints\n', '1≤N≤7000\n', 'Subtasks\n', 'Subtask 1 (25 points):\n', 'N≤7000\n', 'There exist at most two indices\n', '0≤i<N with\n', 'F\n', 'i\n', '\ue020\n', '=i.\n', 'Subtask 2 (4 points):\n', 'N≤1000.\n', 'Subtask 3 (13 points):\n', 'N≤1400.\n', 'Subtask 4 (27 points):\n', 'N≤4000.\n', 'Subtask 5 (16 points):\n', 'N≤5000.\n', 'Subtask 6 (9 points):\n', 'N≤6000.\n', 'Subtask 7 (4 points):\n', 'N≤6500.\n', 'Subtask 8 (2 points):\n', 'N≤7000.\n', 'Sample 1:\n', 'Input\n', 'Output\n', '2 \n', '1\n', '2\n', 'put 1\n', 'multiply 0 2\n', 'Explanation:\n', 'In the beginning, the vector is\n', '[F\n', '0\n', ',F\n', '1\n', ']. After the first call, it would be\n', '[F\n', '0\n', ',F\n', '1\n', ',1]. After the second call, it would be\n', '[F\n', '0\n', ',F\n', '1\n', ',1,F\n', '0\n', ']. So, if the original vector was\n', '[0,1] the final value would be\n', '0 and if the original vector was\n', '[1,0], the final value would be\n', '1.']
-After modification - File: version_1/Question_scrapper/Qdata/7677/7677.txt
-Lines: ['There is a hidden vector\n', 'F, which initially has\n', 'N values\n', 'F\n', '0\n', ',F\n', '1\n', ',…,F\n', 'N−1\n', ', which are a permutation of\n', '{0,1,…,N−1}. You want to find the number of inversions in\n', 'F, that is, the number of pairs\n', '(i,j) with\n', '0≤i<j≤N−1 and\n', 'F\n', 'i\n', '>F\n', 'j\n', '.\n', 'By calling some functions defined later, you can append some values to the end of\n', 'F. Say, currently\n', 'F=[F\n', '0\n', ',F\n', '1\n', ',…,F\n', 'k−1\n', ']. At any instant, any value in\n', 'F must be in the range\n', '[0,10\n', '9\n', '], otherwise you get a wrong answer verdict. You can call the following functions, each of which appends some value to\n', 'F:\n', 'put\n', 'i: This function appends\n', 'i to the end of\n', 'F.\n', 'compose\n', 'i (\n', '0≤i<k,0≤F\n', 'i\n', '<k) : This function appends\n', 'F\n', 'F\n', 'i\n', 'to the end of\n', 'F.\n', 'add\n', 'i\n', 'j (\n', '0≤i,j<k) : This function appends\n', 'F\n', 'i\n', '+F\n', 'j\n', 'to the end of\n', 'F.\n', 'subtract\n', 'i\n', 'j (\n', '0≤i,j<k) : This function appends\n', 'F\n', 'i\n', '−F\n', 'j\n', 'to the end of\n', 'F.\n', 'multiply\n', 'i\n', 'j (\n', '0≤i,j<k) : This function appends\n', 'F\n', 'i\n', '×F\n', 'j\n', 'to the end of\n', 'F.\n', 'xor\n', 'i\n', 'j (\n', '0≤i,j<k) : This function appends\n', 'F\n', 'i\n', '⊕F\n', 'j\n', 'to the end of\n', 'F, where\n', '⊕ denotes the bitwise exclusive-or operator.\n', 'compare\n', 'i\n', 'j (\n', '0≤i,j<k) : This function appends\n', '1 to the end of\n', 'F, if\n', 'F\n', 'i\n', '<F\n', 'j\n', 'and\n', '0 otherwise.\n', 'You are only given the value of\n', 'N. You need to make at most\n', '10\n', '6\n', 'function calls such that in the end, the last value in\n', 'F contains the number of inversions in the original permutation, i.e, the number of inversions in\n', '[F\n', '0\n', ',F\n', '1\n', ',…,F\n', 'N−1\n', '].\n', 'Note that to get the points for a subtask, your output for that subtask should be able to provide the correct answer for every possible permutation of\n', '{0,1,…,N−1} that satisfies the constraints of that subtask. See the explanation of the sample provided below for an example.\n', 'Input Format\n', 'Each test case consists of two lines of input.\n', 'The first line of the input will contain a single integer\n', 'N, denoting the size of the hidden permutation.\n', 'The second line of the input will contain a single integer with the value\n', '1 if the test case belongs to subtask\n', '1 and\n', '0 otherwise.\n', 'Output Format\n', 'In the first line, output the number of function calls you to want to make. This number should not exceed\n', '10\n', '6\n', '.\n', 'In each of the following lines, output the function call as described in the problem statement.\n', 'Constraints\n', '1≤N≤7000\n', 'Subtasks\n', 'Subtask 1 (25 points):\n', 'N≤7000\n', 'There exist at most two indices\n', '0≤i<N with\n', 'F\n', 'i\n', '\ue020\n', '=i.\n', 'Subtask 2 (4 points):\n', 'N≤1000.\n', 'Subtask 3 (13 points):\n', 'N≤1400.\n', 'Subtask 4 (27 points):\n', 'N≤4000.\n', 'Subtask 5 (16 points):\n', 'N≤5000.\n', 'Subtask 6 (9 points):\n', 'N≤6000.\n', 'Subtask 7 (4 points):\n', 'N≤6500.\n', 'Subtask 8 (2 points):\n', 'N≤7000.\n', 'Sample 1:\n', 'Input\n', 'Output\n', '2 \n', '1\n', '2\n', 'put 1\n', 'multiply 0 2\n', 'Explanation:\n', 'In the beginning, the vector is\n', '[F\n', '0\n', ',F\n', '1\n', ']. After the first call, it would be\n', '[F\n', '0\n', ',F\n', '1\n', ',1]. After the second call, it would be\n', '[F\n', '0\n', ',F\n', '1\n', ',1,F\n', '0\n', ']. So, if the original vector was\n', '[0,1] the final value would be\n', '0 and if the original vector was\n', '[1,0], the final value would be\n', '1.']
-Before modification - File: version_1/Question_scrapper/Qdata/7678/7678.txt
-Lines: ['Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.\n', 'There is a grid with\n', 'N rows and\n', 'M columns. There are\n', 'K cannons (numbered\n', '1 through\n', 'K) placed in\n', 'K cells of this grid. Each cannon can fire a ball to any cell whose Manhattan distance from the cannon does not exceed the strength of the cannon (including the cell with the cannon). Initially (at the\n', '0-th second), the strengths of all the cannons are\n', '0 and they increase by\n', '1 every second. Starting at the\n', '0-th second, cannons start throwing balls according to the following rules:\n', 'At each second, exactly one cannon fires one ball to a cell which does not contain any balls yet. (Note that at least one such cell exists for each cannon unless the grid is full.)\n', 'The same cannon may fire during multiple seconds.\n', 'When a ball is fired by a cannon at the\n', 'i-th second, the number\n', 'i gets printed on the cell the ball lands in.\n', 'At the end of the\n', 'N⋅M−1 th second, the grid will be representing a permutation of the integers\n', '0 through\n', 'N⋅M−1. (Two permutations\n', 'P\n', '1\n', 'and\n', 'P\n', '2\n', 'are different if at least one cell has different numbers printed on it in\n', 'P\n', '1\n', 'and\n', 'P\n', '2\n', '.)\n', 'A permutation is considered to be good if it can be formed at the end of the\n', 'N⋅M−1 th second in the given process.\n', 'Your task is to find the fraction of permutations that are good, i.e. the number of good permutations divided by the number of all permutations of\n', '0 through\n', "N⋅M−1. Let's denote this fraction by\n", 'P/Q, where\n', 'P and\n', 'Q are positive integers and\n', 'Q is coprime with\n', '2,500,000,001. You should compute\n', 'P⋅Q\n', '−1\n', 'modulo\n', '2,500,000,001, where\n', 'Q\n', '−1\n', 'denotes the multiplicative inverse of\n', 'Q modulo\n', '2,500,000,001.\n', 'Note: The Manhattan distance between a cell in row\n', 'r\n', '1\n', 'and column\n', 'c\n', '1\n', 'and a cell in row\n', 'r\n', '2\n', 'and column\n', 'c\n', '2\n', 'is\n', '∣r\n', '1\n', '−r\n', '2\n', '∣+∣c\n', '1\n', '−c\n', '2\n', '∣.\n', 'Input Format\n', 'The first line of the input contains a single integer\n', 'T denoting the number of test cases. The description of\n', 'T test cases follows.\n', 'The first line of each test case contains three space-separated integers\n', 'N,\n', 'M and\n', 'K.\n', 'K lines follow. For each valid\n', 'i, the\n', 'i-th of these lines contains two space-separated integers\n', 'R\n', 'i\n', 'and\n', 'C\n', 'i\n', '— the row and column where the\n', 'i-th cannon is located.\n', 'Output Format\n', 'For each test case, print a single line containing one integer\n', 'P⋅Q\n', '−1\n', 'modulo\n', '2,500,000,001.\n', 'Constraints\n', '1≤T≤1,000\n', '1≤N,M≤50,000\n', '1≤K≤min(N⋅M,1,000)\n', '1≤R\n', 'i\n', '≤N for each valid\n', 'i\n', '1≤C\n', 'i\n', '≤M for each valid\n', 'i\n', 'the sum of\n', 'K over all test cases does not exceed\n', '1,000\n', 'the sum of\n', 'N over all test cases does not exceed\n', '10\n', '7\n', 'the sum of\n', 'M over all test cases does not exceed\n', '10\n', '7\n', 'Subtasks\n', 'Subtask #1 (30 points):\n', '1≤N⋅M≤10\n', '6\n', 'The sum of\n', 'N⋅M over all test cases does not exceed\n', '10\n', '6\n', 'Subtask #2 (70 points): original constraints\n', 'Sample 1:\n', 'Input\n', 'Output\n', '3\n', '2 2 2\n', '1 1\n', '2 2\n', '2 2 4\n', '1 1\n', '1 2\n', '2 1\n', '2 2\n', '1 2 1\n', '1 1\n', '1250000001\n', '1\n', '1250000001']
-After modification - File: version_1/Question_scrapper/Qdata/7678/7678.txt
-Lines: ['There is a grid with\n', 'N rows and\n', 'M columns. There are\n', 'K cannons (numbered\n', '1 through\n', 'K) placed in\n', 'K cells of this grid. Each cannon can fire a ball to any cell whose Manhattan distance from the cannon does not exceed the strength of the cannon (including the cell with the cannon). Initially (at the\n', '0-th second), the strengths of all the cannons are\n', '0 and they increase by\n', '1 every second. Starting at the\n', '0-th second, cannons start throwing balls according to the following rules:\n', 'At each second, exactly one cannon fires one ball to a cell which does not contain any balls yet. (Note that at least one such cell exists for each cannon unless the grid is full.)\n', 'The same cannon may fire during multiple seconds.\n', 'When a ball is fired by a cannon at the\n', 'i-th second, the number\n', 'i gets printed on the cell the ball lands in.\n', 'At the end of the\n', 'N⋅M−1 th second, the grid will be representing a permutation of the integers\n', '0 through\n', 'N⋅M−1. (Two permutations\n', 'P\n', '1\n', 'and\n', 'P\n', '2\n', 'are different if at least one cell has different numbers printed on it in\n', 'P\n', '1\n', 'and\n', 'P\n', '2\n', '.)\n', 'A permutation is considered to be good if it can be formed at the end of the\n', 'N⋅M−1 th second in the given process.\n', 'Your task is to find the fraction of permutations that are good, i.e. the number of good permutations divided by the number of all permutations of\n', '0 through\n', "N⋅M−1. Let's denote this fraction by\n", 'P/Q, where\n', 'P and\n', 'Q are positive integers and\n', 'Q is coprime with\n', '2,500,000,001. You should compute\n', 'P⋅Q\n', '−1\n', 'modulo\n', '2,500,000,001, where\n', 'Q\n', '−1\n', 'denotes the multiplicative inverse of\n', 'Q modulo\n', '2,500,000,001.\n', 'Note: The Manhattan distance between a cell in row\n', 'r\n', '1\n', 'and column\n', 'c\n', '1\n', 'and a cell in row\n', 'r\n', '2\n', 'and column\n', 'c\n', '2\n', 'is\n', '∣r\n', '1\n', '−r\n', '2\n', '∣+∣c\n', '1\n', '−c\n', '2\n', '∣.\n', 'Input Format\n', 'The first line of the input contains a single integer\n', 'T denoting the number of test cases. The description of\n', 'T test cases follows.\n', 'The first line of each test case contains three space-separated integers\n', 'N,\n', 'M and\n', 'K.\n', 'K lines follow. For each valid\n', 'i, the\n', 'i-th of these lines contains two space-separated integers\n', 'R\n', 'i\n', 'and\n', 'C\n', 'i\n', '— the row and column where the\n', 'i-th cannon is located.\n', 'Output Format\n', 'For each test case, print a single line containing one integer\n', 'P⋅Q\n', '−1\n', 'modulo\n', '2,500,000,001.\n', 'Constraints\n', '1≤T≤1,000\n', '1≤N,M≤50,000\n', '1≤K≤min(N⋅M,1,000)\n', '1≤R\n', 'i\n', '≤N for each valid\n', 'i\n', '1≤C\n', 'i\n', '≤M for each valid\n', 'i\n', 'the sum of\n', 'K over all test cases does not exceed\n', '1,000\n', 'the sum of\n', 'N over all test cases does not exceed\n', '10\n', '7\n', 'the sum of\n', 'M over all test cases does not exceed\n', '10\n', '7\n', 'Subtasks\n', 'Subtask #1 (30 points):\n', '1≤N⋅M≤10\n', '6\n', 'The sum of\n', 'N⋅M over all test cases does not exceed\n', '10\n', '6\n', 'Subtask #2 (70 points): original constraints\n', 'Sample 1:\n', 'Input\n', 'Output\n', '3\n', '2 2 2\n', '1 1\n', '2 2\n', '2 2 4\n', '1 1\n', '1 2\n', '2 1\n', '2 2\n', '1 2 1\n', '1 1\n', '1250000001\n', '1\n', '1250000001']
-Before modification - File: version_1/Question_scrapper/Qdata/7679/7679.txt
-Lines: ['Given an array of\n', 'N non-negative integers\n', 'A\n', '1\n', ',A\n', '2\n', ',…,A\n', 'N\n', '. In one operation, you can increase any one of the elements by\n', '1.\n', 'Find the minimum number of operations needed to make the XOR of all elements (\n', 'A\n', '1\n', '⊕A\n', '2\n', '⊕…⊕A\n', 'N\n', ') equal to\n', '0. Here\n', '⊕ denotes the bitwise XOR operation.\n', 'Input Format\n', 'The first line of input contains one integer\n', 'T - the number of test cases. Descriptions of\n', 'T test cases follow.\n', 'The first line of each test case contains one integer\n', 'N - the size of the array. The second line of each test case contains\n', 'N integers\n', 'A\n', '1\n', ',A\n', '2\n', ',…,A\n', 'N\n', '- the elements of the array.\n', 'Output Format\n', 'For each test case, print one number - the minimum number of operations required to make the array XOR equal to\n', '0. It can be shown that it is always possible.\n', 'Constraints\n', '1≤T≤100\n', '2≤N≤10\n', '6\n', '∑N≤10\n', '6\n', '0≤A\n', 'i\n', '<2\n', '60\n', 'Subtasks\n', 'Subtask 1 (10 points):\n', '2≤N≤5,\n', 'A\n', 'i\n', '<2\n', '4\n', 'Subtask 2 (20 points):\n', '2≤N≤100,\n', '∑N≤1000,\n', 'A\n', 'i\n', '<2\n', '7\n', 'Subtask 3 (10 points):\n', '2≤N≤7,\n', '∑N≤100,\n', 'A\n', 'i\n', '<2\n', '60\n', 'Subtask 4 (10 points):\n', '2≤N≤13,\n', '∑N≤100,\n', 'A\n', 'i\n', '<2\n', '60\n', 'Subtask 5 (25 points):\n', '2≤N≤1000,\n', '∑N≤10000,\n', 'A\n', 'i\n', '<2\n', '30\n', 'Subtask 6 (15 points):\n', '2≤N≤10\n', '6\n', ',\n', '∑N≤10\n', '6\n', ',\n', 'A\n', 'i\n', '<2\n', '30\n', 'Subtask 7 (10 points): Original constraints\n', 'Sample 1:\n', 'Input\n', 'Output\n', '4\n', '3\n', '3 4 5\n', '4\n', '5 3 0 7\n', '3\n', '2 3 1\n', '5\n', '7 7 7 7 7\n', '2\n', '1\n', '0\n', '9\n', 'Explanation:\n', 'Test case\n', '1: Increase\n', 'A\n', '3\n', 'twice by using two operations. Thus, the array becomes\n', '[3,4,7]. The XOR of all elements of the array is\n', '3⊕4⊕7=0. It can be shown that the XOR of all elements cannot be made equal to\n', '0 using less than\n', '2 operations.\n', 'Test case\n', '2: Use one operation to increase\n', 'A\n', '3\n', 'by\n', '1. Thus, the array becomes\n', '[5,3,1,7]. The XOR of all elements of the array is\n', '5⊕3⊕1⊕7=0. It can be shown that the XOR of all elements cannot be made equal to\n', '0 using less than\n', '1 operation.\n', 'Test case\n', '3: The XOR of all elements is already\n', '0. Thus, we require\n', '0 operations.']
-After modification - File: version_1/Question_scrapper/Qdata/7679/7679.txt
-Lines: ['Given an array of\n', 'N non-negative integers\n', 'A\n', '1\n', ',A\n', '2\n', ',…,A\n', 'N\n', '. In one operation, you can increase any one of the elements by\n', '1.\n', 'Find the minimum number of operations needed to make the XOR of all elements (\n', 'A\n', '1\n', '⊕A\n', '2\n', '⊕…⊕A\n', 'N\n', ') equal to\n', '0. Here\n', '⊕ denotes the bitwise XOR operation.\n', 'Input Format\n', 'The first line of input contains one integer\n', 'T - the number of test cases. Descriptions of\n', 'T test cases follow.\n', 'The first line of each test case contains one integer\n', 'N - the size of the array. The second line of each test case contains\n', 'N integers\n', 'A\n', '1\n', ',A\n', '2\n', ',…,A\n', 'N\n', '- the elements of the array.\n', 'Output Format\n', 'For each test case, print one number - the minimum number of operations required to make the array XOR equal to\n', '0. It can be shown that it is always possible.\n', 'Constraints\n', '1≤T≤100\n', '2≤N≤10\n', '6\n', '∑N≤10\n', '6\n', '0≤A\n', 'i\n', '<2\n', '60\n', 'Subtasks\n', 'Subtask 1 (10 points):\n', '2≤N≤5,\n', 'A\n', 'i\n', '<2\n', '4\n', 'Subtask 2 (20 points):\n', '2≤N≤100,\n', '∑N≤1000,\n', 'A\n', 'i\n', '<2\n', '7\n', 'Subtask 3 (10 points):\n', '2≤N≤7,\n', '∑N≤100,\n', 'A\n', 'i\n', '<2\n', '60\n', 'Subtask 4 (10 points):\n', '2≤N≤13,\n', '∑N≤100,\n', 'A\n', 'i\n', '<2\n', '60\n', 'Subtask 5 (25 points):\n', '2≤N≤1000,\n', '∑N≤10000,\n', 'A\n', 'i\n', '<2\n', '30\n', 'Subtask 6 (15 points):\n', '2≤N≤10\n', '6\n', ',\n', '∑N≤10\n', '6\n', ',\n', 'A\n', 'i\n', '<2\n', '30\n', 'Subtask 7 (10 points): Original constraints\n', 'Sample 1:\n', 'Input\n', 'Output\n', '4\n', '3\n', '3 4 5\n', '4\n', '5 3 0 7\n', '3\n', '2 3 1\n', '5\n', '7 7 7 7 7\n', '2\n', '1\n', '0\n', '9\n', 'Explanation:\n', 'Test case\n', '1: Increase\n', 'A\n', '3\n', 'twice by using two operations. Thus, the array becomes\n', '[3,4,7]. The XOR of all elements of the array is\n', '3⊕4⊕7=0. It can be shown that the XOR of all elements cannot be made equal to\n', '0 using less than\n', '2 operations.\n', 'Test case\n', '2: Use one operation to increase\n', 'A\n', '3\n', 'by\n', '1. Thus, the array becomes\n', '[5,3,1,7]. The XOR of all elements of the array is\n', '5⊕3⊕1⊕7=0. It can be shown that the XOR of all elements cannot be made equal to\n', '0 using less than\n', '1 operation.\n', 'Test case\n', '3: The XOR of all elements is already\n', '0. Thus, we require\n', '0 operations.']
+Editorial for Two
+Berland Intercollegiate Contest has just finished. Monocarp and Polycarp, as the jury, are going to conduct an editorial. Unfortunately, the time is limited, since they have to finish before the closing ceremony.
+There were
+𝑛
+problems in the contest. The problems are numbered from
+1
+to
+𝑛
+. The editorial for the
+𝑖
+-th problem takes
+𝑎
+𝑖
+minutes. Monocarp and Polycarp are going to conduct an editorial for exactly
+𝑘
+of the problems.
+The editorial goes as follows. They have a full problemset of
+𝑛
+problems before them, in order. They remove
+𝑛−𝑘
+problems without changing the order of the remaining
+𝑘
+problems. Then, Monocarp takes some prefix of these
+𝑘
+problems (possibly, an empty one or all problems). Polycarp takes the remaining suffix of them. After that, they go to different rooms and conduct editorials for their problems in parallel. So, the editorial takes as much time as the longer of these two does.
+Please, help Monocarp and Polycarp to choose the problems and the split in such a way that the editorial finishes as early as possible. Print the duration of the editorial.
+Input
+The first line contains a single integer
+𝑡
+(
+1≤𝑡≤
+10
+4
+) — the number of testcases.
+The first line of each testcase contains two integers
+𝑛
+and
+𝑘
+(
+1≤𝑘≤𝑛≤3⋅
+10
+5
+) — the number of problems in the full problemset and the number of problems Monocarp and Polycarp are going to conduct an editorial for.
+The second line contains
+𝑛
+integers
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+(
+1≤
+𝑎
+𝑖
+≤
+10
+9
+) — the time each editorial takes.
+The sum of
+𝑛
+over all testcases doesn't exceed
+3⋅
+10
+5
+.
+Output
+For each testcase, print a single integer — the smallest amount of time the editorial takes, if Monocarp and Polycarp can choose which
+𝑘
+of
+𝑛
+problems to conduct an editorial for and how to split them among themselves.
+Example
+input
+Copy
+6
+5 4
+1 10 1 1 1
+5 3
+1 20 5 15 3
+5 3
+1 20 3 15 5
+10 6
+10 8 20 14 3 8 6 4 16 11
+10 5
+9 9 2 13 15 19 4 9 13 12
+1 1
+1
+output
+Copy
+2
+6
+5
+21
+18
+1
+Playoff Fixing
+2
+𝑘
+teams participate in a playoff tournament. The teams are numbered from
+1
+to
+2
+𝑘
+, in order of decreasing strength. So, team
+1
+is the strongest one, team
+2
+𝑘
+is the weakest one. A team with a smaller number always defeats a team with a larger number.
+First of all, the teams are arranged in some order during a procedure called seeding. Each team is assigned another unique value from
+1
+to
+2
+𝑘
+, called a seed, that represents its starting position in the playoff.
+The tournament consists of
+2
+𝑘
+−1
+games. They are held as follows: the teams are split into pairs: team with seed
+1
+plays against team with seed
+2
+, team with seed
+3
+plays against team with seed
+4
+(exactly in this order), and so on (so,
+2
+𝑘−1
+games are played in that phase). When a team loses a game, it is eliminated.
+After that, only
+2
+𝑘−1
+teams remain. If only one team remains, it is declared the champion; otherwise,
+2
+𝑘−2
+games are played: in the first one of them, the winner of the game "seed
+1
+vs seed
+2
+" plays against the winner of the game "seed
+3
+vs seed
+4
+", then the winner of the game "seed
+5
+vs seed
+6
+" plays against the winner of the game "seed
+7
+vs seed
+8
+", and so on. This process repeats until only one team remains.
+After the tournament ends, the teams are assigned places according to the tournament phase when they were eliminated. In particular:
+the winner of the tournament gets place
+1
+;
+the team eliminated in the finals gets place
+2
+;
+both teams eliminated in the semifinals get place
+3
+;
+all teams eliminated in the quarterfinals get place
+5
+;
+all teams eliminated in the 1/8 finals get place
+9
+, and so on.
+Now that we established the rules, we do a little rigging. In particular, we want:
+team
+1
+(not team with seed
+1
+) to take place
+1
+;
+team
+2
+to take place
+2
+;
+teams
+3
+and
+4
+to take place
+3
+;
+teams from
+5
+to
+8
+to take place
+5
+, and so on.
+For example, this picture describes one of the possible ways the tournament can go with
+𝑘=3
+, and the resulting places of the teams:
+Some seeds are already reserved for some teams (we are not the only ones rigging the tournament, apparently). We have to fill the rest of the seeds with the remaining teams to achieve the desired placements. How many ways are there to do that? Since that value might be large, print it modulo
+998244353
+.
+Input
+The first line contains a single integer
+𝑘
+(
+0≤𝑘≤19
+) — there are
+2
+𝑘
+teams.
+The second line contains
+2
+𝑘
+integers
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+2
+𝑘
+(
+𝑎
+𝑖
+=−1
+or
+1≤
+𝑎
+𝑖
+≤
+2
+𝑘
+). If
+𝑎
+𝑖
+≠−1
+, then team
+𝑎
+𝑖
+has seed
+𝑖
+. Otherwise, the seed
+𝑖
+is not reserved for any team.
+All values, that are not
+−1
+, are distinct.
+Output
+Print a single integer — the number of ways to fill the non-reserved seeds so that the tournament goes as planned, modulo
+998244353
+.
+Examples
+input
+Copy
+2
+1 2 3 4
+output
+Copy
+0
+input
+Copy
+2
+1 3 4 2
+output
+Copy
+1
+input
+Copy
+1
+-1 -1
+output
+Copy
+2
+input
+Copy
+2
+-1 -1 -1 -1
+output
+Copy
+16
+input
+Copy
+3
+-1 -1 -1 -1 2 -1 -1 -1
+output
+Copy
+768
+input
+Copy
+0
+1
+output
+Copy
+1
+Bracket Coloring
+A regular bracket sequence is a bracket sequence that can be transformed into a correct arithmetic expression by inserting characters "1" and "+" between the original characters of the sequence. For example:
+the bracket sequences "()()" and "(())" are regular (the resulting expressions are: "(1)+(1)" and "((1+1)+1)");
+the bracket sequences ")(", "(" and ")" are not.
+A bracket sequence is called beautiful if one of the following conditions is satisfied:
+it is a regular bracket sequence;
+if the order of the characters in this sequence is reversed, it becomes a regular bracket sequence.
+For example, the bracket sequences "()()", "(())", ")))(((", "))()((" are beautiful.
+You are given a bracket sequence
+𝑠
+. You have to color it in such a way that:
+every bracket is colored into one color;
+for every color, there is at least one bracket colored into that color;
+for every color, if you write down the sequence of brackets having that color in the order they appear, you will get a beautiful bracket sequence.
+Color the given bracket sequence
+𝑠
+into the minimum number of colors according to these constraints, or report that it is impossible.
+Input
+The first line contains one integer
+𝑡
+(
+1≤𝑡≤
+10
+4
+) — the number of test cases.
+Each test case consists of two lines. The first line contains one integer
+𝑛
+(
+2≤𝑛≤2⋅
+10
+5
+) — the number of characters in
+𝑠
+. The second line contains
+𝑠
+— a string of
+𝑛
+characters, where each character is either "(" or ")".
+Additional constraint on the input: the sum of
+𝑛
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print the answer as follows:
+if it is impossible to color the brackets according to the problem statement, print
+−1
+;
+otherwise, print two lines. In the first line, print one integer
+𝑘
+(
+1≤𝑘≤𝑛
+) — the minimum number of colors. In the second line, print
+𝑛
+integers
+𝑐
+1
+,
+𝑐
+2
+,…,
+𝑐
+𝑛
+(
+1≤
+𝑐
+𝑖
+≤𝑘
+), where
+𝑐
+𝑖
+is the color of the
+𝑖
+-th bracket. If there are multiple answers, print any of them.
+Example
+input
+Copy
+4
+8
+((())))(
+4
+(())
+4
+))((
+3
+(()
+output
+Copy
+2
+2 2 2 1 2 2 2 1
+1
+1 1 1 1
+1
+1 1 1 1
+-1
+Best Binary String
+You are given a string
+𝑠
+consisting of the characters 0, 1 and/or ?. Let's call it a pattern.
+Let's say that the binary string (a string where each character is either 0 or 1) matches the pattern if you can replace each character ? with 0 or 1 (for each character, the choice is independent) so that the strings become equal. For example, 0010 matches ?01?, but 010 doesn't match 1??, ??, or ????.
+Let's define the cost of the binary string as the minimum number of operations of the form "reverse an arbitrary contiguous substring of the string" required to sort the string in non-descending order.
+You have to find a binary string with the minimum possible cost among those that match the given pattern. If there are multiple answers, print any of them.
+Input
+The first line contains a single integer
+𝑡
+(
+1≤𝑡≤3⋅
+10
+4
+) — the number of test cases.
+The first and only line of each test case contains the string
+𝑠
+(
+1≤|𝑠|≤3⋅
+10
+5
+) consisting of characters 0, 1, and/or ?.
+The sum of the string lengths over all test cases does not exceed
+3⋅
+10
+5
+.
+Output
+For each test case, print a binary string with the minimum possible cost among those that match the given pattern. If there are multiple answers, print any of them.
+Example
+input
+Copy
+4
+??01?
+10100
+1??10?
+0?1?10?10
+output
+Copy
+00011
+10100
+111101
+011110010
+Note
+In the first test case of the example, the cost of the resulting string is
+0
+.
+In the second test case, the cost of the resulting string is
+2
+: we can reverse the substring from the
+1
+-st character to the
+5
+-th character, and we obtain the string 00101. Then we reverse the substring from the
+3
+-rd to the
+4
+-th character, and we obtain the string 00011, which is sorted in non-descending order.
+Comparison String
+You are given a string
+𝑠
+of length
+𝑛
+, where each character is either < or >.
+An array
+𝑎
+consisting of
+𝑛+1
+elements is compatible with the string
+𝑠
+if, for every
+𝑖
+from
+1
+to
+𝑛
+, the character
+𝑠
+𝑖
+represents the result of comparing
+𝑎
+𝑖
+and
+𝑎
+𝑖+1
+, i. e.:
+𝑠
+𝑖
+is < if and only if
+𝑎
+𝑖
+<
+𝑎
+𝑖+1
+;
+𝑠
+𝑖
+is > if and only if
+𝑎
+𝑖
+>
+𝑎
+𝑖+1
+.
+For example, the array
+[1,2,5,4,2]
+is compatible with the string <<>>. There are other arrays with are compatible with that string, for example,
+[13,37,42,37,13]
+.
+The cost of the array is the number of different elements in it. For example, the cost of
+[1,2,5,4,2]
+is
+4
+; the cost of
+[13,37,42,37,13]
+is
+3
+.
+You have to calculate the minimum cost among all arrays which are compatible with the given string
+𝑠
+.
+Input
+The first line contains one integer
+𝑡
+(
+1≤𝑡≤500
+) — the number of test cases.
+Each test case consists of two lines:
+the first line contains one integer
+𝑛
+(
+1≤𝑛≤100
+);
+the second line contains the string
+𝑠
+, consisting of
+𝑛
+characters. Each character of
+𝑠
+is either < or >.
+Output
+For each test case, print one integer — the minimum cost among all arrays which are compatible with the given string
+𝑠
+.
+Example
+input
+Copy
+4
+4
+<<>>
+4
+>><<
+5
+>>>>>
+7
+<><><><
+output
+Copy
+3
+3
+6
+2
+Note
+In the first test case of the example, the array can be
+[13,37,42,37,13]
+.
+In the second test case of the example, the array can be
+[42,37,13,37,42]
+.
+Grasshopper on a Line
+You are given two integers
+𝑥
+and
+𝑘
+. Grasshopper starts in a point
+0
+on an OX axis. In one move, it can jump some integer distance, that is not divisible by
+𝑘
+, to the left or to the right.
+What's the smallest number of moves it takes the grasshopper to reach point
+𝑥
+? What are these moves? If there are multiple answers, print any of them.
+Input
+The first line contains a single integer
+𝑡
+(
+1≤𝑡≤1000
+) — the number of testcases.
+The only line of each testcase contains two integers
+𝑥
+and
+𝑘
+(
+1≤𝑥≤100
+;
+2≤𝑘≤100
+) — the endpoint and the constraint on the jumps, respectively.
+Output
+For each testcase, in the first line, print a single integer
+𝑛
+ — the smallest number of moves it takes the grasshopper to reach point
+𝑥
+.
+In the second line, print
+𝑛
+integers, each of them not divisible by
+𝑘
+. A positive integer would mean jumping to the right, a negative integer would mean jumping to the left. The endpoint after the jumps should be exactly
+𝑥
+.
+Each jump distance should be from
+−
+10
+9
+to
+10
+9
+. In can be shown that, for any solution with the smallest number of jumps, there exists a solution with the same number of jumps such that each jump is from
+−
+10
+9
+to
+10
+9
+.
+It can be shown that the answer always exists under the given constraints. If there are multiple answers, print any of them.
+Example
+input
+Copy
+3
+10 2
+10 3
+3 4
+output
+Copy
+2
+7 3
+1
+10
+1
+3
+Ksyusha and Chinchilla
+Ksyusha has a pet chinchilla, a tree on
+𝑛
+vertices and huge scissors. A tree is a connected graph without cycles. During a boring physics lesson Ksyusha thought about how to entertain her pet.
+Chinchillas like to play with branches. A branch is a tree of
+3
+vertices.
+The branch looks like this.
+A cut is the removal of some (not yet cut) edge in the tree. Ksyusha has plenty of free time, so she can afford to make enough cuts so that the tree splits into branches. In other words, after several (possibly zero) cuts, each vertex must belong to exactly one branch.
+Help Ksyusha choose the edges to be cut or tell that it is impossible.
+Input
+The first line contains a single integer
+𝑡
+(
+1≤𝑡≤
+10
+4
+) — number of testcases.
+The first line of each testcase contains a single integer
+𝑛
+(
+2≤𝑛≤2⋅
+10
+5
+) — the number of vertices in the tree.
+The next
+𝑛−1
+rows of each testcase contain integers
+𝑣
+𝑖
+and
+𝑢
+𝑖
+(
+1≤
+𝑣
+𝑖
+,
+𝑢
+𝑖
+≤𝑛
+) — the numbers of vertices that the
+𝑖
+-th edge connects.
+It is guaranteed that this set of edges forms a tree. It is also guaranteed that the sum of
+𝑛
+over all testcases does not exceed
+2⋅
+10
+5
+.
+Output
+Print the answer for each testcase.
+If the desired way to cut the tree does not exist, print
+−1
+.
+Otherwise, print an integer
+𝑘
+ — the number of edges to be cut. In the next line, print
+𝑘
+different integers
+𝑒
+𝑖
+(
+1≤
+𝑒
+𝑖
+<𝑛
+) — numbers of the edges to be cut. If
+𝑘=0
+, print an empty string instead.
+If there are several solutions, you can print any.
+Examples
+input
+Copy
+4
+9
+1 2
+4 3
+7 9
+5 4
+4 6
+3 2
+8 7
+1 7
+6
+1 2
+1 3
+4 3
+1 5
+6 1
+6
+1 2
+3 2
+3 4
+4 5
+6 5
+5
+1 3
+5 3
+5 2
+3 4
+output
+Copy
+2
+2 8 
+-1
+1
+3 
+-1
+input
+Copy
+4
+2
+1 2
+3
+1 2
+3 1
+6
+1 2
+3 1
+3 4
+3 5
+6 1
+9
+2 6
+6 9
+9 1
+9 7
+1 8
+7 3
+8 5
+4 7
+output
+Copy
+-1
+0
+
+1
+2 
+2
+4 3 
+Note
+The first testcase in first test.
+Ira and Flamenco
+Ira loves Spanish flamenco dance very much. She decided to start her own dance studio and found
+𝑛
+students,
+𝑖
+th of whom has level
+𝑎
+𝑖
+.
+Ira can choose several of her students and set a dance with them. So she can set a huge number of dances, but she is only interested in magnificent dances. The dance is called magnificent if the following is true:
+exactly
+𝑚
+students participate in the dance;
+levels of all dancers are pairwise distinct;
+levels of every two dancers have an absolute difference strictly less than
+𝑚
+.
+For example, if
+𝑚=3
+and
+𝑎=[4,2,2,3,6]
+, the following dances are magnificent (students participating in the dance are highlighted in red):
+[4,2,2,3,6]
+,
+[4,2,2,3,6]
+. At the same time dances
+[4,2,2,3,6]
+,
+[4,2,2,3,6]
+,
+[4,2,2,3,6]
+are not magnificent.
+In the dance
+[4,2,2,3,6]
+only
+2
+students participate, although
+𝑚=3
+.
+The dance
+[4,2,2,3,6]
+involves students with levels
+2
+and
+2
+, although levels of all dancers must be pairwise distinct.
+In the dance
+[4,2,2,3,6]
+students with levels
+3
+and
+6
+participate, but
+|3−6|=3
+, although
+𝑚=3
+.
+Help Ira count the number of magnificent dances that she can set. Since this number can be very large, count it modulo
+10
+9
++7
+. Two dances are considered different if the sets of students participating in them are different.
+Input
+The first line contains a single integer
+𝑡
+(
+1≤𝑡≤
+10
+4
+) — number of testcases.
+The first line of each testcase contains integers
+𝑛
+and
+𝑚
+(
+1≤𝑚≤𝑛≤2⋅
+10
+5
+) — the number of Ira students and the number of dancers in the magnificent dance.
+The second line of each testcase contains
+𝑛
+integers
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+(
+1≤
+𝑎
+𝑖
+≤
+10
+9
+) — levels of students.
+It is guaranteed that the sum of
+𝑛
+over all testcases does not exceed
+2⋅
+10
+5
+.
+Output
+For each testcase, print a single integer — the number of magnificent dances. Since this number can be very large, print it modulo
+10
+9
++7
+.
+Example
+input
+Copy
+9
+7 4
+8 10 10 9 6 11 7
+5 3
+4 2 2 3 6
+8 2
+1 5 2 2 3 1 3 3
+3 3
+3 3 3
+5 1
+3 4 3 10 7
+12 3
+5 2 1 1 4 3 5 5 5 2 7 5
+1 1
+1
+3 2
+1 2 3
+2 2
+1 2
+output
+Copy
+5
+2
+10
+0
+5
+11
+1
+2
+1
+Note
+In the first testcase, Ira can set such magnificent dances:
+[8,10,10,9,6,11,7]
+,
+[8,10,10,9,6,11,7]
+,
+[8,10,10,9,6,11,7]
+,
+[8,10,10,9,6,11,7]
+,
+[8,10,10,9,6,11,7]
+.
+The second testcase is explained in the statements.
+Round Dance
+𝑛
+people came to the festival and decided to dance a few round dances. There are at least
+2
+people in the round dance and each person has exactly two neighbors. If there are
+2
+people in the round dance then they have the same neighbor on each side.
+You decided to find out exactly how many dances there were. But each participant of the holiday remembered exactly one neighbor. Your task is to determine what the minimum and maximum number of round dances could be.
+For example, if there were
+6
+people at the holiday, and the numbers of the neighbors they remembered are equal
+[2,1,4,3,6,5]
+, then the minimum number of round dances is
+1
+:
+1−2−3−4−5−6−1
+and the maximum is
+3
+:
+1−2−1
+3−4−3
+5−6−5
+Input
+The first line contains a positive number
+𝑡
+(
+1≤𝑡≤
+10
+4
+) — the number of test cases. The following is a description of the test cases.
+The first line of the description of each test case contains a positive number
+𝑛
+(
+2≤𝑛≤2⋅
+10
+5
+) — the number of people at the holiday.
+The second line of the description of each test case contains
+𝑛
+integers
+𝑎
+𝑖
+(
+1≤
+𝑎
+𝑖
+≤𝑛,
+𝑎
+𝑖
+≠𝑖
+) — the number of the neighbor that the
+𝑖
+th person remembered.
+It is guaranteed that the test cases are correct and corresponds to at least one division of people into round dances.
+It is guaranteed that the sum of
+𝑛
+for all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output two integers — the minimum and maximum number of round dances that could be.
+Example
+input
+Copy
+10
+6
+2 1 4 3 6 5
+6
+2 3 1 5 6 4
+9
+2 3 2 5 6 5 8 9 8
+2
+2 1
+4
+4 3 2 1
+5
+2 3 4 5 1
+6
+5 3 4 1 1 2
+5
+3 5 4 1 2
+6
+6 3 2 5 4 3
+6
+5 1 4 3 4 2
+output
+Copy
+1 3
+2 2
+1 3
+1 1
+1 2
+1 1
+1 1
+2 2
+1 2
+1 1
+Flipper
+You are given a permutation
+𝑝
+of length
+𝑛
+.
+A permutation is an array consisting of
+𝑛
+distinct integers from
+1
+to
+𝑛
+in any order. For example,
+{2,3,1,5,4}
+is a permutation, while
+{1,2,2}
+is not (since
+2
+appears twice), and
+{1,3,4}
+is also not a permutation (as
+𝑛=3
+, but the array contains
+4
+).
+To the permutation
+𝑝
+, you need to apply the following operation exactly once:
+First you choose a segment
+[𝑙,𝑟]
+(
+1≤𝑙≤𝑟≤𝑛
+, a segment is a continuous sequence of numbers
+{
+𝑝
+𝑙
+,
+𝑝
+𝑙+1
+,…,
+𝑝
+𝑟−1
+,
+𝑝
+𝑟
+}
+) and reverse it. Reversing a segment means swapping pairs of numbers
+(
+𝑝
+𝑙
+,
+𝑝
+𝑟
+)
+,
+(
+𝑝
+𝑙+1
+,
+𝑝
+𝑟−1
+)
+, ...,
+(
+𝑝
+𝑙+𝑖
+,
+𝑝
+𝑟−𝑖
+)
+(where
+𝑙+𝑖≤𝑟−𝑖
+).
+Then you swap the prefix and suffix:
+[𝑟+1,𝑛]
+and
+[1,𝑙−1]
+(note that these segments may be empty).
+For example, given
+𝑛=5,𝑝={2,3,1,5,4}
+, if you choose the segment
+[𝑙=2,𝑟=3]
+, after reversing the segment
+𝑝={2,1,3,5,4}
+, then you swap the segments
+[4,5]
+and
+[1,1]
+. Thus,
+𝑝={5,4,1,3,2}
+. It can be shown that this is the maximum possible result for the given permutation.
+You need to output the lexicographically maximum permutation that can be obtained by applying the operation described exactly once.
+A permutation
+𝑎
+is lexicographically greater than permutation
+𝑏
+if there exists an
+𝑖
+(
+1≤𝑖≤𝑛
+) such that
+𝑎
+𝑗
+=
+𝑏
+𝑗
+for
+1≤𝑗<𝑖
+and
+𝑎
+𝑖
+>
+𝑏
+𝑖
+.
+Input
+The first line of the input contains a single integer
+𝑡
+(
+1≤𝑡≤1000
+) — the number of test cases.
+Then the descriptions of the test cases follow.
+The first line of each test case contains a single integer
+𝑛
+(
+1≤𝑛≤2000
+) — the size of the permutation.
+The second line of each test case contains
+𝑛
+integers:
+𝑝
+1
+,
+𝑝
+2
+,…,
+𝑝
+𝑛
+(
+1≤
+𝑝
+𝑖
+≤𝑛
+) — the permutation
+𝑝
+itself.
+It is guaranteed that the sum of
+𝑛
+over all test cases does not exceed
+2000
+.
+Output
+For each test case, output in a separate line the lexicographically maximum permutation of length
+𝑛
+that can be obtained from
+𝑝
+by applying the operation described in the problem exactly once.
+Example
+input
+Copy
+9
+5
+2 3 1 5 4
+9
+4 1 6 7 2 8 5 3 9
+4
+4 3 2 1
+2
+2 1
+6
+3 2 4 1 5 6
+7
+3 2 1 5 7 6 4
+10
+10 2 5 6 1 9 3 8 4 7
+4
+4 2 1 3
+1
+1
+output
+Copy
+5 4 1 3 2 
+9 4 1 6 7 2 8 5 3 
+3 2 1 4 
+1 2 
+6 5 3 2 4 1 
+7 6 4 5 3 2 1 
+9 3 8 4 7 1 10 2 5 6 
+3 4 2 1 
+1 
+Note
+The first example is explained in the problem statement.
+In the second example, the segment
+[𝑙=9,𝑟=9]
+should be chosen.
+In the third example, the segment
+[𝑙=1,𝑟=1]
+should be chosen.
+In the fourth example, the segment
+[𝑙=1,𝑟=2]
+should be chosen.
+In the fifth example, the segment
+[𝑙=5,𝑟=6]
+should be chosen.
+In the sixth example, the segment
+[𝑙=4,𝑟=4]
+should be chosen.
+In the seventh example, the segment
+[𝑙=5,𝑟=5]
+should be chosen.
+Vlad Building Beautiful Array
+Vlad was given an array
+𝑎
+of
+𝑛
+positive integers. Now he wants to build a beautiful array
+𝑏
+of length
+𝑛
+from it.
+Vlad considers an array beautiful if all the numbers in it are positive and have the same parity. That is, all numbers in the beautiful array are greater than zero and are either all even or all odd.
+To build the array
+𝑏
+, Vlad can assign each
+𝑏
+𝑖
+either the value
+𝑎
+𝑖
+or
+𝑎
+𝑖
+−
+𝑎
+𝑗
+, where any
+𝑗
+from
+1
+to
+𝑛
+can be chosen.
+To avoid trying to do the impossible, Vlad asks you to determine whether it is possible to build a beautiful array
+𝑏
+of length
+𝑛
+using his array
+𝑎
+.
+Input
+The first line of input contains an integer
+𝑡
+(
+1≤𝑡≤
+10
+4
+) — the number of test cases.
+Then follow the descriptions of the test cases.
+The first line of each case contains a single integer
+𝑛
+(
+1≤𝑛≤2⋅
+10
+5
+) — the length of the array
+𝑎
+.
+The second line of each case contains
+𝑛
+positive integers
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+(
+1≤
+𝑎
+𝑖
+≤
+10
+9
+) — the elements of the array
+𝑎
+.
+It is guaranteed that the sum of
+𝑛
+over all cases does not exceed
+2⋅
+10
+5
+.
+Output
+Output
+𝑡
+strings, each of which is the answer to the corresponding test case. As the answer, output "YES" if Vlad can build a beautiful array
+𝑏
+, and "NO" otherwise.
+You can output the answer in any case (for example, the strings "yEs", "yes", "Yes" and "YES" will be recognized as a positive answer).
+Example
+input
+Copy
+7
+5
+2 6 8 4 3
+5
+1 4 7 6 9
+4
+2 6 4 10
+7
+5 29 13 9 10000001 11 3
+5
+2 1 2 4 2
+5
+2 4 5 4 3
+4
+2 5 5 4
+output
+Copy
+NO
+YES
+YES
+YES
+YES
+NO
+NO
+Restore the Weather
+You are given an array
+a
+containing the weather forecast for Berlandia for the last
+n
+days. That is,
+ai
+ — is the estimated air temperature on day
+i
+(
+1≤i≤n
+).
+You are also given an array
+b
+ — the air temperature that was actually present on each of the days. However, all the values in array
+b
+are mixed up.
+Determine which day was which temperature, if you know that the weather never differs from the forecast by more than
+k
+degrees. In other words, if on day
+i
+the real air temperature was
+c
+, then the equality
+|ai−c|≤k
+is always true.
+For example, let an array
+a
+= [
+1,3,5,3,9
+] of length
+n=5
+and
+k=2
+be given and an array
+b
+= [
+2,5,11,2,4
+]. Then, so that the value of
+bi
+corresponds to the air temperature on day
+i
+, we can rearrange the elements of the array
+b
+so: [
+2,2,5,4,11
+]. Indeed:
+On the
+1
+st day,
+|a1−b1|=|1−2|=1
+,
+1≤2=k
+is satisfied;
+On the
+2
+nd day
+|a2−b2|=|3−2|=1
+,
+1≤2=k
+is satisfied;
+On the
+3
+rd day,
+|a3−b3|=|5−5|=0
+,
+0≤2=k
+is satisfied;
+On the
+4
+th day,
+|a4−b4|=|3−4|=1
+,
+1≤2=k
+is satisfied;
+On the
+5
+th day,
+|a5−b5|=|9−11|=2
+,
+2≤2=k
+is satisfied.
+Input
+The first line of input data contains a single integer
+t
+(
+1≤t≤104
+) — the number of test cases.
+The description of the test cases follows.
+The first line of each test case contains two integers
+n
+(
+1≤n≤105
+) and
+k
+(
+0≤k≤109
+) — the number of days and the maximum difference between the expected and actual air temperature on each day.
+The second line of each test case contains exactly
+n
+integers — elements of array
+a
+(
+−109≤ai≤109
+).
+The third line of each test case contains exactly
+n
+integers — elements of array
+b
+(
+−109≤bi≤109
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+105
+, and that the elements of array
+b
+can always be rearranged so that the equality
+|ai−bi|≤k
+is true for all
+i
+.
+Output
+On a separate line for each test case, output exactly
+n
+numbers — the values of air temperature on each of the days in the correct order.
+If there is more than one answer — output any of them.
+Example
+input
+Copy
+3
+5 2
+1 3 5 3 9
+2 5 11 2 4
+6 1
+-1 3 -2 0 -5 -1
+-4 0 -1 4 0 0
+3 3
+7 7 7
+9 4 8
+output
+Copy
+2 2 5 4 11
+0 4 -1 0 -4 0
+8 4 9

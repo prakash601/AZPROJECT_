@@ -1,0 +1,28 @@
+Jzzhu have n non-negative integers a1, a2, ..., an. We will call a sequence of indexes i1, i2, ..., ik (1 ≤ i1 < i2 < ... < ik ≤ n) a group of size k.
+Jzzhu wonders, how many groups exists such that ai1 & ai2 & ... & aik = 0 (1 ≤ k ≤ n)? Help him and print this number modulo 1000000007 (109 + 7). Operation x & y denotes bitwise AND operation of two numbers.
+Input
+The first line contains a single integer n (1 ≤ n ≤ 106). The second line contains n integers a1, a2, ..., an (0 ≤ ai ≤ 106).
+Output
+Output a single integer representing the number of required groups modulo 1000000007 (109 + 7).
+Examples
+input
+Copy
+3
+2 3 3
+output
+Copy
+0
+input
+Copy
+4
+0 1 2 3
+output
+Copy
+10
+input
+Copy
+6
+5 2 0 5 2 1
+output
+Copy
+53

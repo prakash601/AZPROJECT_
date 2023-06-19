@@ -1,0 +1,148 @@
+You have two strings
+s1
+and
+s2
+of length
+n
+, consisting of lowercase English letters. You can perform the following operation any (possibly zero) number of times:
+Choose a positive integer
+1≤k≤n
+.
+Swap the prefix of the string
+s1
+and the suffix of the string
+s2
+of length
+k
+.
+Is it possible to make these two strings equal by doing described operations?
+Input
+The first line contains a single integer
+t
+(
+1≤t≤104
+) — the number of test cases. Then the test cases follow.
+Each test case consists of three lines.
+The first line contains a single integer
+n
+(
+1≤n≤105
+) — the length of the strings
+s1
+and
+s2
+.
+The second line contains the string
+s1
+of length
+n
+, consisting of lowercase English letters.
+The third line contains the string
+s2
+of length
+n
+, consisting of lowercase English letters.
+It is guaranteed that the sum of
+n
+for all test cases does not exceed
+2⋅105
+.
+Output
+For each test case, print "YES" if it is possible to make the strings equal, and "NO" otherwise.
+Example
+input
+Copy
+7
+3
+cbc
+aba
+5
+abcaa
+cbabb
+5
+abcaa
+cbabz
+1
+a
+a
+1
+a
+b
+6
+abadaa
+adaaba
+8
+abcabdaa
+adabcaba
+output
+Copy
+YES
+YES
+NO
+YES
+NO
+NO
+YES
+Note
+In the first test case:
+Initially
+s1=cbc
+,
+s2=aba
+.
+Operation with
+k=1
+, after the operation
+s1=abc
+,
+s2=abc
+.
+In the second test case:
+Initially
+s1=abcaa
+,
+s2=cbabb
+.
+Operation with
+k=2
+, after the operation
+s1=bbcaa
+,
+s2=cbaab
+.
+Operation with
+k=3
+, after the operation
+s1=aabaa
+,
+s2=cbbbc
+.
+Operation with
+k=1
+, after the operation
+s1=cabaa
+,
+s2=cbbba
+.
+Operation with
+k=2
+, after the operation
+s1=babaa
+,
+s2=cbbca
+.
+Operation with
+k=1
+, after the operation
+s1=aabaa
+,
+s2=cbbcb
+.
+Operation with
+k=2
+, after the operation
+s1=cbbaa
+,
+s2=cbbaa
+.
+In the third test case, it's impossible to make strings equal.

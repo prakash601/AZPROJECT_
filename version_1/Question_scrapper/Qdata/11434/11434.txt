@@ -1,0 +1,109 @@
+For some array
+c
+, let's denote a greedy subsequence as a sequence of indices
+p1
+,
+p2
+, ...,
+pl
+such that
+1≤p1<p2<⋯<pl≤|c|
+, and for each
+i∈[1,l−1]
+,
+pi+1
+is the minimum number such that
+pi+1>pi
+and
+c[pi+1]>c[pi]
+.
+You are given an array
+a1,a2,…,an
+. For each its subsegment of length
+k
+, calculate the length of its longest greedy subsequence.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤k≤n≤106
+) — the length of array
+a
+and the length of subsegments.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤n
+) — array
+a
+.
+Output
+Print
+n−k+1
+integers — the maximum lengths of greedy subsequences of each subsegment having length
+k
+. The first number should correspond to subsegment
+a[1..k]
+, the second — to subsegment
+a[2..k+1]
+, and so on.
+Examples
+input
+Copy
+6 4
+1 5 2 5 3 6
+output
+Copy
+2 2 3 
+input
+Copy
+7 6
+4 5 2 5 3 6 6
+output
+Copy
+3 3 
+Note
+In the first example:
+[1,5,2,5]
+— the longest greedy subsequences are
+1,2
+(
+[c1,c2]=[1,5]
+) or
+3,4
+(
+[c3,c4]=[2,5]
+).
+[5,2,5,3]
+— the sequence is
+2,3
+(
+[c2,c3]=[2,5]
+).
+[2,5,3,6]
+— the sequence is
+1,2,4
+(
+[c1,c2,c4]=[2,5,6]
+).
+In the second example:
+[4,5,2,5,3,6]
+— the longest greedy subsequences are
+1,2,6
+(
+[c1,c2,c6]=[4,5,6]
+) or
+3,4,6
+(
+[c3,c4,c6]=[2,5,6]
+).
+[5,2,5,3,6,6]
+— the subsequence is
+2,3,5
+(
+[c2,c3,c5]=[2,5,6]
+).

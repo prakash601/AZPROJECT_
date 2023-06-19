@@ -1,0 +1,163 @@
+Omkar is standing at the foot of Celeste mountain. The summit is
+n
+meters away from him, and he can see all of the mountains up to the summit, so for all
+1≤j≤n
+he knows that the height of the mountain at the point
+j
+meters away from himself is
+hj
+meters. It turns out that for all
+j
+satisfying
+1≤j≤n−1
+,
+hj<hj+1
+(meaning that heights are strictly increasing).
+Suddenly, a landslide occurs! While the landslide is occurring, the following occurs: every minute, if
+hj+2≤hj+1
+, then one square meter of dirt will slide from position
+j+1
+to position
+j
+, so that
+hj+1
+is decreased by
+1
+and
+hj
+is increased by
+1
+. These changes occur simultaneously, so for example, if
+hj+2≤hj+1
+and
+hj+1+2≤hj+2
+for some
+j
+, then
+hj
+will be increased by
+1
+,
+hj+2
+will be decreased by
+1
+, and
+hj+1
+will be both increased and decreased by
+1
+, meaning that in effect
+hj+1
+is unchanged during that minute.
+The landslide ends when there is no
+j
+such that
+hj+2≤hj+1
+. Help Omkar figure out what the values of
+h1,…,hn
+will be after the landslide ends. It can be proven that under the given constraints, the landslide will always end in finitely many minutes.
+Note that because of the large amount of input, it is recommended that your code uses fast IO.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤106
+).
+The second line contains
+n
+integers
+h1,h2,…,hn
+satisfying
+0≤h1<h2<⋯<hn≤1012
+ — the heights.
+Output
+Output
+n
+integers, where the
+j
+-th integer is the value of
+hj
+after the landslide has stopped.
+Example
+input
+Copy
+4
+2 6 7 8
+output
+Copy
+5 5 6 7
+Note
+Initially, the mountain has heights
+2,6,7,8
+.
+In the first minute, we have
+2+2≤6
+, so
+2
+increases to
+3
+and
+6
+decreases to
+5
+, leaving
+3,5,7,8
+.
+In the second minute, we have
+3+2≤5
+and
+5+2≤7
+, so
+3
+increases to
+4
+,
+5
+is unchanged, and
+7
+decreases to
+6
+, leaving
+4,5,6,8
+.
+In the third minute, we have
+6+2≤8
+, so
+6
+increases to
+7
+and
+8
+decreases to
+7
+, leaving
+4,5,7,7
+.
+In the fourth minute, we have
+5+2≤7
+, so
+5
+increases to
+6
+and
+7
+decreases to
+6
+, leaving
+4,6,6,7
+.
+In the fifth minute, we have
+4+2≤6
+, so
+4
+increases to
+5
+and
+6
+decreases to
+5
+, leaving
+5,5,6,7
+.
+In the sixth minute, nothing else can change so the landslide stops and our answer is
+5,5,6,7
+.

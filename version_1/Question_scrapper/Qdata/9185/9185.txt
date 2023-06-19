@@ -1,0 +1,127 @@
+Alice has recently received an array
+a1,a2,…,an
+for her birthday! She is very proud of her array, and when she showed her friend Bob the array, he was very happy with her present too!
+However, soon Bob became curious, and as any sane friend would do, asked Alice to perform
+q
+operations of two types on her array:
+1
+x
+y
+: update the element
+ax
+to
+y
+(set
+ax=y
+).
+2
+l
+r
+: calculate how many non-decreasing subarrays exist within the subarray
+[al,al+1,…,ar]
+. More formally, count the number of pairs of integers
+(p,q)
+such that
+l≤p≤q≤r
+and
+ap≤ap+1≤⋯≤aq−1≤aq
+.
+Help Alice answer Bob's queries!
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n,q≤2⋅105
+) — the size of the array, and the number of queries, respectively.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤109
+) — the elements of Alice's array.
+The next
+q
+lines consist of three integers each. The first integer of the
+i
+-th line is
+ti
+, the operation being performed on the
+i
+-th step (
+ti=1
+or
+ti=2
+).
+If
+ti=1
+, the next two integers are
+xi
+and
+yi
+(
+1≤xi≤n
+;
+1≤yi≤109
+), updating the element at position
+xi
+to
+yi
+(setting
+axi=yi
+).
+If
+ti=2
+, the next two integers are
+li
+and
+ri
+(
+1≤li≤ri≤n
+), the two indices Bob asks Alice about for the
+i
+-th query.
+It's guaranteed that there is at least one operation of the second type.
+Output
+For each query of type
+2
+, print a single integer, the answer to the query.
+Example
+input
+Copy
+5 6
+3 1 4 1 5
+2 2 5
+2 1 3
+1 4 4
+2 2 5
+1 2 6
+2 2 5
+output
+Copy
+6
+4
+10
+7
+Note
+For the first query,
+l=2
+and
+r=5
+, and the non-decreasing subarrays
+[p,q]
+are
+[2,2]
+,
+[3,3]
+,
+[4,4]
+,
+[5,5]
+,
+[2,3]
+and
+[4,5]
+.

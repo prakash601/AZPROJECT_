@@ -1,0 +1,133 @@
+There is given an integer
+k
+and a grid
+2k×2k
+with some numbers written in its cells, cell
+(i,j)
+initially contains number
+aij
+. Grid is considered to be a torus, that is, the cell to the right of
+(i,2k)
+is
+(i,1)
+, the cell below the
+(2k,i)
+is
+(1,i)
+There is also given a lattice figure
+F
+, consisting of
+t
+cells, where
+t
+is odd.
+F
+doesn't have to be connected.
+We can perform the following operation: place
+F
+at some position on the grid. (Only translations are allowed, rotations and reflections are prohibited). Now choose any nonnegative integer
+p
+. After that, for each cell
+(i,j)
+, covered by
+F
+, replace
+aij
+by
+aij⊕p
+, where
+⊕
+denotes the bitwise XOR operation.
+More formally, let
+F
+be given by cells
+(x1,y1),(x2,y2),…,(xt,yt)
+. Then you can do the following operation: choose any
+x,y
+with
+1≤x,y≤2k
+, any nonnegative integer
+p
+, and for every
+i
+from
+1
+to
+n
+replace number in the cell
+(((x+xi−1)mod2k)+1,((y+yi−1)mod2k)+1)
+with
+a((x+xi−1)mod2k)+1,((y+yi−1)mod2k)+1⊕p
+.
+Our goal is to make all the numbers equal to
+0
+. Can we achieve it? If we can, find the smallest number of operations in which it is possible to do this.
+Input
+The first line contains a single integer
+k
+(
+1≤k≤9
+).
+The
+i
+-th of the next
+2k
+lines contains
+2k
+integers
+ai1,ai2,…,ai2k
+(
+0≤aij<260
+) — initial values in the
+i
+-th row of the grid.
+The next line contains a single integer
+t
+(
+1≤t≤min(99,4k)
+,
+t
+is odd) — number of cells of figure.
+i
+-th of next
+t
+lines contains two integers
+xi
+and
+yi
+(
+1≤xi,yi≤2k
+), describing the position of the
+i
+-th cell of the figure.
+It is guaranteed that all cells are different, but it is not guaranteed that the figure is connected.
+Output
+If it is impossible to make all numbers in the grid equal to
+0
+with these operations, output
+−1
+.
+Otherwise, output a single integer — the minimal number of operations needed to do this. It can be shown that if it is possible to make all numbers equal
+0
+, it is possible to do so in less than
+1018
+operations.
+Example
+input
+Copy
+2
+5 5 5 5
+2 6 2 3
+0 0 2 0
+0 0 0 0
+5
+1 1
+1 2
+1 3
+1 4
+2 4
+output
+Copy
+3
+Note
+The figure and the operations for the example are shown above:

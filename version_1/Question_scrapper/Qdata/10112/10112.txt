@@ -1,0 +1,115 @@
+Captain Fint is involved in another treasure hunt, but have found only one strange problem. The problem may be connected to the treasure's location or may not. That's why captain Flint decided to leave the solving the problem to his crew and offered an absurdly high reward: one day off. The problem itself sounds like this...
+There are two arrays
+a
+and
+b
+of length
+n
+. Initially, an
+ans
+is equal to
+0
+and the following operation is defined:
+Choose position
+i
+(
+1≤i≤n
+);
+Add
+ai
+to
+ans
+;
+If
+bi≠−1
+then add
+ai
+to
+abi
+.
+What is the maximum
+ans
+you can get by performing the operation on each
+i
+(
+1≤i≤n
+) exactly once?
+Uncle Bogdan is eager to get the reward, so he is asking your help to find the optimal order of positions to perform the operation on them.
+Input
+The first line contains the integer
+n
+(
+1≤n≤2⋅105
+) — the length of arrays
+a
+and
+b
+.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+−106≤ai≤106
+).
+The third line contains
+n
+integers
+b1,b2,…,bn
+(
+1≤bi≤n
+or
+bi=−1
+).
+Additional constraint: it's guaranteed that for any
+i
+(
+1≤i≤n
+) the sequence
+bi,bbi,bbbi,…
+is not cyclic, in other words it will always end with
+−1
+.
+Output
+In the first line, print the maximum
+ans
+you can get.
+In the second line, print the order of operations:
+n
+different integers
+p1,p2,…,pn
+(
+1≤pi≤n
+). The
+pi
+is the position which should be chosen at the
+i
+-th step. If there are multiple orders, print any of them.
+Examples
+input
+Copy
+3
+1 2 3
+2 3 -1
+output
+Copy
+10
+1 2 3 
+input
+Copy
+2
+-1 100
+2 -1
+output
+Copy
+99
+2 1 
+input
+Copy
+10
+-10 -1 2 2 5 -2 -3 -4 2 -6
+-1 -1 2 2 -1 5 5 7 7 9
+output
+Copy
+-9
+3 5 6 1 9 4 10 7 8 2

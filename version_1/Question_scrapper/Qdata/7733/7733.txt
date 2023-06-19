@@ -1,0 +1,138 @@
+LuoTianyi gives you an array
+a
+of
+n
+integers and the index begins from
+1
+.
+Define
+g(i,j)
+as follows:
+g(i,j)
+is the largest integer
+x
+that satisfies
+{ap:i≤p≤j}⊆{aq:x≤q≤j}
+while
+i≤j
+;
+and
+g(i,j)=0
+while
+i>j
+.
+There are
+q
+queries. For each query you are given four integers
+l,r,x,y
+, you need to calculate
+r
+∑
+i=l
+y
+∑
+j=x
+g(i,j)
+.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n,q≤106
+) — the length of the array
+a
+and the number of queries.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤n
+) — the elements of the array
+a
+.
+Next
+q
+lines describe a query. The
+i
+-th line contains four integers
+l,r,x,y
+(
+1≤l≤r≤n,1≤x≤y≤n
+) — the integers in the
+i
+-th query.
+Output
+Print
+q
+lines where
+i
+-th line contains one integer — the answer for the
+i
+-th query.
+Examples
+input
+Copy
+6 4
+1 2 2 1 3 4
+1 1 4 5
+2 3 3 3
+3 6 1 2
+6 6 6 6
+output
+Copy
+6
+6
+0
+6
+input
+Copy
+10 5
+10 2 8 10 9 8 2 1 1 8
+1 1 10 10
+2 2 3 3
+6 6 6 6
+1 1 4 5
+4 8 4 8
+output
+Copy
+4
+2
+6
+4
+80
+Note
+In the first example:
+In the first query, the answer is
+g(1,4)+g(1,5)=3+3=6
+.
+x=1,2,3
+can satisfies
+{ap:1≤p≤4}⊆{aq:x≤q≤4}
+,
+3
+is the largest integer so
+g(1,4)=3
+.
+In the second query, the answer is
+g(2,3)+g(3,3)=3+3=6
+.
+In the third query, the answer is
+0
+, because all
+i>j
+and
+g(i,j)=0
+.
+In the fourth query, the answer is
+g(6,6)=6
+.
+In the second example:
+In the second query, the answer is
+g(2,3)=2
+.
+In the fourth query, the answer is
+g(1,4)+g(1,5)=2+2=4
+.

@@ -1,0 +1,136 @@
+It turns out that this is exactly the
+100
+-th problem of mine that appears in some programming competition. So it has to be special! And what can be more special than another problem about LIS...
+You are given a permutation
+p1,p2,…,p2n+1
+of integers from
+1
+to
+2n+1
+. You will have to process
+q
+updates, where the
+i
+-th update consists in swapping
+pui,pvi
+.
+After each update, find any cyclic shift of
+p
+with
+LIS≤n
+, or determine that there is no such shift. (Refer to the output section for details).
+Here
+LIS(a)
+denotes the length of longest strictly increasing subsequence of
+a
+.
+Hacks are disabled in this problem. Don't ask why.
+Input
+The first line of the input contains two integers
+n,q
+(
+2≤n≤105
+,
+1≤q≤105
+).
+The second line of the input contains
+2n+1
+integers
+p1,p2,…,p2n+1
+(
+1≤pi≤2n+1
+, all
+pi
+are distinct)  — the elements of
+p
+.
+The
+i
+-th of the next
+q
+lines contains two integers
+ui,vi
+(
+1≤ui,vi≤2n+1
+,
+ui≠vi
+)  — indicating that you have to swap elements
+pui,pvi
+in the
+i
+-th update.
+Output
+After each update, output any
+k
+(0≤k≤2n)
+, such that the length of the longest increasing subsequence of
+(pk+1,pk+2,…,p2n+1,p1,…,pk)
+doesn't exceed
+n
+, or
+−1
+, if there is no such
+k
+.
+Example
+input
+Copy
+2 6
+1 2 3 4 5
+1 5
+1 5
+4 5
+5 4
+1 4
+2 5
+output
+Copy
+-1
+-1
+2
+-1
+4
+0
+Note
+After the first update, our permutation becomes
+(5,2,3,4,1)
+. We can show that all its cyclic shifts have
+LIS≥3
+.
+After the second update, our permutation becomes
+(1,2,3,4,5)
+. We can show that all its cyclic shifts have
+LIS≥3
+.
+After the third update, our permutation becomes
+(1,2,3,5,4)
+. Its shift by
+2
+is
+(3,5,4,1,2)
+, and its
+LIS=2
+.
+After the fourth update, our permutation becomes
+(1,2,3,4,5)
+. We can show that all its cyclic shifts have
+LIS≥3
+.
+After the fifth update, our permutation becomes
+(4,2,3,1,5)
+. Its shift by
+4
+is
+(5,4,2,3,1)
+, and its
+LIS=2
+.
+After the fifth update, our permutation becomes
+(4,5,3,1,2)
+. Its shift by
+0
+is
+(4,5,3,1,2)
+, and its
+LIS=2
+.

@@ -1,0 +1,120 @@
+There are
+n
+segments drawn on a plane; the
+i
+-th segment connects two points (
+xi,1
+,
+yi,1
+) and (
+xi,2
+,
+yi,2
+). Each segment is non-degenerate, and is either horizontal or vertical — formally, for every
+i∈[1,n]
+either
+xi,1=xi,2
+or
+yi,1=yi,2
+(but only one of these conditions holds). Only segments of different types may intersect: no pair of horizontal segments shares any common points, and no pair of vertical segments shares any common points.
+We say that four segments having indices
+h1
+,
+h2
+,
+v1
+and
+v2
+such that
+h1<h2
+and
+v1<v2
+form a rectangle if the following conditions hold:
+segments
+h1
+and
+h2
+are horizontal;
+segments
+v1
+and
+v2
+are vertical;
+segment
+h1
+intersects with segment
+v1
+;
+segment
+h2
+intersects with segment
+v1
+;
+segment
+h1
+intersects with segment
+v2
+;
+segment
+h2
+intersects with segment
+v2
+.
+Please calculate the number of ways to choose four segments so they form a rectangle. Note that the conditions
+h1<h2
+and
+v1<v2
+should hold.
+Input
+The first line contains one integer
+n
+(
+1≤n≤5000
+) — the number of segments.
+Then
+n
+lines follow. The
+i
+-th line contains four integers
+xi,1
+,
+yi,1
+,
+xi,2
+and
+yi,2
+denoting the endpoints of the
+i
+-th segment. All coordinates of the endpoints are in the range
+[−5000,5000]
+.
+It is guaranteed that each segment is non-degenerate and is either horizontal or vertical. Furthermore, if two segments share a common point, one of these segments is horizontal, and another one is vertical.
+Output
+Print one integer — the number of ways to choose four segments so they form a rectangle.
+Examples
+input
+Copy
+7
+-1 4 -1 -2
+6 -1 -2 -1
+-2 3 6 3
+2 -2 2 4
+4 -1 4 3
+5 3 5 1
+5 2 1 2
+output
+Copy
+7
+input
+Copy
+5
+1 5 1 0
+0 1 5 1
+5 4 0 4
+4 2 4 0
+4 3 4 5
+output
+Copy
+0
+Note
+The following pictures represent sample cases:

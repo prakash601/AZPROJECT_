@@ -1,0 +1,107 @@
+ — What is my mission?
+ — To count graph diameters.
+You and Your Submission
+A tree is a connected undirected graph without cycles. A weighted tree has a weight assigned to each edge. The degree of a vertex is the number of edges connected to this vertex.
+You are given a weighted tree with
+n
+vertices, each edge has a weight of
+1
+. Let
+L
+be the set of vertices with degree equal to
+1
+.
+You have to answer
+q
+independent queries. In the
+i
+-th query:
+You are given a positive integer
+xi
+.
+For all
+u,v∈L
+such that
+u<v
+, add edge
+(u,v)
+with weight
+xi
+to the graph (initially the given tree).
+Find the diameter of the resulting graph.
+The diameter of a graph is equal to
+max
+1≤u<v≤n
+d(u,v)
+, where
+d(u,v)
+is the length of the shortest path between vertex
+u
+and vertex
+v
+.
+Input
+The first line contains a single integer
+n
+(
+3≤n≤106
+).
+The second line contains
+n−1
+integers
+p2,p3,…,pn
+(
+1≤pi<i
+) indicating that there is an edge between vertices
+i
+and
+pi
+. It is guaranteed that the given edges form a tree.
+The third line contains a single integer
+q
+(
+1≤q≤10
+).
+The fourth line contains
+q
+integers
+x1,x2,…,xq
+(
+1≤xi≤n
+). All
+xi
+are distinct.
+Output
+Print
+q
+integers in a single line — the answers to the queries.
+Examples
+input
+Copy
+4
+1 2 2
+4
+1 2 3 4
+output
+Copy
+1 2 2 2 
+input
+Copy
+7
+1 2 3 4 2 1
+7
+2 1 3 7 5 6 4
+output
+Copy
+3 3 4 5 5 5 4 
+input
+Copy
+3
+1 2
+1
+1
+output
+Copy
+1 
+Note
+The graph in the first test after adding the edges:

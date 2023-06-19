@@ -1,0 +1,69 @@
+Everybody knows that Balázs has the fanciest fence in the whole town. It's built up from
+N
+fancy sections. The sections are rectangles standing closely next to each other on the ground. The
+i
+th section has integer height
+hi
+and integer width
+wi
+. We are looking for fancy rectangles on this fancy fence. A rectangle is fancy if:
+its sides are either horizontal or vertical and have integer lengths
+the distance between the rectangle and the ground is integer
+the distance between the rectangle and the left side of the first section is integer
+it's lying completely on sections
+What is the number of fancy rectangles? This number can be very big, so we are interested in it modulo
+109+7
+.
+Input
+The first line contains
+N
+(
+1≤N≤105
+) – the number of sections. The second line contains
+N
+space-separated integers, the
+i
+th number is
+hi
+(
+1≤hi≤109
+). The third line contains
+N
+space-separated integers, the
+i
+th number is
+wi
+(
+1≤wi≤109
+).
+Output
+You should print a single integer, the number of fancy rectangles modulo
+109+7
+. So the output range is
+0,1,2,…,109+6
+.
+Scoring
+Subtask Points Constraints
+1 0 sample
+2 12 N≤50andhi≤50andwi=1for alli
+3 13 hi=1orhi=2for alli
+4 15 allhiare equal
+5 15 hi≤hi+1for alli≤N−1
+6 18 N≤1000
+7 27 no additional constraints
+Example
+input
+Copy
+2
+1 2
+1 2
+output
+Copy
+12
+Note
+The fence looks like this:
+There are 5 fancy rectangles of shape:
+There are 3 fancy rectangles of shape:
+There is 1 fancy rectangle of shape:
+There are 2 fancy rectangles of shape:
+There is 1 fancy rectangle of shape:

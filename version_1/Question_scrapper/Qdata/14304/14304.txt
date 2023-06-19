@@ -1,0 +1,18 @@
+Sorting arrays is traditionally associated with high-level languages. How hard can it be in FALSE? Sort the given array in non-descending order.
+Input
+The input consists of a single line of space-separated integers. The first number is n (1 ≤ n ≤ 10) — the size of the array. The following n numbers are the elements of the array (1 ≤ ai ≤ 100).
+Output
+Output space-separated elements of the sorted array.
+Examples
+input
+Copy
+3 3 1 2
+output
+Copy
+1 2 3 
+input
+Copy
+7 12 2 3 44 5 60 2
+output
+Copy
+2 2 3 5 12 44 60 

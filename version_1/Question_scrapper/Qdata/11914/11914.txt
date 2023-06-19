@@ -1,0 +1,104 @@
+You are given a tuple generator
+f(k)=(f
+(k)
+1
+,f
+(k)
+2
+,…,f
+(k)
+n
+)
+, where
+f
+(k)
+i
+=(ai⋅f
+(k−1)
+i
++bi)modpi
+and
+f(0)=(x1,x2,…,xn)
+. Here
+xmody
+denotes the remainder of
+x
+when divided by
+y
+. All
+pi
+are primes.
+One can see that with fixed sequences
+xi
+,
+yi
+,
+ai
+the tuples
+f(k)
+starting from some index will repeat tuples with smaller indices. Calculate the maximum number of different tuples (from all
+f(k)
+for
+k≥0
+) that can be produced by this generator, if
+xi
+,
+ai
+,
+bi
+are integers in the range
+[0,pi−1]
+and can be chosen arbitrary. The answer can be large, so print the remainder it gives when divided by
+109+7
+Input
+The first line contains one integer
+n
+(
+1≤n≤2⋅105
+) — the number of elements in the tuple.
+The second line contains
+n
+space separated prime numbers — the modules
+p1,p2,…,pn
+(
+2≤pi≤2⋅106
+).
+Output
+Print one integer — the maximum number of different tuples modulo
+109+7
+.
+Examples
+input
+Copy
+4
+2 3 5 7
+output
+Copy
+210
+input
+Copy
+3
+5 3 3
+output
+Copy
+30
+Note
+In the first example we can choose next parameters:
+a=[1,1,1,1]
+,
+b=[1,1,1,1]
+,
+x=[0,0,0,0]
+, then
+f
+(k)
+i
+=kmodpi
+.
+In the second example we can choose next parameters:
+a=[1,1,2]
+,
+b=[1,1,0]
+,
+x=[0,0,1]
+.

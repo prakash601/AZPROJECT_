@@ -1,0 +1,109 @@
+Vitya has learned that the answer for The Ultimate Question of Life, the Universe, and Everything is not the integer 54 42, but an increasing integer sequence
+a1,…,an
+. In order to not reveal the secret earlier than needed, Vitya encrypted the answer and obtained the sequence
+b1,…,bn
+using the following rules:
+b1=a1
+;
+bi=ai⊕ai−1
+for all
+i
+from 2 to
+n
+, where
+x⊕y
+is the bitwise XOR of
+x
+and
+y
+.
+It is easy to see that the original sequence can be obtained using the rule
+ai=b1⊕…⊕bi
+.
+However, some time later Vitya discovered that the integers
+bi
+in the cypher got shuffled, and it can happen that when decrypted using the rule mentioned above, it can produce a sequence that is not increasing. In order to save his reputation in the scientific community, Vasya decided to find some permutation of integers
+bi
+so that the sequence
+ai=b1⊕…⊕bi
+is strictly increasing. Help him find such a permutation or determine that it is impossible.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤105
+).
+The second line contains
+n
+integers
+b1,…,bn
+(
+1≤bi<260
+).
+Output
+If there are no valid permutations, print a single line containing "No".
+Otherwise in the first line print the word "Yes", and in the second line print integers
+b
+′
+1
+,…,b
+′
+n
+ — a valid permutation of integers
+bi
+. The unordered multisets
+{b1,…,bn}
+and
+{b
+′
+1
+,…,b
+′
+n
+}
+should be equal, i. e. for each integer
+x
+the number of occurrences of
+x
+in the first multiset should be equal to the number of occurrences of
+x
+in the second multiset. Apart from this, the sequence
+ai=b
+′
+1
+⊕…⊕b
+′
+i
+should be strictly increasing.
+If there are multiple answers, print any of them.
+Examples
+input
+Copy
+3
+1 2 3
+output
+Copy
+No
+input
+Copy
+6
+4 7 7 12 31 61
+output
+Copy
+Yes
+4 12 7 31 7 61 
+Note
+In the first example no permutation is valid.
+In the second example the given answer lead to the sequence
+a1=4
+,
+a2=8
+,
+a3=15
+,
+a4=16
+,
+a5=23
+,
+a6=42
+.

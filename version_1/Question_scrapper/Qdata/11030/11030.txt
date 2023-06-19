@@ -1,0 +1,112 @@
+An array of integers
+p1,p2,…,pn
+is called a permutation if it contains each number from
+1
+to
+n
+exactly once. For example, the following arrays are permutations:
+[3,1,2],[1],[1,2,3,4,5]
+and
+[4,3,1,2]
+. The following arrays are not permutations:
+[2],[1,1],[2,3,4]
+.
+There is a hidden permutation of length
+n
+.
+For each index
+i
+, you are given
+si
+, which equals to the sum of all
+pj
+such that
+j<i
+and
+pj<pi
+. In other words,
+si
+is the sum of elements before the
+i
+-th element that are smaller than the
+i
+-th element.
+Your task is to restore the permutation.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅105
+) — the size of the permutation.
+The second line contains
+n
+integers
+s1,s2,…,sn
+(
+0≤si≤
+n(n−1)
+2
+).
+It is guaranteed that the array
+s
+corresponds to a valid permutation of length
+n
+.
+Output
+Print
+n
+integers
+p1,p2,…,pn
+— the elements of the restored permutation. We can show that the answer is always unique.
+Examples
+input
+Copy
+3
+0 0 0
+output
+Copy
+3 2 1
+input
+Copy
+2
+0 1
+output
+Copy
+1 2
+input
+Copy
+5
+0 1 1 1 10
+output
+Copy
+1 4 3 2 5
+Note
+In the first example for each
+i
+there is no index
+j
+satisfying both conditions, hence
+si
+are always
+0
+.
+In the second example for
+i=2
+it happens that
+j=1
+satisfies the conditions, so
+s2=p1
+.
+In the third example for
+i=2,3,4
+only
+j=1
+satisfies the conditions, so
+s2=s3=s4=1
+. For
+i=5
+all
+j=1,2,3,4
+are possible, so
+s5=p1+p2+p3+p4=10
+.

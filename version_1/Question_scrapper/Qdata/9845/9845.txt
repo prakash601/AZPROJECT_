@@ -1,0 +1,215 @@
+We start with a permutation
+a1,a2,…,an
+and with an empty array
+b
+. We apply the following operation
+k
+times.
+On the
+i
+-th iteration, we select an index
+ti
+(
+1≤ti≤n−i+1
+), remove
+ati
+from the array, and append one of the numbers
+ati−1
+or
+ati+1
+(if
+ti−1
+or
+ti+1
+are within the array bounds) to the right end of the array
+b
+. Then we move elements
+ati+1,…,an
+to the left in order to fill in the empty space.
+You are given the initial permutation
+a1,a2,…,an
+and the resulting array
+b1,b2,…,bk
+. All elements of an array
+b
+are distinct. Calculate the number of possible sequences of indices
+t1,t2,…,tk
+modulo
+998244353
+.
+Input
+Each test contains multiple test cases. The first line contains an integer
+t
+(
+1≤t≤100000
+), denoting the number of test cases, followed by a description of the test cases.
+The first line of each test case contains two integers
+n,k
+(
+1≤k<n≤200000
+): sizes of arrays
+a
+and
+b
+.
+The second line of each test case contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤n
+): elements of
+a
+. All elements of
+a
+are distinct.
+The third line of each test case contains
+k
+integers
+b1,b2,…,bk
+(
+1≤bi≤n
+): elements of
+b
+. All elements of
+b
+are distinct.
+The sum of all
+n
+among all test cases is guaranteed to not exceed
+200000
+.
+Output
+For each test case print one integer: the number of possible sequences modulo
+998244353
+.
+Example
+input
+Copy
+3
+5 3
+1 2 3 4 5
+3 2 5
+4 3
+4 3 2 1
+4 3 1
+7 4
+1 4 7 3 6 2 5
+3 2 4 5
+output
+Copy
+2
+0
+4
+Note
+Let's denote as
+a1a2…ai
+ai+1
+_
+…an→a1a2…ai−1ai+1…an−1
+an operation over an element with index
+i
+: removal of element
+ai
+from array
+a
+and appending element
+ai+1
+to array
+b
+.
+In the first example test, the following two options can be used to produce the given array
+b
+:
+12
+3
+_
+45→1
+2
+_
+35→12
+5
+_
+→12
+;
+(t1,t2,t3)=(4,3,2)
+;
+12
+3
+_
+45→1
+2
+_
+35→23
+5
+_
+→15
+;
+(t1,t2,t3)=(4,1,2)
+.
+In the second example test, it is impossible to achieve the given array no matter the operations used. That's because, on the first application, we removed the element next to
+4
+, namely number
+3
+, which means that it couldn't be added to array
+b
+on the second step.
+In the third example test, there are four options to achieve the given array
+b
+:
+147
+3
+_
+625→1436
+2
+_
+5→1
+4
+_
+325→432
+5
+_
+→435
+;
+147
+3
+_
+625→1436
+2
+_
+5→1
+4
+_
+325→142
+5
+_
+→145
+;
+147
+3
+_
+625→1473
+2
+_
+5→1
+4
+_
+725→472
+5
+_
+→475
+;
+147
+3
+_
+625→1473
+2
+_
+5→1
+4
+_
+725→142
+5
+_
+→145
+;

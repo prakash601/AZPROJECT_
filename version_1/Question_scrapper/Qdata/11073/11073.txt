@@ -1,0 +1,60 @@
+You are given an array
+a1,a2,…,an
+.
+In one operation you can choose two elements
+ai
+and
+aj
+(
+i≠j
+) and decrease each of them by one.
+You need to check whether it is possible to make all the elements equal to zero or not.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤105
+) — the size of the array.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤109
+) — the elements of the array.
+Output
+Print "YES" if it is possible to make all elements zero, otherwise print "NO".
+Examples
+input
+Copy
+4
+1 1 2 2
+output
+Copy
+YES
+input
+Copy
+6
+1 2 3 4 5 6
+output
+Copy
+NO
+Note
+In the first example, you can make all elements equal to zero in
+3
+operations:
+Decrease
+a1
+and
+a2
+,
+Decrease
+a3
+and
+a4
+,
+Decrease
+a3
+and
+a4
+In the second example, one can show that it is impossible to make all elements equal to zero.

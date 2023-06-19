@@ -1,0 +1,11 @@
+Input
+The first line contains a string
+S
+.
+The second line contains an integer
+X
+.
+Constraints
+|S|=3
+0≤X≤109
+The input is guaranteed to be valid.

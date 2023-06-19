@@ -1,0 +1,97 @@
+You are given
+n
+segments on the coordinate axis. The
+i
+-th segment is
+[li,ri]
+. Let's denote the set of all integer points belonging to the
+i
+-th segment as
+Si
+.
+Let
+A∪B
+be the union of two sets
+A
+and
+B
+,
+A∩B
+be the intersection of two sets
+A
+and
+B
+, and
+A⊕B
+be the symmetric difference of
+A
+and
+B
+(a set which contains all elements of
+A
+and all elements of
+B
+, except for the ones that belong to both sets).
+Let
+[op1,op2,…,opn−1]
+be an array where each element is either
+∪
+,
+⊕
+, or
+∩
+. Over all
+3n−1
+ways to choose this array, calculate the sum of the following values:
+|(((S1 op1 S2) op2 S3) op3 S4) … opn−1 Sn|
+In this expression,
+|S|
+denotes the size of the set
+S
+.
+Input
+The first line contains one integer
+n
+(
+2≤n≤3⋅105
+).
+Then,
+n
+lines follow. The
+i
+-th of them contains two integers
+li
+and
+ri
+(
+0≤li≤ri≤3⋅105
+).
+Output
+Print one integer — the sum of
+|(((S1 op1 S2) op2 S3) op3 S4) … opn−1 Sn|
+over all possible ways to choose
+[op1,op2,…,opn−1]
+. Since the answer can be huge, print it modulo
+998244353
+.
+Examples
+input
+Copy
+4
+3 5
+4 8
+2 2
+1 9
+output
+Copy
+162
+input
+Copy
+4
+1 9
+3 5
+4 8
+2 2
+output
+Copy
+102

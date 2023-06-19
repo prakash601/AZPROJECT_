@@ -1,0 +1,93 @@
+You are given
+n
+points with integer coordinates on a coordinate axis
+OX
+. The coordinate of the
+i
+-th point is
+xi
+. All points' coordinates are distinct and given in strictly increasing order.
+For each point
+i
+, you can do the following operation no more than once: take this point and move it by
+1
+to the left or to the right (i..e., you can change its coordinate
+xi
+to
+xi−1
+or to
+xi+1
+). In other words, for each point, you choose (separately) its new coordinate. For the
+i
+-th point, it can be either
+xi−1
+,
+xi
+or
+xi+1
+.
+Your task is to determine if you can move some points as described above in such a way that the new set of points forms a consecutive segment of integers, i. e. for some integer
+l
+the coordinates of points should be equal to
+l,l+1,…,l+n−1
+.
+Note that the resulting points should have distinct coordinates.
+You have to answer
+t
+independent test cases.
+Input
+The first line of the input contains one integer
+t
+(
+1≤t≤2⋅104
+) — the number of test cases. Then
+t
+test cases follow.
+The first line of the test case contains one integer
+n
+(
+1≤n≤2⋅105
+) — the number of points in the set
+x
+.
+The second line of the test case contains
+n
+integers
+x1<x2<…<xn
+(
+1≤xi≤106
+), where
+xi
+is the coordinate of the
+i
+-th point.
+It is guaranteed that the points are given in strictly increasing order (this also means that all coordinates are distinct). It is also guaranteed that the sum of
+n
+does not exceed
+2⋅105
+(
+∑n≤2⋅105
+).
+Output
+For each test case, print the answer — if the set of points from the test case can be moved to form a consecutive segment of integers, print YES, otherwise print NO.
+Example
+input
+Copy
+5
+2
+1 4
+3
+1 2 3
+4
+1 2 3 7
+1
+1000000
+3
+2 5 6
+output
+Copy
+YES
+YES
+NO
+YES
+YES

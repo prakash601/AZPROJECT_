@@ -1,0 +1,18 @@
+You are given a string. Reverse its characters.
+Input
+The only line of input contains a string between 1 and 100 characters long. Each character of the string has ASCII-code between 33 (exclamation mark) and 126 (tilde), inclusive.
+Output
+Output the characters of this string in reverse order.
+Examples
+input
+Copy
+secrofedoc
+output
+Copy
+codeforces
+input
+Copy
+!ssalg-gnikool5
+output
+Copy
+5looking-glass!

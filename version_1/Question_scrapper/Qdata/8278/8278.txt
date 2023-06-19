@@ -1,0 +1,116 @@
+You are given an array
+a
+with
+n
+non-negative integers. You can apply the following operation on it.
+Choose two indices
+l
+and
+r
+(
+1≤l<r≤n
+).
+If
+al+ar
+is odd, do
+ar:=al
+. If
+al+ar
+is even, do
+al:=ar
+.
+Find any sequence of at most
+n
+operations that makes
+a
+non-decreasing. It can be proven that it is always possible. Note that you do not have to minimize the number of operations.
+An array
+a1,a2,…,an
+is non-decreasing if and only if
+a1≤a2≤…≤an
+.
+Input
+The first line contains one integer
+t
+(
+1≤t≤105
+) — the number of test cases.
+Each test case consists of two lines. The first line of each test case contains one integer
+n
+(
+1≤n≤105
+) — the length of the array.
+The second line of each test case contains
+n
+integers
+a1,a2,…,an
+(
+0≤ai≤109
+)  — the array itself.
+It is guaranteed that the sum of
+n
+over all test cases doesn't exceed
+105
+.
+Output
+For each test case, print one integer
+m
+(
+0≤m≤n
+), the number of operations, in the first line.
+Then print
+m
+lines. Each line must contain two integers
+li,ri
+, which are the indices you chose in the
+i
+-th operation (
+1≤li<ri≤n
+).
+If there are multiple solutions, print any of them.
+Example
+input
+Copy
+3
+2
+7 8
+5
+1 1000000000 3 0 5
+1
+0
+output
+Copy
+0
+2
+3 4
+1 2
+0
+Note
+In the second test case,
+a
+changes like this:
+Select indices
+3
+and
+4
+.
+a3+a4=3
+is odd, so do
+a4:=a3
+.
+a=[1,1000000000,3,3,5]
+now.
+Select indices
+1
+and
+2
+.
+a1+a2=1000000001
+is odd, so do
+a2:=a1
+.
+a=[1,1,3,3,5]
+now, and it is non-decreasing.
+In the first and third test cases,
+a
+is already non-decreasing.

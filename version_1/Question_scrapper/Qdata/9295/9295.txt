@@ -1,0 +1,140 @@
+A sequence of non-negative integers
+a1,a2,…,an
+is called growing if for all
+i
+from
+1
+to
+n−1
+all ones (of binary representation) in
+ai
+are in the places of ones (of binary representation) in
+ai+1
+(in other words,
+ai&ai+1=ai
+, where
+&
+denotes bitwise AND). If
+n=1
+then the sequence is considered growing as well.
+For example, the following four sequences are growing:
+[2,3,15,175]
+— in binary it's
+[102,112,11112,101011112]
+;
+[5]
+— in binary it's
+[1012]
+;
+[1,3,7,15]
+— in binary it's
+[12,112,1112,11112]
+;
+[0,0,0]
+— in binary it's
+[02,02,02]
+.
+The following three sequences are non-growing:
+[3,4,5]
+— in binary it's
+[112,1002,1012]
+;
+[5,4,3]
+— in binary it's
+[1012,1002,0112]
+;
+[1,2,4,8]
+— in binary it's
+[00012,00102,01002,10002]
+.
+Consider two sequences of non-negative integers
+x1,x2,…,xn
+and
+y1,y2,…,yn
+. Let's call this pair of sequences co-growing if the sequence
+x1⊕y1,x2⊕y2,…,xn⊕yn
+is growing where
+⊕
+denotes bitwise XOR.
+You are given a sequence of integers
+x1,x2,…,xn
+. Find the lexicographically minimal sequence
+y1,y2,…,yn
+such that sequences
+xi
+and
+yi
+are co-growing.
+The sequence
+a1,a2,…,an
+is lexicographically smaller than the sequence
+b1,b2,…,bn
+if there exists
+1≤k≤n
+such that
+ai=bi
+for any
+1≤i<k
+but
+ak<bk
+.
+Input
+The first line contains an integer
+t
+(
+1≤t≤104
+). Then
+t
+test cases follow.
+The first line of each test case contains an integer
+n
+(
+1≤n≤2⋅105
+) — length of the sequence
+xi
+.
+The second line contains
+n
+integers
+x1,x2,…,xn
+(
+0≤xi<230
+) — elements of the sequence
+xi
+.
+It is guaranteed that the sum of
+n
+overall all test cases doesn't exceed
+2⋅105
+.
+Output
+For each test case, print
+n
+integers
+y1,y2,…,yn
+(
+0≤yi<230
+) — lexicographically minimal sequence such that such that it's co-growing with given sequence
+xi
+.
+Example
+input
+Copy
+5
+4
+1 3 7 15
+4
+1 2 4 8
+5
+1 2 3 4 5
+4
+11 13 15 1
+1
+0
+output
+Copy
+0 0 0 0 
+0 1 3 7 
+0 1 0 3 2 
+0 2 0 14 
+0 

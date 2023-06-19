@@ -1,0 +1,187 @@
+Oh no, on the first exam Madoka got this hard problem:
+Given integer
+n
+and
+m
+pairs of integers (
+vi,ui
+). Also there is an array
+b1,b2,…,bn
+, initially filled with zeros.
+Then for each index
+i
+, where
+1≤i≤m
+, perform either
+bvi:=bvi−1
+and
+bui:=bui+1
+, or
+bvi:=bvi+1
+and
+bui:=bui−1
+. Note that exactly one of these operations should be performed for every
+i
+.
+Also there is an array
+s
+of length
+n
+consisting of
+0
+and
+1
+. And there is an array
+a1,a2,…,an
+, where it is guaranteed, that if
+si=0
+holds, then
+ai=0
+.
+Help Madoka and determine whenever it is possible to perform operations in such way that for every
+i
+, where
+si=1
+it holds that
+ai=bi
+. If it possible you should also provide Madoka with a way to perform operations.
+Input
+The first line contains two integers
+n
+and
+m
+(
+2≤n≤10000,1≤m≤10000
+) — the length of the array
+a
+and the number of pair of integers.
+The second line contains
+n
+integers
+s1,s2,…sn
+(
+0≤si≤1
+) — the elements of the array
+s
+.
+The third line contains
+n
+integers
+a1,a2,…,an
+(
+|ai|≤m
+) — the elements of the array
+a
+. It is guaranteed that if
+si=0
+holds, then
+ai=0
+.
+i
+-th of the following
+m
+lines contains two integers
+vi
+and
+ui
+(
+1≤vi,ui≤n,vi≠ui
+) — the indexes of the elements of the array
+b
+to which the operation is performed. It is also guaranteed that there are no two indices
+i
+and
+j
+, where
+1≤i<j≤m
+, such that
+(vi,ui)=(vj,uj)
+or
+(vi,ui)=(uj,vj)
+.
+Output
+In the first line print "YES" if it is possible to perform operations in the required way, and "NO" otherwise.
+You may print each letter in any case (for example, "YES", "Yes", "yes", "yEs" will all be recognized as positive answer).
+In case you printed "YES", print
+m
+pairs of integers. If for pair
+(vi,ui)
+we should perform
+bvi:=bvi−1
+and
+bui:=bui+1
+, print
+(vi,ui)
+. Otherwise print
+(ui,vi)
+. If there are multiple ways to get the correct answer, you can print any of them.
+You can print pairs in any order.
+Examples
+input
+Copy
+5 5
+1 1 1 1 1
+-2 0 2 1 -1
+1 5
+1 4
+3 5
+3 4
+4 5
+output
+Copy
+YES
+1 5
+1 4
+5 3
+4 3
+5 4
+input
+Copy
+5 5
+0 1 0 1 0
+0 1 0 0 0
+1 3
+2 3
+3 5
+3 4
+4 5
+output
+Copy
+YES
+3 1
+3 2
+5 3
+3 4
+4 5
+input
+Copy
+4 4
+1 1 1 1
+0 2 -2 2
+1 3
+1 4
+2 3
+2 4
+output
+Copy
+NO
+Note
+In the first example, the array
+b
+will change as follows:
+[0,0,0,0,0]→[−1,0,0,1,0]→[−2,0,0,1,1]→[−2,0,1,0,1]→[−2,0,2,0,0]→[−2,0,2,1,−1]
+.
+ai=bi
+for all indices
+i
+from
+1
+to
+5
+.
+In the second example, it is enough for us that
+b2=1
+at the end, since only
+s2=1
+.
+In the third example, the operations cannot be performed as required.

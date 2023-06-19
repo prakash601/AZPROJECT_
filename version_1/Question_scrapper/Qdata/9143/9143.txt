@@ -1,0 +1,107 @@
+Mr. Chanek wants to knit a batik, a traditional cloth from Indonesia. The cloth forms a grid
+a
+with size
+n×m
+. There are
+k
+colors, and each cell in the grid can be one of the
+k
+colors.
+Define a sub-rectangle as an ordered pair of two cells
+((x1,y1),(x2,y2))
+, denoting the top-left cell and bottom-right cell (inclusively) of a sub-rectangle in
+a
+. Two sub-rectangles
+((x1,y1),(x2,y2))
+and
+((x3,y3),(x4,y4))
+have the same pattern if and only if the following holds:
+they have the same width (
+x2−x1=x4−x3
+);
+they have the same height (
+y2−y1=y4−y3
+);
+for every pair
+(i,j)
+where
+0≤i≤x2−x1
+and
+0≤j≤y2−y1
+, the color of cells
+(x1+i,y1+j)
+and
+(x3+i,y3+j)
+are equal.
+Count the number of possible batik color combinations, such that the subrectangles
+((ax,ay),(ax+r−1,ay+c−1))
+and
+((bx,by),(bx+r−1,by+c−1))
+have the same pattern.
+Output the answer modulo
+109+7
+.
+Input
+The first line contains five integers
+n
+,
+m
+,
+k
+,
+r
+, and
+c
+(
+1≤n,m≤109
+,
+1≤k≤109
+,
+1≤r≤min(106,n)
+,
+1≤c≤min(106,m)
+) — the size of the batik, the number of colors, and size of the sub-rectangle.
+The second line contains four integers
+ax
+,
+ay
+,
+bx
+, and
+by
+(
+1≤ax,bx≤n
+,
+1≤ay,by≤m
+) — the top-left corners of the first and second sub-rectangle. Both of the sub-rectangles given are inside the grid (
+1≤ax+r−1
+,
+bx+r−1≤n
+,
+1≤ay+c−1
+,
+by+c−1≤m
+).
+Output
+Output an integer denoting the number of possible batik color combinations modulo
+109+7
+.
+Examples
+input
+Copy
+3 3 2 2 2
+1 1 2 2
+output
+Copy
+32
+input
+Copy
+4 5 170845 2 2
+1 4 3 1
+output
+Copy
+756680455
+Note
+The following are all
+32
+possible color combinations in the first example.

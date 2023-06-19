@@ -1,0 +1,52 @@
+It is the easy version of the problem. The only difference is that in this version
+k=3
+.
+You are given a positive integer
+n
+. Find
+k
+positive integers
+a1,a2,…,ak
+, such that:
+a1+a2+…+ak=n
+LCM(a1,a2,…,ak)≤
+n
+2
+Here
+LCM
+is the least common multiple of numbers
+a1,a2,…,ak
+.
+We can show that for given constraints the answer always exists.
+Input
+The first line contains a single integer
+t
+(1≤t≤104)
+ — the number of test cases.
+The only line of each test case contains two integers
+n
+,
+k
+(
+3≤n≤109
+,
+k=3
+).
+Output
+For each test case print
+k
+positive integers
+a1,a2,…,ak
+, for which all conditions are satisfied.
+Example
+input
+Copy
+3
+3 3
+8 3
+14 3
+output
+Copy
+1 1 1
+4 2 2
+2 6 6

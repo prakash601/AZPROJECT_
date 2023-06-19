@@ -1,0 +1,22 @@
+You are given a string S of even length s1..s2n . Perform the following manipulations:
+divide it into two halves s1..sn and sn + 1..s2n
+reverse each of them sn..s1 and s2n..sn + 1
+concatenate the resulting strings into sn..s1s2n..sn + 1
+Output the result of these manipulations.
+Input
+The only line of the input contains a string of lowercase Latin letters. The length of the string is between 2 and 20, inclusive, and it is even.
+Output
+Output the string which is the result of the described manipulations.
+Examples
+input
+Copy
+codeforces
+output
+Copy
+fedocsecro
+input
+Copy
+qwertyasdfgh
+output
+Copy
+ytrewqhgfdsa

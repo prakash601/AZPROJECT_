@@ -1,0 +1,149 @@
+We are given a rooted tree consisting of
+n
+vertices numbered from
+1
+to
+n
+. The root of the tree is the vertex
+1
+and the parent of the vertex
+v
+is
+pv
+.
+There is a number written on each vertex, initially all numbers are equal to
+0
+. Let's denote the number written on the vertex
+v
+as
+av
+.
+For each
+v
+, we want
+av
+to be between
+lv
+and
+rv
+(lv≤av≤rv)
+.
+In a single operation we do the following:
+Choose some vertex
+v
+. Let
+b1,b2,…,bk
+be vertices on the path from the vertex
+1
+to vertex
+v
+(meaning
+b1=1
+,
+bk=v
+and
+bi=pbi+1
+).
+Choose a non-decreasing array
+c
+of length
+k
+of nonnegative integers:
+0≤c1≤c2≤…≤ck
+.
+For each
+i
+(1≤i≤k)
+, increase
+abi
+by
+ci
+.
+What's the minimum number of operations needed to achieve our goal?
+Input
+The first line contains an integer
+t
+(1≤t≤1000)
+ — the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(2≤n≤2⋅105)
+ — the number of the vertices in the tree.
+The second line of each test case contains
+n−1
+integers,
+p2,p3,…,pn
+(1≤pi<i)
+, where
+pi
+denotes the parent of the vertex
+i
+.
+The
+i
+-th of the following
+n
+lines contains two integers
+li
+and
+ri
+(1≤li≤ri≤109)
+.
+It is guaranteed that the sum of
+n
+over all test cases doesn't exceed
+2⋅105
+.
+Output
+For each test case output the minimum number of operations needed.
+Example
+input
+Copy
+4
+2
+1
+1 5
+2 9
+3
+1 1
+4 5
+2 4
+6 10
+4
+1 2 1
+6 9
+5 6
+4 5
+2 4
+5
+1 2 3 4
+5 5
+4 4
+3 3
+2 2
+1 1
+output
+Copy
+1
+2
+2
+5
+Note
+In the first test case, we can achieve the goal with a single operation: choose
+v=2
+and
+c=[1,2]
+, resulting in
+a1=1,a2=2
+.
+In the second test case, we can achieve the goal with two operations: first, choose
+v=2
+and
+c=[3,3]
+, resulting in
+a1=3,a2=3,a3=0
+. Then, choose
+v=3,c=[2,7]
+, resulting in
+a1=5,a2=3,a3=7
+.

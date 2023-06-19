@@ -1,0 +1,18 @@
+Hexagonal numbers are figurate numbers which can be calculated using the formula hn = 2n2 - n. You are given n; calculate n-th hexagonal number.
+Input
+The only line of input contains an integer n (1 ≤ n ≤ 100).
+Output
+Output the n-th hexagonal number.
+Examples
+input
+Copy
+3
+output
+Copy
+15
+input
+Copy
+6
+output
+Copy
+66

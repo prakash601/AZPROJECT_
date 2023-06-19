@@ -1,0 +1,105 @@
+The string
+t1t2…tk
+is good if each letter of this string belongs to at least one palindrome of length greater than 1.
+A palindrome is a string that reads the same backward as forward. For example, the strings A, BAB, ABBA, BAABBBAAB are palindromes, but the strings AB, ABBBAA, BBBA are not.
+Here are some examples of good strings:
+t
+= AABBB (letters
+t1
+,
+t2
+belong to palindrome
+t1…t2
+and letters
+t3
+,
+t4
+,
+t5
+belong to palindrome
+t3…t5
+);
+t
+= ABAA (letters
+t1
+,
+t2
+,
+t3
+belong to palindrome
+t1…t3
+and letter
+t4
+belongs to palindrome
+t3…t4
+);
+t
+= AAAAA (all letters belong to palindrome
+t1…t5
+);
+You are given a string
+s
+of length
+n
+, consisting of only letters A and B.
+You have to calculate the number of good substrings of string
+s
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤3⋅105
+) — the length of the string
+s
+.
+The second line contains the string
+s
+, consisting of letters A and B.
+Output
+Print one integer — the number of good substrings of string
+s
+.
+Examples
+input
+Copy
+5
+AABBB
+output
+Copy
+6
+input
+Copy
+3
+AAA
+output
+Copy
+3
+input
+Copy
+7
+AAABABB
+output
+Copy
+15
+Note
+In the first test case there are six good substrings:
+s1…s2
+,
+s1…s4
+,
+s1…s5
+,
+s3…s4
+,
+s3…s5
+and
+s4…s5
+.
+In the second test case there are three good substrings:
+s1…s2
+,
+s1…s3
+and
+s2…s3
+.

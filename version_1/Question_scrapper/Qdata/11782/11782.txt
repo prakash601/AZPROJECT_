@@ -1,0 +1,94 @@
+You are given a rooted tree on
+n
+vertices, its root is the vertex number
+1
+. The
+i
+-th vertex contains a number
+wi
+. Split it into the minimum possible number of vertical paths in such a way that each path contains no more than
+L
+vertices and the sum of integers
+wi
+on each path does not exceed
+S
+. Each vertex should belong to exactly one path.
+A vertical path is a sequence of vertices
+v1,v2,…,vk
+where
+vi
+(
+i≥2
+) is the parent of
+vi−1
+.
+Input
+The first line contains three integers
+n
+,
+L
+,
+S
+(
+1≤n≤105
+,
+1≤L≤105
+,
+1≤S≤1018
+) — the number of vertices, the maximum number of vertices in one path and the maximum sum in one path.
+The second line contains
+n
+integers
+w1,w2,…,wn
+(
+1≤wi≤109
+) — the numbers in the vertices of the tree.
+The third line contains
+n−1
+integers
+p2,…,pn
+(
+1≤pi<i
+), where
+pi
+is the parent of the
+i
+-th vertex in the tree.
+Output
+Output one number  — the minimum number of vertical paths. If it is impossible to split the tree, output
+−1
+.
+Examples
+input
+Copy
+3 1 3
+1 2 3
+1 1
+output
+Copy
+3
+input
+Copy
+3 3 6
+1 2 3
+1 1
+output
+Copy
+2
+input
+Copy
+1 1 10000
+10001
+output
+Copy
+-1
+Note
+In the first sample the tree is split into
+{1}, {2}, {3}
+.
+In the second sample the tree is split into
+{1, 2}, {3}
+or
+{1, 3}, {2}
+.
+In the third sample it is impossible to split the tree.

@@ -1,0 +1,23 @@
+Input
+The input contains a single integer a (1 ≤ a ≤ 40).
+Output
+Output a single string.
+Examples
+input
+Copy
+2
+output
+Copy
+Adams
+input
+Copy
+8
+output
+Copy
+Van Buren
+input
+Copy
+29
+output
+Copy
+Harding

@@ -1,0 +1,20 @@
+You are given three positive integers x, y, n. Your task is to find the nearest fraction to fraction whose denominator is no more than n.
+Formally, you should find such pair of integers a, b (1 ≤ b ≤ n; 0 ≤ a) that the value is as minimal as possible.
+If there are multiple "nearest" fractions, choose the one with the minimum denominator. If there are multiple "nearest" fractions with the minimum denominator, choose the one with the minimum numerator.
+Input
+A single line contains three integers x, y, n (1 ≤ x, y, n ≤ 105).
+Output
+Print the required fraction in the format "a/b" (without quotes).
+Examples
+input
+Copy
+3 7 6
+output
+Copy
+2/5
+input
+Copy
+7 2 4
+output
+Copy
+7/2

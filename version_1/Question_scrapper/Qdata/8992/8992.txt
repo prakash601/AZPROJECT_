@@ -1,0 +1,122 @@
+While performing complex market analysis William encountered the following problem:
+For a given array
+a
+of size
+n
+and a natural number
+e
+, calculate the number of pairs of natural numbers
+(i,k)
+which satisfy the following conditions:
+1≤i,k
+i+e⋅k≤n
+.
+Product
+ai⋅ai+e⋅ai+2⋅e⋅…⋅ai+k⋅e
+is a prime number.
+A prime number (or a prime) is a natural number greater than 1 that is not a product of two smaller natural numbers.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤10000
+). Description of the test cases follows.
+The first line of each test case contains two integers
+n
+and
+e
+(1≤e≤n≤2⋅105)
+, the number of items in the array and number
+e
+, respectively.
+The second line contains
+n
+integers
+a1,a2,…,an
+(1≤ai≤106)
+, the contents of the array.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅105
+.
+Output
+For each test case output the answer in the following format:
+Output one line containing the number of pairs of numbers
+(i,k)
+which satisfy the conditions.
+Example
+input
+Copy
+6
+7 3
+10 2 1 3 1 19 3
+3 2
+1 13 1
+9 3
+2 4 2 1 1 1 1 4 2
+3 1
+1 1 1
+4 1
+1 2 1 1
+2 2
+1 2
+output
+Copy
+2
+0
+4
+0
+5
+0
+Note
+In the first example test case two pairs satisfy the conditions:
+i=2,k=1
+, for which the product is:
+a2⋅a5=2
+which is a prime number.
+i=3,k=1
+, for which the product is:
+a3⋅a6=19
+which is a prime number.
+In the second example test case there are no pairs that satisfy the conditions.
+In the third example test case four pairs satisfy the conditions:
+i=1,k=1
+, for which the product is:
+a1⋅a4=2
+which is a prime number.
+i=1,k=2
+, for which the product is:
+a1⋅a4⋅a7=2
+which is a prime number.
+i=3,k=1
+, for which the product is:
+a3⋅a6=2
+which is a prime number.
+i=6,k=1
+, for which the product is:
+a6⋅a9=2
+which is a prime number.
+In the fourth example test case there are no pairs that satisfy the conditions.
+In the fifth example test case five pairs satisfy the conditions:
+i=1,k=1
+, for which the product is:
+a1⋅a2=2
+which is a prime number.
+i=1,k=2
+, for which the product is:
+a1⋅a2⋅a3=2
+which is a prime number.
+i=1,k=3
+, for which the product is:
+a1⋅a2⋅a3⋅a4=2
+which is a prime number.
+i=2,k=1
+, for which the product is:
+a2⋅a3=2
+which is a prime number.
+i=2,k=2
+, for which the product is:
+a2⋅a3⋅a4=2
+which is a prime number.
+In the sixth example test case there are no pairs that satisfy the conditions.

@@ -1,0 +1,16 @@
+You won't find this sequence on OEIS.
+Input
+One integer
+r
+(
+−45≤r≤2999
+).
+Output
+One integer.
+Example
+input
+Copy
+2999
+output
+Copy
+3000

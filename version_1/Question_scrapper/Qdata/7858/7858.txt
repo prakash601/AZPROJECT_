@@ -1,0 +1,127 @@
+Dasha, an excellent student, is studying at the best mathematical lyceum in the country. Recently, a mysterious stranger brought
+𝑛
+words consisting of small latin letters
+𝑠
+1
+,
+𝑠
+2
+,…,
+𝑠
+𝑛
+to the lyceum. Since that day, Dasha has been tormented by nightmares.
+Consider some pair of integers
+⟨𝑖,𝑗⟩
+(
+1≤𝑖≤𝑗≤𝑛
+). A nightmare is a string for which it is true:
+It is obtained by concatenation
+𝑠
+𝑖
+𝑠
+𝑗
+;
+Its length is odd;
+The number of different letters in it is exactly
+25
+;
+The number of occurrences of each letter that is in the word is odd.
+For example, if
+𝑠
+𝑖
+=
+"abcdefg" and
+𝑠
+𝑗
+=
+"ijklmnopqrstuvwxyz", the pair
+⟨𝑖,𝑗⟩
+creates a nightmare.
+Dasha will stop having nightmares if she counts their number. There are too many nightmares, so Dasha needs your help. Count the number of different nightmares.
+Nightmares are called different if the corresponding pairs
+⟨𝑖,𝑗⟩
+are different. The pairs
+⟨
+𝑖
+1
+,
+𝑗
+1
+⟩
+and
+⟨
+𝑖
+2
+,
+𝑗
+2
+⟩
+are called different if
+𝑖
+1
+≠
+𝑖
+2
+or
+𝑗
+1
+≠
+𝑗
+2
+.
+Input
+The first line contains a single integer
+𝑛
+(
+1≤𝑛≤2⋅
+10
+5
+) — the number of words.
+The following
+𝑛
+lines contain the words
+𝑠
+1
+,
+𝑠
+2
+,…,
+𝑠
+𝑛
+, consisting of small latin letters.
+It is guaranteed that the total length of words does not exceed
+5⋅
+10
+6
+.
+Output
+Print a single integer — the number of different nightmares.
+Example
+input
+Copy
+10
+ftl
+abcdefghijklmnopqrstuvwxy
+abcdeffghijkllmnopqrsttuvwxy
+ffftl
+aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyy
+thedevid
+bcdefghhiiiijklmnopqrsuwxyz
+gorillasilverback
+abcdefg
+ijklmnopqrstuvwxyz
+output
+Copy
+5
+Note
+In the first test, nightmares are created by pairs
+⟨1,3⟩
+,
+⟨2,5⟩
+,
+⟨3,4⟩
+,
+⟨6,7⟩
+,
+⟨9,10⟩
+.

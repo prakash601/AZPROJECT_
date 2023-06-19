@@ -1,0 +1,88 @@
+You are given two arrays
+a0,a1,…,an−1
+and
+b0,b1,…,bm−1
+, and an integer
+c
+.
+Compute the following sum:
+n−1
+∑
+i=0
+m−1
+∑
+j=0
+aibjci2j3
+Since it's value can be really large, print it modulo
+490019
+.
+Input
+First line contains three integers
+n
+,
+m
+and
+c
+(
+1≤n,m≤100000
+,
+1≤c<490019
+).
+Next line contains exactly
+n
+integers
+ai
+and defines the array
+a
+(
+0≤ai≤1000
+).
+Last line contains exactly
+m
+integers
+bi
+and defines the array
+b
+(
+0≤bi≤1000
+).
+Output
+Print one integer — value of the sum modulo
+490019
+.
+Examples
+input
+Copy
+2 2 3
+0 1
+0 1
+output
+Copy
+3
+input
+Copy
+3 4 1
+1 1 1
+1 1 1 1
+output
+Copy
+12
+input
+Copy
+2 3 3
+1 2
+3 4 5
+output
+Copy
+65652
+Note
+In the first example, the only non-zero summand corresponds to
+i=1
+,
+j=1
+and is equal to
+1⋅1⋅31=3
+.
+In the second example, all summands are equal to
+1
+.

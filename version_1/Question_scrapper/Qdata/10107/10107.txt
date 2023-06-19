@@ -1,0 +1,162 @@
+You are given two lists of segments
+[al1,ar1],[al2,ar2],…,[aln,arn]
+and
+[bl1,br1],[bl2,br2],…,[bln,brn]
+.
+Initially, all segments
+[ali,ari]
+are equal to
+[l1,r1]
+and all segments
+[bli,bri]
+are equal to
+[l2,r2]
+.
+In one step, you can choose one segment (either from the first or from the second list) and extend it by
+1
+. In other words, suppose you've chosen segment
+[x,y]
+then you can transform it either into
+[x−1,y]
+or into
+[x,y+1]
+.
+Let's define a total intersection
+I
+as the sum of lengths of intersections of the corresponding pairs of segments, i.e.
+n
+∑
+i=1
+intersection_length([ali,ari],[bli,bri])
+. Empty intersection has length
+0
+and length of a segment
+[x,y]
+is equal to
+y−x
+.
+What is the minimum number of steps you need to make
+I
+greater or equal to
+k
+?
+Input
+The first line contains the single integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+The first line of each test case contains two integers
+n
+and
+k
+(
+1≤n≤2⋅105
+;
+1≤k≤109
+) — the length of lists and the minimum required total intersection.
+The second line of each test case contains two integers
+l1
+and
+r1
+(
+1≤l1≤r1≤109
+) — the segment all
+[ali,ari]
+are equal to initially.
+The third line of each test case contains two integers
+l2
+and
+r2
+(
+1≤l2≤r2≤109
+) — the segment all
+[bli,bri]
+are equal to initially.
+It's guaranteed that the sum of
+n
+doesn't exceed
+2⋅105
+.
+Output
+Print
+t
+integers — one per test case. For each test case, print the minimum number of step you need to make
+I
+greater or equal to
+k
+.
+Example
+input
+Copy
+3
+3 5
+1 2
+3 4
+2 1000000000
+1 1
+999999999 999999999
+10 3
+5 10
+7 8
+output
+Copy
+7
+2000000000
+0
+Note
+In the first test case, we can achieve total intersection
+5
+, for example, using next strategy:
+make
+[al1,ar1]
+from
+[1,2]
+to
+[1,4]
+in
+2
+steps;
+make
+[al2,ar2]
+from
+[1,2]
+to
+[1,3]
+in
+1
+step;
+make
+[bl1,br1]
+from
+[3,4]
+to
+[1,4]
+in
+2
+steps;
+make
+[bl2,br2]
+from
+[3,4]
+to
+[1,4]
+in
+2
+steps.
+In result,
+I=intersection_length([al1,ar1],[bl1,br1])+intersection_length([al2,ar2],[bl2,br2])++intersection_length([al3,ar3],[bl3,br3])=3+2+0=5
+In the second test case, we can make
+[al1,ar1]=[0,1000000000]
+in
+1000000000
+steps and
+[bl1,br1]=[0,1000000000]
+in
+1000000000
+steps.
+In the third test case, the total intersection
+I
+is already equal to
+10>3
+, so we don't need to do any steps.

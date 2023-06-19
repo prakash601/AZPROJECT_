@@ -1,0 +1,77 @@
+There is a square of size
+106×106
+on the coordinate plane with four points
+(0,0)
+,
+(0,106)
+,
+(106,0)
+, and
+(106,106)
+as its vertices.
+You are going to draw segments on the plane. All segments are either horizontal or vertical and intersect with at least one side of the square.
+Now you are wondering how many pieces this square divides into after drawing all segments. Write a program calculating the number of pieces of the square.
+Input
+The first line contains two integers
+n
+and
+m
+(
+0≤n,m≤105
+) — the number of horizontal segments and the number of vertical segments.
+The next
+n
+lines contain descriptions of the horizontal segments. The
+i
+-th line contains three integers
+yi
+,
+lxi
+and
+rxi
+(
+0<yi<106
+;
+0≤lxi<rxi≤106
+), which means the segment connects
+(lxi,yi)
+and
+(rxi,yi)
+.
+The next
+m
+lines contain descriptions of the vertical segments. The
+i
+-th line contains three integers
+xi
+,
+lyi
+and
+ryi
+(
+0<xi<106
+;
+0≤lyi<ryi≤106
+), which means the segment connects
+(xi,lyi)
+and
+(xi,ryi)
+.
+It's guaranteed that there are no two segments on the same line, and each segment intersects with at least one of square's sides.
+Output
+Print the number of pieces the square is divided into after drawing all the segments.
+Example
+input
+Copy
+3 3
+2 3 1000000
+4 0 4
+3 0 1000000
+4 0 1
+2 0 5
+3 1 1000000
+output
+Copy
+7
+Note
+The sample is like this:

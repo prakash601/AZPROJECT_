@@ -1,0 +1,13 @@
+We'll call a set of positive integers a beautiful if the following condition fulfills: for any prime p, if , then . In other words, if one number from the set is divisible by prime p, then at least half of numbers from the set is divisible by p.
+Your task is to find any beautiful set, where the number of elements is equal to k and each element doesn't exceed 2k2.
+Input
+The first line contains integer k (10 ≤ k ≤ 5000) that shows how many numbers the required beautiful set should have.
+Output
+In the first line print k space-separated integers that are a beautiful set. If there are multiple such sets, you are allowed to print any of them.
+Examples
+input
+Copy
+10
+output
+Copy
+16 18 24 27 36 48 54 72 108 144 

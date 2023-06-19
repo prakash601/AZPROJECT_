@@ -1,0 +1,117 @@
+Hossam gives you a sequence of integers
+a1,a2,…,an
+of length
+n
+. Moreover, he will give you
+q
+queries of type
+(l,r)
+. For each query, consider the elements
+al,al+1,…,ar
+. Hossam wants to know the smallest number in this sequence, such that it occurs in this sequence an odd number of times.
+You need to compute the answer for each query before process the next query.
+Input
+The first line of the input contains one integer
+n
+(
+1≤n≤2⋅105
+), the length of the sequence.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤109
+).
+The third line contains one integer
+q
+(
+1≤q≤2⋅105
+), the number of queries.
+Each of the next
+q
+lines contains two integers
+a
+and
+b
+(
+0≤a,b≤2⋅109
+), the numbers used to encode the queries.
+Let
+ansi
+be the answer on the
+i
+-th query, and
+ans0
+be zero. Then
+li=ai⊕ansi−1,
+ri=bi⊕ansi−1,
+where
+li,ri
+are parameters of the
+i
+-th query and
+⊕
+means the bitwise exclusive or operation. It is guaranteed that
+1≤l≤r≤n
+.
+Output
+For each query, print the smallest number that occurs an odd number of times on the given segment of the sequence.
+If there is no such number, print
+0
+.
+Examples
+input
+Copy
+5
+1 2 1 2 2
+6
+1 2
+0 2
+0 6
+0 5
+2 2
+3 7
+output
+Copy
+1
+2
+1
+0
+2
+2
+input
+Copy
+10
+51 43 69 48 23 52 48 76 19 55
+10
+1 1
+57 57
+54 62
+20 27
+56 56
+79 69
+16 21
+18 30
+25 25
+62 61
+output
+Copy
+51
+55
+19
+48
+76
+19
+23
+19
+55
+19
+Note
+In the example,
+l1=1,r1=2,
+l2=1,r2=3,
+l3=2,r3=4,
+l4=1,r4=4,
+l5=2,r5=2,
+l6=1,r6=5.

@@ -1,0 +1,141 @@
+Little Sasha has two friends, whom he wants to please with gifts on the Eighth of March. To do this, he went to the largest shopping center in the city.
+There are
+𝑛
+departments in the mall, each of which has exactly two stores. For convenience, we number the departments with integers from
+1
+to
+𝑛
+. It is known that gifts in the first store of the
+𝑖
+department cost
+𝑎
+𝑖
+rubles, and in the second store of the
+𝑖
+department —
+𝑏
+𝑖
+rubles.
+Entering the mall, Sasha will visit each of the
+𝑛
+departments of the mall, and in each department, he will enter exactly one store. When Sasha gets into the
+𝑖
+-th department, he will perform exactly one of two actions:
+Buy a gift for the first friend, spending
+𝑎
+𝑖
+rubles on it.
+Buy a gift for the second friend, spending
+𝑏
+𝑖
+rubles on it.
+Sasha is going to buy at least one gift for each friend. Moreover, he wants to pick up gifts in such a way that the price difference of the most expensive gifts bought for friends is as small as possible so that no one is offended.
+More formally: let
+𝑚
+1
+  be the maximum price of a gift bought to the first friend, and
+𝑚
+2
+  be the maximum price of a gift bought to the second friend. Sasha wants to choose gifts in such a way as to minimize the value of
+|
+𝑚
+1
+−
+𝑚
+2
+|
+.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+𝑡
+(
+1≤𝑡≤1000
+). The description of the test cases follows.
+The first line of each test case contains a single integer
+𝑛
+(
+2≤𝑛≤500000
+) — the number of departments in the mall.
+Each of the following
+𝑛
+lines of each test case contains two integers
+𝑎
+𝑖
+and
+𝑏
+𝑖
+(
+0≤
+𝑎
+𝑖
+,
+𝑏
+𝑖
+≤
+10
+9
+) — the prices of gifts in the first and second store of the
+𝑖
+department, respectively.
+It is guaranteed that the sum of
+𝑛
+over all test cases does not exceed
+500000
+.
+Output
+Print one integer — the minimum price difference of the most expensive gifts bought to friends.
+Example
+input
+Copy
+2
+2
+1 2
+2 1
+5
+1 5
+2 7
+3 3
+4 10
+2 5
+output
+Copy
+0
+1
+Note
+In the first test case, Sasha has two possible options: buy a gift for the first friend in the first department, and the second friend  — in the second department, or vice versa. In the first case,
+𝑚
+1
+=
+𝑚
+2
+=1
+, and in the second case —
+𝑚
+1
+=
+𝑚
+2
+=2
+. In both cases, the answer is
+0
+. In the second test case, you can buy gifts for the first friend in the
+2
+,
+4
+and
+5
+departments, and for the second friend  — in the
+1
+and
+3
+departments.So
+𝑚
+1
+=max(2,4,2)=4
+,
+𝑚
+2
+=max(5,3)=5
+. The answer is
+|4−5|=1
+.

@@ -1,0 +1,131 @@
+You are given a permutation
+𝑝
+1
+,
+𝑝
+2
+,…,
+𝑝
+𝑛
+. A permutation of length
+𝑛
+is a sequence such that each integer between
+1
+and
+𝑛
+occurs exactly once in the sequence.
+Find the number of pairs of indices
+(𝑙,𝑟)
+(
+1≤𝑙≤𝑟≤𝑛
+) such that the value of the median of
+𝑝
+𝑙
+,
+𝑝
+𝑙+1
+,…,
+𝑝
+𝑟
+is exactly the given number
+𝑚
+.
+The median of a sequence is the value of the element which is in the middle of the sequence after sorting it in non-decreasing order. If the length of the sequence is even, the left of two middle elements is used.
+For example, if
+𝑎=[4,2,7,5]
+then its median is
+4
+since after sorting the sequence, it will look like
+[2,4,5,7]
+and the left of two middle elements is equal to
+4
+. The median of
+[7,1,2,9,6]
+equals
+6
+since after sorting, the value
+6
+will be in the middle of the sequence.
+Write a program to find the number of pairs of indices
+(𝑙,𝑟)
+(
+1≤𝑙≤𝑟≤𝑛
+) such that the value of the median of
+𝑝
+𝑙
+,
+𝑝
+𝑙+1
+,…,
+𝑝
+𝑟
+is exactly the given number
+𝑚
+.
+Input
+The first line contains integers
+𝑛
+and
+𝑚
+(
+1≤𝑛≤2⋅
+10
+5
+,
+1≤𝑚≤𝑛
+) — the length of the given sequence and the required value of the median.
+The second line contains a permutation
+𝑝
+1
+,
+𝑝
+2
+,…,
+𝑝
+𝑛
+(
+1≤
+𝑝
+𝑖
+≤𝑛
+). Each integer between
+1
+and
+𝑛
+occurs in
+𝑝
+exactly once.
+Output
+Print the required number.
+Examples
+input
+Copy
+5 4
+2 4 5 3 1
+output
+Copy
+4
+input
+Copy
+5 5
+1 2 3 4 5
+output
+Copy
+1
+input
+Copy
+15 8
+1 15 2 14 3 13 4 8 12 5 11 6 10 7 9
+output
+Copy
+48
+Note
+In the first example, the suitable pairs of indices are:
+(1,3)
+,
+(2,2)
+,
+(2,3)
+and
+(2,4)
+.

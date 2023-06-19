@@ -1,0 +1,79 @@
+You are given an undirected graph of
+N
+nodes and
+M
+edges,
+E1,E2,…EM
+.
+A connected graph is a cactus if each of it's edges belogs to at most one simple cycle. A graph is a desert if each of it's connected components is a cactus.
+Find the number of pairs
+(L,R)
+, (
+1≤L≤R≤M
+) such that, if we delete all the edges except for
+EL,EL+1,…ER
+, the graph is a desert.
+Input
+The first line contains two integers
+N
+and
+M
+(
+2≤N≤2.5×105
+,
+1≤M≤5×105
+). Each of the next
+M
+lines contains two integers. The
+i
+-th line describes the
+i
+-th edge. It contains integers
+Ui
+and
+Vi
+, the nodes connected by the
+i
+-th edge (
+Ei=(Ui,Vi)
+). It is guaranteed that
+1≤Ui,Vi≤N
+and
+Ui≠Vi
+.
+Output
+The output contains one integer number – the answer.
+Examples
+input
+Copy
+5 6
+1 2
+2 3
+3 4
+4 5
+5 1
+2 4
+output
+Copy
+20
+input
+Copy
+2 3
+1 2
+1 2
+1 2
+output
+Copy
+5
+Note
+In the second example: Graphs for pairs
+(1,1)
+,
+(2,2)
+and
+(3,3)
+are deserts because they don't have any cycles. Graphs for pairs
+(1,2)
+and
+(2,3)
+have one cycle of length 2 so they are deserts.

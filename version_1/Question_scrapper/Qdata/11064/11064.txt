@@ -1,0 +1,102 @@
+You are given a string
+t
+and
+n
+strings
+s1,s2,…,sn
+. All strings consist of lowercase Latin letters.
+Let
+f(t,s)
+be the number of occurences of string
+s
+in string
+t
+. For example,
+f(′aaabacaa′,′aa′)=3
+, and
+f(′ababa′,′aba′)=2
+.
+Calculate the value of
+n
+∑
+i=1
+n
+∑
+j=1
+f(t,si+sj)
+, where
+s+t
+is the concatenation of strings
+s
+and
+t
+. Note that if there are two pairs
+i1
+,
+j1
+and
+i2
+,
+j2
+such that
+si1+sj1=si2+sj2
+, you should include both
+f(t,si1+sj1)
+and
+f(t,si2+sj2)
+in answer.
+Input
+The first line contains string
+t
+(
+1≤|t|≤2⋅105
+).
+The second line contains integer
+n
+(
+1≤n≤2⋅105
+).
+Each of next
+n
+lines contains string
+si
+(
+1≤|si|≤2⋅105
+).
+It is guaranteed that
+n
+∑
+i=1
+|si|≤2⋅105
+. All strings consist of lowercase English letters.
+Output
+Print one integer — the value of
+n
+∑
+i=1
+n
+∑
+j=1
+f(t,si+sj)
+.
+Examples
+input
+Copy
+aaabacaa
+2
+a
+aa
+output
+Copy
+5
+input
+Copy
+aaabacaa
+4
+a
+a
+a
+b
+output
+Copy
+33

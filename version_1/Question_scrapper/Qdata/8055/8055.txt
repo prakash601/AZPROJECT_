@@ -1,0 +1,96 @@
+Hossam has
+𝑛
+trainees. He assigned a number
+𝑎
+𝑖
+for the
+𝑖
+-th trainee.
+A pair of the
+𝑖
+-th and
+𝑗
+-th (
+𝑖≠𝑗
+) trainees is called successful if there is an integer
+𝑥
+(
+𝑥≥2
+), such that
+𝑥
+divides
+𝑎
+𝑖
+, and
+𝑥
+divides
+𝑎
+𝑗
+.
+Hossam wants to know if there is a successful pair of trainees.
+Hossam is very tired now, so he asks you for your help!
+Input
+The input consists of multiple test cases. The first line contains a single integer
+𝑡
+(
+1≤𝑡≤
+10
+5
+), the number of test cases. A description of the test cases follows.
+The first line of each test case contains an integer number
+𝑛
+(
+2≤𝑛≤
+10
+5
+).
+The second line of each test case contains
+𝑛
+integers, the number of each trainee
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+(
+1≤
+𝑎
+𝑖
+≤
+10
+9
+).
+It is guaranteed that the sum of
+𝑛
+over all test cases does not exceed
+10
+5
+.
+Output
+Print the answer — "YES" (without quotes) if there is a successful pair of trainees and "NO" otherwise. You can print each letter in any case.
+Example
+input
+Copy
+2
+3
+32 48 7
+3
+14 5 9
+output
+Copy
+YES
+NO
+Note
+In the first example, the first trainee and the second trainee make up a successful pair:
+𝑎
+1
+=32,
+𝑎
+2
+=48
+, you can choose
+𝑥=4
+.

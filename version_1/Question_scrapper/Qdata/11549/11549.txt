@@ -1,0 +1,173 @@
+Lunar New Year is approaching, and Bob received a gift from his friend recently — a recursive sequence! He loves this sequence very much and wants to play with it.
+Let
+f1,f2,…,fi,…
+be an infinite sequence of positive integers. Bob knows that for
+i>k
+,
+fi
+can be obtained by the following recursive equation:
+fi=(f
+b1
+i−1
+⋅f
+b2
+i−2
+⋅⋯⋅f
+bk
+i−k
+)modp,
+which in short is
+fi=(
+k
+∏
+j=1
+f
+bj
+i−j
+)modp,
+where
+p=998244353
+(a widely-used prime),
+b1,b2,…,bk
+are known integer constants, and
+xmody
+denotes the remainder of
+x
+divided by
+y
+.
+Bob lost the values of
+f1,f2,…,fk
+, which is extremely troublesome – these are the basis of the sequence! Luckily, Bob remembers the first
+k−1
+elements of the sequence:
+f1=f2=…=fk−1=1
+and the
+n
+-th element:
+fn=m
+. Please find any possible value of
+fk
+. If no solution exists, just tell Bob that it is impossible to recover his favorite sequence, regardless of Bob's sadness.
+Input
+The first line contains a positive integer
+k
+(
+1≤k≤100
+), denoting the length of the sequence
+b1,b2,…,bk
+.
+The second line contains
+k
+positive integers
+b1,b2,…,bk
+(
+1≤bi<p
+).
+The third line contains two positive integers
+n
+and
+m
+(
+k<n≤109
+,
+1≤m<p
+), which implies
+fn=m
+.
+Output
+Output a possible value of
+fk
+, where
+fk
+is a positive integer satisfying
+1≤fk<p
+. If there are multiple answers, print any of them. If no such
+fk
+makes
+fn=m
+, output
+−1
+instead.
+It is easy to show that if there are some possible values of
+fk
+, there must be at least one satisfying
+1≤fk<p
+.
+Examples
+input
+Copy
+3
+2 3 5
+4 16
+output
+Copy
+4
+input
+Copy
+5
+4 7 1 5 6
+7 14187219
+output
+Copy
+6
+input
+Copy
+8
+2 3 5 6 1 7 9 10
+23333 1
+output
+Copy
+1
+input
+Copy
+1
+2
+88888 66666
+output
+Copy
+-1
+input
+Copy
+3
+998244352 998244352 998244352
+4 2
+output
+Copy
+-1
+input
+Copy
+10
+283 463 213 777 346 201 463 283 102 999
+2333333 6263423
+output
+Copy
+382480067
+Note
+In the first sample, we have
+f4=f
+2
+3
+⋅f
+3
+2
+⋅f
+5
+1
+. Therefore, applying
+f3=4
+, we have
+f4=16
+. Note that there can be multiple answers.
+In the third sample, applying
+f7=1
+makes
+f23333=1
+.
+In the fourth sample, no such
+f1
+makes
+f88888=66666
+. Therefore, we output
+−1
+instead.

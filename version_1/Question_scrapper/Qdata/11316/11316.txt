@@ -1,0 +1,79 @@
+You are given an array
+a
+consisting of
+n
+integers
+a1,a2,…,an
+.
+Your problem is to find such pair of indices
+i,j
+(
+1≤i<j≤n
+) that
+lcm(ai,aj)
+is minimum possible.
+lcm(x,y)
+is the least common multiple of
+x
+and
+y
+(minimum positive number such that both
+x
+and
+y
+are divisors of this number).
+Input
+The first line of the input contains one integer
+n
+(
+2≤n≤106
+) — the number of elements in
+a
+.
+The second line of the input contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤107
+), where
+ai
+is the
+i
+-th element of
+a
+.
+Output
+Print two integers
+i
+and
+j
+(
+1≤i<j≤n
+) such that the value of
+lcm(ai,aj)
+is minimum among all valid pairs
+i,j
+. If there are multiple answers, you can print any.
+Examples
+input
+Copy
+5
+2 4 8 3 6
+output
+Copy
+1 2
+input
+Copy
+5
+5 2 11 3 7
+output
+Copy
+2 4
+input
+Copy
+6
+2 5 10 1 10 2
+output
+Copy
+1 4

@@ -1,0 +1,276 @@
+Wow, what a big face!
+Kagura Mahiru
+Koxia and Mahiru are enjoying the Winter Festival. The streets of the Winter Festival can be represented as a
+𝑛×𝑛
+undirected grid graph. Formally, the set of vertices is
+{(𝑖,𝑗)|1≤𝑖,𝑗≤𝑛}
+and two vertices
+(
+𝑖
+1
+,
+𝑗
+1
+)
+and
+(
+𝑖
+2
+,
+𝑗
+2
+)
+are connected by an edge if and only if
+|
+𝑖
+1
+−
+𝑖
+2
+|+|
+𝑗
+1
+−
+𝑗
+2
+|=1
+.
+A network with size
+𝑛=3
+.
+Koxia and Mahiru are planning to visit The Winter Festival by traversing
+2𝑛
+routes. Although routes are not planned yet, the endpoints of the routes are already planned as follows:
+In the
+𝑖
+-th route, they want to start from vertex
+(1,𝑖)
+and end at vertex
+(𝑛,
+𝑝
+𝑖
+)
+, where
+𝑝
+is a permutation of length
+𝑛
+.
+In the
+(𝑖+𝑛)
+-th route, they want to start from vertex
+(𝑖,1)
+and end at vertex
+(
+𝑞
+𝑖
+,𝑛)
+, where
+𝑞
+is a permutation of length
+𝑛
+.
+A network with size
+𝑛=3
+, points to be connected are shown in the same color for
+𝑝=[3,2,1]
+and
+𝑞=[3,1,2]
+.
+Your task is to find a routing scheme —
+2𝑛
+paths where each path connects the specified endpoints. Let's define the congestion of an edge as the number of times it is used (both directions combined) in the routing scheme. In order to ensure that Koxia and Mahiru won't get too bored because of traversing repeated edges, please find a routing scheme that minimizes the maximum congestion among all edges.
+An example solution — the maximum congestion is
+2
+, which is optimal in this case.
+Input
+The first line contains an integer
+𝑛
+(
+2≤𝑛≤200
+) — the size of the network.
+The second line contains
+𝑛
+integers
+𝑝
+1
+,
+𝑝
+2
+,…,
+𝑝
+𝑛
+(
+1≤
+𝑝
+𝑖
+≤𝑛
+).
+The third line contains
+𝑛
+integers
+𝑞
+1
+,
+𝑞
+2
+,…,
+𝑞
+𝑛
+(
+1≤
+𝑞
+𝑖
+≤𝑛
+).
+It is guaranteed that both
+𝑝
+and
+𝑞
+are permutations of length
+𝑛
+.
+Output
+Output
+2𝑛
+lines, each line describing a route.
+The first
+𝑛
+lines should describe the connections from top to bottom. The
+𝑖
+-th line should describe the route starting at vertex
+(1,𝑖)
+and ending at vertex
+(𝑛,
+𝑝
+𝑖
+)
+.
+The next
+𝑛
+lines should describe the connections from left to right. The
+(𝑖+𝑛)
+-th line should describe the route starting at vertex
+(𝑖,1)
+and ending at vertex
+(
+𝑞
+𝑖
+,𝑛)
+.
+Each line describing a route should start with an integer
+𝑘
+(
+2≤𝑘≤
+10
+5
+) — the number of vertices the route passes, including the starting and ending vertices. Then output all the vertices on the route in order. In other words, if the route is
+(
+𝑥
+1
+,
+𝑦
+1
+)→(
+𝑥
+2
+,
+𝑦
+2
+)→⋯→(
+𝑥
+𝑘
+,
+𝑦
+𝑘
+)
+, then output
+𝑘 
+𝑥
+1
+ 𝑦
+1
+ 𝑥
+2
+ 𝑦
+2
+…
+𝑥
+𝑘
+ 𝑦
+𝑘
+. Note that
+|
+𝑥
+𝑖
+−
+𝑥
+𝑖+1
+|+|
+𝑦
+𝑖
+−
+𝑦
+𝑖+1
+|=1
+should holds for
+1≤𝑖<𝑘
+.
+If there are multiple solutions that minimize the maximum congestion, you may output any.
+Examples
+input
+Copy
+3
+3 2 1
+3 1 2
+output
+Copy
+5 1 1 2 1 2 2 3 2 3 3 
+3 1 2 2 2 3 2 
+5 1 3 1 2 1 1 2 1 3 1 
+5 1 1 1 2 1 3 2 3 3 3
+4 2 1 2 2 2 3 1 3 
+4 3 1 3 2 3 3 2 3
+input
+Copy
+4
+3 4 2 1
+2 4 1 3
+output
+Copy
+6 1 1 1 2 2 2 2 3 3 3 4 3
+6 1 2 1 3 2 3 2 4 3 4 4 4
+5 1 3 2 3 2 2 3 2 4 2
+7 1 4 1 3 1 2 2 2 2 1 3 1 4 1
+7 1 1 2 1 3 1 3 2 3 3 2 3 2 4
+6 2 1 2 2 3 2 4 2 4 3 4 4
+6 3 1 3 2 3 3 3 4 2 4 1 4
+5 4 1 4 2 4 3 3 3 3 4
+input
+Copy
+3
+1 2 3
+1 2 3
+output
+Copy
+3 1 1 2 1 3 1 
+3 1 2 2 2 3 2 
+3 1 3 2 3 3 3 
+3 1 1 1 2 1 3 
+3 2 1 2 2 2 3 
+3 3 1 3 2 3 3 
+Note
+The first example corresponds to the figures in the problem statement.
+The output for examples
+2
+and
+3
+respectively are visualized below:
+Sample output for examples
+2
+and
+3
+. Maximum congestions are
+2
+and
+1
+respectively.

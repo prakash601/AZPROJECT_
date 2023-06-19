@@ -1,0 +1,27 @@
+You've got an array consisting of n integers: a[1], a[2], ..., a[n]. Moreover, there are m queries, each query can be described by three integers li, ri, ki. Query li, ri, ki means that we should add to each element a[j], where li ≤ j ≤ ri.
+Record means the binomial coefficient, or the number of combinations from y elements into groups of x elements.
+You need to fulfil consecutively all queries and then print the final array.
+Input
+The first line contains integers n, m (1 ≤ n, m ≤ 105).
+The second line contains n integers a[1], a[2], ..., a[n] (0 ≤ ai ≤ 109) — the initial array.
+Next m lines contain queries in the format li, ri, ki — to all elements of the segment li... ri add number (1 ≤ li ≤ ri ≤ n; 0 ≤ k ≤ 100).
+Output
+Print n integers: the i-th number is the value of element a[i] after all the queries. As the values can be rather large, print them modulo 1000000007 (109 + 7).
+Examples
+input
+Copy
+5 1
+0 0 0 0 0
+1 5 0
+output
+Copy
+1 1 1 1 1
+input
+Copy
+10 2
+1 2 3 4 5 0 0 0 0 0
+1 6 1
+6 10 2
+output
+Copy
+2 4 6 8 10 7 3 6 10 15

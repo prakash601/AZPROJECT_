@@ -1,0 +1,109 @@
+You are given two sets of positive integers
+A
+and
+B
+. You have to find two non-empty subsets
+SA⊆A
+,
+SB⊆B
+so that the least common multiple (LCM) of the elements of
+SA
+is equal to the least common multiple (LCM) of the elements of
+SB
+.
+Input
+The input consists of multiple test cases. The first line of the input contains one integer
+t
+(
+1≤t≤200
+), the number of test cases.
+For each test case, there is one line containing two integers
+n,m
+(
+1≤n,m≤1000
+), the sizes of the sets
+A
+and
+B
+, respectively.
+The next line contains
+n
+distinct integers
+a1,a2,…,an
+(
+1≤ai≤4⋅1036
+), the elements of
+A
+.
+The next line contains
+m
+distinct integers
+b1,b2,…,bm
+(
+1≤bi≤4⋅1036
+), the elements of
+B
+.
+The sum of
+n
+for all test cases and the sum of
+m
+for all test cases is at most
+1000
+.
+Output
+For each test case, if there do not exist two subsets with equal least common multiple, output one line with NO.
+Otherwise, output one line with YES, followed by a line with two integers
+|SA|,|SB|
+(
+1≤|SA|≤n
+,
+1≤|SB|≤m
+), the sizes of the subsets
+SA
+and
+SB
+The next line should contain
+|SA|
+integers
+x1,x2,…,x|SA|
+, the elements of
+SA
+, followed by a line with
+|SB|
+integers
+y1,y2,…,y|SB|
+, the elements of
+SB
+. If there are multiple possible pairs of subsets, you can print any.
+Example
+input
+Copy
+4
+3 4
+5 6 7
+2 8 9 10
+4 4
+5 6 7 8
+2 3 4 9
+1 3
+1
+1 2 3
+5 6
+3 4 9 7 8
+2 15 11 14 20 12
+output
+Copy
+NO
+YES
+1 2
+6
+2 3
+YES
+1 1
+1
+1
+YES
+3 2
+3 7 4
+12 14

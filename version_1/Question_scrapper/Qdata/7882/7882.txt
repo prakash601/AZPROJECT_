@@ -1,0 +1,146 @@
+Li Hua wants to solve a problem about
+φ
+ — Euler's totient function. Please recall that
+φ(x)=
+x
+∑
+i=1
+[gcd(i,x)=1]
+.
+†,‡
+He has a sequence
+a1,a2,⋯,an
+and he wants to perform
+m
+operations:
+"1
+l
+r
+" (
+1≤l≤r≤n
+) — for each
+x∈[l,r]
+, change
+ax
+into
+φ(ax)
+.
+"2
+l
+r
+" (
+1≤l≤r≤n
+) — find out the minimum changes needed to make sure
+al=al+1=⋯=ar
+. In each change, he chooses one
+x∈[l,r]
+, change
+ax
+into
+φ(ax)
+. Each operation of this type is independent, which means the array doesn't actually change.
+Suppose you were Li Hua, please solve this problem.
+†
+gcd(x,y)
+denotes the greatest common divisor (GCD) of integers
+x
+and
+y
+.
+‡
+The notation
+[cond]
+equals
+1
+if the condition
+cond
+is true, and
+0
+otherwise.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤105
+) — the number of elements in the array and the number of operations to process, respectively.
+The second line contains
+n
+integers
+a1,a2,⋯,an
+(
+1≤ai≤5⋅106
+) — the elements of the array.
+Next
+m
+lines, each line contains three integers
+ti,li,ri
+(
+ti∈{1,2},1≤li≤ri≤n
+) — the
+i
+-th operation.
+Output
+For each "2
+l
+r
+", output the answer in an separate line.
+Example
+input
+Copy
+5 4
+8 1 6 3 7
+2 1 5
+2 3 4
+1 1 3
+2 3 4
+output
+Copy
+10
+2
+1
+Note
+Denote
+φk(x)={
+x, k=0
+φ(φk−1(x)), k>0
+.
+At first,
+a=[8,1,6,3,7]
+.
+To make sure
+a1=a2=a3=a4=a5
+, we can change
+a
+to
+a′=[φ3(8),φ0(1),φ2(6),φ2(3),φ3(7)]=[1,1,1,1,1]
+, using
+3+0+2+2+3=10
+changes.
+To make sure
+a3=a4
+, we can change
+a
+to
+a′=[φ0(8),φ0(1),φ1(6),φ1(3),φ0(7)]=[8,1,2,2,7]
+, using
+0+0+1+1+0=2
+changes.
+After "1
+1
+3
+",
+a
+is changed to
+a=[φ1(8),φ1(1),φ1(6),φ0(3),φ0(7)]=[4,1,2,3,7]
+.
+To make sure
+a3=a4
+, we can change
+a
+to
+a′=[φ0(4),φ0(1),φ0(2),φ1(3),φ0(7)]=[4,1,2,2,7]
+, using
+0+0+0+1+0=1
+change.

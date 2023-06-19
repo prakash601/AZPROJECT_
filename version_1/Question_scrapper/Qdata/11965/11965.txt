@@ -1,0 +1,118 @@
+Notice: unusual memory limit!
+After the war, destroyed cities in the neutral zone were restored. And children went back to school.
+The war changed the world, as well as education. In those hard days, a new math concept was created.
+As we all know, logarithm function can be described as:
+log(p
+a1
+1
+p
+a2
+2
+...p
+a2
+k
+)=a1logp1+a2logp2+...+aklogpk
+Where
+p
+a1
+1
+p
+a2
+2
+...p
+a2
+k
+is the prime factorization of a integer. A problem is that the function uses itself in the definition. That is why it is hard to calculate.
+So, the mathematicians from the neutral zone invented this:
+exlogf(p
+a1
+1
+p
+a2
+2
+...p
+a2
+k
+)=a1f(p1)+a2f(p2)+...+akf(pk)
+Notice that
+exlogf(1)
+is always equal to
+0
+.
+This concept for any function
+f
+was too hard for children. So teachers told them that
+f
+can only be a polynomial of degree no more than
+3
+in daily uses (i.e.,
+f(x)=Ax3+Bx2+Cx+D
+).
+"Class is over! Don't forget to do your homework!" Here it is:
+n
+∑
+i=1
+exlogf(i)
+Help children to do their homework. Since the value can be very big, you need to find the answer modulo
+232
+.
+Input
+The only line contains five integers
+n
+,
+A
+,
+B
+,
+C
+, and
+D
+(
+1≤n≤3⋅108
+,
+0≤A,B,C,D≤106
+).
+Output
+Print the answer modulo
+232
+.
+Examples
+input
+Copy
+12 0 0 1 0
+output
+Copy
+63
+input
+Copy
+4 1 2 3 4
+output
+Copy
+136
+Note
+In the first sample:
+exlogf(1)=0
+exlogf(2)=2
+exlogf(3)=3
+exlogf(4)=2+2=4
+exlogf(5)=5
+exlogf(6)=2+3=5
+exlogf(7)=7
+exlogf(8)=2+2+2=6
+exlogf(9)=3+3=6
+exlogf(10)=2+5=7
+exlogf(11)=11
+exlogf(12)=2+2+3=7
+∑
+12
+i=1
+exlogf(i)=63
+In the second sample:
+exlogf(1)=0
+exlogf(2)=(1×23+2×22+3×2+4)=26
+exlogf(3)=(1×33+2×32+3×3+4)=58
+exlogf(4)=2×exlogf(2)=52
+∑
+4
+i=1
+exlogf(i)=0+26+58+52=136

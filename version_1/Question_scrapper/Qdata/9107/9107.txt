@@ -1,0 +1,106 @@
+Pchelyonok decided to give Mila a gift. Pchelenok has already bought an array
+a
+of length
+n
+, but gifting an array is too common. Instead of that, he decided to gift Mila the segments of that array!
+Pchelyonok wants his gift to be beautiful, so he decided to choose
+k
+non-overlapping segments of the array
+[l1,r1]
+,
+[l2,r2]
+,
+…
+[lk,rk]
+such that:
+the length of the first segment
+[l1,r1]
+is
+k
+, the length of the second segment
+[l2,r2]
+is
+k−1
+,
+…
+, the length of the
+k
+-th segment
+[lk,rk]
+is
+1
+for each
+i<j
+, the
+i
+-th segment occurs in the array earlier than the
+j
+-th (i.e.
+ri<lj
+)
+the sums in these segments are strictly increasing (i.e. let
+sum(l…r)=
+r
+∑
+i=l
+ai
+— the sum of numbers in the segment
+[l,r]
+of the array, then
+sum(l1…r1)<sum(l2…r2)<…<sum(lk…rk)
+).
+Pchelenok also wants his gift to be as beautiful as possible, so he asks you to find the maximal value of
+k
+such that he can give Mila a gift!
+Input
+The first line contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases. The next
+2⋅t
+lines contain the descriptions of test cases. The description of each test case consists of two lines.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤105
+) — the length of the array.
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤109
+) — the elements of the array
+a
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+105
+.
+Output
+For each test case, print the maximum possible value of
+k
+.
+Example
+input
+Copy
+5
+1
+1
+3
+1 2 3
+5
+1 1 2 2 3
+7
+1 2 1 1 3 2 6
+5
+9 6 7 9 7
+output
+Copy
+1
+1
+2
+3
+1

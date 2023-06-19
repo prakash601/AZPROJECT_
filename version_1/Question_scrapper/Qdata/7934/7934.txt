@@ -1,0 +1,342 @@
+Serval loves playing music games. He meets a problem when playing music games, and he leaves it for you to solve.
+You are given
+n
+positive integers
+s1<s2<…<sn
+.
+f(x)
+is defined as the number of
+i
+(
+1≤i≤n
+) that exist non-negative integers
+pi,qi
+such that:
+si=pi⌊
+sn
+x
+⌋+qi⌈
+sn
+x
+⌉
+Find out
+∑
+sn
+x=1
+x⋅f(x)
+modulo
+998244353
+.
+As a reminder,
+⌊x⌋
+denotes the maximal integer that is no greater than
+x
+, and
+⌈x⌉
+denotes the minimal integer that is no less than
+x
+.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤104
+). The description of the test cases follows.
+The first line of each test cases contains a single integer
+n
+(
+1≤n≤106
+).
+The second line of each test case contains
+n
+positive integers
+s1,s2,…,sn
+(
+1≤s1<s2<…<sn≤107
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+106
+, and the sum of
+sn
+does not exceed
+107
+.
+Output
+For each test case, print a single integer in a single line — the sum of
+x⋅f(x)
+over all possible
+x
+modulo
+998244353
+.
+Example
+input
+Copy
+4
+3
+1 2 4
+4
+1 2 7 9
+4
+344208 591000 4779956 5403429
+5
+1633 1661 1741 2134 2221
+output
+Copy
+26
+158
+758737625
+12334970
+Note
+For the first test case,
+sn=4
+,
+f(x)
+are calculated as followings:
+f(1)=1
+⌊
+sn
+1
+⌋=4
+,
+⌈
+sn
+1
+⌉=4
+.
+It can be shown that such
+p1,p2
+and
+q1,q2
+that satisfy the conditions don't exist.
+Let
+p3=1
+and
+q3=0
+, then
+s3=p3⋅⌊
+sn
+1
+⌋+q3⋅⌈
+sn
+1
+⌉=1⋅4+0⋅4=4
+.
+f(2)=2
+⌊
+sn
+2
+⌋=2
+,
+⌈
+sn
+2
+⌉=2
+.
+It can be shown that such
+p1
+and
+q1
+that satisfy the conditions don't exist.
+Let
+p2=1
+and
+q2=0
+, then
+s2=p2⋅⌊
+sn
+2
+⌋+q2⋅⌈
+sn
+2
+⌉=1⋅2+0⋅2=2
+.
+Let
+p3=0
+and
+q3=2
+, then
+s3=p3⋅⌊
+sn
+2
+⌋+q3⋅⌈
+sn
+2
+⌉=0⋅2+2⋅2=4
+.
+f(3)=3
+⌊
+sn
+3
+⌋=1
+,
+⌈
+sn
+3
+⌉=2
+.
+Let
+p1=1
+and
+q1=0
+, then
+s1=p1⋅⌊
+sn
+3
+⌋+q1⋅⌈
+sn
+3
+⌉=1⋅1+0⋅2=1
+.
+Let
+p2=0
+and
+q2=1
+, then
+s2=p2⋅⌊
+sn
+3
+⌋+q2⋅⌈
+sn
+3
+⌉=0⋅1+1⋅2=2
+.
+Let
+p3=0
+and
+q3=2
+, then
+s3=p3⋅⌊
+sn
+3
+⌋+q3⋅⌈
+sn
+3
+⌉=0⋅1+2⋅2=4
+.
+f(4)=3
+⌊
+sn
+4
+⌋=1
+,
+⌈
+sn
+4
+⌉=1
+.
+Let
+p1=1
+and
+q1=0
+, then
+s1=p1⋅⌊
+sn
+4
+⌋+q1⋅⌈
+sn
+4
+⌉=1⋅1+0⋅1=1
+.
+Let
+p2=1
+and
+q2=1
+, then
+s2=p2⋅⌊
+sn
+4
+⌋+q2⋅⌈
+sn
+4
+⌉=1⋅1+1⋅1=2
+.
+Let
+p3=2
+and
+q3=2
+, then
+s3=p3⋅⌊
+sn
+4
+⌋+q3⋅⌈
+sn
+4
+⌉=2⋅1+2⋅1=4
+.
+Therefore, the answer is
+∑
+4
+x=1
+x⋅f(x)=1⋅1+2⋅2+3⋅3+4⋅3=26
+.
+For the second test case:
+f(1)=f(2)=f(3)=1
+f(4)=3
+f(5)=f(6)=f(7)=f(8)=f(9)=4
+For example, when
+x=3
+we have
+f(3)=1
+because there exist
+p4
+and
+q4
+:
+9=1⋅⌊
+9
+3
+⌋+2⋅⌈
+9
+3
+⌉
+It can be shown that it is impossible to find
+p1,p2,p3
+and
+q1,q2,q3
+that satisfy the conditions.
+When
+x=5
+we have
+f(5)=4
+because there exist
+pi
+and
+qi
+as followings:
+1=1⋅⌊
+9
+5
+⌋+0⋅⌈
+9
+5
+⌉
+2=0⋅⌊
+9
+5
+⌋+1⋅⌈
+9
+5
+⌉
+7=3⋅⌊
+9
+5
+⌋+2⋅⌈
+9
+5
+⌉
+9=3⋅⌊
+9
+5
+⌋+3⋅⌈
+9
+5
+⌉
+Therefore, the answer is
+∑
+9
+x=1
+x⋅f(x)=158
+.

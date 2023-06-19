@@ -1,0 +1,209 @@
+This is the easy version of the problem. It differs from the hard one only in constraints on
+𝑛
+. You can make hacks only if you lock both versions.
+Let
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+be an array of non-negative integers. Let
+𝐹(
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+)
+be the sorted in the non-decreasing order array of
+𝑛−1
+smallest numbers of the form
+𝑎
+𝑖
++
+𝑎
+𝑗
+, where
+1≤𝑖<𝑗≤𝑛
+. In other words,
+𝐹(
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+)
+is the sorted in the non-decreasing order array of
+𝑛−1
+smallest sums of all possible pairs of elements of the array
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+. For example,
+𝐹(1,2,5,7)=[1+2,1+5,2+5]=[3,6,7]
+.
+You are given an array of non-negative integers
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+. Determine the single element of the array
+𝐹(𝐹(𝐹…𝐹
+
+
+
+
+
+
+
+𝑛−1
+(
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+)…))
+. Since the answer can be quite large, output it modulo
+10
+9
++7
+.
+Input
+The first line contains one integer
+𝑛
+(
+2≤𝑛≤3000
+) — the initial length of the array.
+The second line contains
+𝑛
+integers
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+(
+0≤
+𝑎
+𝑖
+≤
+10
+9
+) — the array elements.
+Output
+Output a single number — the answer modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+5
+1 2 4 5 6
+output
+Copy
+34
+input
+Copy
+9
+1 1 1 7 7 7 9 9 9
+output
+Copy
+256
+input
+Copy
+7
+1 7 9 2 0 0 9
+output
+Copy
+20
+input
+Copy
+3
+1000000000 1000000000 777
+output
+Copy
+1540
+Note
+In the first test, the array is transformed as follows:
+[1,2,4,5,6]→[3,5,6,6]→[8,9,9]→[17,17]→[34]
+. The only element of the final array is
+34
+.
+In the second test,
+𝐹(
+𝑎
+1
+,
+𝑎
+2
+,…,
+𝑎
+𝑛
+)
+is
+[2,2,2,8,8,8,8,8]
+. This array is made up of
+3
+numbers of the form
+1+1
+and
+5
+numbers of the form
+1+7
+.
+In the fourth test, the array is transformed as follows:
+[
+10
+9
+,
+10
+9
+,777]→[
+10
+9
++777,
+10
+9
++777]→[2⋅
+10
+9
++1554]
+.
+2⋅
+10
+9
++1554
+modulo
+10
+9
++7
+equals
+1540
+.

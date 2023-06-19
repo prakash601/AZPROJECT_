@@ -1,0 +1,74 @@
+You are given
+n
+integers
+a1,a2,…,an
+. For any real number
+t
+, consider the complete weighted graph on
+n
+vertices
+Kn(t)
+with weight of the edge between vertices
+i
+and
+j
+equal to
+wij(t)=ai⋅aj+t⋅(ai+aj)
+.
+Let
+f(t)
+be the cost of the minimum spanning tree of
+Kn(t)
+. Determine whether
+f(t)
+is bounded above and, if so, output the maximum value it attains.
+Input
+The input consists of multiple test cases. The first line contains a single integer
+T
+(
+1≤T≤104
+) — the number of test cases. Description of the test cases follows.
+The first line of each test case contains an integer
+n
+(
+2≤n≤2⋅105
+) — the number of vertices of the graph.
+The second line of each test case contains
+n
+integers
+a1,a2,…,an
+(
+−106≤ai≤106
+).
+The sum of
+n
+for all test cases is at most
+2⋅105
+.
+Output
+For each test case, print a single line with the maximum value of
+f(t)
+(it can be shown that it is an integer), or INF if
+f(t)
+is not bounded above.
+Example
+input
+Copy
+5
+2
+1 0
+2
+-1 1
+3
+1 -1 -2
+3
+3 -1 -2
+4
+1 2 3 -4
+output
+Copy
+INF
+-1
+INF
+-6
+-18

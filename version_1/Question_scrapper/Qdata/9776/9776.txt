@@ -1,0 +1,48 @@
+You are given two positive integer sequences
+a1,…,an
+and
+b1,…,bm
+. For each
+j=1,…,m
+find the greatest common divisor of
+a1+bj,…,an+bj
+.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤2⋅105
+).
+The second line contains
+n
+integers
+a1,…,an
+(
+1≤ai≤1018)
+.
+The third line contains
+m
+integers
+b1,…,bm
+(
+1≤bj≤1018)
+.
+Output
+Print
+m
+integers. The
+j
+-th of them should be equal to GCD
+(a1+bj,…,an+bj)
+.
+Example
+input
+Copy
+4 4
+1 25 121 169
+1 2 7 23
+output
+Copy
+2 3 8 24

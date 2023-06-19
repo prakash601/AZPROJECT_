@@ -1,0 +1,22 @@
+Princess Twilight went to Celestia and Luna's old castle to research the chest from the Elements of Harmony.
+A sequence of positive integers bi is harmony if and only if for every two elements of the sequence their greatest common divisor equals 1. According to an ancient book, the key of the chest is a harmony sequence bi which minimizes the following expression:
+You are given sequence ai, help Princess Twilight to find the key.
+Input
+The first line contains an integer n (1 ≤ n ≤ 100) — the number of elements of the sequences a and b. The next line contains n integers a1, a2, ..., an (1 ≤ ai ≤ 30).
+Output
+Output the key — sequence bi that minimizes the sum described above. If there are multiple optimal sequences, you can output any of them.
+Examples
+input
+Copy
+5
+1 1 1 1 1
+output
+Copy
+1 1 1 1 1 
+input
+Copy
+5
+1 6 4 2 8
+output
+Copy
+1 5 3 1 8 

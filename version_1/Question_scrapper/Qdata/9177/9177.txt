@@ -1,0 +1,107 @@
+Once upon a time, Petya had an array of integers
+a
+of length
+n
+. But over time, the array itself was lost, and only
+n−1
+results of comparisons of neighboring array elements remained. In other words, for every
+i
+from
+1
+to
+n−1
+, Petya knows exactly one of these three facts:
+ai<ai+1
+;
+ai=ai+1
+;
+ai>ai+1
+.
+Petya wonders if it is possible to uniquely determine the result of comparing
+a1
+and
+an
+.
+You have to help Petya determine the result of comparing
+a1
+and
+an
+or report that the result cannot be determined unambiguously.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤500
+) — the number of test cases.
+The only line of the test case contains the string
+s
+(
+1≤|s|≤100
+), where
+si
+is:
+<, if
+ai<ai+1
+;
+>, if
+ai>ai+1
+;
+=, if
+ai=ai+1
+.
+Output
+For each test case, print a single string equal to:
+<, if
+a1<an
+;
+>, if
+a1>an
+;
+=, if
+a1=an
+;
+?, if it is impossible to uniquely determine the result of the comparison.
+Example
+input
+Copy
+4
+>>>
+<><=<
+=
+<<==
+output
+Copy
+>
+?
+=
+<
+Note
+Consider the test cases of the example:
+in the first test case, it's easy to see that
+a1>a4
+since
+a1>a2>a3>a4
+;
+in the second test case, both sequences
+[1,2,0,10,10,15]
+and
+[10,11,1,2,2,5]
+meet the constraints; in the first one,
+a1<a6
+, and in the second one,
+a1>a6
+, so it's impossible to compare
+a1
+and
+a6
+;
+in the third test case, we already know that
+a1=a2
+;
+in the fourth test case, it's easy to see that
+a3=a4=a5
+, and
+a1<a2<a3
+, so
+a1<a5
+.

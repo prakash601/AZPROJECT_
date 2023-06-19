@@ -1,0 +1,153 @@
+You are given a tree with
+n
+weighted vertices labeled from
+1
+to
+n
+rooted at vertex
+1
+. The parent of vertex
+i
+is
+pi
+and the weight of vertex
+i
+is
+ai
+. For convenience, define
+p1=0
+.
+For two vertices
+x
+and
+y
+of the same depth
+†
+, define
+f(x,y)
+as follows:
+Initialize
+ans=0
+.
+While both
+x
+and
+y
+are not
+0
+:
+ans←ans+ax⋅ay
+;
+x←px
+;
+y←py
+.
+f(x,y)
+is the value of
+ans
+.
+You will process
+q
+queries. In the
+i
+-th query, you are given two integers
+xi
+and
+yi
+and you need to calculate
+f(xi,yi)
+.
+†
+The depth of vertex
+v
+is the number of edges on the unique simple path from the root of the tree to vertex
+v
+.
+Input
+The first line contains two integers
+n
+and
+q
+(
+2≤n≤105
+;
+1≤q≤105
+).
+The second line contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤105
+).
+The third line contains
+n−1
+integers
+p2,…,pn
+(
+1≤pi<i
+).
+Each of the next
+q
+lines contains two integers
+xi
+and
+yi
+(
+1≤xi,yi≤n
+). It is guaranteed that
+xi
+and
+yi
+are of the same depth.
+Output
+Output
+q
+lines, the
+i
+-th line contains a single integer, the value of
+f(xi,yi)
+.
+Examples
+input
+Copy
+6 2
+1 5 2 3 1 1
+1 2 3 3 2
+4 5
+6 6
+output
+Copy
+33
+27
+input
+Copy
+14 8
+3 2 5 3 1 4 2 2 2 5 5 5 2 4
+1 2 3 1 1 4 7 3 3 1 5 3 8
+4 4
+4 10
+13 10
+3 12
+13 9
+3 12
+9 10
+11 5
+output
+Copy
+47
+53
+48
+36
+42
+36
+48
+14
+Note
+Consider the first example:
+In the first query, the answer is
+a4⋅a5+a3⋅a3+a2⋅a2+a1⋅a1=3+4+25+1=33
+.
+In the second query, the answer is
+a6⋅a6+a2⋅a2+a1⋅a1=1+25+1=27
+.

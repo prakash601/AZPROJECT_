@@ -1,0 +1,183 @@
+Everool has a binary string
+s
+of length
+2n
+. Note that a binary string is a string consisting of only characters
+0
+and
+1
+. He wants to partition
+s
+into two disjoint equal subsequences. He needs your help to do it.
+You are allowed to do the following operation exactly once.
+You can choose any subsequence (possibly empty) of
+s
+and rotate it right by one position.
+In other words, you can select a sequence of indices
+b1,b2,…,bm
+, where
+1≤b1<b2<…<bm≤2n
+. After that you simultaneously set
+sb1:=sbm,
+sb2:=sb1,
+…,
+sbm:=sbm−1.
+Can you partition
+s
+into two disjoint equal subsequences after performing the allowed operation exactly once?
+A partition of
+s
+into two disjoint equal subsequences
+sp
+and
+sq
+is two increasing arrays of indices
+p1,p2,…,pn
+and
+q1,q2,…,qn
+, such that each integer from
+1
+to
+2n
+is encountered in either
+p
+or
+q
+exactly once,
+sp=sp1sp2…spn
+,
+sq=sq1sq2…sqn
+, and
+sp=sq
+.
+If it is not possible to partition after performing any kind of operation, report
+−1
+.
+If it is possible to do the operation and partition
+s
+into two disjoint subsequences
+sp
+and
+sq
+, such that
+sp=sq
+, print elements of
+b
+and indices of
+sp
+, i. e. the values
+p1,p2,…,pn
+.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤105
+). Description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤105
+), where
+2n
+is the length of the binary string.
+The second line of each test case contains the binary string
+s
+of length
+2n
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+105
+.
+Output
+For each test case, follow the following output format.
+If there is no solution, print
+−1
+.
+Otherwise,
+In the first line, print an integer
+m
+(
+0≤m≤2n
+), followed by
+m
+distinct indices
+b1
+,
+b2
+, ...,
+bm
+(in increasing order).
+In the second line, print
+n
+distinct indices
+p1
+,
+p2
+, ...,
+pn
+(in increasing order).
+If there are multiple solutions, print any.
+Example
+input
+Copy
+4
+2
+1010
+3
+100010
+2
+1111
+2
+1110
+output
+Copy
+0
+1 2
+2 3 5
+1 2 5
+3 2 3 4
+1 4
+-1
+Note
+In the first test case,
+b
+is empty. So string
+s
+is not changed. Now
+sp=s1s2=10
+, and
+sq=s3s4=10
+.
+In the second test case,
+b=[3,5]
+. Initially
+s3=0
+, and
+s5=1
+. On performing the operation, we simultaneously set
+s3=1
+, and
+s5=0
+.
+So
+s
+is updated to 101000 on performing the operation.
+Now if we take characters at indices
+[1,2,5]
+in
+sp
+, we get
+s1=100
+. Also characters at indices
+[3,4,6]
+are in
+sq
+. Thus
+sq=100
+. We are done as
+sp=sq
+.
+In fourth test case, it can be proved that it is not possible to partition the string after performing any operation.

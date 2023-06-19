@@ -1,0 +1,111 @@
+You are given an array
+a
+consisting of
+n
+integers.
+Let
+min(l,r)
+be the minimum value among
+al,al+1,…,ar
+and
+max(l,r)
+be the maximum value among
+al,al+1,…,ar
+.
+Your task is to choose three positive (greater than
+0
+) integers
+x
+,
+y
+and
+z
+such that:
+x+y+z=n
+;
+max(1,x)=min(x+1,x+y)=max(x+y+1,n)
+.
+In other words, you have to split the array
+a
+into three consecutive non-empty parts that cover the whole array and the maximum in the first part equals the minimum in the second part and equals the maximum in the third part (or determine it is impossible to find such a partition).
+Among all such triples (partitions), you can choose any.
+You have to answer
+t
+independent test cases.
+Input
+The first line of the input contains one integer
+t
+(
+1≤t≤2⋅104
+) — the number of test cases. Then
+t
+test cases follow.
+The first line of the test case contains one integer
+n
+(
+3≤n≤2⋅105
+) — the length of
+a
+.
+The second line of the test case contains
+n
+integers
+a1,a2,…,an
+(
+1≤ai≤109
+), where
+ai
+is the
+i
+-th element of
+a
+.
+It is guaranteed that the sum of
+n
+does not exceed
+2⋅105
+(
+∑n≤2⋅105
+).
+Output
+For each test case, print the answer: NO in the only line if there is no such partition of
+a
+that satisfies the conditions from the problem statement. Otherwise, print YES in the first line and three integers
+x
+,
+y
+and
+z
+(
+x+y+z=n
+) in the second line.
+If there are several answers, you can print any.
+Example
+input
+Copy
+6
+11
+1 2 3 3 3 4 4 3 4 2 1
+8
+2 9 1 7 3 9 4 1
+9
+2 1 4 2 4 3 3 1 2
+7
+4 2 1 1 4 1 4
+5
+1 1 1 1 1
+7
+4 3 4 3 3 3 4
+output
+Copy
+YES
+6 1 4
+NO
+YES
+2 5 2
+YES
+4 1 2
+YES
+1 1 3
+YES
+2 1 4

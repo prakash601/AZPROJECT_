@@ -1,0 +1,97 @@
+The well-known Fibonacci sequence
+F0,F1,F2,…
+is defined as follows:
+F0=0,F1=1
+.
+For each
+i≥2
+:
+Fi=Fi−1+Fi−2
+.
+Given an increasing arithmetic sequence of positive integers with
+n
+elements:
+(a,a+d,a+2⋅d,…,a+(n−1)⋅d)
+.
+You need to find another increasing arithmetic sequence of positive integers with
+n
+elements
+(b,b+e,b+2⋅e,…,b+(n−1)⋅e)
+such that:
+0<b,e<264
+,
+for all
+0≤i<n
+, the decimal representation of
+a+i⋅d
+appears as substring in the last
+18
+digits of the decimal representation of
+Fb+i⋅e
+(if this number has less than
+18
+digits, then we consider all its digits).
+Input
+The first line contains three positive integers
+n
+,
+a
+,
+d
+(
+1≤n,a,d,a+(n−1)⋅d<106
+).
+Output
+If no such arithmetic sequence exists, print
+−1
+.
+Otherwise, print two integers
+b
+and
+e
+, separated by space in a single line (
+0<b,e<264
+).
+If there are many answers, you can output any of them.
+Examples
+input
+Copy
+3 1 1
+output
+Copy
+2 1
+input
+Copy
+5 1 2
+output
+Copy
+19 5
+Note
+In the first test case, we can choose
+(b,e)=(2,1)
+, because
+F2=1,F3=2,F4=3
+.
+In the second test case, we can choose
+(b,e)=(19,5)
+because:
+F19=4181
+contains
+1
+;
+F24=46368
+contains
+3
+;
+F29=514229
+contains
+5
+;
+F34=5702887
+contains
+7
+;
+F39=63245986
+contains
+9
+.

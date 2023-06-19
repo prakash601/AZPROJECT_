@@ -1,0 +1,141 @@
+Allen and Bessie are playing a simple number game. They both know a function
+f:{0,1}n→R
+, i. e. the function takes
+n
+binary arguments and returns a real value. At the start of the game, the variables
+x1,x2,…,xn
+are all set to
+−1
+. Each round, with equal probability, one of Allen or Bessie gets to make a move. A move consists of picking an
+i
+such that
+xi=−1
+and either setting
+xi→0
+or
+xi→1
+.
+After
+n
+rounds all variables are set, and the game value resolves to
+f(x1,x2,…,xn)
+. Allen wants to maximize the game value, and Bessie wants to minimize it.
+Your goal is to help Allen and Bessie find the expected game value! They will play
+r+1
+times though, so between each game, exactly one value of
+f
+changes. In other words, between rounds
+i
+and
+i+1
+for
+1≤i≤r
+,
+f(z1,…,zn)→gi
+for some
+(z1,…,zn)∈{0,1}n
+. You are to find the expected game value in the beginning and after each change.
+Input
+The first line contains two integers
+n
+and
+r
+(
+1≤n≤18
+,
+0≤r≤218
+).
+The next line contains
+2n
+integers
+c0,c1,…,c2n−1
+(
+0≤ci≤109
+), denoting the initial values of
+f
+. More specifically,
+f(x0,x1,…,xn−1)=cx
+, if
+x=
+¯
+xn−1…x0
+in binary.
+Each of the next
+r
+lines contains two integers
+z
+and
+g
+(
+0≤z≤2n−1
+,
+0≤g≤109
+). If
+z=
+¯
+zn−1…z0
+in binary, then this means to set
+f(z0,…,zn−1)→g
+.
+Output
+Print
+r+1
+lines, the
+i
+-th of which denotes the value of the game
+f
+during the
+i
+-th round. Your answer must have absolute or relative error within
+10−6
+.
+Formally, let your answer be
+a
+, and the jury's answer be
+b
+. Your answer is considered correct if
+|a−b|
+max(1,|b|)
+≤10−6
+.
+Examples
+input
+Copy
+2 2
+0 1 2 3
+2 5
+0 4
+output
+Copy
+1.500000
+2.250000
+3.250000
+input
+Copy
+1 0
+2 3
+output
+Copy
+2.500000
+input
+Copy
+2 0
+1 1 1 1
+output
+Copy
+1.000000
+Note
+Consider the second test case. If Allen goes first, he will set
+x1→1
+, so the final value will be
+3
+. If Bessie goes first, then she will set
+x1→0
+so the final value will be
+2
+. Thus the answer is
+2.5
+.
+In the third test case, the game value will always be
+1
+regardless of Allen and Bessie's play.

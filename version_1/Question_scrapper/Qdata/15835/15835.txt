@@ -1,0 +1,23 @@
+You are given a polynom in form p(x) = (x + a1)·(x + a2)·... (x + an). Write Pike program to print it in a standard form p(x) = xn + b1xn - 1 + ... + bn - 1x + bn. You should write each addend in form «C*X^K» (for example, 5*X^8).
+Please, write the polynom in the shortest way, so you should skip unnecessary terms: some terms «C*X^K» should be reduced or even omitted. Look for the samples for clarification.
+Input
+The first line of the input contains n (1 ≤ n ≤ 9). The following n lines contain integer ai ( - 10 ≤ ai ≤ 10).
+Output
+Print the given polynom in a standard way. Note, that the answer in this problem response uniquely determined.
+Examples
+input
+Copy
+2
+-1
+1
+output
+Copy
+X^2-1
+input
+Copy
+2
+1
+1
+output
+Copy
+X^2+2*X+1

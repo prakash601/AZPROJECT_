@@ -1,0 +1,67 @@
+You are given a permutation
+p
+of
+n
+integers
+1
+,
+2
+, ...,
+n
+(a permutation is an array where each element from
+1
+to
+n
+occurs exactly once).
+Let's call some subsegment
+p[l,r]
+of this permutation special if
+pl+pr=
+r
+max
+i=l
+pi
+. Please calculate the number of special subsegments.
+Input
+The first line contains one integer
+n
+(
+3≤n≤2⋅105
+).
+The second line contains
+n
+integers
+p1
+,
+p2
+, ...,
+pn
+(
+1≤pi≤n
+). All these integers are pairwise distinct.
+Output
+Print the number of special subsegments of the given permutation.
+Examples
+input
+Copy
+5
+3 4 1 5 2
+output
+Copy
+2
+input
+Copy
+3
+1 3 2
+output
+Copy
+1
+Note
+Special subsegments in the first example are
+[1,5]
+and
+[1,3]
+.
+The only special subsegment in the second example is
+[1,3]
+.

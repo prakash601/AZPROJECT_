@@ -1,0 +1,72 @@
+You are given a set of
+n
+segments on a line
+[Li;Ri]
+. All
+2n
+segment endpoints are pairwise distinct integers.
+The set is laminar — any two segments are either disjoint or one of them contains the other.
+Choose a non-empty subsegment
+[li,ri]
+with integer endpoints in each segment (
+Li≤li<ri≤Ri
+) in such a way that no two subsegments intersect (they are allowed to have common endpoints though) and the sum of their lengths (
+∑
+n
+i=1
+ri−li
+) is maximized.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅103
+) — the number of segments.
+The
+i
+-th of the next
+n
+lines contains two integers
+Li
+and
+Ri
+(
+0≤Li<Ri≤109
+) — the endpoints of the
+i
+-th segment.
+All the given
+2n
+segment endpoints are distinct. The set of segments is laminar.
+Output
+On the first line, output the maximum possible sum of subsegment lengths.
+On the
+i
+-th of the next
+n
+lines, output two integers
+li
+and
+ri
+(
+Li≤li<ri≤Ri
+), denoting the chosen subsegment of the
+i
+-th segment.
+Example
+input
+Copy
+4
+1 10
+2 3
+5 9
+6 7
+output
+Copy
+7
+3 6
+2 3
+7 9
+6 7
+Note
+The example input and the example output are illustrated below.

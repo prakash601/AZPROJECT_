@@ -1,0 +1,30 @@
+On a number line there are n balls. At time moment 0 for each ball the following data is known: its coordinate xi, speed vi (possibly, negative) and weight mi. The radius of the balls can be ignored.
+The balls collide elastically, i.e. if two balls weighing m1 and m2 and with speeds v1 and v2 collide, their new speeds will be:
+.
+Your task is to find out, where each ball will be t seconds after.
+Input
+The first line contains two integers n and t (1 ≤ n ≤ 10, 0 ≤ t ≤ 100) — amount of balls and duration of the process. Then follow n lines, each containing three integers: xi, vi, mi (1 ≤ |vi|, mi ≤ 100, |xi| ≤ 100) — coordinate, speed and weight of the ball with index i at time moment 0.
+It is guaranteed that no two balls have the same coordinate initially. Also each collision will be a collision of not more than two balls (that is, three or more balls never collide at the same point in all times from segment [0;t]).
+Output
+Output n numbers — coordinates of the balls t seconds after. Output the numbers accurate to at least 4 digits after the decimal point.
+Examples
+input
+Copy
+2 9
+3 4 5
+0 7 8
+output
+Copy
+68.538461538
+44.538461538
+input
+Copy
+3 10
+1 2 3
+4 -5 6
+7 -8 9
+output
+Copy
+-93.666666667
+-74.666666667
+-15.666666667
