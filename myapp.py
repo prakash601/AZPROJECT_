@@ -6,9 +6,9 @@ from nltk.tokenize import regexp_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
 lemmatizer = WordNetLemmatizer()
-# nltk.download('stopwords')
-# nltk.download('wordnet') 
-# nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('wordnet') 
+nltk.download('wordnet')
 
 from flask import Flask, jsonify, url_for, redirect, render_template, request, session
 import math
