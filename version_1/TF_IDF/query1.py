@@ -22,7 +22,8 @@ with open('vectorizer.pkl', 'rb') as file:
 # Initialize NLTK lemmatizer and stopwords
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
-
+# Measure the execution time
+start_time = time.time()
 # Query and rank documents
 line = "linkad liast is a thas 1"
 line = line.strip()
@@ -53,8 +54,7 @@ lemmatized_tokens = [lemmatizer.lemmatize(token) for token in corrected_tokens]
 
 query_vector = vectorizer.transform([' '.join(lemmatized_tokens)])  # Use transform instead of fit_transform
 
-# Measure the execution time
-start_time = time.time()
+
 
 similarity_scores = cosine_similarity(query_vector, tfidf_matrix)
 sorted_indices = similarity_scores.argsort()[0][::-1]
@@ -70,6 +70,7 @@ with open(output_file_path, 'r') as f:
 # Print ranked documents with similarity scores
 for index in sorted_indices:
     print(f"Document: {preprocessed_documents[index]}, Similarity Score: {similarity_scores[0][index]}")
+    break
 
 # Print the execution time
 print(f"Execution Time: {execution_time} seconds")

@@ -28,10 +28,9 @@ custom_stop_words = ['<','<=', '=', '<', '>=','r', ',',']','.','[','(',')','+','
     'under', 'between', 'among', 'through', 'during', 'since', 'until', 'unless', 'while',
     'throughout', 'above', 'below', 'behind', 'beside', 'beneath', 'within', 'without',
     'Hello', ',', 'how', 'are', 'you', '?', '(', "I'm", 'doing', 'well', ')', '[', 'And', 'you', ']', '{', 'Nice', 'to', 'meet', 'you', '}', '&', '(', '...', ')', ',', '[', '..', ':', ']', '....', '+-----------------+----------+|', '|+-----------------+----------+|', '|+-----------------+----------+', '"||**||**|*"', '", "', '=#', ',', '#,', '#,#"', ',', ',', ':"../"', ').', '"./"', '/"'
-
  ]
 
-start_time = time.time()
+
 stop_words = astop_words.union(custom_stop_words)
 
 def remove_stop_words(text):
@@ -167,6 +166,7 @@ def calc_docs_sorted_order(q_terms):
             "Question Link": Qlink[int(doc_index)][:-1],
             "text": Doctext[int(doc_index)]
         })
+        break
         # print('score: ', potential_docs[doc_index], 'Document: ',documents[int(doc_index)])
 
     return ans
@@ -197,6 +197,7 @@ def calc_docs_sorted_order(q_terms):
 
 # query_string = input("Enter your query: ")
 query_string = "linked list"
+start_time = time.time()
 text = remove_stop_words(query_string)
 # corrected_text = correct_spellings(text)
 print(text)
