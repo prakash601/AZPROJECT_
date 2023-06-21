@@ -17,9 +17,9 @@ from spellchecker import SpellChecker
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 from num2words import num2words
-# nltk.download('stopwords')
-# nltk.download('wordnet') 
-# nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('wordnet') 
+nltk.download('wordnet')
 
 from num2words import num2words
 
