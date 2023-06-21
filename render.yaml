@@ -1,5 +1,10 @@
 
-env:
-  PYTHON_VERSION: 3.9.6
-  PIP_VERSION: 23.1.2
-
+previewsEnabled: true
+services:
+  - type: web
+    plan: standard
+    name: app
+    env: python
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.5
