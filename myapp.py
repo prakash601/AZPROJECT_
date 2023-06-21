@@ -13,7 +13,7 @@ import time
 import nltk
 
 from nltk.stem import WordNetLemmatizer
-# from spellchecker import SpellChecker
+from spellchecker import SpellChecker
 lemmatizer = WordNetLemmatizer()
 
 from num2words import num2words
@@ -24,7 +24,7 @@ from nltk.corpus import stopwords
 
 from num2words import num2words
 stop_words = set(stopwords.words('english'))
-# spell = SpellChecker()
+spell = SpellChecker()
 from flask import Flask, jsonify, url_for, redirect, render_template, request, session
 import math
 import re
@@ -50,16 +50,16 @@ def preprocess(text):
     tokens = [t for t in tokens if t.isalnum()]
     tokens = [t for t in tokens if t not in stop_words]
     # tokens = expand_query(tokens)
-    # corrected_tokens = []
-    # for token in tokens:
-    #     if token in spell:
-    #         corrected_tokens.append(token)
-    #     else :
-    #         correction = spell.correction(token)
-    #         if correction.isdigit():
-    #             corrected_tokens.append(num2words(int(correction)))
-    #         else:
-    #             corrected_tokens.append(correction)
+    corrected_tokens = []
+    for token in tokens:
+        if token in spell:
+            corrected_tokens.append(token)
+        else :
+            correction = spell.correction(token)
+            if correction.isdigit():
+                corrected_tokens.append(num2words(int(correction)))
+            else:
+                corrected_tokens.append(correction)
             # print(f"Misspelled word: {token}, Correction: {correction}")
     lem_tokens = [lemmatizer.lemmatize(token) for token in tokens]
     query_vector = vectorizer.transform([' '.join(lem_tokens)]) 
