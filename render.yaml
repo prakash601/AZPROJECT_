@@ -1,0 +1,2 @@
+buildCommand:
+  - python3.9 myapp.py

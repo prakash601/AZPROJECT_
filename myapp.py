@@ -116,6 +116,7 @@ def calc_docs_sorted_order(query_vector):
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key'
 app.config['TEMPLATES_AUTO_RELOAD'] = True
+os.environ['API_KEY'] = 'your_api_key_here'
 
 @app.route("/<query>")
 def return_links(query):
