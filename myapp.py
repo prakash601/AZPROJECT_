@@ -11,7 +11,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 import time
 import nltk
-from nltk.corpus import stopwords
+
 from nltk.stem import WordNetLemmatizer
 # from spellchecker import SpellChecker
 lemmatizer = WordNetLemmatizer()
@@ -20,7 +20,7 @@ from num2words import num2words
 nltk.download('stopwords')
 nltk.download('wordnet') 
 nltk.download('wordnet')
-
+from nltk.corpus import stopwords
 
 from num2words import num2words
 
