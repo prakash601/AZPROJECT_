@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Page</title>
     <link
       rel="stylesheet"
@@ -14,44 +16,52 @@
   </style>
 
   <body>
-    <div class="form">
-      <form method="POST">
-        <div class="search-box">
-          <input
-            class="input-search"
-            type="search"
-            name="search"
-            placeholder="Type to Search..."
-            required
-            value="{{ search_term }}"
-          />
-          <button class="btn-search" type="submit">Submit</button>
-        </div>
-      </form>
+    <!-- create naviagation bar it has comapany logo, company name , contact us in right-->
+    <header class="nav">
+    <div class="nav-left">
+
+      <a href="/" class="company-name" >Problem Finder</a>
     </div>
+    <div class="nav-right">
+      <a href="https://github.com/prakash601/AZPROJECT_" target="_blank">Source Code</a>
+    </div>
+  </header>
+    <!-- create a search bar -->
+  <div class="search-container">
+    <form id="search-form" action="#" method="POST">
+      <input type="text" id="search-input" name="search" placeholder="Type to Search..." required value="{{ search_term }}" />
+      <button type="submit" id="search-button"><img src="static/css/icons8-search.svg" alt="Search"></button>
+    </form>
+  </div>
+
     <div class="execution-time">
       {% if execution_time %}
       <p>Execution time: {{ execution_time }} seconds</p>
       {% endif %}
     </div>
-    <div class="results-container">
-      {% for result in results %}
-      <div class="result-item" style="margin: auto">
-        <a
-          href="{{ result['Question Link'] }}"
-          target="_blank"
-          title="{% set words = result['text'].split() %}{% if words|length > 25 %}{{ words[:25]|join(' ') }}...{% else %}{{ result['text'] }}{% endif %}"
-          >{{ result['Question Link'].rsplit('/', 1)[-1].replace('-', ' ')|
-          title }}</a
-        >
-        <button
-          class="link-button"
-          onclick="window.open('{{ result['Question Link'] }}', '_blank')"
-        >
-          Go to Question
-        </button>
-      </div>
-      {% endfor %}
+
+<div class="results-container">
+  {% for result in results %}
+    <div class="result-box">
+        <div class="result-left">
+            <p class="problem-name"><a href="{{result['Qlink']}}" target="_blank" title="{% set words = result['Qdata'].split() %}{% if words|length > 35 %}{{ words[:35]|join(' ') }}...{% else %}{{ result['qdata'] }}{% endif %}" >{{result['pname']}}</a></p>
+            <p class="problem-score"> Score: {{result['score']}}</p>
+        </div>
+        <div class="result-right">
+            <p class="go-to-problem"> <a href= "{{ result['Qlink']}}" target="_blank" title="Go to Problem" > {{result['platform']}}</a></p>
+        </div>
     </div>
+    {% endfor %}
+</div>
+
+  <!-- Footer -->
+ <footer class="footer">
+  <a href="https://fair-gasoline-add.notion.site/About-Me-80fca8d7f8744f05a298019af9b04293?pvs=4" target="_blank" class = "footer-icon"><img src="static/css/icons8-about-me-45.png" alt="Email"></a>
+  <a href="prakashsankhla0601@gmail.com" class="footer-icon1"><img src="static/css/icons8-email-45.png" alt="Email"></a>
+  <a href="https://www.linkedin.com/in/prakash-sankhla/" target="_blank" class="footer-icon2"><img src="static/css/icons8-linked-in.svg" alt="LinkedIn"></a>
+  <a href="https://www.instagram.com/prakas.sankhla/" target="_blank" class="footer-icon3"><img src="static/css/icons8-instagram.svg" alt="Instagram"></a>
+  <a href="https://github.com/prakash601" target="_blank" class="footer-icon4"><img src="static/css/icons8-github.svg" alt="GitHub" ></a>
+</footer>
+
   </body>
 </html>
