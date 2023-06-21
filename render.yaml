@@ -1,2 +1,5 @@
-buildCommand:
-  - python3.9 myapp.py
+
+env:
+  PYTHON_VERSION: 3.9.6
+  PIP_VERSION: 23.1.2
+
