@@ -120,7 +120,7 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 @app.route("/<query>")
 def return_links(query):
     start_time = time.time()  # Start measuring time
-    results = calc_docs_sorted_order(preprocess(query))[:10:]
+    results = calc_docs_sorted_order(preprocess(query))[:20:]
     end_time = time.time()  # Stop measuring time
     execution_time = end_time - start_time
     return jsonify(results, execution_time)
@@ -134,7 +134,7 @@ def home():
         query = request.form.get('search', '')
         # q_terms = [term.lower() for term in query.strip().split()]
         # results =  calc_docs_sorted_order(q_terms)[:10:]
-        results = calc_docs_sorted_order(preprocess(query))[:10:]
+        results = calc_docs_sorted_order(preprocess(query))[:20:]
         session['search_term'] = query
         session['results'] = results
         session['execution_time'] = execution_time
