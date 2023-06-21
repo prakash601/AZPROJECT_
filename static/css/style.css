@@ -1,7 +1,10 @@
 /* Navigation Bar */
 body {
-  background-color: #b7b6b6;
+  background: linear-gradient(to bottom, #f5f5f5, #cac7c7);
+  margin: 0;
+  padding: 0;
 }
+
 
 a {
   text-decoration: none;
@@ -16,7 +19,7 @@ a {
 
 
 .nav {
-  background-color: #333;
+  background-color: #fffefe;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -45,7 +48,7 @@ a {
 
 .company-name {
   margin-left: 10px;
-  color: #fff;
+  color: #050505;
   text-decoration: none;
 }
 
@@ -118,7 +121,7 @@ a {
 
 .result-right {
   float: right;
-  
+
 
 }
 
@@ -137,7 +140,7 @@ a {
 
 
 .footer {
-  background-color: #333;
+  background-color: #cac7c7;
   color: #fff;
   padding: 2px;
   text-align: center;
