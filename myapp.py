@@ -1,7 +1,7 @@
 import math
 import nltk
 import time
-# from nltk.corpus import stopwords
+
 from nltk.tokenize import regexp_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
@@ -15,15 +15,15 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 # from spellchecker import SpellChecker
 lemmatizer = WordNetLemmatizer()
-# stop_words = set(stopwords.words('english'))
+
 from num2words import num2words
-# nltk.download('stopwords')
+nltk.download('stopwords')
 nltk.download('wordnet') 
 nltk.download('punkt')
-# from nltk.corpus import stopwords
+from nltk.corpus import stopwords
 
 from num2words import num2words
-
+stop_words = set(stopwords.words('english'))
 # spell = SpellChecker()
 from flask import Flask, jsonify, url_for, redirect, render_template, request, session
 import math
@@ -48,7 +48,7 @@ def preprocess(text):
     line = text.strip()
     tokens = nltk.word_tokenize(line.lower())
     tokens = [t for t in tokens if t.isalnum()]
-    # tokens = [t for t in tokens if t not in stop_words]
+    tokens = [t for t in tokens if t not in stop_words]
     # tokens = expand_query(tokens)
     # corrected_tokens = []
     # for token in tokens:
