@@ -11,9 +11,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import pickle
 import time
 import nltk
+from correct import correction
 
 from nltk.stem import WordNetLemmatizer
-from spellchecker import SpellChecker
 lemmatizer = WordNetLemmatizer()
 
 from num2words import num2words
@@ -24,7 +24,6 @@ from nltk.corpus import stopwords
 
 from num2words import num2words
 stop_words = set(stopwords.words('english'))
-spell = SpellChecker()
 from flask import Flask, jsonify, url_for, redirect, render_template, request, session
 import math
 import re
@@ -52,19 +51,29 @@ def preprocess(text):
     # tokens = expand_query(tokens)
     corrected_tokens = []
     for token in tokens:
-        if token in spell:
-            corrected_tokens.append(token)
-        else :
-            correction = spell.correction(token)
-            if correction.isdigit():
-                corrected_tokens.append(num2words(int(correction)))
-            else:
-                corrected_tokens.append(correction)
+        correction_res = correction(token)
+        if token.isdigit():
+            corrected_tokens.append(num2words(int(token)))
+        else:
+            corrected_tokens.append(correction_res)
+    # print(f"Misspelled word: {token}, Correction: {correction_res}")
+    # corrected_tokens = []
+    # for token in tokens:
+    #     if token in spell:
+    #         corrected_tokens.append(token)
+    #     else :
+    #         correction = spell.correction(token)
+    #         if correction.isdigit():
+    #             corrected_tokens.append(num2words(int(correction)))
+    #         else:
+    #             corrected_tokens.append(correction)
             # print(f"Misspelled word: {token}, Correction: {correction}")
-    lem_tokens = [lemmatizer.lemmatize(token) for token in tokens]
-    query_vector = vectorizer.transform([' '.join(lem_tokens)]) 
+    lem_tokens = [lemmatizer.lemmatize(token) for token in corrected_tokens]
+    query = ' '.join(lem_tokens)
+    # print(query)
+    # query_vector = vectorizer.transform([query]) 
     
-    return query_vector
+    return query
     
             
 with open('tfidf_matrix.pkl', 'rb') as file:
@@ -79,13 +88,14 @@ with open('version_1/Question_scrapper/Qdata/index.txt', 'r') as f:
 with open('version_1/TF_IDF/platform_name.txt', 'r') as f:
     platform = f.readlines() 
 
-def calc_docs_sorted_order(query_vector):
+def calc_docs_sorted_order(query):
+
+    query_vector = vectorizer.transform([query]) 
     similarity_scores = cosine_similarity(query_vector, tfidf_matrix)
     sorted_indices = similarity_scores.argsort()[0][::-1]
     ans = []
     for index in sorted_indices:
         ans.append({'Qlink': qlinks[index], 'score': similarity_scores[0][index], 'Qdata': qdata[index], 'pname': pname[int(index)], 'platform': platform[index]})
-    # print(ans)
     
     return ans 
      
@@ -103,7 +113,7 @@ def calc_docs_sorted_order(query_vector):
 
 # p = calc_docs_sorted_order(preprocess(query_string))[:10:]
 
-
+# print(p)
 # execution_time =  time.time() - start_time
 # print("Execution time:", execution_time, "seconds")
 
@@ -121,7 +131,9 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 @app.route("/<query>")
 def return_links(query):
     start_time = time.time()  # Start measuring time
-    results = calc_docs_sorted_order(preprocess(query))[:20:]
+    queryp=preprocess(query)
+    results = calc_docs_sorted_order(queryp)[:20:]
+    
     end_time = time.time()  # Stop measuring time
     execution_time = end_time - start_time
     return jsonify(results, execution_time)
@@ -131,11 +143,13 @@ def home():
     search_term = session.pop('search_term', '') if 'search_term' in session else ''
     results = session.pop('results', []) if 'results' in session else []
     execution_time = session.pop('execution_time', 0) if 'execution_time' in session else 0
+    query = ''
     if request.method == 'POST':
         query = request.form.get('search', '')
         # q_terms = [term.lower() for term in query.strip().split()]
         # results =  calc_docs_sorted_order(q_terms)[:10:]
-        results = calc_docs_sorted_order(preprocess(query))[:20:]
+        queryp=preprocess(query)
+        results = calc_docs_sorted_order(queryp)[:20:]
         session['search_term'] = query
         session['results'] = results
         session['execution_time'] = execution_time
