@@ -28,7 +28,7 @@
   </header>
     <!-- create a search bar -->
   <div class="search-container">
-    <form id="search-form" action="#" method="POST">
+    <form id="search-form"  method="POST">
       <input type="text" id="search-input" name="search" placeholder="Type to Search..." required value="{{ search_term }}" />
       <button type="submit" id="search-button"><img src="static/css/icons8-search.svg" alt="Search"></button>
     </form>
@@ -39,12 +39,17 @@
       <p>Execution time: {{ execution_time }} seconds</p>
       {% endif %}
     </div>
+<div class="query">
+  {% if query %}
+    <p>This is the query you searched for: {{ query }}</p>
+  {% endif %}
+</div>
 
 <div class="results-container">
   {% for result in results %}
     <div class="result-box">
         <div class="result-left">
-            <p class="problem-name"><a href="{{result['Qlink']}}" target="_blank" title="{% set words = result['Qdata'].split() %}{% if words|length > 35 %}{{ words[:35]|join(' ') }}...{% else %}{{ result['qdata'] }}{% endif %}" >{{result['pname']}}</a></p>
+            <p class="problem-name"><a href="{{result['Qlink']}}" target="_blank" title="{% set words = result['Qdata'].split() %}{% if words|length > 35 %}{{ words[:35]|join(' ') }}...{% else %}{{ result['Qdata'] }}{% endif %}" >{{result['pname']}}</a></p>
             <p class="problem-score"> Score: {{result['score']}}</p>
         </div>
         <div class="result-right">
