@@ -27,7 +27,7 @@ with open('vectorizer.pkl', 'rb') as file:
 start_time = time.time()
 
 # Query and rank documents
-line = "linked list is a this "
+line = "linked list"
 line = line.strip()
 
         # Tokenize the line using custom delimiters and punctuation marks
@@ -54,14 +54,14 @@ sorted_indices = similarity_scores.argsort()[0][::-1]
 execution_time = time.time() - start_time
 
 # Load preprocessed documents
-output_file_path = 'version_1/TF_IDF/documents.txt'
+output_file_path = 'version_1/TF_IDF/qdata.txt'
 with open(output_file_path, 'r') as f:
     preprocessed_documents = f.readlines()
 
 # Print ranked documents with similarity scores
 for index in sorted_indices:
     print(f"Document: {preprocessed_documents[index]}, Similarity Score: {similarity_scores[0][index]}")
-    break
+
 
 # Print the execution time
 print(f"Execution Time: {execution_time} seconds")

@@ -160,14 +160,18 @@ def calc_docs_sorted_order(q_terms):
     if len(sorted_docs) == 0:
         print("No matching question found. Please search with more relevant terms.")
         return ans
-    
+    i=0
     for doc_index in sorted_docs:
         ans.append({
             "Question Link": Qlink[int(doc_index)][:-1],
             "text": Doctext[int(doc_index)]
         })
-        break
+        # print('score: ', potential_docs[doc_index])
+        i=i+1
+        if i == 30: 
+            break
         # print('score: ', potential_docs[doc_index], 'Document: ',documents[int(doc_index)])
+        
 
     return ans
      
@@ -196,19 +200,20 @@ def calc_docs_sorted_order(q_terms):
         
 
 # query_string = input("Enter your query: ")
-query_string = "linked list"
+query_string = "Given an unsorted array A of size N that contains only positive integers"
 start_time = time.time()
 text = remove_stop_words(query_string)
 # corrected_text = correct_spellings(text)
-print(text)
+# print(text)
 query_terms = preprocess(text)
 
-print(query_terms)
+# print(query_terms)
 p=calc_docs_sorted_order(query_terms)
+end_time = time.time()
 # p=calc_docs_sorted_order(preprocess(remove_stop_words(query_string)))
 print(p[:20:])
 
-end_time = time.time()
+
 execution_time = end_time - start_time
 print("Execution time:", execution_time, "seconds")
 

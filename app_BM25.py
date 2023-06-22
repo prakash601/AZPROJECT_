@@ -78,11 +78,8 @@ def calc_docs_sorted_order(query):
     query_scores = bm25.get_scores(preprocess(query).split())
     ans = []
     # Print ranked documents with scores and execution time
-    i=0
     for index, score in sorted(enumerate(query_scores), key=lambda x: x[1], reverse=True):
         ans.append({'Qlink': qlinks[index], 'score': score, 'Qdata': qdata[index], 'pname': pname[int(index)], 'platform': platform[index]})
-        if i == 50:
-            break
         # print(f"Document: {qdata[index]}, BM25 Score: {score}")
     return ans
 
