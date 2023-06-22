@@ -26,23 +26,12 @@ from num2words import num2words
 stop_words = set(stopwords.words('english'))
 from flask import Flask, jsonify, url_for, redirect, render_template, request, session
 import math
-import re
+
 
 with open('vectorizer.pkl', 'rb') as file:
     vectorizer = pickle.load(file)
 
  
-
-
-# def expand_query(query_terms):
-#     expanded_terms = []
-#     for term in query_terms:
-#         expanded_terms.append(term)
-#         synsets = wordnet.synsets(term)
-#         for synset in synsets:
-#             for lemma in synset.lemmas():
-#                 expanded_terms.append(lemma.name())
-#     return expanded_terms
 def preprocess(text):
     line = text.strip()
     tokens = nltk.word_tokenize(line.lower())
@@ -57,17 +46,7 @@ def preprocess(text):
         else:
             corrected_tokens.append(correction_res)
     # print(f"Misspelled word: {token}, Correction: {correction_res}")
-    # corrected_tokens = []
-    # for token in tokens:
-    #     if token in spell:
-    #         corrected_tokens.append(token)
-    #     else :
-    #         correction = spell.correction(token)
-    #         if correction.isdigit():
-    #             corrected_tokens.append(num2words(int(correction)))
-    #         else:
-    #             corrected_tokens.append(correction)
-            # print(f"Misspelled word: {token}, Correction: {correction}")
+
     lem_tokens = [lemmatizer.lemmatize(token) for token in corrected_tokens]
     query = ' '.join(lem_tokens)
     # print(query)
