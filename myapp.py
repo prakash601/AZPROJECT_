@@ -104,21 +104,26 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/<query>')
 def return_links(query):
-    results = calc_docs_sorted_order(preprocess(query))[:20:]
+    results = calc_docs_sorted_order(preprocess(query))[:30:]
     return jsonify(results=results)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
     query= ''
+    queryp = ''
     results = []
+    execution_time = 0
     if request.method == 'POST':
         query = request.form['search']
-        print(f"Received query: {query}")  # Debug print statement
-        results = calc_docs_sorted_order(preprocess(query))[:20:]
-        print(f"Results: {results}")  # Debug print statement
+        # print(f"Received query: {query}")  # Debug print statement
+        start_time = time.time()
+        queryp = preprocess(query)
+        results = calc_docs_sorted_order(queryp)[:30:]
+        execution_time = time.time() - start_time
+        # print(f"Results: {results}")  # Debug print statement
         # return redirect(url_for('home'))
     
-    return render_template('index.html',results=results, query=query)
+    return render_template('index.html',results=results, query=query, queryp=queryp, execution_time=execution_time)
 
 if __name__ == '__main__':
     app.run(debug=True)

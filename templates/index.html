@@ -34,14 +34,10 @@
     </form>
   </div>
 
-    <div class="execution-time">
-      {% if execution_time %}
-      <p>Execution time: {{ execution_time }} seconds</p>
-      {% endif %}
-    </div>
+
 <div class="query">
   {% if query %}
-    <p>This is the query you searched for: {{ query }}</p>
+    <p> you searched for: {{ query }} And Showing result for: {{queryp}} in {{ execution_time }} seconds </p>
   {% endif %}
 </div>
 
