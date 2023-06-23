@@ -55,6 +55,18 @@ def preprocess(text):
     # query_vector = vectorizer.transform([query]) 
     return query
 
+def correct_query(text):
+    line = text.strip()
+    tokens = nltk.word_tokenize(line)
+    corrected_tokens = []
+    for token in tokens:
+        correction_res = correction(token)
+        if token.isdigit():
+            corrected_tokens.append(num2words(int(token)))
+        else:
+            corrected_tokens.append(correction_res)
+    query = ' '.join(corrected_tokens)
+    return query
 # Calculate BM25 scores for the query
 # query_scores = bm25.get_scores(preprocess(query).split())
 
@@ -117,8 +129,8 @@ def home():
         query = request.form['search']
         # print(f"Received query: {query}")  # Debug print statement
         start_time = time.time()
-        queryp = preprocess(query)
-        results = calc_docs_sorted_order(queryp)[:30:]
+        queryp = correct_query(query)
+        results = calc_docs_sorted_order(preprocess(query))[:30:]
         execution_time = time.time() - start_time
         # print(f"Results: {results}")  # Debug print statement
         # return redirect(url_for('home'))

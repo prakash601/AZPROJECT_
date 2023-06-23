@@ -15,19 +15,19 @@
 #             print(lemmatizer.lemmatize(word))
 # print(len(documents))
 
-def check_vocab_in_file(vocab_file, target_file):
-    with open(vocab_file, 'r') as vocab:
-        vocab_words = set(word.strip() for word in vocab)
+# def check_vocab_in_file(vocab_file, target_file):
+#     with open(vocab_file, 'r') as vocab:
+#         vocab_words = set(word.strip() for word in vocab)
 
-    with open(target_file, 'r') as target:
-        target_words = set(word.strip() for word in target)
+#     with open(target_file, 'r') as target:
+#         target_words = set(word.strip() for word in target)
 
-    common_words = vocab_words.intersection(target_words)
+#     common_words = vocab_words.intersection(target_words)
 
-    for word in common_words:
-        print(word)
+#     for word in common_words:
+#         print(word)
 
-# Example usage
-vocab_file = 'TF_IDF/vocab.txt'
-target_file = 'output5.txt'
-check_vocab_in_file(vocab_file, target_file)
+# # Example usage
+# vocab_file = 'TF_IDF/vocab.txt'
+# target_file = 'output5.txt'
+# check_vocab_in_file(vocab_file, target_file)
