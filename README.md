@@ -1,7 +1,5 @@
 AlgoZenith Hackathon
 
-https://problem-explorer.onrender.com/
-
 Getting started
 SetUp
 
