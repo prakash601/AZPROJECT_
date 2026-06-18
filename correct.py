@@ -1,9 +1,17 @@
 import re
 from collections import Counter
+from db import get_cursor
 
 def words(text): return re.findall(r'\w+', text.lower())
 
-WORDS = Counter(words(open('big.txt').read())) + Counter(words(open('version_1/TF_IDF/qdata.txt').read()))
+def load_words_from_db():
+    with get_cursor(commit=False) as cur:
+        cur.execute("SELECT title, description FROM problems")
+        rows = cur.fetchall()
+    text = " ".join([f"{r[0]} {r[1]}" for r in rows])
+    return Counter(words(text))
+
+WORDS = load_words_from_db()
 
 def P(word, N=sum(WORDS.values())): 
     "Probability of `word`."

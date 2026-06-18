@@ -45,11 +45,11 @@
   {% for result in results %}
     <div class="result-box">
         <div class="result-left">
-            <p class="problem-name"><a href="{{result['Qlink']}}" target="_blank" title="{% set words = result['Qdata'].split() %}{% if words|length > 35 %}{{ words[:35]|join(' ') }}...{% else %}{{ result['Qdata'] }}{% endif %}" >{{result['pname']}}</a></p>
+            <p class="problem-name"><a href="{{result['url']}}" target="_blank" title="{% set words = result['description'].split() %}{% if words|length > 35 %}{{ words[:35]|join(' ') }}...{% else %}{{ result['description'] }}{% endif %}" >{{result['title']}}</a></p>
             <p class="problem-score"> Score: {{result['score']}}</p>
         </div>
         <div class="result-right">
-            <p class="go-to-problem"> <a href= "{{ result['Qlink']}}" target="_blank" title="Go to Problem" > {{result['platform']}}</a></p>
+            <p class="go-to-problem"> <a href= "{{ result['url']}}" target="_blank" title="Go to Problem" > {{result['platform']}}</a></p>
         </div>
     </div>
     {% endfor %}
