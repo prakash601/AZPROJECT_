@@ -1,0 +1,174 @@
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast),
+    box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.card:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.01em;
+}
+
+.titleLink {
+  color: var(--color-text);
+}
+
+.titleLink:hover {
+  color: var(--color-accent);
+}
+
+.externalLink {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.externalLink:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-accent);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+}
+
+.platform {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text-secondary);
+}
+
+/* Platform-specific accents (left border tint) */
+.platform_leetcode {
+  color: var(--color-platform-leetcode);
+}
+.platform_codeforces {
+  color: var(--color-platform-codeforces);
+}
+.platform_codechef {
+  color: var(--color-platform-codechef);
+}
+.platform_hackerrank {
+  color: var(--color-platform-hackerrank);
+}
+.platform_hackerearth {
+  color: var(--color-platform-hackerearth);
+}
+.platform_atcoder {
+  color: var(--color-platform-atcoder);
+}
+
+.difficulty {
+  background-color: transparent;
+  border: 1px solid currentColor;
+}
+.difficulty_easy {
+  color: var(--color-difficulty-easy);
+}
+.difficulty_medium {
+  color: var(--color-difficulty-medium);
+}
+.difficulty_hard {
+  color: var(--color-difficulty-hard);
+}
+
+.tag {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-4);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.scoreRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.scoreLabel {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  font-weight: var(--fw-medium);
+  flex-shrink: 0;
+}
+
+.scoreBar {
+  flex: 1;
+  height: 6px;
+  background-color: var(--color-surface-hover);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.scoreFill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-accent),
+    var(--color-accent-hover)
+  );
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+
+.scoreValue {
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  font-weight: var(--fw-semibold);
+  font-variant-numeric: tabular-nums;
+  min-width: 36px;
+  text-align: right;
+}

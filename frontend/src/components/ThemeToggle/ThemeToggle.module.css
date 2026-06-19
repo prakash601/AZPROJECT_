@@ -1,0 +1,24 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.toggle:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.icon {
+  transition: transform var(--transition-base);
+}
+
+.toggle:hover .icon {
+  transform: rotate(15deg);
+}
