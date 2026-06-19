@@ -59,6 +59,7 @@ def search(query: str, limit: int = 30, offset: int = 0):
         LIMIT 50
     )
     SELECT p.id, p.platform, p.title, p.url, p.description,
+           p.difficulty, p.tags,
            COALESCE(s.rrf_score, 0) + COALESCE(k.rrf_score, 0) + COALESCE(f.rrf_score, 0) AS score
     FROM problems p
     LEFT JOIN semantic s ON p.id = s.id
@@ -85,7 +86,9 @@ def search(query: str, limit: int = 30, offset: int = 0):
             "title": r[2],
             "url": r[3],
             "description": r[4],
-            "score": float(r[5])
+            "difficulty": r[5],
+            "tags": r[6] if r[6] else [],
+            "score": float(r[7])
         }
         for r in rows
     ]

@@ -1,14 +1,15 @@
-# Existing dependencies
-flask
-rank-bm25
-nltk
-num2words
+# Web framework
+fastapi
+uvicorn
 
 # Database
 psycopg2-binary==2.9.9
 pgvector==0.2.3
 python-dotenv==1.0.0
 
-# Embeddings
+# Search / NLP
+rank-bm25
+nltk
+num2words
 sentence-transformers==2.7.0
 tqdm==4.66.0
