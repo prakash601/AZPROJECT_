@@ -10,7 +10,14 @@ __pycache__/
 
 # Secrets
 .env
+frontend/.env.local
 
 # OS Files
 .DS_Store
 Thumbs.db
+
+# CodeGraph index
+.codegraph/
+
+# Frontend build output
+frontend/dist/
