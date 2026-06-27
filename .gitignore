@@ -1,0 +1,23 @@
+# Environments
+myenv/
+venv/
+env/
+
+# Cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Secrets
+.env
+frontend/.env.local
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# CodeGraph index
+.codegraph/
+
+# Frontend build output
+frontend/dist/

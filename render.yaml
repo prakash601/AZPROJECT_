@@ -1,10 +1,12 @@
-
 previewsEnabled: true
 services:
   - type: web
     plan: standard
-    name: app
+    name: problem-finder-api
     env: python
     envVars:
       - key: PYTHON_VERSION
-        value: 3.9.6
+        value: 3.11.7
+      - key: SECRET_KEY
+        generateValue: true
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT

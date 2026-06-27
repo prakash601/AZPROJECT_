@@ -1,9 +1,19 @@
 import re
+import nltk
 from collections import Counter
+from num2words import num2words
+from db import get_cursor
 
 def words(text): return re.findall(r'\w+', text.lower())
 
-WORDS = Counter(words(open('big.txt').read())) + Counter(words(open('version_1/TF_IDF/qdata.txt').read()))
+def load_words_from_db():
+    with get_cursor(commit=False) as cur:
+        cur.execute("SELECT title, description FROM problems")
+        rows = cur.fetchall()
+    text = " ".join([f"{r[0]} {r[1]}" for r in rows])
+    return Counter(words(text))
+
+WORDS = load_words_from_db()
 
 def P(word, N=sum(WORDS.values())): 
     "Probability of `word`."
@@ -34,3 +44,17 @@ def edits1(word):
 def edits2(word): 
     "All edits that are two edits away from `word`."
     return (e2 for e1 in edits1(word) for e2 in edits1(e1))
+
+
+def correct_query(text):
+    """Tokenize a query, spell-correct each token, convert digits to words."""
+    line = text.strip()
+    tokens = nltk.word_tokenize(line)
+    corrected_tokens = []
+    for token in tokens:
+        correction_res = correction(token)
+        if token.isdigit():
+            corrected_tokens.append(num2words(int(token)))
+        else:
+            corrected_tokens.append(correction_res)
+    return ' '.join(corrected_tokens)

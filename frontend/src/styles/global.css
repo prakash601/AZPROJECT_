@@ -1,0 +1,6 @@
+/*
+ * Global stylesheet aggregator — the ONLY file imported in main.jsx.
+ * Import order matters: tokens first (defines variables), then base.
+ */
+@import './tokens.css';
+@import './base.css';
