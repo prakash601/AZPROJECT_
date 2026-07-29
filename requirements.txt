@@ -11,5 +11,7 @@ python-dotenv==1.0.0
 rank-bm25
 nltk
 num2words
-sentence-transformers==2.7.0
+transformers
+optimum[onnxruntime]
+onnxruntime
 tqdm==4.66.0
