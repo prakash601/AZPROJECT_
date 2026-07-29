@@ -1,0 +1,45 @@
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding: var(--space-3) 0;
+  margin-bottom: var(--space-2);
+}
+
+.summary {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+}
+
+.count {
+  color: var(--color-text);
+  font-weight: var(--fw-semibold);
+}
+
+.query {
+  color: var(--color-text);
+  font-weight: var(--fw-medium);
+}
+
+.time {
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.didYouMean {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.didYouMean:hover {
+  background-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
