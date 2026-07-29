@@ -1,32 +1,58 @@
-"""
-Unified search: FTS + Vector + Trigram with RRF (Reciprocal Rank Fusion).
-
-All SQL uses parameterized queries — no string interpolation for user input.
-Returns results with clean key names: url, title, description, platform, score.
-"""
-from sentence_transformers import SentenceTransformer
+import numpy as np
+from optimum.onnxruntime import ORTModelForFeatureExtraction
+from transformers import AutoTokenizer
 from db import get_cursor
 
-MODEL_NAME = "all-MiniLM-L6-v2"
+MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
-# Eager-load model at import time to avoid cold start on first request
-_model = SentenceTransformer(MODEL_NAME)
+# Lazy-loaded globals
+_tokenizer = None
+_model = None
 
+def get_onnx_model():
+    """Lazily load tokenizer and ONNX Runtime session."""
+    global _tokenizer, _model
+    if _model is None or _tokenizer is None:
+        print("Loading ONNX model and tokenizer...")
+        _tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+        # export=True converts PyTorch weights to ONNX format on first run
+        _model = ORTModelForFeatureExtraction.from_pretrained(
+            MODEL_NAME, export=True
+        )
+        print("ONNX model loaded successfully.")
+    return _tokenizer, _model
 
-def get_model():
-    return _model
+def mean_pooling(model_output, attention_mask):
+    """Perform mean pooling over token embeddings."""
+    token_embeddings = model_output[0]  # First element contains token embeddings
+    input_mask_expanded = np.expand_dims(attention_mask, axis=-1)
+    sum_embeddings = np.sum(token_embeddings * input_mask_expanded, axis=1)
+    sum_mask = np.clip(input_mask_expanded.sum(axis=1), a_min=1e-9, a_max=None)
+    return sum_embeddings / sum_mask
 
+def encode_query(query: str):
+    """Encode string query into a 384-dim normalized embedding using ONNX."""
+    tokenizer, model = get_onnx_model()
+    
+    # Tokenize text input
+    inputs = tokenizer(
+        query, padding=True, truncation=True, max_length=128, return_tensors="np"
+    )
+    
+    # Run inference with ONNX Runtime
+    outputs = model(**inputs)
+    
+    # Mean pooling + L2 normalization
+    embeddings = mean_pooling(outputs, inputs["attention_mask"])
+    norm = np.linalg.norm(embeddings, ord=2, axis=1, keepdims=True)
+    normalized_embedding = (embeddings / np.clip(norm, a_min=1e-12, a_max=None))[0]
+    
+    return normalized_embedding.tolist()
 
 def search(query: str, limit: int = 30, offset: int = 0):
-    """
-    Combined search using Reciprocal Rank Fusion (RRF).
-    Merges semantic (vector), keyword (FTS), and fuzzy (trigram) results.
-
-    Returns list of dicts with keys: id, platform, title, url, description, score
-    """
-    model = get_model()
-    query_embedding = model.encode(query).tolist()
-
+    """Combined search using Reciprocal Rank Fusion (RRF)."""
+    query_embedding = encode_query(query)
+    
     sql = """
     WITH semantic AS (
         SELECT id,
@@ -69,16 +95,15 @@ def search(query: str, limit: int = 30, offset: int = 0):
     ORDER BY score DESC
     LIMIT %s OFFSET %s
     """
-
     with get_cursor(commit=False) as cur:
         cur.execute(sql, (
-            query_embedding, query_embedding,   # semantic (2 refs)
-            query, query, query,                # keyword  (3 refs to plainto_tsquery)
-            query, query, query,                # fuzzy    (3 refs)
+            query_embedding, query_embedding,
+            query, query, query,
+            query, query, query,
             limit, offset
         ))
         rows = cur.fetchall()
-
+        
     return [
         {
             "id": r[0],
@@ -93,7 +118,6 @@ def search(query: str, limit: int = 30, offset: int = 0):
         for r in rows
     ]
 
-
 def autocomplete(prefix: str, limit: int = 10):
     """Fast autocomplete with prefix + fuzzy matching."""
     sql = """
@@ -106,11 +130,9 @@ def autocomplete(prefix: str, limit: int = 10):
     LIMIT %s
     """
     like_pattern = f"{prefix}%"
-
     with get_cursor(commit=False) as cur:
         cur.execute(sql, (prefix, like_pattern, like_pattern, prefix, limit))
         rows = cur.fetchall()
-
     return [
         {"id": r[0], "title": r[1], "url": r[2], "platform": r[3]}
         for r in rows
