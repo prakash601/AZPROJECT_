@@ -4,6 +4,13 @@ from collections import Counter
 from num2words import num2words
 from db import get_cursor
 
+try:
+    nltk.data.find('tokenizers/punkt')
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt')
+    nltk.download('punkt_tab')
+
 def words(text): return re.findall(r'\w+', text.lower())
 
 def load_words_from_db():
