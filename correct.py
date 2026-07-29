@@ -11,35 +11,40 @@ except LookupError:
     nltk.download('punkt')
     nltk.download('punkt_tab')
 
-def words(text): return re.findall(r'\w+', text.lower())
+WORDS_CACHE = None
 
-def load_words_from_db():
-    with get_cursor(commit=False) as cur:
-        cur.execute("SELECT title, description FROM problems")
-        rows = cur.fetchall()
-    text = " ".join([f"{r[0]} {r[1]}" for r in rows])
-    return Counter(words(text))
+def words(text): 
+    return re.findall(r'\w+', text.lower())
 
-WORDS = load_words_from_db()
+def get_words():
+    global WORDS_CACHE
+    if WORDS_CACHE is None:
+        try:
+            with get_cursor(commit=False) as cur:
+                cur.execute("SELECT title, description FROM problems LIMIT 5000")  # Limit or fetch titles to keep fast
+                rows = cur.fetchall()
+            text = " ".join([f"{r[0]} {r[1]}" for r in rows])
+            WORDS_CACHE = Counter(words(text))
+        except Exception:
+            WORDS_CACHE = Counter()
+    return WORDS_CACHE
 
-def P(word, N=sum(WORDS.values())): 
-    "Probability of `word`."
-    return WORDS[word] / N
+def P(word):
+    w = get_words()
+    N = sum(w.values()) or 1
+    return w[word] / N
 
-def correction(word): 
-    "Most probable spelling correction for word."
+def correction(word):
     return max(candidates(word), key=P)
 
-def candidates(word): 
-    "Generate possible spelling corrections for word."
+def candidates(word):
     return (known([word]) or known(edits1(word)) or known(edits2(word)) or [word])
 
-def known(words): 
-    "The subset of `words` that appear in the dictionary of WORDS."
-    return set(w for w in words if w in WORDS)
+def known(words_list):
+    w = get_words()
+    return set(x for x in words_list if x in w)
 
 def edits1(word):
-    "All edits that are one edit away from `word`."
     letters    = 'abcdefghijklmnopqrstuvwxyz'
     splits     = [(word[:i], word[i:])    for i in range(len(word) + 1)]
     deletes    = [L + R[1:]               for L, R in splits if R]
@@ -48,20 +53,18 @@ def edits1(word):
     inserts    = [L + c + R               for L, R in splits for c in letters]
     return set(deletes + transposes + replaces + inserts)
 
-def edits2(word): 
-    "All edits that are two edits away from `word`."
+def edits2(word):
     return (e2 for e1 in edits1(word) for e2 in edits1(e1))
 
-
 def correct_query(text):
-    """Tokenize a query, spell-correct each token, convert digits to words."""
     line = text.strip()
+    if not line:
+        return line
     tokens = nltk.word_tokenize(line)
     corrected_tokens = []
     for token in tokens:
-        correction_res = correction(token)
         if token.isdigit():
             corrected_tokens.append(num2words(int(token)))
         else:
-            corrected_tokens.append(correction_res)
+            corrected_tokens.append(correction(token))
     return ' '.join(corrected_tokens)
