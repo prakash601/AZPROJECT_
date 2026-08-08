@@ -25,8 +25,9 @@ merged via Reciprocal Rank Fusion (RRF), backed by PostgreSQL + pgvector.
                                     └────────────────────────────┘
 ```
 
-- **`main.py`** — FastAPI app. Pure JSON API: `/api/health`, `/api/search`,
-  `/api/autocomplete`. Interactive docs at `/docs`.
+- **`main.py`** — FastAPI app setup, middleware, and router registration.
+- **`api/routes.py`** — HTTP API routes and response models: `/api/health`,
+  `/api/search`, and `/api/autocomplete`. Interactive docs at `/docs`.
 - **`search.py`** — RRF search (semantic + FTS + trigram) and autocomplete.
 - **`correct.py`** — Norvig spell-correct + `correct_query()` for "Did you mean".
 - **`db.py`** — Threaded PostgreSQL connection pool with pgvector support.
@@ -86,6 +87,16 @@ FastAPI auto-generates interactive docs at `/docs` and `/redoc`.
   Set env vars: `DB_*`, `SECRET_KEY`, `FRONTEND_ORIGIN`.
 - **Frontend:** Vercel/Netlify (`frontend/vercel.json`). Build: `npm run build`,
   output: `dist`. Set `VITE_API_BASE_URL` to the deployed API URL.
+
+## Documentation
+
+| Document                              | Description                               |
+| ------------------------------------- | ----------------------------------------- |
+| [docs/setup.md](docs/setup.md)        | Local development setup guide             |
+| [docs/architecture.md](docs/architecture.md) | System design & search pipeline    |
+| [docs/api-reference.md](docs/api-reference.md) | API reference with examples    |
+| [docs/deployment.md](docs/deployment.md) | Deployment guide (Render, Vercel, Docker) |
+| [docs/data-pipeline.md](docs/data-pipeline.md) | Data ingestion & embedding pipeline |
 
 ## Tech Stack
 
