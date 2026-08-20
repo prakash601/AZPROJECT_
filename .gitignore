@@ -11,6 +11,7 @@ __pycache__/
 # Secrets
 .env
 frontend/.env.local
+frontend/.vite
 
 # OS Files
 .DS_Store
@@ -21,3 +22,11 @@ Thumbs.db
 
 # Frontend build output
 frontend/dist/
+
+# Test / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+coverage.xml
+# Backend build artefact (derived from frontend/dist via Dockerfile)
+static/
