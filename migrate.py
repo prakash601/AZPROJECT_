@@ -75,11 +75,16 @@ def migrate():
                 batch.append((platform, title, url, description))
 
             if batch:
-                cur.executemany("""
+                args_str = ",".join(
+                    cur.mogrify("(%s, %s, %s, %s)", row).decode("utf-8") 
+                    for row in batch
+                )
+                query = f"""
                     INSERT INTO problems (platform, title, url, description)
-                    VALUES (%s, %s, %s, %s)
+                    VALUES {args_str}
                     ON CONFLICT (url) DO NOTHING
-                """, batch)
+                """
+                cur.execute(query)
                 inserted += len(batch)
 
     print(f"Done. Inserted: {inserted}, Skipped: {skipped}")

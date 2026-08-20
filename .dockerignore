@@ -1,0 +1,9 @@
+.env
+__pycache__
+*.pyc
+.git
+.gitignore
+.DS_Store
+node_modules
+frontend/node_modules
+README.md
