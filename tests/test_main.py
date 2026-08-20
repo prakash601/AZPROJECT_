@@ -1,6 +1,13 @@
-"""Tests for main.py – FastAPI endpoints."""
+"""Tests for main.py / api/routes.py – FastAPI endpoints."""
 import pytest
 from unittest import mock
+
+# After refactor/api-routes, search logic lives in api.routes (main.py just includes the router).
+# Patch api.routes.pg_search / correct_query / autocomplete. Also patch main.* for backwards compat
+# by aliasing — tests that mock main.* will still work if we patch both.
+_PATCH_SEARCH = "api.routes.pg_search"
+_PATCH_CORRECT = "api.routes.correct_query"
+_PATCH_AUTOCOMPLETE = "api.routes.autocomplete"
 
 
 def test_health(client):
@@ -10,7 +17,6 @@ def test_health(client):
 
 
 def test_search_success_returns_results_and_no_correction(client):
-    # Patch pg_search and correct_query at the main module location
     fake_results = [
         {
             "id": 1,
@@ -23,8 +29,8 @@ def test_search_success_returns_results_and_no_correction(client):
             "score": 0.9,
         }
     ]
-    with mock.patch("main.pg_search", return_value=fake_results) as mock_search, \
-         mock.patch("main.correct_query", return_value="two sum"):
+    with mock.patch(_PATCH_SEARCH, return_value=fake_results) as mock_search, \
+         mock.patch(_PATCH_CORRECT, return_value="two sum"):
         resp = client.get("/api/search", params={"q": "two sum", "limit": 30, "offset": 0})
         assert resp.status_code == 200
         data = resp.json()
@@ -39,21 +45,21 @@ def test_search_success_returns_results_and_no_correction(client):
 
 def test_search_surfaces_corrected_query_when_different(client):
     fake_results = []
-    with mock.patch("main.pg_search", return_value=fake_results), \
-         mock.patch("main.correct_query", return_value="binary search"):
+    with mock.patch(_PATCH_SEARCH, return_value=fake_results), \
+         mock.patch(_PATCH_CORRECT, return_value="binary search"):
         resp = client.get("/api/search", params={"q": "binery serch"})
         assert resp.status_code == 200
         assert resp.json()["corrected_query"] == "binary search"
 
 
 def test_search_corrected_query_case_insensitive_suppressed(client):
-    with mock.patch("main.pg_search", return_value=[]), \
-         mock.patch("main.correct_query", return_value="Two Sum"):
+    with mock.patch(_PATCH_SEARCH, return_value=[]), \
+         mock.patch(_PATCH_CORRECT, return_value="Two Sum"):
         resp = client.get("/api/search", params={"q": "two sum"})
         assert resp.json()["corrected_query"] is None
 
-    with mock.patch("main.pg_search", return_value=[]), \
-         mock.patch("main.correct_query", return_value="  Two Sum  "):
+    with mock.patch(_PATCH_SEARCH, return_value=[]), \
+         mock.patch(_PATCH_CORRECT, return_value="  Two Sum  "):
         resp = client.get("/api/search", params={"q": "  two sum  "})
         assert resp.json()["corrected_query"] is None
 
@@ -65,8 +71,8 @@ def test_search_validation_min_length(client):
 
 
 def test_search_validation_limit_bounds(client):
-    with mock.patch("main.pg_search", return_value=[]), \
-         mock.patch("main.correct_query", return_value=None):
+    with mock.patch(_PATCH_SEARCH, return_value=[]), \
+         mock.patch(_PATCH_CORRECT, return_value=None):
         resp = client.get("/api/search", params={"q": "x", "limit": 0})
         assert resp.status_code == 422
         resp = client.get("/api/search", params={"q": "x", "limit": 101})
@@ -81,8 +87,8 @@ def test_search_validation_offset_negative(client):
 
 
 def test_search_pagination_passed_to_pg_search(client):
-    with mock.patch("main.pg_search", return_value=[]) as m, \
-         mock.patch("main.correct_query", return_value=None):
+    with mock.patch(_PATCH_SEARCH, return_value=[]) as m, \
+         mock.patch(_PATCH_CORRECT, return_value=None):
         resp = client.get("/api/search", params={"q": "hello", "limit": 5, "offset": 10})
         assert resp.status_code == 200
         m.assert_called_once_with("hello", limit=5, offset=10)
@@ -91,7 +97,7 @@ def test_search_pagination_passed_to_pg_search(client):
 
 def test_autocomplete_success(client):
     fake_suggestions = [{"id": 1, "title": "Two Sum", "url": "https://example.com", "platform": "leetcode"}]
-    with mock.patch("main.autocomplete", return_value=fake_suggestions) as m:
+    with mock.patch(_PATCH_AUTOCOMPLETE, return_value=fake_suggestions) as m:
         resp = client.get("/api/autocomplete", params={"prefix": "two", "limit": 10})
         assert resp.status_code == 200
         data = resp.json()
@@ -111,15 +117,15 @@ def test_autocomplete_validation(client):
 
 def test_search_response_model_fields(client):
     # Ensure response shape matches SearchResponse model
-    with mock.patch("main.pg_search", return_value=[]), \
-         mock.patch("main.correct_query", return_value=None):
+    with mock.patch(_PATCH_SEARCH, return_value=[]), \
+         mock.patch(_PATCH_CORRECT, return_value=None):
         resp = client.get("/api/search", params={"q": "test"})
         data = resp.json()
         assert set(data.keys()) == {"query", "corrected_query", "execution_time_ms", "count", "results"}
 
 
 def test_autocomplete_response_model_fields(client):
-    with mock.patch("main.autocomplete", return_value=[]):
+    with mock.patch(_PATCH_AUTOCOMPLETE, return_value=[]):
         resp = client.get("/api/autocomplete", params={"prefix": "a"})
         data = resp.json()
         assert set(data.keys()) == {"prefix", "suggestions"}
