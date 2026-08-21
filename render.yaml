@@ -7,6 +7,9 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.7
-      - key: SECRET_KEY
-        generateValue: true
+      # Set this in the Render dashboard to your deployed frontend URL
+      # (e.g. https://your-app.vercel.app) — required for CORS.
+      - key: FRONTEND_ORIGIN
+        sync: false
+    buildCommand: ./build.sh
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT

@@ -1,25 +1,61 @@
+import logging
+import os
+import threading
+import time
+
 import numpy as np
 from optimum.onnxruntime import ORTModelForFeatureExtraction
 from transformers import AutoTokenizer
 from db import get_cursor
 
-MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+logger = logging.getLogger(__name__)
 
-# Lazy-loaded globals
+MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+# Persisted ONNX export so we don't re-convert PyTorch weights on every boot
+ONNX_MODEL_DIR = os.getenv("ONNX_MODEL_DIR", "models/onnx-minilm-l6-v2")
+
+# Lazy-loaded globals (lock guards concurrent first requests from racing)
 _tokenizer = None
 _model = None
+_model_lock = threading.Lock()
+
+
+def _has_saved_onnx(model_dir: str) -> bool:
+    """True only if the dir actually contains an exported ONNX graph."""
+    if not os.path.isdir(model_dir):
+        return False
+    return any(f.endswith(".onnx") for f in os.listdir(model_dir))
+
 
 def get_onnx_model():
-    """Lazily load tokenizer and ONNX Runtime session."""
+    """Lazily load tokenizer and ONNX Runtime session (cached on disk)."""
     global _tokenizer, _model
     if _model is None or _tokenizer is None:
-        print("Loading ONNX model and tokenizer...")
-        _tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-        # export=True converts PyTorch weights to ONNX format on first run
-        _model = ORTModelForFeatureExtraction.from_pretrained(
-            MODEL_NAME, export=True
-        )
-        print("ONNX model loaded successfully.")
+        with _model_lock:
+            if _model is None or _tokenizer is None:
+                start = time.perf_counter()
+                logger.info("Loading ONNX model and tokenizer...")
+                _tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+                if _has_saved_onnx(ONNX_MODEL_DIR):
+                    # Fast path: previously exported ONNX graph
+                    _model = ORTModelForFeatureExtraction.from_pretrained(
+                        ONNX_MODEL_DIR
+                    )
+                else:
+                    # One-time export, then persist for future boots.
+                    # Save to a temp dir first so a crash mid-export never
+                    # leaves a half-written cache that other boots trust.
+                    logger.info("Exporting PyTorch -> ONNX (one-time)...")
+                    model = ORTModelForFeatureExtraction.from_pretrained(
+                        MODEL_NAME, export=True
+                    )
+                    tmp_dir = ONNX_MODEL_DIR + ".tmp"
+                    model.save_pretrained(tmp_dir)
+                    _tokenizer.save_pretrained(tmp_dir)
+                    os.replace(tmp_dir, ONNX_MODEL_DIR)  # atomic swap
+                    _model = model
+                logger.info("ONNX model loaded in %.0f ms",
+                            (time.perf_counter() - start) * 1000)
     return _tokenizer, _model
 
 def mean_pooling(model_output, attention_mask):
@@ -51,7 +87,9 @@ def encode_query(query: str):
 
 def search(query: str, limit: int = 30, offset: int = 0):
     """Combined search using Reciprocal Rank Fusion (RRF)."""
+    start = time.perf_counter()
     query_embedding = encode_query(query)
+    encode_ms = (time.perf_counter() - start) * 1000
     
     sql = """
     WITH semantic AS (
@@ -103,6 +141,9 @@ def search(query: str, limit: int = 30, offset: int = 0):
             limit, offset
         ))
         rows = cur.fetchall()
+    db_ms = (time.perf_counter() - start) * 1000
+    logger.info("search q=%r: encode=%.0fms db=%.0fms rows=%d",
+                query, encode_ms, db_ms, len(rows))
         
     return [
         {

@@ -1,5 +1,6 @@
 """HTTP routes and response models for the Problem Finder API."""
 
+import logging
 import time
 from typing import Optional
 
@@ -8,6 +9,8 @@ from pydantic import BaseModel, Field
 
 from correct import correct_query
 from search import autocomplete, search as pg_search
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api")
 
@@ -61,11 +64,17 @@ def search(
     """Hybrid search with optional spell correction."""
     start = time.perf_counter()
     results = pg_search(q, limit=limit, offset=offset)
-    elapsed_ms = int((time.perf_counter() - start) * 1000)
+    search_ms = (time.perf_counter() - start) * 1000
+    elapsed_ms = int(search_ms)
 
+    correct_start = time.perf_counter()
     corrected = correct_query(q) if q.strip() else None
     if corrected and corrected.strip().lower() == q.strip().lower():
         corrected = None
+    correct_ms = (time.perf_counter() - correct_start) * 1000
+
+    logger.info("GET /api/search q=%r: search=%.0fms correct=%.0fms total=%.0fms",
+                q, search_ms, correct_ms, (time.perf_counter() - start) * 1000)
 
     return {
         "query": q,
