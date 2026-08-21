@@ -1,8 +1,16 @@
 """Spell correction for search queries (Norvig-style, cached and guarded)."""
 import logging
+import os
 import re
 from collections import Counter
 from functools import lru_cache
+
+# Point NLTK at a private, writable dir (Render's shared /opt/render/nltk_data
+# is world-writable and rejected by the downloader) BEFORE importing nltk.
+_PROJECT_NLTK_DATA = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "nltk_data"
+)
+os.environ.setdefault("NLTK_DATA", _PROJECT_NLTK_DATA)
 
 import nltk
 from num2words import num2words
@@ -16,6 +24,7 @@ try:
     nltk.data.find('tokenizers/punkt_tab')
 except LookupError:
     try:
+        os.makedirs(_PROJECT_NLTK_DATA, exist_ok=True)
         nltk.download('punkt', quiet=True)
         nltk.download('punkt_tab', quiet=True)
     except Exception:

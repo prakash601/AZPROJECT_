@@ -1,62 +1,95 @@
+"""Query embedding + hybrid search using raw ONNX Runtime (no PyTorch).
+
+The ONNX graph and tokenizer are fetched once (build time or first boot)
+into ONNX_MODEL_DIR. We deliberately avoid importing transformers/torch —
+the bare `tokenizers` + `onnxruntime` combo keeps RSS around ~150MB.
+"""
 import logging
 import os
+import shutil
 import threading
 import time
 
 import numpy as np
-from optimum.onnxruntime import ORTModelForFeatureExtraction
-from transformers import AutoTokenizer
+import onnxruntime as ort
+from tokenizers import Tokenizer
+
 from db import get_cursor
 
 logger = logging.getLogger(__name__)
 
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-# Persisted ONNX export so we don't re-convert PyTorch weights on every boot
+# Persisted ONNX graph + tokenizer so we never convert weights at runtime
 ONNX_MODEL_DIR = os.getenv("ONNX_MODEL_DIR", "models/onnx-minilm-l6-v2")
+ONNX_FILENAME = "model.onnx"
 
 # Lazy-loaded globals (lock guards concurrent first requests from racing)
 _tokenizer = None
-_model = None
+_session = None
 _model_lock = threading.Lock()
 
 
+def _local_onnx_path() -> str:
+    return os.path.join(ONNX_MODEL_DIR, ONNX_FILENAME)
+
+
 def _has_saved_onnx(model_dir: str) -> bool:
-    """True only if the dir actually contains an exported ONNX graph."""
-    if not os.path.isdir(model_dir):
-        return False
-    return any(f.endswith(".onnx") for f in os.listdir(model_dir))
+    """True only if a previously exported/downloaded ONNX graph exists."""
+    return os.path.isfile(os.path.join(model_dir, ONNX_FILENAME))
+
+
+def _ensure_local_files() -> str:
+    """Download the prebuilt ONNX graph + tokenizer if not cached yet."""
+    path = _local_onnx_path()
+    tokenizer_path = os.path.join(ONNX_MODEL_DIR, "tokenizer.json")
+    from huggingface_hub import hf_hub_download
+
+    if not _has_saved_onnx(ONNX_MODEL_DIR):
+        logger.info("Downloading prebuilt ONNX graph from Hugging Face...")
+        os.makedirs(ONNX_MODEL_DIR, exist_ok=True)
+        downloaded = hf_hub_download(
+            repo_id=MODEL_NAME, filename="onnx/" + ONNX_FILENAME
+        )
+        tmp_path = path + ".tmp"
+        shutil.copyfile(downloaded, tmp_path)
+        os.replace(tmp_path, path)  # atomic swap
+    if not os.path.isfile(tokenizer_path):
+        downloaded = hf_hub_download(repo_id=MODEL_NAME, filename="tokenizer.json")
+        tmp_path = tokenizer_path + ".tmp"
+        shutil.copyfile(downloaded, tmp_path)
+        os.replace(tmp_path, tokenizer_path)  # atomic swap
+    return path
 
 
 def get_onnx_model():
-    """Lazily load tokenizer and ONNX Runtime session (cached on disk)."""
-    global _tokenizer, _model
-    if _model is None or _tokenizer is None:
+    """Lazily load tokenizer + ONNX Runtime session (cached in-process)."""
+    global _tokenizer, _session
+    if _tokenizer is None or _session is None:
         with _model_lock:
-            if _model is None or _tokenizer is None:
+            if _tokenizer is None or _session is None:
                 start = time.perf_counter()
                 logger.info("Loading ONNX model and tokenizer...")
-                _tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-                if _has_saved_onnx(ONNX_MODEL_DIR):
-                    # Fast path: previously exported ONNX graph
-                    _model = ORTModelForFeatureExtraction.from_pretrained(
-                        ONNX_MODEL_DIR
-                    )
-                else:
-                    # One-time export, then persist for future boots.
-                    # Save to a temp dir first so a crash mid-export never
-                    # leaves a half-written cache that other boots trust.
-                    logger.info("Exporting PyTorch -> ONNX (one-time)...")
-                    model = ORTModelForFeatureExtraction.from_pretrained(
-                        MODEL_NAME, export=True
-                    )
-                    tmp_dir = ONNX_MODEL_DIR + ".tmp"
-                    model.save_pretrained(tmp_dir)
-                    _tokenizer.save_pretrained(tmp_dir)
-                    os.replace(tmp_dir, ONNX_MODEL_DIR)  # atomic swap
-                    _model = model
+                onnx_path = _ensure_local_files()
+                _tokenizer = Tokenizer.from_file(
+                    os.path.join(ONNX_MODEL_DIR, "tokenizer.json")
+                )
+                # Match the old transformers-based preprocessing
+                _tokenizer.no_padding()
+                _tokenizer.enable_truncation(max_length=128)
+
+                opts = ort.SessionOptions()
+                opts.intra_op_num_threads = int(
+                    os.getenv("ORT_THREADS", "2")
+                )
+                _session = ort.InferenceSession(
+                    onnx_path,
+                    sess_options=opts,
+                    providers=["CPUExecutionProvider"],
+                )
                 logger.info("ONNX model loaded in %.0f ms",
                             (time.perf_counter() - start) * 1000)
-    return _tokenizer, _model
+    return _tokenizer, _session
+
 
 def mean_pooling(model_output, attention_mask):
     """Perform mean pooling over token embeddings."""
@@ -66,31 +99,39 @@ def mean_pooling(model_output, attention_mask):
     sum_mask = np.clip(input_mask_expanded.sum(axis=1), a_min=1e-9, a_max=None)
     return sum_embeddings / sum_mask
 
+
 def encode_query(query: str):
     """Encode string query into a 384-dim normalized embedding using ONNX."""
-    tokenizer, model = get_onnx_model()
-    
-    # Tokenize text input
-    inputs = tokenizer(
-        query, padding=True, truncation=True, max_length=128, return_tensors="np"
-    )
-    
-    # Run inference with ONNX Runtime
-    outputs = model(**inputs)
-    
+    tokenizer, session = get_onnx_model()
+
+    # Tokenize text input (single sequence, batch of 1)
+    enc = tokenizer.encode(query)
+    inputs = {
+        "input_ids": np.array([enc.ids], dtype=np.int64),
+        "attention_mask": np.array([enc.attention_mask], dtype=np.int64),
+        "token_type_ids": np.array([enc.type_ids], dtype=np.int64),
+    }
+
+    # Run inference with ONNX Runtime (only feed the inputs the graph expects)
+    expected = {i.name for i in session.get_inputs()}
+    onnx_inputs = {k: v for k, v in inputs.items() if k in expected}
+    outputs = session.run(None, onnx_inputs)
+
     # Mean pooling + L2 normalization
     embeddings = mean_pooling(outputs, inputs["attention_mask"])
     norm = np.linalg.norm(embeddings, ord=2, axis=1, keepdims=True)
     normalized_embedding = (embeddings / np.clip(norm, a_min=1e-12, a_max=None))[0]
-    
+
     return normalized_embedding.tolist()
+
+
 
 def search(query: str, limit: int = 30, offset: int = 0):
     """Combined search using Reciprocal Rank Fusion (RRF)."""
     start = time.perf_counter()
     query_embedding = encode_query(query)
     encode_ms = (time.perf_counter() - start) * 1000
-    
+
     sql = """
     WITH semantic AS (
         SELECT id,
@@ -144,7 +185,7 @@ def search(query: str, limit: int = 30, offset: int = 0):
     db_ms = (time.perf_counter() - start) * 1000
     logger.info("search q=%r: encode=%.0fms db=%.0fms rows=%d",
                 query, encode_ms, db_ms, len(rows))
-        
+
     return [
         {
             "id": r[0],

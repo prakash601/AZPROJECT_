@@ -46,3 +46,10 @@ app.add_middleware(
 
 
 app.include_router(api_router)
+
+# Serve the built SPA if present (frontend/dist copied to static/ by the
+# Dockerfile / build.sh). Mounted last so /api routes take precedence.
+_static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
+if os.path.isdir(_static_dir):
+    from fastapi.staticfiles import StaticFiles
+    app.mount("/", StaticFiles(directory=_static_dir, html=True), name="spa")

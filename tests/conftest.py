@@ -126,6 +126,6 @@ def reset_search_model():
     try:
         import search
         search._tokenizer = None
-        search._model = None
+        search._session = None
     except Exception:
         pass
