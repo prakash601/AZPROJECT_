@@ -8,10 +8,10 @@ pgvector==0.2.3
 python-dotenv==1.0.0
 
 # Search / NLP
-rank-bm25
 nltk
 num2words
 transformers
 optimum[onnxruntime]
 onnxruntime
+sentence-transformers
 tqdm==4.66.0

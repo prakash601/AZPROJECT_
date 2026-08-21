@@ -8,11 +8,18 @@ only the web layer.
 Run dev:  uvicorn main:app --reload
 Run prod: uvicorn main:app --host 0.0.0.0 --port $PORT
 """
+import logging
 import os
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from api.routes import router as api_router
+
+logging.basicConfig(
+    level=os.getenv("LOG_LEVEL", "INFO"),
+    format="%(asctime)s %(levelname)s %(name)s %(message)s",
+)
 
 app = FastAPI(
     title="Problem Finder API",
