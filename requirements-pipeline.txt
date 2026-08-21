@@ -1,0 +1,6 @@
+# Offline data-pipeline dependencies (migrate.py, generate_embeddings.py).
+# Not needed by the API at runtime — keeps Render deploys torch-free.
+-r requirements.txt
+sentence-transformers==2.7.0
+transformers==4.44.1
+optimum[onnxruntime]==2.1.0

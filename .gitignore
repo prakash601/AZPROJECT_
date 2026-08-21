@@ -33,3 +33,6 @@ static/
 
 # Local ONNX model export cache
 models/
+
+# Local NLTK data cache
+nltk_data/
