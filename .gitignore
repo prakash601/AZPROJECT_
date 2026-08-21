@@ -30,3 +30,6 @@ htmlcov/
 coverage.xml
 # Backend build artefact (derived from frontend/dist via Dockerfile)
 static/
+
+# Local ONNX model export cache
+models/

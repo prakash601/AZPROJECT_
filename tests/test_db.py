@@ -11,7 +11,7 @@ def test_get_conn_commit_on_success():
     mock_pool = mock.MagicMock()
     mock_pool.getconn.return_value = mock_conn
 
-    with mock.patch.object(db, "pool", mock_pool), \
+    with mock.patch.object(db, "_pool", mock_pool), \
          mock.patch("db.register_vector") as mock_reg:
         with db.get_conn() as conn:
             assert conn is mock_conn
@@ -27,7 +27,7 @@ def test_get_conn_rollback_on_exception():
     mock_pool = mock.MagicMock()
     mock_pool.getconn.return_value = mock_conn
 
-    with mock.patch.object(db, "pool", mock_pool), \
+    with mock.patch.object(db, "_pool", mock_pool), \
          mock.patch("db.register_vector"):
         with pytest.raises(RuntimeError):
             with db.get_conn() as conn:
