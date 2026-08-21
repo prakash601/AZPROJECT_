@@ -28,20 +28,23 @@ def test_mean_pooling_all_masked():
 def test_encode_query_returns_normalized_list(mock_get_cursor):
     import search
 
-    # Mock tokenizer and model
+    # Mock tokenizer (tokenizers lib interface) and session
     fake_tokenizer = mock.MagicMock()
-    fake_inputs = {
-        "input_ids": np.array([[1, 2, 3]]),
-        "attention_mask": np.array([[1, 1, 1]]),
-    }
-    fake_tokenizer.return_value = fake_inputs
+    fake_enc = mock.MagicMock()
+    fake_enc.ids = [1, 2, 3]
+    fake_enc.attention_mask = [1, 1, 1]
+    fake_enc.type_ids = [0, 0, 0]
+    fake_tokenizer.encode.return_value = fake_enc
 
-    fake_model = mock.MagicMock()
-    # model(**inputs) returns [token_embeddings]; shape (1,3,384)
+    fake_session = mock.MagicMock()
+    fake_input = mock.MagicMock()
+    fake_input.name = "input_ids"
+    fake_session.get_inputs.return_value = [fake_input]
+    # session.run returns [token_embeddings]; shape (1,3,384)
     token_emb = np.ones((1, 3, 384))
-    fake_model.return_value = [token_emb]
+    fake_session.run.return_value = [token_emb]
 
-    with mock.patch("search.get_onnx_model", return_value=(fake_tokenizer, fake_model)):
+    with mock.patch("search.get_onnx_model", return_value=(fake_tokenizer, fake_session)):
         vec = search.encode_query("hello world")
 
     assert isinstance(vec, list)
@@ -49,32 +52,33 @@ def test_encode_query_returns_normalized_list(mock_get_cursor):
     # L2 norm should be ~1
     norm = np.linalg.norm(np.array(vec))
     assert abs(norm - 1.0) < 1e-5
-    # tokenizer called with correct args
-    fake_tokenizer.assert_called_once_with(
-        "hello world", padding=True, truncation=True, max_length=128, return_tensors="np"
-    )
+    fake_tokenizer.encode.assert_called_once_with("hello world")
+    # session fed only the inputs it expects
+    run_inputs = fake_session.run.call_args[0][1]
+    assert set(run_inputs.keys()) == {"input_ids"}
 
 
 def test_get_onnx_model_lazy_loads_once():
     import search
 
     search._tokenizer = None
-    search._model = None
+    search._session = None
 
     fake_tokenizer = mock.MagicMock()
-    fake_model = mock.MagicMock()
+    fake_session = mock.MagicMock()
 
-    with mock.patch("transformers.AutoTokenizer.from_pretrained", return_value=fake_tokenizer) as mock_tok, \
-         mock.patch("optimum.onnxruntime.ORTModelForFeatureExtraction.from_pretrained", return_value=fake_model) as mock_mdl:
+    with mock.patch("search.Tokenizer.from_file", return_value=fake_tokenizer) as mock_tok, \
+         mock.patch("search._ensure_local_files", return_value="models/onnx-minilm-l6-v2/model.onnx"), \
+         mock.patch("onnxruntime.InferenceSession", return_value=fake_session) as mock_sess:
         t1, m1 = search.get_onnx_model()
         t2, m2 = search.get_onnx_model()
 
         assert t1 is fake_tokenizer
-        assert m1 is fake_model
+        assert m1 is fake_session
         assert t2 is fake_tokenizer
         # Should only load once
         mock_tok.assert_called_once()
-        mock_mdl.assert_called_once()
+        mock_sess.assert_called_once()
 
 
 def test_search_calls_cursor_with_correct_params(mock_get_cursor):

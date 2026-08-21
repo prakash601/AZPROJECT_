@@ -1,17 +1,16 @@
 # Web framework
-fastapi
-uvicorn
+fastapi==0.137.2
+uvicorn==0.49.0
 
 # Database
 psycopg2-binary==2.9.9
 pgvector==0.2.3
 python-dotenv==1.0.0
 
-# Search / NLP
-nltk
-num2words
-transformers
-optimum[onnxruntime]
-onnxruntime
-sentence-transformers
+# Search / NLP (runtime: no torch/transformers — raw onnxruntime + tokenizers)
+nltk==3.10.2
+num2words==0.5.14
+tokenizers==0.19.1
+onnxruntime==1.28.0
+huggingface_hub==0.24.6
 tqdm==4.66.0
